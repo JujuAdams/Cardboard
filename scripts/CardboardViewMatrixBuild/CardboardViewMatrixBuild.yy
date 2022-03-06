@@ -6,7 +6,7 @@
     "path": "folders/Cardboard/View Matrix.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardViewMatrixGet",
+  "name": "CardboardViewMatrixBuild",
   "tags": [],
   "resourceType": "GMScript",
 }

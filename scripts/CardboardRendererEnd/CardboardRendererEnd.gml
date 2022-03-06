@@ -1,5 +1,6 @@
 function CardboardRendererEnd()
 {
+    //If we've got a pending batch then submit that before resetting draw state
     CardboardBatchSubmit();
     
     //Reset GPU state

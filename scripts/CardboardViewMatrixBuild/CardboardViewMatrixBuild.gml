@@ -9,7 +9,7 @@
 /// @param [upY=0]
 /// @param [upZ=1]
 
-function CardboardViewMatrixGet(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric = true, _upX = 0, _upY = 0, _upZ = 1)
+function CardboardViewMatrixBuild(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric = true, _upX = 0, _upY = 0, _upZ = 1)
 {
     var _xyDistance = point_distance(_fromX, _fromY, _toX, _toY);
     var _yaw = point_direction(_fromX, _fromY, _toX, _toY);

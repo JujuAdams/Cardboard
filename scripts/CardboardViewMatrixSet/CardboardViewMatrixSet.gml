@@ -13,5 +13,5 @@ function CardboardViewMatrixSet(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axono
 {
     global.__cardboardOldViewMatrix = matrix_get(matrix_view);
     global.__cardboardBillboardYaw = point_direction(_fromX, _fromY, _toX, _toY) - 90;
-    matrix_set(matrix_view, CardboardViewMatrixGet(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometrix, _upX, _upY, _upZ));
+    matrix_set(matrix_view, CardboardViewMatrixBuild(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometrix, _upX, _upY, _upZ));
 }

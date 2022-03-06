@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Drawing",
-    "path": "folders/Cardboard/Drawing.yy",
+    "name": "Batching",
+    "path": "folders/Cardboard/Batching.yy",
   },
   "resourceVersion": "1.0",
   "name": "CardboardBatchSubmit",
