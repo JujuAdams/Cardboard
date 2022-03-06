@@ -12,8 +12,8 @@ camToX += _dx;
 camToY += _dy;
 camToZ += _dz;
 
-var _distance = point_distance(camToX, camToY, camFromX, camFromY);
-var _direction = point_direction(camToX, camToY, camFromX, camFromY);
-_direction += (keyboard_check(ord("Q")) - keyboard_check(ord("E")));
-camFromX = camToX + lengthdir_x(_distance, _direction);
-camFromY = camToY + lengthdir_y(_distance, _direction);
+yawTarget += 45*(keyboard_check_pressed(ord("E")) - keyboard_check_pressed(ord("Q")));
+yaw = lerp(yaw, yawTarget, 0.3);
+
+camFromX = camToX + lengthdir_x(200, yaw);
+camFromY = camToY + lengthdir_y(200, yaw);

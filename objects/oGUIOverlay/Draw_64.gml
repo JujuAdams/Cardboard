@@ -5,7 +5,8 @@ if (show_info)
         _string += "\n";
         _string += "FPS = " + string(fps) + " (" + string(fps_smoothed) + ")\n";
         _string += "\n";
-        _string += "WASD/shift/space to move\n";
+        _string += "WASD/shift/space to move camera\n";
+        _string += "Q/E to rotate camera\n";
         _string += "F1 to toggle this panel\n";
         _string += "F4 to toggle fullscreen";
     

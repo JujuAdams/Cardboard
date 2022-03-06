@@ -8,18 +8,12 @@ var _oldWorld      = matrix_get(matrix_world);
 var _oldView       = matrix_get(matrix_view); 
 var _oldProjection = matrix_get(matrix_projection);
 
-CardboardViewMatrixSet(camFromX, camFromY, camFromZ,    camToX, camToY, camToZ);
+CardboardViewMatrixSet(oCamera.camFromX, oCamera.camFromY, oCamera.camFromZ,
+                       oCamera.camToX, oCamera.camToY, oCamera.camToZ);
 matrix_set(matrix_projection, matrix_build_projection_ortho(room_width, room_height, -3000, 3000));
 
-CardboardModelSubmit(model);
-
-CardboardSpriteBillboard(sprTest, 0,    320, 0, 32);
-CardboardSpriteExt(sprTest, 0,    161,   0, 64,    2, 2, 0, 90,    c_white, 1);
-CardboardSpriteExt(sprTest, 0,      0, 161, 64,    2, 2, 0,  0,    c_white, 1);
-CardboardSpriteBillboard(sprCrosshair, 0,    camToX, camToY, camToZ);
-CardboardBatchSubmit();
-
-CardboardBatchSubmit();
+oScene.Draw();
+CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
 
 matrix_set(matrix_world, _oldWorld);
 matrix_set(matrix_view, _oldView);
