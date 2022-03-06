@@ -12,6 +12,32 @@ CardboardSpriteExt(sprHi, 1,    0,  160, 160, 5, 5, 0,   0, c_white, 1);
 CardboardSpriteExt(sprHi, 1, -160,    0, 160, 5, 5, 0, -90, c_white, 1);
 CardboardSpriteExt(sprHi, 1,    0, -160, 160, 5, 5, 0, 180, c_white, 1);
 
+CardboardSpriteQuad(sprHi, 0,
+                    -160, -800, 160,
+                     160, -800, 160,
+                    -160, -480,   0,
+                     160, -480,   0,
+                    c_aqua, 1);
+
+CardboardSpriteTriangle(sprHi, 0,
+                        160, -800, 160,    0, 0,
+                        480, -800, 160,    1, 0,
+                        160, -480,   0,    0, 1,
+                        c_aqua, 1);
+
+CardboardSpriteTriangle(sprHi, 0,
+                        480, -800, 160,    1, 0,
+                        160, -480,   0,    0, 1,
+                        480, -480, 160,    1, 1,
+                        c_aqua, 1);
+
+CardboardSpriteQuad(sprHi, 0,
+                    480, -480, 160,
+                    480, -160, 160,
+                    160, -480,   0,
+                    160, -160,   0,
+                    c_aqua, 1);
+
 model = CardboardModelEnd();
 
 //Define a handy draw function that we can call from oRenderer later
