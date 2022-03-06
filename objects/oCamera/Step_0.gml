@@ -14,8 +14,6 @@ camToZ += _dz;
 
 var _distance = point_distance(camToX, camToY, camFromX, camFromY);
 var _direction = point_direction(camToX, camToY, camFromX, camFromY);
-_direction += (keyboard_check(ord("U")) - keyboard_check(ord("I")));
+_direction += (keyboard_check(ord("Q")) - keyboard_check(ord("E")));
 camFromX = camToX + lengthdir_x(_distance, _direction);
 camFromY = camToY + lengthdir_y(_distance, _direction);
-
-camFromZ += (keyboard_check(ord("O")) - keyboard_check(ord("L")));

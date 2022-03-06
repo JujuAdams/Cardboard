@@ -14,8 +14,8 @@ matrix_set(matrix_projection, matrix_build_projection_ortho(room_width, room_hei
 CardboardModelSubmit(model);
 
 CardboardSpriteBillboard(sprTest, 0,    320, 0, 32);
-CardboardSpriteBillboardExt(sprTest, 0,    160, 0, 80,    2.5, 2.5, 0,    c_white, 1);
-CardboardSpriteBillboardExt(sprTest, 0,    0, 160, 80,    2.5, 2.5, 0,    c_white, 1);
+CardboardSpriteExt(sprTest, 0,    161,   0, 64,    2, 2, 0, 90,    c_white, 1);
+CardboardSpriteExt(sprTest, 0,      0, 161, 64,    2, 2, 0,  0,    c_white, 1);
 CardboardSpriteBillboard(sprCrosshair, 0,    camToX, camToY, camToZ);
 CardboardBatchSubmit();
 
