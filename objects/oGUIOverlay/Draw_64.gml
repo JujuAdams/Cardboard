@@ -7,6 +7,7 @@ if (show_info)
         _string += "\n";
         _string += "WASD/shift/space to move camera\n";
         _string += "Q/E to rotate camera\n";
+        _string += "X to toggle axonometric mode (" + (oRenderer.axonometric? "on" : "off") + ")\n";
         _string += "F1 to toggle this panel\n";
         _string += "F4 to toggle fullscreen";
     

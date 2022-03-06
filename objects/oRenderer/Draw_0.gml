@@ -12,7 +12,8 @@ gpu_set_alphatestref(254);
 
 //Set new matrices: the view matrix is a special one that Cardboard creates
 CardboardViewMatrixSet(oCamera.camFromX, oCamera.camFromY, oCamera.camFromZ,
-                       oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+                       oCamera.camToX, oCamera.camToY, oCamera.camToZ,
+                       axonometric);
 matrix_set(matrix_projection, matrix_build_projection_ortho(room_width, room_height, -3000, 3000));
 
 //Draw the scene object

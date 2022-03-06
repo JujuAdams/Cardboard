@@ -1,6 +1,3 @@
-//Toggle fullscreen
-if (keyboard_check_released(vk_f4)) window_set_fullscreen(!window_get_fullscreen());
-
 // Q/E rotates the camera
 yawTarget += 45*(keyboard_check_pressed(ord("E")) - keyboard_check_pressed(ord("Q")));
 yaw = lerp(yaw, yawTarget, 0.3);
@@ -18,6 +15,8 @@ camToY += _dy;
 camToZ += _dz;
 
 //Set the camera's "from" position relative to the "to" position
-camFromX = camToX + lengthdir_x(200, yaw);
-camFromY = camToY + lengthdir_y(200, yaw);
-camFromZ = camToZ + 200;
+camFromX = camToX + lengthdir_x(cameraDistance, yaw);
+camFromY = camToY + lengthdir_y(cameraDistance, yaw);
+camFromZ = camToZ + cameraHeight;
+
+cameraHeight += (keyboard_check_pressed(ord("O")) - keyboard_check_pressed(ord("L")));
