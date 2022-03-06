@@ -56,12 +56,12 @@
   ],
   "Folders": [
     {"folderPath":"folders/Cardboard.yy","order":0,"resourceVersion":"1.0","name":"Cardboard","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Cardboard/Model.yy","order":2,"resourceVersion":"1.0","name":"Model","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Cardboard/Drawing.yy","order":0,"resourceVersion":"1.0","name":"Drawing","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Cardboard/Model.yy","order":3,"resourceVersion":"1.0","name":"Model","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Cardboard/Drawing.yy","order":1,"resourceVersion":"1.0","name":"Drawing","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Cardboard/View Matrix.yy","order":4,"resourceVersion":"1.0","name":"View Matrix","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Cardboard/Default Renderer.yy","order":3,"resourceVersion":"1.0","name":"Default Renderer","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Cardboard/Default Renderer.yy","order":0,"resourceVersion":"1.0","name":"Default Renderer","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Cardboard/(System).yy","order":5,"resourceVersion":"1.0","name":"(System)","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Cardboard/Batching.yy","order":1,"resourceVersion":"1.0","name":"Batching","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Cardboard/Batching.yy","order":2,"resourceVersion":"1.0","name":"Batching","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

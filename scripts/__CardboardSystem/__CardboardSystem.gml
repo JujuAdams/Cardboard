@@ -1,6 +1,5 @@
-#macro __CARDBOARD_VERSION     "0.0.0"
+#macro __CARDBOARD_VERSION     "1.0.0"
 #macro __CARDBOARD_DATE        "2022-03-05"
-#macro __CARDBOARD_DEBUG       false
 #macro __CARDBOARD_MAX_IMAGES  1024
 
 __CardboardTrace("Welcome to Cardboard by @jujuadams! This is version " + __CARDBOARD_VERSION + ", " + __CARDBOARD_DATE);
