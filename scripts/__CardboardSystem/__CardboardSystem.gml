@@ -17,6 +17,10 @@ global.__cardboardModel         = undefined;
 global.__cardboardOldViewMatrix = matrix_get(matrix_view);
 global.__cardboardBillboardYaw = 0;
 
+global.__cardboardOldWorld      = matrix_get(matrix_world); 
+global.__cardboardOldView       = matrix_get(matrix_view); 
+global.__cardboardOldProjection = matrix_get(matrix_projection);
+
 global.__cardboardBatchTexturePointer = undefined;
 global.__cardboardBatchTextureIndex   = undefined;
 global.__cardboardBatchVertexBuffer   = vertex_create_buffer();

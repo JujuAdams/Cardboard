@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "(System)",
-    "path": "folders/Cardboard/(System).yy",
+    "name": "Helpers",
+    "path": "folders/Cardboard/Helpers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "__CardboardSystem",
+  "name": "CardboardRendererEnd",
   "tags": [],
   "resourceType": "GMScript",
 }
