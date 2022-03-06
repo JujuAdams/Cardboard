@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Cardboard",
-    "path": "folders/Cardboard.yy",
+    "name": "View Matrix",
+    "path": "folders/Cardboard/View Matrix.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardViewMatrix",
+  "name": "CardboardViewMatrixGet",
   "tags": [],
   "resourceType": "GMScript",
 }

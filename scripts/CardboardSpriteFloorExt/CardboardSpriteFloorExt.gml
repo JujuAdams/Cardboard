@@ -4,7 +4,7 @@
 /// @param y
 /// @param z
 /// @param xScale
-/// @param yScale
+/// @param zScale
 /// @param zAngle
 /// @param color
 /// @param alpha

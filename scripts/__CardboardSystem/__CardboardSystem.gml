@@ -11,7 +11,9 @@ vertex_format_add_color();       // 4 bytes
 vertex_format_add_texcoord();    // 8 bytes
 global.__cardboardVertexFormat = vertex_format_end();
 
-global.__cardboardModel = false;
+global.__cardboardModel         = false;
+global.__cardboardOldViewMatrix = matrix_get(matrix_view);
+global.__cardboardBillboardYaw = 0;
 
 global.__cardboardBatchTexturePointer = undefined;
 global.__cardboardBatchTextureIndex   = undefined;

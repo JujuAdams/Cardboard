@@ -6,11 +6,10 @@
 /// @param xScale
 /// @param zScale
 /// @param yAngle
-/// @param zAngle
 /// @param color
 /// @param alpha
 
-function CardboardSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _zAngle, _color, _alpha)
+function CardboardSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _color, _alpha)
 {
     var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
     var _imageData = global.__cardboardTexturePageIndexMap[? (_sprite << __CARDBOARD_MAX_IMAGES) | _flooredImage];
@@ -44,8 +43,8 @@ function CardboardSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAng
     var _rbZ  = -(_r*_sin + _b*_cos) + _z;
     
     //Perform a less simple 2D rotation
-    var _sin = dsin(-_zAngle);
-    var _cos = dcos(-_zAngle);
+    var _sin = dsin(-global.__cardboardBillboardYaw);
+    var _cos = dcos(-global.__cardboardBillboardYaw);
     
     var _ltX = _ltX0*_cos + _x;
     var _ltY = _ltX0*_sin + _y;

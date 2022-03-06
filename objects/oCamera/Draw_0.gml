@@ -8,9 +8,7 @@ var _oldWorld      = matrix_get(matrix_world);
 var _oldView       = matrix_get(matrix_view); 
 var _oldProjection = matrix_get(matrix_projection);
 
-var _yaw = point_direction(camFromX, camFromY, camToX, camToY) - 90;
-
-matrix_set(matrix_view, CardboardViewMatrix(camFromX, camFromY, camFromZ,    camToX, camToY, camToZ));
+CardboardViewMatrixSet(camFromX, camFromY, camFromZ,    camToX, camToY, camToZ,    false);
 matrix_set(matrix_projection, matrix_build_projection_ortho(room_width, room_height, -3000, 3000));
 
 CardboardSpriteFloorExt(sprHi, 0, 320,   0,   0, 5, 5, 0, c_red,   1);
@@ -21,19 +19,19 @@ CardboardSpriteExt(sprHi, 0, 0, 160, 160, 5, 5, 0, 0, c_white, 1);
 CardboardSpriteExt(sprHi, 0, 160, 0, 160, 5, 5, 0, 90, c_white, 1);
 CardboardSpriteExt(sprHi, 0, -160, 0, 160, 5, 5, 0, -90, c_white, 1);
 
-CardboardSpriteExt(sprTest, 0,
-                   160, 0, 0,
-                    2.5, 2.5,
-                   0, _yaw,
-                   c_white, 1);
+CardboardSpriteBillboard(sprTest, 0,   320, 0, 32);
 
-CardboardSpriteExt(sprTest, 0,
-                   0, 160, 0,
-                   2.5, 2.5,
-                   0, _yaw,
-                   c_white, 1);
+CardboardSpriteBillboardExt(sprTest, 0,
+                            160, 0, 80,
+                            2.5, 2.5, 0,
+                            c_white, 1);
 
-CardboardSpriteExt(sprCrosshair, 0, camToX, camToY, camToZ, 1, 1, 0, _yaw, c_white, 1);
+CardboardSpriteBillboardExt(sprTest, 0,
+                            0, 160, 80,
+                            2.5, 2.5, 0,
+                            c_white, 1);
+
+CardboardSpriteBillboard(sprCrosshair, 0, camToX, camToY, camToZ);
 CardboardBatchSubmit();
 
 CardboardBatchSubmit();

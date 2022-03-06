@@ -1,6 +1,6 @@
-camFromX = 0;
+camFromX = 200;
 camFromY = 200;
-camFromZ = 100;
+camFromZ = camFromY*sqrt(2/3);
 
 camToX = 0;
 camToY = 0;

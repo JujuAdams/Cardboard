@@ -4,12 +4,12 @@
 /// @param toX
 /// @param toY
 /// @param toZ
-/// @param [lockYAxis=true]
+/// @param [axonometric=true]
 /// @param [upX=0]
 /// @param [upY=0]
 /// @param [upZ=1]
 
-function CardboardViewMatrix(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _lockYAxis = true, _upX = 0, _upY = 0, _upZ = 1)
+function CardboardViewMatrixGet(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric = true, _upX = 0, _upY = 0, _upZ = 1)
 {
     var _xyDistance = point_distance(_fromX, _fromY, _toX, _toY);
     var _yaw = point_direction(_fromX, _fromY, _toX, _toY);
@@ -22,7 +22,7 @@ function CardboardViewMatrix(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _lockYAxi
     var _tiltMatrix = matrix_build(-_toX, -_toY, -_toZ,   0,0,0,   1,1,1);
     _tiltMatrix = matrix_multiply(_tiltMatrix, matrix_build(0,0,0,   0, 0, -_yaw,   1,1,1));
     
-    if (_lockYAxis) _tiltMatrix = matrix_multiply(_tiltMatrix, matrix_build(0,0,0,   0,0,0, 1/_pitchSin, 1, 1));
+    if (_axonometric) _tiltMatrix = matrix_multiply(_tiltMatrix, matrix_build(0,0,0,   0,0,0, 1/_pitchSin, 1, 1));
     
     _tiltMatrix = matrix_multiply(_tiltMatrix, [
         1, 0, 0, 0,
