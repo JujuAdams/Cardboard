@@ -12,12 +12,12 @@
 function CardboardSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _color, _alpha)
 {
     var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = global.__cardboardTexturePageIndexMap[? (_sprite << __CARDBOARD_MAX_IMAGES) | _flooredImage];
+    var _imageData = global.__cardboardTexturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
     
     //Break the batch if we've swapped texture
     if (_imageData.textureIndex != global.__cardboardBatchTextureIndex)
     {
-        CardboardBatchSubmit();
+        __CardboardBatchComplete();
         
         global.__cardboardBatchTexturePointer = _imageData.texturePointer;
         global.__cardboardBatchTextureIndex   = _imageData.textureIndex;

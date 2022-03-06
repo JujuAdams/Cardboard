@@ -11,7 +11,9 @@ vertex_format_add_color();       // 4 bytes
 vertex_format_add_texcoord();    // 8 bytes
 global.__cardboardVertexFormat = vertex_format_end();
 
-global.__cardboardModel         = false;
+global.__cardboardBuildingModel = false;
+global.__cardboardModel         = undefined;
+
 global.__cardboardOldViewMatrix = matrix_get(matrix_view);
 global.__cardboardBillboardYaw = 0;
 
@@ -40,7 +42,10 @@ while(sprite_exists(_sprite))
         var _right  = _left + _uvs[6]*sprite_get_width(_sprite);
         var _bottom = _top + _uvs[7]*sprite_get_height(_sprite);
         
-        global.__cardboardTexturePageIndexMap[? (_sprite << __CARDBOARD_MAX_IMAGES) | _image] = {
+        global.__cardboardTexturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _image] = {
+            spriteName: sprite_get_name(_sprite),
+            image: _image,
+            
             texturePointer: sprite_get_texture(_sprite, _image),
             textureIndex: _framesArray[_image].texture,
             
@@ -98,4 +103,74 @@ function __CardboardError()
     
     show_debug_message("Cardboard: " + string_replace_all(_string, "\n", "\n          "));
     show_error("Cardboard:\n" + _string + "\n ", true);
+}
+
+
+
+function __CardboardBatchComplete()
+{
+    if (global.__cardboardBuildingModel)
+    {
+        global.__cardboardModel.__AddBatch();
+    }
+    else
+    {
+        CardboardBatchSubmit();
+    }
+}
+
+function __CardboardClassModel() constructor
+{
+    array = [];
+    
+    static __AddBatch = function()
+    {
+        if (!is_array(array)) return;
+        
+        //Don't do anything we know this batch is empty
+        if (global.__cardboardBatchTexturePointer == undefined) return;
+        
+        //End the batch we have
+        vertex_end(global.__cardboardBatchVertexBuffer);
+        
+        array_push(array, {
+            vertexBuffer:   global.__cardboardBatchVertexBuffer,
+            texturePointer: global.__cardboardBatchTexturePointer,
+        });
+        
+        //Clear the batch's texture state
+        global.__cardboardBatchTexturePointer = undefined;
+        global.__cardboardBatchTextureIndex   = undefined;
+        
+        //Then start the vertex buffer again!
+        global.__cardboardBatchVertexBuffer = vertex_create_buffer();
+        vertex_begin(global.__cardboardBatchVertexBuffer, global.__cardboardVertexFormat);
+    }
+    
+    static __Submit = function()
+    {
+        if (!is_array(array)) return;
+        
+        var _i = 0;
+        repeat(array_length(array))
+        {
+            var _batch = array[_i];
+            vertex_submit(_batch.vertexBuffer, pr_trianglelist, _batch.texturePointer);
+            ++_i;
+        }
+    }
+    
+    static __Destroy = function()
+    {
+        if (!is_array(array)) return;
+        
+        var _i = 0;
+        repeat(array_length(array))
+        {
+            vertex_delete_buffer(array[_i].vertexBuffer);
+            ++_i;
+        }
+        
+        array = undefined;
+    }
 }

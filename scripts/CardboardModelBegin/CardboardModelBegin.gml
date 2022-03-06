@@ -1,7 +1,9 @@
 function CardboardModelBegin()
 {
-    CardboardBatchSubmit();
+    if (global.__cardboardBuildingModel) __CardboardError("Only one model can be created at a time");
     
-    if (global.__cardboardModel) __CardboardError("Only one model can be created at a time");
-    global.__cardboardModel = true;
+    __CardboardBatchComplete();
+    
+    global.__cardboardBuildingModel = true;
+    global.__cardboardModel = new __CardboardClassModel();
 }

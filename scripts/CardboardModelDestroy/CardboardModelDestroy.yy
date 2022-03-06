@@ -6,7 +6,7 @@
     "path": "folders/Cardboard/Model.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardModelDelete",
+  "name": "CardboardModelDestroy",
   "tags": [],
   "resourceType": "GMScript",
 }
