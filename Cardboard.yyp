@@ -15,11 +15,7 @@
     {"id":{"name":"__CardboardSystem","path":"scripts/__CardboardSystem/__CardboardSystem.yy",},"order":0,},
     {"id":{"name":"sprCrosshair","path":"sprites/sprCrosshair/sprCrosshair.yy",},"order":1,},
     {"id":{"name":"CardboardBatchSubmit","path":"scripts/CardboardBatchSubmit/CardboardBatchSubmit.yy",},"order":6,},
-    {"id":{"name":"CardboardViewMatrixExt","path":"scripts/CardboardViewMatrixExt/CardboardViewMatrixExt.yy",},"order":2,},
     {"id":{"name":"CardboardSpriteFloorExt","path":"scripts/CardboardSpriteFloorExt/CardboardSpriteFloorExt.yy",},"order":3,},
-    {"id":{"name":"CardboardShaderSet","path":"scripts/CardboardShaderSet/CardboardShaderSet.yy",},"order":7,},
-    {"id":{"name":"CardboardShaderReset","path":"scripts/CardboardShaderReset/CardboardShaderReset.yy",},"order":8,},
-    {"id":{"name":"CardboardPipe","path":"scripts/CardboardPipe/CardboardPipe.yy",},"order":0,},
     {"id":{"name":"CardboardModelBegin","path":"scripts/CardboardModelBegin/CardboardModelBegin.yy",},"order":0,},
     {"id":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},"order":7,},
   ],
@@ -52,9 +48,8 @@
   ],
   "Folders": [
     {"folderPath":"folders/Cardboard.yy","order":0,"resourceVersion":"1.0","name":"Cardboard","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Cardboard/Model.yy","order":4,"resourceVersion":"1.0","name":"Model","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Cardboard/Drawing.yy","order":3,"resourceVersion":"1.0","name":"Drawing","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Cardboard/Pipe.yy","order":5,"resourceVersion":"1.0","name":"Pipe","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Cardboard/Model.yy","order":5,"resourceVersion":"1.0","name":"Model","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Cardboard/Drawing.yy","order":4,"resourceVersion":"1.0","name":"Drawing","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
