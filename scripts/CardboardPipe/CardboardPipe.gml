@@ -1,0 +1,4 @@
+function CardboardPipe() constructor
+{
+    
+}
