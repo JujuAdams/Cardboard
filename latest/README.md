@@ -5,8 +5,6 @@
 
 &nbsp;
 
-## Features
-
 ## About & Support
 
 Cardboard supports all GameMaker export modules, including consoles, mobile, and Opera GX. Cardboard also works on HTML5 but YoYoGames' lacklustre support for this platform can make bug fixing hard if you run into anything. If you'd like to report a bug or suggest a feature, please use the repo's [Issues page](https://github.com/JujuAdams/Cardboard/issues). Cardboard is constantly being maintained and upgraded; bugs are usually addressed within a few days of being reported.
