@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Cardboard/Sprites.yy",
+    "name": "Model",
+    "path": "folders/Cardboard/Model.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardSprite",
+  "name": "CardboardModelNewVertexBuffer",
   "tags": [],
   "resourceType": "GMScript",
 }

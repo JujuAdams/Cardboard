@@ -2,13 +2,19 @@
 #macro __CARDBOARD_DATE        "2022-03-05"
 #macro __CARDBOARD_MAX_IMAGES  1024
 
+
+
 __CardboardTrace("Welcome to Cardboard by @jujuadams! This is version " + __CARDBOARD_VERSION + ", " + __CARDBOARD_DATE);
+
+
 
 vertex_format_begin();
 vertex_format_add_position_3d(); //12 bytes
 vertex_format_add_color();       // 4 bytes
 vertex_format_add_texcoord();    // 8 bytes
 global.__cardboardVertexFormat = vertex_format_end();
+
+
 
 global.__cardboardBuildingModel = false;
 global.__cardboardModel         = undefined;
@@ -20,11 +26,13 @@ global.__cardboardOldWorld      = matrix_get(matrix_world);
 global.__cardboardOldView       = matrix_get(matrix_view); 
 global.__cardboardOldProjection = matrix_get(matrix_projection);
 
-global.__cardboardBatching            = false;
+global.__cardboardAutoBatching        = false;
 global.__cardboardBatchTexturePointer = undefined;
 global.__cardboardBatchTextureIndex   = undefined;
 global.__cardboardBatchVertexBuffer   = vertex_create_buffer();
 vertex_begin(global.__cardboardBatchVertexBuffer, global.__cardboardVertexFormat);
+
+
 
 //Cache texture page index information for every image of every sprite
 global.__cardboardTexturePageIndexMap = ds_map_create();
@@ -119,7 +127,7 @@ function __CardboardBatchComplete()
     }
     else
     {
-        CardboardBatchSubmit();
+        CardboardBatchForceSubmit();
     }
 }
 

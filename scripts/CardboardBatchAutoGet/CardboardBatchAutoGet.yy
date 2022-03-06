@@ -6,7 +6,7 @@
     "path": "folders/Cardboard/Batching.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardBatchingGet",
+  "name": "CardboardBatchAutoGet",
   "tags": [],
   "resourceType": "GMScript",
 }

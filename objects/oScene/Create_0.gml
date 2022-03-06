@@ -1,4 +1,4 @@
-//Pre-build terrain
+//Pre-build "terrain"
 CardboardModelBegin();
 
 CardboardSpriteFloorExt(sprHi, 0,  320,    0,   0, 5, 5, 0, c_red,    1);
@@ -22,5 +22,5 @@ Draw = function()
     CardboardSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, 90,    c_white, 1);
     CardboardSpriteExt(sprTest, 0,      0, 320, 0,    2, 2, 0,  0,    c_white, 1);
     
-    CardboardBatchSubmit();
+    CardboardBatchForceSubmit();
 }

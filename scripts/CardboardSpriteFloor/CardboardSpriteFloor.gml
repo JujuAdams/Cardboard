@@ -1,8 +1,13 @@
-/// @param sprite
-/// @param image
-/// @param x
-/// @param y
-/// @param z
+/// Draws a sprite parallel to the floor ("lying down")
+/// 
+/// This function presumes that the camera is pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)
+/// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn
+/// 
+/// @param sprite  Sprite to draw
+/// @param image   Image of the sprite to draw
+/// @param x       x-coordinate to draw the sprite at
+/// @param y       y-coordinate to draw the sprite at
+/// @param z       z-coordinate to draw the sprite at
 
 function CardboardSpriteFloor(_sprite, _image, _x, _y, _z)
 {
@@ -41,5 +46,5 @@ function CardboardSpriteFloor(_sprite, _image, _x, _y, _z)
     vertex_position_3d(_vertexBuffer, _r, _b, _z); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v1);
     vertex_position_3d(_vertexBuffer, _l, _b, _z); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v1);
     
-    if (!global.__cardboardBatching && !global.__cardboardBuildingModel) CardboardBatchSubmit();
+    if (!global.__cardboardAutoBatching && !global.__cardboardBuildingModel) CardboardBatchForceSubmit();
 }

@@ -1,7 +1,9 @@
-function CardboardRendererEnd()
+/// Resets the rendering state set by CardboardRendererSet()
+
+function CardboardRenderStateReset()
 {
     //If we've got a pending batch then submit that before resetting draw state
-    CardboardBatchSubmit();
+    CardboardBatchForceSubmit();
     
     //Reset GPU state
     gpu_set_ztestenable(false);

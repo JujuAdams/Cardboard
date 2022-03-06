@@ -1,13 +1,22 @@
-/// @param sprite
-/// @param image
-/// @param x
-/// @param y
-/// @param z
-/// @param xScale
-/// @param zScale
-/// @param yAngle
-/// @param color
-/// @param alpha
+/// Draws a sprite perpendicular to the floor ("standing up") and facing the camera
+/// 
+/// This function requires that you call CardboardViewMatrixSet() before drawing the billboarded sprite
+/// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn
+/// 
+/// N.B. Billboarded sprites that have been written into a model will use the camera position at the time
+///      that the sprite is written into a model and may not necessarily follow the camera when the model
+///      is drawn thereafter
+/// 
+/// @param sprite  Sprite to draw
+/// @param image   Image of the sprite to draw
+/// @param x       x-coordinate to draw the sprite at
+/// @param y       y-coordinate to draw the sprite at
+/// @param z       z-coordinate to draw the sprite at
+/// @param xScale  Scale of the sprite on the x-axis
+/// @param zScale  Scale of the sprite on the z-axis
+/// @param yAngle  Rotation of the sprite around the y-axis
+/// @param color   Blend color for the sprite (c_white is "no blending")
+/// @param alpha   Blend alpha for the sprite (0 being transparent and 1 being 100% opacity)
 
 function CardboardSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _color, _alpha)
 {
@@ -72,5 +81,5 @@ function CardboardSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zSca
     vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1);
     vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
     
-    if (!global.__cardboardBatching && !global.__cardboardBuildingModel) CardboardBatchSubmit();
+    if (!global.__cardboardAutoBatching && !global.__cardboardBuildingModel) CardboardBatchForceSubmit();
 }

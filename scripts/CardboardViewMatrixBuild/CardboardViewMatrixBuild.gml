@@ -1,13 +1,18 @@
-/// @param fromX
-/// @param fromY
-/// @param fromZ
-/// @param toX
-/// @param toY
-/// @param toZ
-/// @param [axonometric=true]
-/// @param [upX=0]
-/// @param [upY=0]
-/// @param [upZ=1]
+/// Builds a z-tilt view matrix
+/// 
+/// This can be used in your own rendering pipeline, though you may find the
+/// use of CardboardViewMatrixSet() or CardboardRenderStateSet() convenient
+/// 
+/// @param fromX               x-coordinate of the camera
+/// @param fromY               y-coordinate of the camera
+/// @param fromZ               z-coordinate of the camera
+/// @param toX                 x-coordinate of the camera's focal point
+/// @param toY                 y-coordinate of the camera's focal point
+/// @param toZ                 z-coordinate of the camera's focal point
+/// @param [axonometric=true]  Optional, defaults to <true>; whether to use axonometric projection. This ensures sprites are never "squashed" regardless of the camera pitch angle
+/// @param [upX=0]             x-component of the camera's up vector
+/// @param [upY=0]             y-component of the camera's up vector
+/// @param [upZ=1]             z-component of the camera's up vector
 
 function CardboardViewMatrixBuild(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric = true, _upX = 0, _upY = 0, _upZ = 1)
 {

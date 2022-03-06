@@ -1,14 +1,19 @@
-/// @param sprite
-/// @param image
-/// @param x
-/// @param y
-/// @param z
-/// @param xScale
-/// @param zScale
-/// @param yAngle
-/// @param zAngle
-/// @param color
-/// @param alpha
+/// Draws a sprite perpendicular to the floor ("standing up")
+/// 
+/// This function treats a z angle of 0 degrees as facing a camera pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)
+/// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn
+/// 
+/// @param sprite  Sprite to draw
+/// @param image   Image of the sprite to draw
+/// @param x       x-coordinate to draw the sprite at
+/// @param y       y-coordinate to draw the sprite at
+/// @param z       z-coordinate to draw the sprite at
+/// @param xScale  Scale of the sprite on the x-axis
+/// @param zScale  Scale of the sprite on the z-axis
+/// @param yAngle  Rotation of the sprite around the y-axis
+/// @param zAngle  Rotation of the sprite around the z-axis
+/// @param color   Blend color for the sprite (c_white is "no blending")
+/// @param alpha   Blend alpha for the sprite (0 being transparent and 1 being 100% opacity)
 
 function CardboardSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _zAngle, _color, _alpha)
 {
@@ -73,5 +78,5 @@ function CardboardSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAng
     vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1);
     vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
     
-    if (!global.__cardboardBatching && !global.__cardboardBuildingModel) CardboardBatchSubmit();
+    if (!global.__cardboardAutoBatching && !global.__cardboardBuildingModel) CardboardBatchForceSubmit();
 }

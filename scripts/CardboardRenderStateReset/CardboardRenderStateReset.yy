@@ -6,7 +6,7 @@
     "path": "folders/Cardboard/Default Renderer.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardRendererBegin",
+  "name": "CardboardRenderStateReset",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -6,7 +6,7 @@
     "path": "folders/Cardboard/Batching.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardBatchSubmit",
+  "name": "CardboardBatchAutoSet",
   "tags": [],
   "resourceType": "GMScript",
 }

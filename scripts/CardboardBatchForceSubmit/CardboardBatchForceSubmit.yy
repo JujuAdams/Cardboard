@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Cardboard/Sprites.yy",
+    "name": "Batching",
+    "path": "folders/Cardboard/Batching.yy",
   },
   "resourceVersion": "1.0",
-  "name": "CardboardSprite",
+  "name": "CardboardBatchForceSubmit",
   "tags": [],
   "resourceType": "GMScript",
 }

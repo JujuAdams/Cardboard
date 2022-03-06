@@ -1,6 +1,10 @@
-function CardboardBatchSubmit()
+/// Forces the current batch to be submitted to the GPU
+/// 
+/// This should be called before a change in GPU state (such as world matrix / shader changes etc.)
+
+function CardboardBatchForceSubmit()
 {
-    if (global.__cardboardBuildingModel) __CardboardError("Cannot submit a batch whilst creating a model");
+    if (global.__cardboardBuildingModel) __CardboardError("Cannot force submit a batch whilst creating a model");
     
     //Don't do anything we know this batch is empty
     if (global.__cardboardBatchTexturePointer == undefined) return;
