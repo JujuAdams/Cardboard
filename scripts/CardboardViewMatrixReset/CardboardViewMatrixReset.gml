@@ -2,6 +2,7 @@
 
 function CardboardViewMatrixReset()
 {
-    global.__cardboardBillboardYaw = undefined;
+    CardboardBillboardYawReset();
+    
     matrix_set(matrix_view, global.__cardboardOldViewMatrix);
 }

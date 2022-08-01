@@ -20,7 +20,7 @@ global.__cardboardBuildingModel = false;
 global.__cardboardModel         = undefined;
 
 global.__cardboardOldViewMatrix = matrix_get(matrix_view);
-global.__cardboardBillboardYaw  = undefined;
+CardboardBillboardYawReset();
 
 global.__cardboardOldWorld      = matrix_get(matrix_world); 
 global.__cardboardOldView       = matrix_get(matrix_view); 

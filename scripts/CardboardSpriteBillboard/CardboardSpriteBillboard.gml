@@ -34,15 +34,12 @@ function CardboardSpriteBillboard(_sprite, _image, _x, _y, _z)
     var _b = _imageData.bottom;
     
     //Perform a simple 2D rotation
-    var _sin = dsin(-global.__cardboardBillboardYaw);
-    var _cos = dcos(-global.__cardboardBillboardYaw);
-    
-    var _lX =  _l*_cos + _x;
-    var _lY =  _l*_sin + _y;
-    var _rX =  _r*_cos + _x;
-    var _rY =  _r*_sin + _y;
-    var _tZ = -_t      + _z;
-    var _bZ = -_b      + _z;
+    var _lX =  _l*global.__cardboardBillboardYawCos + _x;
+    var _lY =  _l*global.__cardboardBillboardYawSin + _y;
+    var _rX =  _r*global.__cardboardBillboardYawCos + _x;
+    var _rY =  _r*global.__cardboardBillboardYawSin + _y;
+    var _tZ = -_t + _z;
+    var _bZ = -_b + _z;
     
     //Cache the UVs for speeeeeeeed
     var _u0 = _imageData.u0;
