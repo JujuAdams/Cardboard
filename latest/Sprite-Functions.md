@@ -152,3 +152,26 @@
 |`v3`    |number  |                                                                             |
 |`color` |number  |Blend color for the sprite (`c_white` is "no blending")                      |
 |`alpha` |number  |Blend alpha for the sprite (`0` being transparent and `1` being 100% opacity)|
+
+&nbsp;
+
+## `CardboardBillboardYawSet(fromX, fromY, toX, toY)`
+
+**Returns:** N/A (`undefined`)
+
+|Name           |Datatype|Purpose                                 |
+|---------------|--------|----------------------------------------|
+|`fromX`        |number  |x-coordinate of the camera              |
+|`fromY`        |number  |y-coordinate of the camera              |
+|`toX`          |number  |x-coordinate of the camera's focal point|
+|`toY`          |number  |y-coordinate of the camera's focal point|
+
+&nbsp;
+
+## `CardboardBillboardYawReset()`
+
+**Returns:** N/A (`undefined`)
+
+|Name|Datatype|Purpose|
+|----|--------|-------|
+|None|        |       |
