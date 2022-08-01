@@ -7,17 +7,17 @@
 /// @param x1      x-coordinate for the top-left corner of the texture
 /// @param y1      y-coordinate for the top-left corner of the texture
 /// @param z1      z-coordinate for the top-left corner of the texture
-/// @param u1
-/// @param v1
+/// @param u1      U-coordinate, normalised to the size of the sprite's texture
+/// @param v1      V-coordinate, normalised to the size of the sprite's texture
 /// @param x2      x-coordinate for the top-right corner of the texture
 /// @param y2      y-coordinate for the top-right corner of the texture
 /// @param z2      z-coordinate for the top-right corner of the texture
-/// @param u2
-/// @param v2
+/// @param u2      U-coordinate, normalised to the size of the sprite's texture
+/// @param v2      V-coordinate, normalised to the size of the sprite's texture
 /// @param x3      x-coordinate for the bottom-left corner of the texture
 /// @param y3      y-coordinate for the bottom-left corner of the texture
-/// @param u3
-/// @param v3
+/// @param u3      U-coordinate, normalised to the size of the sprite's texture
+/// @param v3      V-coordinate, normalised to the size of the sprite's texture
 /// @param color   Blend color for the sprite (c_white is "no blending")
 /// @param alpha   Blend alpha for the sprite (0 being transparent and 1 being 100% opacity)
 
