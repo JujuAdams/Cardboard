@@ -6,4 +6,4 @@
 
 <p align="center">Chat about Cardboard on the <a href="https://discord.gg/8krYCqr">Discord server</a></p>
 
-<p align="center"><img src="./images/example.gif"></p>
+<p align="center"><img src="./images/example.gif" style="display:block; margin:auto"></p>
