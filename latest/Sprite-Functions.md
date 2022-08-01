@@ -138,18 +138,18 @@
 |`x1`    |number  |x-coordinate for the top-left corner of the texture                          |
 |`y1`    |number  |y-coordinate for the top-left corner of the texture                          |
 |`z1`    |number  |z-coordinate for the top-left corner of the texture                          |
-|`u1`    |number  |                                                                             |
-|`v1`    |number  |                                                                             |
+|`u1`    |number  |U-coordinate, normalised to the size of the sprite's texture                 |
+|`v1`    |number  |V-coordinate, normalised to the size of the sprite's texture                 |
 |`x2`    |number  |x-coordinate for the top-right corner of the texture                         |
 |`y2`    |number  |y-coordinate for the top-right corner of the texture                         |
 |`z2`    |number  |z-coordinate for the top-right corner of the texture                         |
-|`u2`    |number  |                                                                             |
-|`v2`    |number  |                                                                             |
+|`u2`    |number  |U-coordinate, normalised to the size of the sprite's texture                 |
+|`v2`    |number  |V-coordinate, normalised to the size of the sprite's texture                 |
 |`x3`    |number  |x-coordinate for the bottom-left corner of the texture                       |
 |`y3`    |number  |y-coordinate for the bottom-left corner of the texture                       |
 |`z3`    |number  |z-coordinate for the bottom-left corner of the texture                       |
-|`u3`    |number  |                                                                             |
-|`v3`    |number  |                                                                             |
+|`u3`    |number  |U-coordinate, normalised to the size of the sprite's texture                 |
+|`v3`    |number  |V-coordinate, normalised to the size of the sprite's texture                 |
 |`color` |number  |Blend color for the sprite (`c_white` is "no blending")                      |
 |`alpha` |number  |Blend alpha for the sprite (`0` being transparent and `1` being 100% opacity)|
 
