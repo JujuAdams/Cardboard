@@ -7,10 +7,10 @@ CardboardSpriteFloorExt(sprHi, 0, -320,    0,   0, 5, 5, 0, c_yellow, 1);
 CardboardSpriteFloorExt(sprHi, 0,    0,  320,   0, 5, 5, 0, c_lime,   1);
 CardboardSpriteFloorExt(sprHi, 0,    0,    0, 320, 5, 5, 0, c_blue,   1);
 
-CardboardSpriteExt(sprHi, 1,  160,    0, 160, 5, 5, 0,  90, c_white, 1);
-CardboardSpriteExt(sprHi, 1,    0,  160, 160, 5, 5, 0,   0, c_white, 1);
-CardboardSpriteExt(sprHi, 1, -160,    0, 160, 5, 5, 0, -90, c_white, 1);
-CardboardSpriteExt(sprHi, 1,    0, -160, 160, 5, 5, 0, 180, c_white, 1);
+CardboardSpriteExt(sprHi, 1,  160,    0, 160, 5, 5, 0,  90, c_white, 1, false);
+CardboardSpriteExt(sprHi, 1,    0,  160, 160, 5, 5, 0,   0, c_white, 1, false);
+CardboardSpriteExt(sprHi, 1, -160,    0, 160, 5, 5, 0, -90, c_white, 1, false);
+CardboardSpriteExt(sprHi, 1,    0, -160, 160, 5, 5, 0, 180, c_white, 1, false);
 
 CardboardSpriteQuad(sprHi, 0,
                     -160, -800, 160,
@@ -45,8 +45,9 @@ Draw = function()
 {
     CardboardModelSubmit(model);
     
-    CardboardSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, 90,    c_white, 1);
-    CardboardSpriteExt(sprTest, 0,      0, 320, 0,    2, 2, 0,  0,    c_white, 1);
+    CardboardSpriteExt(sprTest, 0,   -320,   0, 0,    2, 2, 0, current_time/15,    c_white, 1, true );
+    CardboardSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, 90,    c_white, 1, false);
+    CardboardSpriteExt(sprTest, 0,      0, 320, 0,    2, 2, 0,  0,    c_white, 1, false);
     
     CardboardBatchForceSubmit();
 }
