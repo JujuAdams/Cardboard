@@ -60,7 +60,16 @@ function CardboardSurfaceBillboardExt(_surface, _x, _y, _z, _xScale, _zScale, _y
     
     if (CARDBOARD_WRITE_NORMALS)
     {
+        var _normalX = _global.__billboardYawSin;
+        var _normalY = _global.__billboardYawCos;
         
+        vertex_position_3d(_vertexBuffer, _ltX, _ltY, _ltZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 0);
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _rtZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0);
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1);
+        
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _rtZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0);
+        vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1);
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1);
     }
     else
     {

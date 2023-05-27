@@ -59,7 +59,16 @@ function CardboardSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAng
     
     if (CARDBOARD_WRITE_NORMALS)
     {
+        var _normalX = _sin;
+        var _normalY = _cos;
         
+        vertex_position_3d(_vertexBuffer, _ltX, _ltY, _ltZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v0);
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _rtZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v0);
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
+        
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _rtZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v0);
+        vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1);
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
     }
     else
     {
@@ -85,7 +94,13 @@ function CardboardSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAng
         
         if (CARDBOARD_WRITE_NORMALS)
         {
+            vertex_position_3d(_vertexBuffer, _ltX, _ltY, _ltZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v0);
+            vertex_position_3d(_vertexBuffer, _rtX, _rtY, _rtZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v0);
+            vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
             
+            vertex_position_3d(_vertexBuffer, _rtX, _rtY, _rtZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v0);
+            vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1);
+            vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
         }
         else
         {

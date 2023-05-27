@@ -50,7 +50,13 @@ function CardboardSurfaceTriangle()
     
     if (CARDBOARD_WRITE_NORMALS)
     {
+        var _normalX = _global.__billboardYawSin;
+        var _normalY = _global.__billboardYawCos;
+        var _normalZ = 0;
         
+        vertex_position_3d(_vertexBuffer, _x1, _y1, _z1); vertex_normal(_vertexBuffer, _normalX, _normalY, _normalZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1prop, _v1prop);
+        vertex_position_3d(_vertexBuffer, _x2, _y2, _z2); vertex_normal(_vertexBuffer, _normalX, _normalY, _normalZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u2prop, _v2prop);
+        vertex_position_3d(_vertexBuffer, _x3, _y3, _z3); vertex_normal(_vertexBuffer, _normalX, _normalY, _normalZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u3prop, _v3prop);
     }
     else
     {
