@@ -7,7 +7,7 @@ CardboardRenderStateSet(1366, 768,
 
 if (CARDBOARD_WRITE_NORMALS)
 {
-    CardboardLightingSet(0, 300, 200, 1000, c_yellow);
+    CardboardLightingSet(-240, 300, 200, 2200, c_yellow);
     CardboardLightingStart();
 }
 
