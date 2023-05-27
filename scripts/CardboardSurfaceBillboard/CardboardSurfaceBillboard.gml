@@ -26,10 +26,13 @@ function CardboardSurfaceBillboard(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin 
     var _b = _t - surface_get_height(_surface);
     
     //Perform a simple 2D rotation
-    var _lX = _l*_global.__billboardYawCos + _x;
-    var _lY = _l*_global.__billboardYawSin + _y;
-    var _rX = _r*_global.__billboardYawCos + _x;
-    var _rY = _r*_global.__billboardYawSin + _y;
+    var _sin = _global.__billboardYawSin;
+    var _cos = _global.__billboardYawCos;
+    
+    var _lX = _l*_cos + _x;
+    var _lY = _l*_sin + _y;
+    var _rX = _r*_cos + _x;
+    var _rY = _r*_sin + _y;
     var _tZ = _t + _z;
     var _bZ = _b + _z;
     
@@ -38,26 +41,26 @@ function CardboardSurfaceBillboard(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin 
     
     if (CARDBOARD_WRITE_NORMALS)
     {
-        var _normalX = _global.__billboardYawSin;
-        var _normalY = _global.__billboardYawCos;
+        var _normalX = -_sin;
+        var _normalY =  _cos;
         
         vertex_position_3d(_vertexBuffer, _lX, _lY, _tZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 0, 0);
-        vertex_position_3d(_vertexBuffer, _rX, _rY, _tZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 0);
         vertex_position_3d(_vertexBuffer, _lX, _lY, _bZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 0, 1);
+        vertex_position_3d(_vertexBuffer, _rX, _rY, _tZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 0);
         
         vertex_position_3d(_vertexBuffer, _rX, _rY, _tZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 0);
-        vertex_position_3d(_vertexBuffer, _rX, _rY, _bZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 1);
         vertex_position_3d(_vertexBuffer, _lX, _lY, _bZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 0, 1);
+        vertex_position_3d(_vertexBuffer, _rX, _rY, _bZ); vertex_normal(_vertexBuffer, _normalX, _normalY, 0); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 1);
     }
     else
     {
         vertex_position_3d(_vertexBuffer, _lX, _lY, _tZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 0, 0);
-        vertex_position_3d(_vertexBuffer, _rX, _rY, _tZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 0);
         vertex_position_3d(_vertexBuffer, _lX, _lY, _bZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 0, 1);
+        vertex_position_3d(_vertexBuffer, _rX, _rY, _tZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 0);
         
         vertex_position_3d(_vertexBuffer, _rX, _rY, _tZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 0);
-        vertex_position_3d(_vertexBuffer, _rX, _rY, _bZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 1);
         vertex_position_3d(_vertexBuffer, _lX, _lY, _bZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 0, 1);
+        vertex_position_3d(_vertexBuffer, _rX, _rY, _bZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 1);
     }
     
     __CARDBOARD_FORCE_SUBMIT_CONDITION

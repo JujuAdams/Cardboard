@@ -46,6 +46,7 @@ function CardboardSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zSca
     //Perform a less simple 2D rotation
     var _sin = _global.__billboardYawSin;
     var _cos = _global.__billboardYawCos;
+    
     var _ltX = _ltX0*_cos + _x;
     var _ltY = _ltX0*_sin + _y;
     var _rtX = _rtX0*_cos + _x;
