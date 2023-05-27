@@ -45,9 +45,6 @@ function CardboardSurfaceExt(_surface, _x, _y, _z, _xScale, _zScale, _yAngle, _z
     var _sin = dsin(-_zAngle);
     var _cos = dcos(-_zAngle);
     
-    //Add this surface to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
-    
     var _ltX = _ltX0*_cos + _x;
     var _ltY = _ltX0*_sin + _y;
     var _rtX = _rtX0*_cos + _x;
@@ -56,6 +53,9 @@ function CardboardSurfaceExt(_surface, _x, _y, _z, _xScale, _zScale, _yAngle, _z
     var _lbY = _lbX0*_sin + _y;
     var _rbX = _rbX0*_cos + _x;
     var _rbY = _rbX0*_sin + _y;
+    
+    //Add this surface to the vertex buffer
+    var _vertexBuffer = _global.__batchVertexBuffer;
     
     vertex_position_3d(_vertexBuffer, _ltX, _ltY, _ltZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 0);
     vertex_position_3d(_vertexBuffer, _rtX, _rtY, _rtZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0);

@@ -19,7 +19,7 @@
 /// @param [xOrigin=0]  x-offset
 /// @param [yOrigin=0]  y-offset
 
-function CardboardSurfaceBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _color, _alpha, _xOrigin = 0, _yOrigin = 0)
+function CardboardSurfaceBillboardExt(_surface, _x, _y, _z, _xScale, _zScale, _yAngle, _color, _alpha, _xOrigin = 0, _yOrigin = 0)
 {
     __CARDBOARD_GLOBAL
     __CARDBOARD_SURFACE_COMMON_TEXTURE
