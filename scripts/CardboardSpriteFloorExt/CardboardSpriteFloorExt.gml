@@ -16,16 +16,18 @@
 
 function CardboardSpriteFloorExt(_sprite, _image, _x, _y, _z, _xScale, _yScale, _zAngle, _color, _alpha)
 {
+    __CARDBOARD_GLOBAL
+    
     var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = global.__cardboardTexturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
+    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
     
     //Break the batch if we've swapped texture
-    if (_imageData.textureIndex != global.__cardboardBatchTextureIndex)
+    if (_imageData.textureIndex != _global.__batchTextureIndex)
     {
         __CardboardBatchComplete();
         
-        global.__cardboardBatchTexturePointer = _imageData.texturePointer;
-        global.__cardboardBatchTextureIndex   = _imageData.textureIndex;
+        _global.__batchTexturePointer = _imageData.texturePointer;
+        _global.__batchTextureIndex   = _imageData.textureIndex;
     }
     
     //Scale up the image
@@ -54,7 +56,7 @@ function CardboardSpriteFloorExt(_sprite, _image, _x, _y, _z, _xScale, _yScale, 
     var _v1 = _imageData.v1;
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = global.__cardboardBatchVertexBuffer;
+    var _vertexBuffer = _global.__batchVertexBuffer;
     
     vertex_position_3d(_vertexBuffer, _ltX, _ltY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v0);
     vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v0);
@@ -64,5 +66,5 @@ function CardboardSpriteFloorExt(_sprite, _image, _x, _y, _z, _xScale, _yScale, 
     vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1);
     vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
     
-    if (!global.__cardboardAutoBatching && !global.__cardboardBuildingModel) CardboardBatchForceSubmit();
+    if (!_global.__autoBatching && !_global.__buildingModel) CardboardBatchForceSubmit();
 }

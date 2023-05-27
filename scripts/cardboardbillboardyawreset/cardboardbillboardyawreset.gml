@@ -3,7 +3,9 @@
 
 function CardboardBillboardYawReset()
 {
-    global.__cardboardBillboardYaw    = undefined;
-    global.__cardboardBillboardYawSin = 0;
-    global.__cardboardBillboardYawCos = 0;
+    __CARDBOARD_GLOBAL
+    
+    _global.__billboardYaw    = undefined;
+    _global.__billboardYawSin = 0;
+    _global.__billboardYawCos = 0;
 }

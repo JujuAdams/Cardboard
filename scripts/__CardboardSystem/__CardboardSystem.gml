@@ -4,78 +4,69 @@
 
 
 
-__CardboardTrace("Welcome to Cardboard by @jujuadams! This is version " + __CARDBOARD_VERSION + ", " + __CARDBOARD_DATE);
+__CardboardInitialize();
 
-
-
-vertex_format_begin();
-vertex_format_add_position_3d(); //12 bytes
-vertex_format_add_color();       // 4 bytes
-vertex_format_add_texcoord();    // 8 bytes
-global.__cardboardVertexFormat = vertex_format_end();
-
-
-
-global.__cardboardBuildingModel = false;
-global.__cardboardModel         = undefined;
-
-global.__cardboardOldViewMatrix = matrix_get(matrix_view);
-CardboardBillboardYawReset();
-
-global.__cardboardOldWorld      = matrix_get(matrix_world); 
-global.__cardboardOldView       = matrix_get(matrix_view); 
-global.__cardboardOldProjection = matrix_get(matrix_projection);
-
-global.__cardboardAutoBatching        = false;
-global.__cardboardBatchTexturePointer = undefined;
-global.__cardboardBatchTextureIndex   = undefined;
-global.__cardboardBatchVertexBuffer   = vertex_create_buffer();
-vertex_begin(global.__cardboardBatchVertexBuffer, global.__cardboardVertexFormat);
-
-
-
-//Cache texture page index information for every image of every sprite
-global.__cardboardTexturePageIndexMap = ds_map_create();
-var _sprite = 0;
-while(sprite_exists(_sprite))
+function __CardboardInitialize()
 {
-    var _framesArray = sprite_get_info(_sprite).frames;
+    static _initialized = false;
+    if (_initialized) return;
+    _initialized = true;
     
-    var _number = sprite_get_number(_sprite);
-    if (_number > __CARDBOARD_MAX_IMAGES) __CardboardError("Image number cannot exceed 1024 (", sprite_get_name(_sprite), ")");
+    __CardboardTrace("Welcome to Cardboard by @jujuadams! This is version " + __CARDBOARD_VERSION + ", " + __CARDBOARD_DATE);
     
-    var _image = 0;
-    repeat(_number)
+    __CARDBOARD_GLOBAL
+    
+    vertex_format_begin();
+    vertex_format_add_position_3d(); //12 bytes
+    vertex_format_add_color();       // 4 bytes
+    vertex_format_add_texcoord();    // 8 bytes
+    _global.__vertexFormat = vertex_format_end();
+    
+    vertex_begin(_global.__batchVertexBuffer, _global.__vertexFormat);
+    
+    //Cache texture page index information for every image of every sprite
+    var _texturePageIndexMap = _global.__texturePageIndexMap;
+    var _sprite = 0;
+    while(sprite_exists(_sprite))
     {
-        var _uvs = sprite_get_uvs(_sprite, _image);
+        var _framesArray = sprite_get_info(_sprite).frames;
         
-        var _left   = -sprite_get_xoffset(_sprite) + _uvs[4];
-        var _top    = -sprite_get_yoffset(_sprite) + _uvs[5];
-        var _right  = _left + _uvs[6]*sprite_get_width(_sprite);
-        var _bottom = _top + _uvs[7]*sprite_get_height(_sprite);
+        var _number = sprite_get_number(_sprite);
+        if (_number > __CARDBOARD_MAX_IMAGES) __CardboardError("Image number cannot exceed ", __CARDBOARD_MAX_IMAGES, " (", sprite_get_name(_sprite), ")");
         
-        global.__cardboardTexturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _image] = {
-            spriteName: sprite_get_name(_sprite),
-            image: _image,
+        var _image = 0;
+        repeat(_number)
+        {
+            var _uvs = sprite_get_uvs(_sprite, _image);
             
-            texturePointer: sprite_get_texture(_sprite, _image),
-            textureIndex: _framesArray[_image].texture,
+            var _left   = -sprite_get_xoffset(_sprite) + _uvs[4];
+            var _top    = -sprite_get_yoffset(_sprite) + _uvs[5];
+            var _right  = _left + _uvs[6]*sprite_get_width(_sprite);
+            var _bottom = _top + _uvs[7]*sprite_get_height(_sprite);
             
-            left:   _left,
-            top:    _top,
-            right:  _right,
-            bottom: _bottom,
+            _texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _image] = {
+                spriteName: sprite_get_name(_sprite),
+                image:      _image,
+                
+                texturePointer: sprite_get_texture(_sprite, _image),
+                textureIndex:   _framesArray[_image].texture,
+                
+                left:   _left,
+                top:    _top,
+                right:  _right,
+                bottom: _bottom,
+                
+                u0: _uvs[0],
+                v0: _uvs[1],
+                u1: _uvs[2],
+                v1: _uvs[3],
+            };
             
-            u0: _uvs[0],
-            v0: _uvs[1],
-            u1: _uvs[2],
-            v1: _uvs[3],
-        };
+            ++_image;
+        }
         
-        ++_image;
+        ++_sprite;
     }
-    
-    ++_sprite;
 }
 
 
@@ -118,71 +109,3 @@ function __CardboardError()
 }
 
 
-
-function __CardboardBatchComplete()
-{
-    if (global.__cardboardBuildingModel)
-    {
-        global.__cardboardModel.__AddBatch();
-    }
-    else
-    {
-        CardboardBatchForceSubmit();
-    }
-}
-
-function __CardboardClassModel() constructor
-{
-    array = [];
-    
-    static __AddBatch = function()
-    {
-        if (!is_array(array)) return;
-        
-        //Don't do anything we know this batch is empty
-        if (global.__cardboardBatchTexturePointer == undefined) return;
-        
-        //End the batch we have
-        vertex_end(global.__cardboardBatchVertexBuffer);
-        
-        array_push(array, {
-            vertexBuffer:   global.__cardboardBatchVertexBuffer,
-            texturePointer: global.__cardboardBatchTexturePointer,
-        });
-        
-        //Clear the batch's texture state
-        global.__cardboardBatchTexturePointer = undefined;
-        global.__cardboardBatchTextureIndex   = undefined;
-        
-        //Then start the vertex buffer again!
-        global.__cardboardBatchVertexBuffer = vertex_create_buffer();
-        vertex_begin(global.__cardboardBatchVertexBuffer, global.__cardboardVertexFormat);
-    }
-    
-    static __Submit = function()
-    {
-        if (!is_array(array)) return;
-        
-        var _i = 0;
-        repeat(array_length(array))
-        {
-            var _batch = array[_i];
-            vertex_submit(_batch.vertexBuffer, pr_trianglelist, _batch.texturePointer);
-            ++_i;
-        }
-    }
-    
-    static __Destroy = function()
-    {
-        if (!is_array(array)) return;
-        
-        var _i = 0;
-        repeat(array_length(array))
-        {
-            vertex_delete_buffer(array[_i].vertexBuffer);
-            ++_i;
-        }
-        
-        array = undefined;
-    }
-}

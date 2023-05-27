@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CardboardBatchAutoSet",
+  "name": "CardboardBillboardYawGet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Batching",
-    "path": "folders/Cardboard/Batching.yy",
+    "name": "Sprites",
+    "path": "folders/Cardboard/Sprites.yy",
   },
 }

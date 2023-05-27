@@ -2,5 +2,7 @@
 
 function CardboardBatchAutoGet()
 {
-    return global.__cardboardAutoBatching;
+    __CARDBOARD_GLOBAL
+    
+    return _global.__autoBatching;
 }

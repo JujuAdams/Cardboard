@@ -16,10 +16,12 @@
 
 function CardboardRenderStateSet(_width, _height, _fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric = undefined, _alphaTestRef = 128)
 {
+    __CARDBOARD_GLOBAL
+    
     //Track matrices that are being used
-    global.__cardboardOldWorld      = matrix_get(matrix_world); 
-    global.__cardboardOldView       = matrix_get(matrix_view); 
-    global.__cardboardOldProjection = matrix_get(matrix_projection);
+    _global.__oldRenderStateMatrixWorld      = matrix_get(matrix_world); 
+    _global.__oldRenderStateMatrixView       = matrix_get(matrix_view); 
+    _global.__oldRenderStateMatrixProjection = matrix_get(matrix_projection);
     
     //Set up GPU state
     gpu_set_ztestenable(true);

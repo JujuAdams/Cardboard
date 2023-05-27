@@ -23,6 +23,8 @@
 
 function CardboardSpriteTriangle()
 {
+    __CARDBOARD_GLOBAL
+    
     var _sprite = argument[0];
     var _image  = argument[1];
     var _x1     = argument[2];
@@ -44,15 +46,15 @@ function CardboardSpriteTriangle()
     var _alpha  = argument[18];
     
     var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = global.__cardboardTexturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
+    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
     
     //Break the batch if we've swapped texture
-    if (_imageData.textureIndex != global.__cardboardBatchTextureIndex)
+    if (_imageData.textureIndex != _global.__batchTextureIndex)
     {
         __CardboardBatchComplete();
         
-        global.__cardboardBatchTexturePointer = _imageData.texturePointer;
-        global.__cardboardBatchTextureIndex   = _imageData.textureIndex;
+        _global.__batchTexturePointer = _imageData.texturePointer;
+        _global.__batchTextureIndex   = _imageData.textureIndex;
     }
     
     //Cache the UVs for speeeeeeeed
@@ -62,11 +64,11 @@ function CardboardSpriteTriangle()
     var _v1source = _imageData.v1;
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = global.__cardboardBatchVertexBuffer;
+    var _vertexBuffer = _global.__batchVertexBuffer;
     
     vertex_position_3d(_vertexBuffer, _x1, _y1, _z1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0source, _u1source, _u1prop), lerp(_v0source, _v1source, _v1prop));
     vertex_position_3d(_vertexBuffer, _x2, _y2, _z2); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0source, _u1source, _u2prop), lerp(_v0source, _v1source, _v2prop));
     vertex_position_3d(_vertexBuffer, _x3, _y3, _z3); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0source, _u1source, _u3prop), lerp(_v0source, _v1source, _v3prop));
     
-    if (!global.__cardboardAutoBatching && !global.__cardboardBuildingModel) CardboardBatchForceSubmit();
+    if (!_global.__autoBatching && !_global.__buildingModel) CardboardBatchForceSubmit();
 }

@@ -4,21 +4,26 @@
 
 function CardboardBatchForceSubmit()
 {
-    if (global.__cardboardBuildingModel) __CardboardError("Cannot force submit a batch whilst creating a model");
+    __CARDBOARD_GLOBAL
     
-    //Don't do anything we know this batch is empty
-    if (global.__cardboardBatchTexturePointer == undefined) return;
-    
-    //Submit the batch we have
-    vertex_end(global.__cardboardBatchVertexBuffer);
-    vertex_submit(global.__cardboardBatchVertexBuffer, pr_trianglelist, global.__cardboardBatchTexturePointer);
-    vertex_delete_buffer(global.__cardboardBatchVertexBuffer);
-    
-    //Clear the batch's texture state
-    global.__cardboardBatchTexturePointer = undefined;
-    global.__cardboardBatchTextureIndex   = undefined;
-    
-    //Then start the vertex buffer again!
-    global.__cardboardBatchVertexBuffer = vertex_create_buffer();
-    vertex_begin(global.__cardboardBatchVertexBuffer, global.__cardboardVertexFormat);
+    with(_global)
+    {
+        if (__buildingModel) __CardboardError("Cannot force submit a batch whilst creating a model");
+        
+        //Don't do anything we know this batch is empty
+        if (__batchTexturePointer == undefined) return;
+        
+        //Submit the batch we have
+        vertex_end(__batchVertexBuffer);
+        vertex_submit(__batchVertexBuffer, pr_trianglelist, __batchTexturePointer);
+        vertex_delete_buffer(__batchVertexBuffer);
+        
+        //Clear the batch's texture state
+        __batchTexturePointer = undefined;
+        __batchTextureIndex   = undefined;
+        
+        //Then start the vertex buffer again!
+        __batchVertexBuffer = vertex_create_buffer();
+        vertex_begin(__batchVertexBuffer, __vertexFormat);
+    }
 }

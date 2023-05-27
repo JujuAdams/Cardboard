@@ -6,14 +6,16 @@
 
 function CardboardModelEnd()
 {
-    if (!global.__cardboardBuildingModel) __CardboardError("No model has been created");
+    __CARDBOARD_GLOBAL
+    
+    if (!_global.__buildingModel) __CardboardError("No model has been created");
     
     __CardboardBatchComplete();
     
-    var _model = global.__cardboardModel;
+    var _model = _global.__model;
     
-    global.__cardboardBuildingModel = false;
-    global.__cardboardModel         = undefined;
+    _global.__buildingModel = false;
+    _global.__model         = undefined;
     
     return _model;
 }

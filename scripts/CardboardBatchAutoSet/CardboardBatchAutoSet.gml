@@ -4,5 +4,7 @@
 
 function CardboardBatchAutoSet(_state)
 {
-    global.__cardboardAutoBatching = _state;
+    __CARDBOARD_GLOBAL
+    
+    _global.__autoBatching = _state;
 }

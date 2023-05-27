@@ -8,8 +8,10 @@
 
 function CardboardBillboardYawSet(_fromX, _fromY, _toX, _toY)
 {
+    __CARDBOARD_GLOBAL
+    
     //FIXME - this is janky af lmao
-    global.__cardboardBillboardYaw    = point_direction(_fromX, _fromY, _toX, _toY) - 90;
-    global.__cardboardBillboardYawSin = dsin(-global.__cardboardBillboardYaw);
-    global.__cardboardBillboardYawCos = dcos(-global.__cardboardBillboardYaw);
+    _global.__billboardYaw    = point_direction(_fromX, _fromY, _toX, _toY) - 90;
+    _global.__billboardYawSin = dsin(-_global.__billboardYaw);
+    _global.__billboardYawCos = dcos(-_global.__billboardYaw);
 }

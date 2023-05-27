@@ -10,12 +10,14 @@
 
 function CardboardBatchNewVertexBuffer(_texture)
 {
-    if (global.__cardboardBuildingModel) __CardboardError("Cannot use CardboardBatchNewVertexBuffer() whilst a model is being built\nUse CardboardModelNewVertexBuffer() to instead");
+    __CARDBOARD_GLOBAL
+    
+    if (_global.__buildingModel) __CardboardError("Cannot use CardboardBatchNewVertexBuffer() whilst a model is being built\nUse CardboardModelNewVertexBuffer() to instead");
     
     CardboardBatchForceSubmit();
     
-    global.__cardboardBatchTexturePointer = _texture;
-    global.__cardboardBatchTextureIndex   = undefined;
+    _global.__batchTexturePointer = _texture;
+    _global.__batchTextureIndex   = undefined;
     
-    return global.__cardboardBatchVertexBuffer;
+    return _global.__batchVertexBuffer;
 }

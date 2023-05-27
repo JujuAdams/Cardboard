@@ -2,6 +2,8 @@
 
 function CardboardRenderStateReset()
 {
+    __CARDBOARD_GLOBAL
+    
     //If we've got a pending batch then submit that before resetting draw state
     CardboardBatchForceSubmit();
     
@@ -12,7 +14,7 @@ function CardboardRenderStateReset()
     gpu_set_alphatestenable(false);
     
     //Restore the old matrices we've been using
-    matrix_set(matrix_world,      global.__cardboardOldWorld);
-    matrix_set(matrix_view,       global.__cardboardOldView);
-    matrix_set(matrix_projection, global.__cardboardOldProjection);
+    matrix_set(matrix_world,      _global.__oldRenderStateMatrixWorld);
+    matrix_set(matrix_view,       _global.__oldRenderStateMatrixView);
+    matrix_set(matrix_projection, _global.__oldRenderStateMatrixProjection);
 }

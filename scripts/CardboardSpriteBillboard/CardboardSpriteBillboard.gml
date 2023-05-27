@@ -15,16 +15,18 @@
 
 function CardboardSpriteBillboard(_sprite, _image, _x, _y, _z)
 {
+    __CARDBOARD_GLOBAL
+    
     var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = global.__cardboardTexturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
+    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
     
     //Break the batch if we've swapped texture
-    if (_imageData.textureIndex != global.__cardboardBatchTextureIndex)
+    if (_imageData.textureIndex != _global.__batchTextureIndex)
     {
         __CardboardBatchComplete();
         
-        global.__cardboardBatchTexturePointer = _imageData.texturePointer;
-        global.__cardboardBatchTextureIndex   = _imageData.textureIndex;
+        _global.__batchTexturePointer = _imageData.texturePointer;
+        _global.__batchTextureIndex   = _imageData.textureIndex;
     }
     
     //Scale up the image
@@ -34,10 +36,10 @@ function CardboardSpriteBillboard(_sprite, _image, _x, _y, _z)
     var _b = _imageData.bottom;
     
     //Perform a simple 2D rotation
-    var _lX =  _l*global.__cardboardBillboardYawCos + _x;
-    var _lY =  _l*global.__cardboardBillboardYawSin + _y;
-    var _rX =  _r*global.__cardboardBillboardYawCos + _x;
-    var _rY =  _r*global.__cardboardBillboardYawSin + _y;
+    var _lX =  _l*_global.__billboardYawCos + _x;
+    var _lY =  _l*_global.__billboardYawSin + _y;
+    var _rX =  _r*_global.__billboardYawCos + _x;
+    var _rY =  _r*_global.__billboardYawSin + _y;
     var _tZ = -_t + _z;
     var _bZ = -_b + _z;
     
@@ -48,7 +50,7 @@ function CardboardSpriteBillboard(_sprite, _image, _x, _y, _z)
     var _v1 = _imageData.v1;
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = global.__cardboardBatchVertexBuffer;
+    var _vertexBuffer = _global.__batchVertexBuffer;
     
     vertex_position_3d(_vertexBuffer, _lX, _lY, _tZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, _u0, _v0);
     vertex_position_3d(_vertexBuffer, _rX, _rY, _tZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, _u1, _v0);
@@ -58,5 +60,5 @@ function CardboardSpriteBillboard(_sprite, _image, _x, _y, _z)
     vertex_position_3d(_vertexBuffer, _rX, _rY, _bZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, _u1, _v1);
     vertex_position_3d(_vertexBuffer, _lX, _lY, _bZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, _u0, _v1);
     
-    if (!global.__cardboardAutoBatching && !global.__cardboardBuildingModel) CardboardBatchForceSubmit();
+    if (!_global.__autoBatching && !_global.__buildingModel) CardboardBatchForceSubmit();
 }
