@@ -21,18 +21,8 @@
 function CardboardSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _color, _alpha)
 {
     __CARDBOARD_GLOBAL
-    
-    var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
-    
-    //Break the batch if we've swapped texture
-    if (_imageData.textureIndex != _global.__batchTextureIndex)
-    {
-        __CardboardBatchComplete();
-        
-        _global.__batchTexturePointer = _imageData.texturePointer;
-        _global.__batchTextureIndex   = _imageData.textureIndex;
-    }
+    __CARDBOARD_SPRITE_COMMON_TEXTURE
+    __CARDBOARD_SPRITE_COMMON_UVS
     
     //Scale up the image
     var _l = _xScale*_imageData.left;
@@ -64,12 +54,6 @@ function CardboardSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zSca
     var _lbY = _lbX0*_sin + _y;
     var _rbX = _rbX0*_cos + _x;
     var _rbY = _rbX0*_sin + _y;
-    
-    //Cache the UVs for speeeeeeeed
-    var _u0 = _imageData.u0;
-    var _v0 = _imageData.v0;
-    var _u1 = _imageData.u1;
-    var _v1 = _imageData.v1;
     
     //Add this sprite to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;

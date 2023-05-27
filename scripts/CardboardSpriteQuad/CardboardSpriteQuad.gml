@@ -22,24 +22,8 @@
 function CardboardSpriteQuad(_sprite, _image, _x1, _y1, _z1, _x2, _y2, _z2, _x3, _y3, _z3, _x4, _y4, _z4, _color, _alpha)
 {
     __CARDBOARD_GLOBAL
-    
-    var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
-    
-    //Break the batch if we've swapped texture
-    if (_imageData.textureIndex != _global.__batchTextureIndex)
-    {
-        __CardboardBatchComplete();
-        
-        _global.__batchTexturePointer = _imageData.texturePointer;
-        _global.__batchTextureIndex   = _imageData.textureIndex;
-    }
-    
-    //Cache the UVs for speeeeeeeed
-    var _u0 = _imageData.u0;
-    var _v0 = _imageData.v0;
-    var _u1 = _imageData.u1;
-    var _v1 = _imageData.v1;
+    __CARDBOARD_SPRITE_COMMON_TEXTURE
+    __CARDBOARD_SPRITE_COMMON_UVS
     
     //Add this sprite to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;

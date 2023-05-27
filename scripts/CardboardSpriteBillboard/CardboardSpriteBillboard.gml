@@ -16,20 +16,10 @@
 function CardboardSpriteBillboard(_sprite, _image, _x, _y, _z)
 {
     __CARDBOARD_GLOBAL
+    __CARDBOARD_SPRITE_COMMON_TEXTURE
+    __CARDBOARD_SPRITE_COMMON_UVS
     
-    var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
-    
-    //Break the batch if we've swapped texture
-    if (_imageData.textureIndex != _global.__batchTextureIndex)
-    {
-        __CardboardBatchComplete();
-        
-        _global.__batchTexturePointer = _imageData.texturePointer;
-        _global.__batchTextureIndex   = _imageData.textureIndex;
-    }
-    
-    //Scale up the image
+    //Cache the vertex positions
     var _l = _imageData.left;
     var _t = _imageData.top;
     var _r = _imageData.right;
@@ -42,12 +32,6 @@ function CardboardSpriteBillboard(_sprite, _image, _x, _y, _z)
     var _rY =  _r*_global.__billboardYawSin + _y;
     var _tZ = -_t + _z;
     var _bZ = -_b + _z;
-    
-    //Cache the UVs for speeeeeeeed
-    var _u0 = _imageData.u0;
-    var _v0 = _imageData.v0;
-    var _u1 = _imageData.u1;
-    var _v1 = _imageData.v1;
     
     //Add this sprite to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
