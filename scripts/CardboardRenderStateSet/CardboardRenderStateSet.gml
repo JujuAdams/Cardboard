@@ -23,6 +23,8 @@ function CardboardRenderStateSet(_width, _height, _fromX, _fromY, _fromZ, _toX, 
     _global.__oldRenderStateMatrixView       = matrix_get(matrix_view); 
     _global.__oldRenderStateMatrixProjection = matrix_get(matrix_projection);
     
+    _global.__alphaTestRef = _alphaTestRef;
+    
     //Set up GPU state
     gpu_set_ztestenable(true);
     gpu_set_zwriteenable(true);

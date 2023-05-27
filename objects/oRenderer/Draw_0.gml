@@ -5,7 +5,11 @@ CardboardRenderStateSet(1366, 768,
                         oCamera.camToX, oCamera.camToY, oCamera.camToZ,
                         axonometric);
 
-if (CARDBOARD_WRITE_NORMALS) shader_set(shdNormalTest);
+if (CARDBOARD_WRITE_NORMALS)
+{
+    shader_set(shdNormalTest);
+    shader_set_uniform_f(shader_get_uniform(shdNormalTest, "u_fAlphaTestRef"), __CardboardGlobal().__alphaTestRef/255);
+}
 
 //Draw the scene object
 oScene.Draw();

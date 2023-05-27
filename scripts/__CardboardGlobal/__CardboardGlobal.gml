@@ -9,6 +9,8 @@ function __CardboardGlobal()
             __surfaceHeight: 1080,
         },
         
+        __alphaTestRef: 128,
+        
         __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
         __oldRenderStateMatrixView:       matrix_get(matrix_view),
         __oldRenderStateMatrixProjection: matrix_get(matrix_projection),
