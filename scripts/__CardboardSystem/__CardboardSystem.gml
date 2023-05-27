@@ -16,11 +16,23 @@ function __CardboardInitialize()
     
     __CARDBOARD_GLOBAL
     
-    vertex_format_begin();
-    vertex_format_add_position_3d(); //12 bytes
-    vertex_format_add_color();       // 4 bytes
-    vertex_format_add_texcoord();    // 8 bytes
-    _global.__vertexFormat = vertex_format_end();
+    if (CARDBOARD_WRITE_NORMALS)
+    {
+        vertex_format_begin();
+        vertex_format_add_position_3d(); //12 bytes
+        vertex_format_add_normal();      //12 bytes
+        vertex_format_add_color();       // 4 bytes
+        vertex_format_add_texcoord();    // 8 bytes
+        _global.__vertexFormat = vertex_format_end();
+    }
+    else
+    {
+        vertex_format_begin();
+        vertex_format_add_position_3d(); //12 bytes
+        vertex_format_add_color();       // 4 bytes
+        vertex_format_add_texcoord();    // 8 bytes
+        _global.__vertexFormat = vertex_format_end();
+    }
     
     vertex_begin(_global.__batchVertexBuffer, _global.__vertexFormat);
     

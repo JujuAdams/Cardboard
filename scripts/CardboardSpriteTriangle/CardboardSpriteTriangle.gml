@@ -51,9 +51,16 @@ function CardboardSpriteTriangle()
     //Add this sprite to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
     
-    vertex_position_3d(_vertexBuffer, _x1, _y1, _z1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u1prop), lerp(_v0, _v1, _v1prop));
-    vertex_position_3d(_vertexBuffer, _x2, _y2, _z2); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u2prop), lerp(_v0, _v1, _v2prop));
-    vertex_position_3d(_vertexBuffer, _x3, _y3, _z3); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u3prop), lerp(_v0, _v1, _v3prop));
+    if (CARDBOARD_WRITE_NORMALS)
+    {
+        
+    }
+    else
+    {
+        vertex_position_3d(_vertexBuffer, _x1, _y1, _z1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u1prop), lerp(_v0, _v1, _v1prop));
+        vertex_position_3d(_vertexBuffer, _x2, _y2, _z2); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u2prop), lerp(_v0, _v1, _v2prop));
+        vertex_position_3d(_vertexBuffer, _x3, _y3, _z3); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u3prop), lerp(_v0, _v1, _v3prop));
+    }
     
     __CARDBOARD_FORCE_SUBMIT_CONDITION
 }
