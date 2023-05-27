@@ -1,3 +1,5 @@
+/// Ends Cardboard's forward lighting shader
+
 function CardboardLightingEnd()
 {
     __CARDBOARD_GLOBAL

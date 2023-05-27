@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Billboard",
-    "path": "folders/Cardboard/Billboard.yy",
+    "name": "Billboard Manual Control",
+    "path": "folders/Cardboard/Billboard Manual Control.yy",
   },
 }

@@ -1,8 +1,15 @@
 /// Starts a new vertex buffer inside Cardboard's batching system
 /// 
 /// This vertex buffer can be used to add your own vertex data to the batch
-/// Its vertex format is as follows:
+//
+/// When CARDBOARD_WRITE_NORMALS is set to <false>, the vertex format is as follows:
 ///  - vertex_format_add_position_3d
+///  - vertex_format_add_color
+///  - vertex_format_add_texcoord
+//
+/// When CARDBOARD_WRITE_NORMALS is set to <true>, the vertex format is as follows:
+///  - vertex_format_add_position_3d
+///  - vertex_format_add_normal
 ///  - vertex_format_add_color
 ///  - vertex_format_add_texcoord
 /// 

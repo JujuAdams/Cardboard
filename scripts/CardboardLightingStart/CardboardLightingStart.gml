@@ -1,3 +1,5 @@
+/// Starts Cardboard's native forward lighting shader
+
 function CardboardLightingStart()
 {
     __CARDBOARD_GLOBAL
