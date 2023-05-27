@@ -3,7 +3,7 @@
 /// This function treats a z angle of 0 degrees as facing a camera pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)
 ///
 /// N.B. Particle system drawing cannot be baked into models, and this function draws the particle system immediately
-///      This function doesn't write normals despite the value of CARDBOARD_WRITE_NORMALS
+///      Drawing particles is not compatible with lighting, nor does it write normals
 /// 
 /// @param ps      Particle system to draw
 /// @param x       x-coordinate to draw the particle system at

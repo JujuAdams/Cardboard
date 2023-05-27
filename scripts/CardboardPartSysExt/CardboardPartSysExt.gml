@@ -3,7 +3,7 @@
 /// This function treats a z angle of 0 degrees as facing a camera pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)
 ///
 /// N.B. Particle system drawing cannot be baked into models, and this function draws the particle system immediately
-///      This function doesn't write normals despite the value of CARDBOARD_WRITE_NORMALS
+///      Drawing particles is not compatible with lighting, nor does it write normals
 /// 
 /// @param ps      Particle system to draw
 /// @param x       x-coordinate to draw the particle system at
@@ -18,6 +18,7 @@ function CardboardPartSysExt(_pSystem, _x, _y, _z, _xScale, _zScale, _yAngle, _z
 {
     __CARDBOARD_GLOBAL
     __CARDBOARD_PARTICLE_SYSTEM_COMMON_TEXTURE
+    __CARDBOARD_PARTICLE_SYSTEM_DISABLE_LIGHTING
     
     var _oldWorldMatrix = matrix_get(matrix_world);
     
@@ -29,4 +30,6 @@ function CardboardPartSysExt(_pSystem, _x, _y, _z, _xScale, _zScale, _yAngle, _z
     matrix_set(matrix_world, _matrix);
     part_system_drawit(_pSystem);
     matrix_set(matrix_world, _oldWorldMatrix);
+    
+    __CARDBOARD_PARTICLE_SYSTEM_REENABLE_LIGHTING
 }
