@@ -85,5 +85,5 @@ function CardboardSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAng
         vertex_position_3d(_vertexBuffer, _lbX, _lbY, _lbZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
     }
     
-    if (!_global.__autoBatching && !_global.__buildingModel) CardboardBatchForceSubmit();
+    __CARDBOARD_FORCE_SUBMIT_CONDITION
 }

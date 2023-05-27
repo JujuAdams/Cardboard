@@ -50,5 +50,5 @@ function CardboardSpriteFloorExt(_sprite, _image, _x, _y, _z, _xScale, _yScale, 
     vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1);
     vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u0, _v1);
     
-    if (!_global.__autoBatching && !_global.__buildingModel) CardboardBatchForceSubmit();
+    __CARDBOARD_FORCE_SUBMIT_CONDITION
 }

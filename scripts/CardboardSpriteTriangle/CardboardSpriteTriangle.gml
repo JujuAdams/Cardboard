@@ -55,5 +55,5 @@ function CardboardSpriteTriangle()
     vertex_position_3d(_vertexBuffer, _x2, _y2, _z2); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u2prop), lerp(_v0, _v1, _v2prop));
     vertex_position_3d(_vertexBuffer, _x3, _y3, _z3); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, lerp(_u0, _u1, _u3prop), lerp(_v0, _v1, _v3prop));
     
-    if (!_global.__autoBatching && !_global.__buildingModel) CardboardBatchForceSubmit();
+    __CARDBOARD_FORCE_SUBMIT_CONDITION
 }
