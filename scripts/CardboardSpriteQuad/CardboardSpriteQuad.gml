@@ -30,12 +30,18 @@ function CardboardSpriteQuad(_sprite, _image, _x1, _y1, _z1, _x2, _y2, _z2, _x3,
     
     if (CARDBOARD_WRITE_NORMALS)
     {
-        var _normalX = _global.__billboardYawSin;
-        var _normalY = _global.__billboardYawCos;
-        var _normalZ = 0;
+        //Cross product
+        var _normalX = (_y2 - _y1)*(_z3 - _z1) - (_z2 - _z1)*(_y3 - _y1);
+        var _normalY = (_z2 - _z1)*(_x3 - _x1) - (_x2 - _x1)*(_z3 - _z1);
+        var _normalZ = (_x2 - _x1)*(_y3 - _y1) - (_y2 - _y1)*(_x3 - _x1);
         
         if (_global.__doubleSided)
         {
+            var _invLength = 1 / point_distance_3d(0, 0, 0, _normalX, _normalY, _normalZ);
+            _normalX *= _invLength;
+            _normalY *= _invLength;
+            _normalZ *= _invLength;
+            
             var _dX = CARDBOARD_DOUBLE_SIDED_SPACING*_normalX;
             var _dY = CARDBOARD_DOUBLE_SIDED_SPACING*_normalY;
             var _dZ = CARDBOARD_DOUBLE_SIDED_SPACING*_normalZ;
