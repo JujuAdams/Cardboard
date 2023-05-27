@@ -1,1 +1,1 @@
-#macro CARDBOARD_WRITE_NORMALS  false
+#macro CARDBOARD_WRITE_NORMALS  true
