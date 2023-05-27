@@ -29,7 +29,7 @@ function CardboardRenderStateSet(_width, _height, _fromX, _fromY, _fromZ, _toX, 
     //Set up GPU state
     gpu_set_ztestenable(true);
     gpu_set_zwriteenable(true);
-    gpu_set_cullmode((CARDBOARD_WRITE_NORMALS && _global.__doubleSided)? cull_clockwise : cull_noculling);
+    gpu_set_cullmode((CARDBOARD_WRITE_NORMALS && CARDBOARD_BACKFACE_CULLING)? cull_clockwise : cull_noculling);
     gpu_set_alphatestenable(true);
     gpu_set_alphatestref(_alphaTestRef);
     
