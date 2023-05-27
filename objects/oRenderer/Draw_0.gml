@@ -5,8 +5,12 @@ CardboardRenderStateSet(1366, 768,
                         oCamera.camToX, oCamera.camToY, oCamera.camToZ,
                         axonometric);
 
+if (CARDBOARD_WRITE_NORMALS) shader_set(shdNormalTest);
+
 //Draw the scene object
 oScene.Draw();
+
+if (CARDBOARD_WRITE_NORMALS) shader_reset();
 
 //Draw a lil triangle at the camera's "to" position
 CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
