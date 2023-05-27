@@ -23,6 +23,7 @@ function CardboardRenderStateSet(_width, _height, _fromX, _fromY, _fromZ, _toX, 
     _global.__oldRenderStateMatrixView       = matrix_get(matrix_view); 
     _global.__oldRenderStateMatrixProjection = matrix_get(matrix_projection);
     
+    //Store the alpha test value for use in other shaders
     _global.__alphaTestRef = _alphaTestRef;
     
     //Set up GPU state
