@@ -7,17 +7,18 @@ CardboardRenderStateSet(1366, 768,
 
 if (CARDBOARD_WRITE_NORMALS)
 {
-    shader_set(shdNormalTest);
-    shader_set_uniform_f(shader_get_uniform(shdNormalTest, "u_fAlphaTestRef"), __CardboardGlobal().__alphaTestRef/255);
+    CardboardLightingSet(0, 300, 200, 1000, c_yellow);
+    CardboardLightingStart();
 }
 
 //Draw the scene object
+
 oScene.Draw();
-
-if (CARDBOARD_WRITE_NORMALS) shader_reset();
-
 //Draw a lil triangle at the camera's "to" position
 CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+
+if (CARDBOARD_WRITE_NORMALS) CardboardLightingEnd();
+
 
 //Reset render state
 CardboardRenderStateReset();

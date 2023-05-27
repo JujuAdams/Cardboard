@@ -5,6 +5,12 @@ function __CardboardGlobal()
     static _struct = {
         __lightingStarted: false,
         
+        __lightingX:      0,
+        __lightingY:      0,
+        __lightingZ:      0,
+        __lightingRadius: 0,
+        __lightingColor:  c_black,
+        
         __alphaTestRef: 128,
         
         __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
