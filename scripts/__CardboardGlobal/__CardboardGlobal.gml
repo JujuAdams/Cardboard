@@ -3,6 +3,8 @@
 function __CardboardGlobal()
 {
     static _struct = {
+        __doubleSided: true,
+        
         __lightingStarted: false,
         
         __lightingX:      0,
