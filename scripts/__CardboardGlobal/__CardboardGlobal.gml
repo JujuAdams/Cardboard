@@ -3,11 +3,7 @@
 function __CardboardGlobal()
 {
     static _struct = {
-        __lighting: {
-            __started:       false,
-            __surfaceWidth:  1920,
-            __surfaceHeight: 1080,
-        },
+        __lightingStarted: false,
         
         __alphaTestRef: 128,
         

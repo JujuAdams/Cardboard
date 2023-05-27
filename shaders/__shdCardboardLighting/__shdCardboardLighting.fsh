@@ -6,8 +6,6 @@ uniform float u_fAlphaTestRef;
 
 void main()
 {
-    //gl_FragColor = vec4(0.5 + 0.5*v_vNormal, texture2D(gm_BaseTexture, v_vTexcoord).a);
-    
     gl_FragColor = v_vColour*texture2D(gm_BaseTexture, v_vTexcoord);
     if (u_fAlphaTestRef > gl_FragColor.a) discard;
     
