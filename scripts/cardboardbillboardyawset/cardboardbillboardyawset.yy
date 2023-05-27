@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Cardboard/Sprites.yy",
+    "name": "Billboard",
+    "path": "folders/Cardboard/Billboard.yy",
   },
 }
