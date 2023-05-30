@@ -13,11 +13,16 @@ repeat(2)
     {
         case 0:
             CardboardLightShadow(0, c_yellow, 300, 450, 300, -150, 150, 0, 45, 10, 1000);
-            CardboardLightShadowStart(0);
+            CardboardLightShadow(1, c_yellow, 0, 0, 600, 0, -150, 0, 45, 10, 1000);
             
+            CardboardLightShadowStart(0);
             oScene.Draw();
             CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+            CardboardLightShadowEnd();
             
+            CardboardLightShadowStart(1);
+            oScene.Draw();
+            CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
             CardboardLightShadowEnd();
         break;
         
@@ -60,12 +65,12 @@ repeat(2)
 
 if (keyboard_check(ord("L")))
 {
-    CardboardLightShadowDrawDebug(0, 0, 0);
+    CardboardLightShadowDrawDebug(1, 0, 0);
 }
 
 if (keyboard_check(ord("O")))
 {
     shader_set(__shdCardboardDepthTest);
-    CardboardLightShadowDrawDebug(0, 0, 0);
+    CardboardLightShadowDrawDebug(1, 0, 0);
     shader_reset();
 }

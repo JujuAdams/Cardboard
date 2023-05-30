@@ -1,4 +1,6 @@
 #define LIGHT_COUNT  4
+#define BIAS_MAX     0.01
+#define BIAS_COEFF   0.005
 
 varying vec3 v_vPosition;
 varying vec3 v_vNormal;
@@ -11,10 +13,12 @@ uniform vec3      u_vAmbient;
 uniform float     u_fAlphaTestRef;
 uniform vec4      u_vPosRadArray[LIGHT_COUNT];
 uniform vec3      u_vColorArray[LIGHT_COUNT];
+
 uniform sampler2D u_sLightDepth0;
 uniform vec4      u_vLightPos0;
 uniform vec3      u_vLightColor0;
 uniform vec2      u_vLightZ0;
+
 uniform sampler2D u_sLightDepth1;
 uniform vec4      u_vLightPos1;
 uniform vec2      u_vLightZ1;
@@ -62,29 +66,71 @@ vec3 AccumulateShadowMappedLights()
     float foundDepth;
     vec3  dir;
     float factor;
-    float bias;
+    float depthBias;
     
-    texCoord = 0.5 + 0.5*vec2(v_vLightPos0.x, -v_vLightPos0.y) / v_vLightPos0.w;
     
+    
+    //Light 0
+    texCoord   = 0.5 + 0.5*vec2(v_vLightPos0.x, -v_vLightPos0.y) / v_vLightPos0.w;
     calcDepth  = (v_vLightPos0.z - u_vLightZ0.x) / (u_vLightZ0.y - u_vLightZ0.x);
     foundDepth = RGBToDepth(texture2D(u_sLightDepth0, texCoord).rgb);
+    dir        = u_vLightPos0.xyz - v_vPosition;
     
-    dir = u_vLightPos0.xyz - v_vPosition;
+    //Adjust for normals
     factor = max(dot(normalize(v_vNormal), normalize(dir)), 0.0);
     
-    bias = clamp(0.005*tan(acos(factor)), 0.0, 0.01);
+    //Calculate the bias for the depth comparison
+    depthBias = clamp(BIAS_COEFF*tan(acos(factor)), 0.0, BIAS_MAX);
     
-    factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
+    //Perform the distance comparison
+    factor *= step(calcDepth, foundDepth + depthBias);
     
-    if ((texCoord.x >= 0.0)
-    &&  (texCoord.x <= 1.0)
-    &&  (texCoord.y >= 0.0)
-    &&  (texCoord.y <= 1.0)
-    &&  (calcDepth  <  foundDepth + bias)
-    &&  (2.0*length(texCoord.xy - 0.5) <= 1.0))
-    {
-        final += factor*u_vLightColor0;
-    }
+    //Adjust for distance from the light source
+    //factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
+    
+    //Clip the limits of the surface
+    factor *= step(0.0, texCoord.x);
+    factor *= step(texCoord.x, 1.0);
+    factor *= step(0.0, texCoord.y);
+    factor *= step(texCoord.y, 1.0);
+    
+    //FIXME - Placeholder circular light
+    factor *= step(2.0*length(texCoord.xy - 0.5), 1.0);
+    
+    final += factor*u_vLightColor0;
+    
+    
+    
+    //Light 1
+    texCoord   = 0.5 + 0.5*vec2(v_vLightPos1.x, -v_vLightPos1.y) / v_vLightPos1.w;
+    calcDepth  = (v_vLightPos1.z - u_vLightZ1.x) / (u_vLightZ1.y - u_vLightZ1.x);
+    foundDepth = RGBToDepth(texture2D(u_sLightDepth1, texCoord).rgb);
+    dir        = u_vLightPos0.xyz - v_vPosition;
+    
+    //Adjust for normals
+    factor = max(dot(normalize(v_vNormal), normalize(dir)), 0.0);
+    
+    //Calculate the bias for the depth comparison
+    depthBias = clamp(BIAS_COEFF*tan(acos(factor)), 0.0, BIAS_MAX);
+    
+    //Perform the distance comparison
+    factor *= step(calcDepth, foundDepth + depthBias);
+    
+    //Adjust for distance from the light source
+    //factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
+    
+    //Clip the limits of the surface
+    factor *= step(0.0, texCoord.x);
+    factor *= step(texCoord.x, 1.0);
+    factor *= step(0.0, texCoord.y);
+    factor *= step(texCoord.y, 1.0);
+    
+    //FIXME - Placeholder circular light
+    factor *= step(2.0*length(texCoord.xy - 0.5), 1.0);
+    
+    final += factor*u_vLightColor1;
+    
+    
     
     return final;
 }
