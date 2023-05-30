@@ -36,7 +36,7 @@ function CardboardLightShadowStart(_index, _setShader = true)
         
         gpu_set_ztestenable(true);
         gpu_set_zwriteenable(true);
-        gpu_set_cullmode(cull_noculling);
+        gpu_set_cullmode(cull_counterclockwise);
         
         if (_setShader)
         {
