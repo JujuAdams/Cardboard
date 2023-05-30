@@ -4,9 +4,10 @@ function CardboardLightingStart()
 {
     __CARDBOARD_GLOBAL
     
-    static _u_fAlphaTestRef   = shader_get_uniform(__shdCardboardLighting, "u_fAlphaTestRef");
-    static _u_vPositionRadius = shader_get_uniform(__shdCardboardLighting, "u_vPositionRadius");
-    static _u_vColor          = shader_get_uniform(__shdCardboardLighting, "u_vColor");
+    static _u_vAmbient      = shader_get_uniform(__shdCardboardLighting, "u_vAmbient");
+    static _u_fAlphaTestRef = shader_get_uniform(__shdCardboardLighting, "u_fAlphaTestRef");
+    static _u_vPosRadArray  = shader_get_uniform(__shdCardboardLighting, "u_vPosRadArray");
+    static _u_vColorArray   = shader_get_uniform(__shdCardboardLighting, "u_vColorArray");
     
     if (!CARDBOARD_WRITE_NORMALS)
     {
@@ -24,9 +25,12 @@ function CardboardLightingStart()
             __lightingStarted = true;
             
             shader_set(__shdCardboardLighting);
-            shader_set_uniform_f(_u_fAlphaTestRef,   __alphaTestRef/255);
-            shader_set_uniform_f(_u_vPositionRadius, __lightingX, __lightingY, __lightingZ, __lightingRadius);
-            shader_set_uniform_f(_u_vColor,          color_get_red(__lightingColor)/255, color_get_green(__lightingColor)/255, color_get_blue(__lightingColor)/255);
+            shader_set_uniform_f(_u_vAmbient, colour_get_red(  __lightingAmbience)/255,
+                                              colour_get_green(__lightingAmbience)/255,
+                                              colour_get_blue( __lightingAmbience)/255);
+            shader_set_uniform_f(_u_fAlphaTestRef,      __alphaTestRef/255);
+            shader_set_uniform_f_array(_u_vPosRadArray, __lightingPosRadArray);
+            shader_set_uniform_f_array(_u_vColorArray,  __lightingColorArray);
         }
     }
 }

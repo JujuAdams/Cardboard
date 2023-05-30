@@ -7,11 +7,9 @@ function __CardboardGlobal()
         
         __lightingStarted: false,
         
-        __lightingX:      0,
-        __lightingY:      0,
-        __lightingZ:      0,
-        __lightingRadius: 0,
-        __lightingColor:  c_black,
+        __lightingAmbience:    c_white,
+        __lightingPosRadArray: array_create(4*__CARDBOARD_LIGHT_COUNT, 0),
+        __lightingColorArray:  array_create(3*__CARDBOARD_LIGHT_COUNT, 0),
         
         __alphaTestRef: 128,
         

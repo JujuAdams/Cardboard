@@ -2,6 +2,8 @@
 #macro __CARDBOARD_DATE        "2023-05-07"
 #macro __CARDBOARD_MAX_IMAGES  1024
 
+#macro __CARDBOARD_LIGHT_COUNT  4
+
 
 
 __CardboardInitialize();
