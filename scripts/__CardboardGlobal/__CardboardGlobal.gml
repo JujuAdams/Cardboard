@@ -9,7 +9,10 @@ function __CardboardGlobal()
         __lightingPosRadArray: array_create(4*__CARDBOARD_LIGHT_COUNT, 0),
         __lightingColorArray:  array_create(3*__CARDBOARD_LIGHT_COUNT, 0),
         
-        __alphaTestRef: 128,
+        __lightingShadowCurrent: undefined,
+        __lightingShadowArray: [new __CardboardClassShadowMap(), new __CardboardClassShadowMap()],
+        
+        __alphaTestRef: 0.5,
         
         __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
         __oldRenderStateMatrixView:       matrix_get(matrix_view),

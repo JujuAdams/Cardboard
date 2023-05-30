@@ -7,7 +7,7 @@
 /// @param radius  Radius of the light
 /// @param color   Color of the light
 
-function CardboardLightPointSet(_index, _x, _y, _z, _radius, _color)
+function CardboardLightPoint(_index, _x, _y, _z, _radius, _color)
 {
     __CARDBOARD_GLOBAL
     

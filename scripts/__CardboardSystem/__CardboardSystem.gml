@@ -4,7 +4,8 @@
 #macro __CARDBOARD_Z_NEAR      -3000
 #macro __CARDBOARD_Z_FAR       3000
 
-#macro __CARDBOARD_LIGHT_COUNT  4
+#macro __CARDBOARD_LIGHT_COUNT   4
+#macro __CARDBOARD_SHADOW_COUNT  2
 
 
 
@@ -83,4 +84,6 @@ function __CardboardInitialize()
         
         ++_sprite;
     }
+    
+    time_source_start(time_source_create(time_source_global, 1, time_source_units_frames, __CardboardTick, [], -1));
 }

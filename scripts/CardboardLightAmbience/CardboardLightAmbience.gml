@@ -2,7 +2,7 @@
 /// 
 /// @param color   Color of the ambient lighting
 
-function CardboardLightAmbienceSet(_color)
+function CardboardLightAmbience(_color)
 {
     __CARDBOARD_GLOBAL
     

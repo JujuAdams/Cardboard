@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CardboardLightPointSet",
+  "name": "CardboardLightShadow",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
