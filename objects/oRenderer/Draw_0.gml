@@ -3,9 +3,6 @@ if (not surface_exists(surfaceDepth))
     surfaceDepth = surface_create(1366, 768);
 }
 
-var _global = __CardboardGlobal();
-var _surface = _global.__lightingShadowArray[0].__surface;
-
 var _i = 0;
 repeat(2)
 {
@@ -65,7 +62,7 @@ repeat(2)
 
 if (keyboard_check(ord("L")))
 {
-    CardboardLightShadowDrawDebug(1, 0, 0);
+    CardboardLightShadowDrawDebug(0, 0, 0);
 }
 
 if (keyboard_check(ord("O")))
