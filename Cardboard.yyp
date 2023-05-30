@@ -53,6 +53,7 @@
     {"id":{"name":"CardboardSpriteBillboard","path":"scripts/CardboardSpriteBillboard/CardboardSpriteBillboard.yy",},"order":3,},
     {"id":{"name":"sprWhitePixel","path":"sprites/sprWhitePixel/sprWhitePixel.yy",},"order":3,},
     {"id":{"name":"CardboardRenderStateReset","path":"scripts/CardboardRenderStateReset/CardboardRenderStateReset.yy",},"order":1,},
+    {"id":{"name":"__shdCardboardDepth","path":"shaders/__shdCardboardDepth/__shdCardboardDepth.yy",},"order":8,},
     {"id":{"name":"__CardboardSpriteCommon","path":"scripts/__CardboardSpriteCommon/__CardboardSpriteCommon.yy",},"order":0,},
     {"id":{"name":"oScene","path":"objects/oScene/oScene.yy",},"order":8,},
     {"id":{"name":"CardboardBillboardYawReset","path":"scripts/CardboardBillboardYawReset/CardboardBillboardYawReset.yy",},"order":2,},
