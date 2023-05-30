@@ -21,12 +21,20 @@ void main()
     float lightFactor;
     for(int i = 0; i < LIGHT_COUNT; i++)
     {
-        lightDir = u_vPosRadArray[i].xyz - v_vPosition;
-        
-        lightFactor = max(dot(normalize(v_vNormal), normalize(lightDir)), 0.0);
-        lightFactor *= max(0.0, 1.0 - (length(lightDir) / u_vPosRadArray[i].w));
-        
-        lightFinal += u_vColorArray[i]*lightFactor;
+        if (u_vPosRadArray[i].w > 0.0)
+        {
+            lightDir = u_vPosRadArray[i].xyz - v_vPosition;
+            
+            lightFactor = max(dot(normalize(v_vNormal), normalize(lightDir)), 0.0);
+            lightFactor *= max(0.0, 1.0 - (length(lightDir) / u_vPosRadArray[i].w));
+            
+            lightFinal += u_vColorArray[i]*lightFactor;
+        }
+        else
+        {
+            lightFactor = max(dot(normalize(v_vNormal), -normalize(u_vPosRadArray[i].xyz)), 0.0);
+            lightFinal += u_vColorArray[i]*lightFactor;
+        }
     }
     
     gl_FragColor.rgb *= lightFinal;

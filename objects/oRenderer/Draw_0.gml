@@ -3,7 +3,7 @@ if (not surface_exists(surfaceDepth))
     surfaceDepth = surface_create(1366, 768);
 }
 
-var _lightX = lerp(0, 100, 0.5 + 0.5*dsin(0.1*current_time));
+var _lightX = 0; //lerp(0, 100, 0.5 + 0.5*dsin(0.1*current_time));
 var _lightRadius = 1000;
 
 var _lightMatrixView = matrix_build_lookat( 300 + _lightX, 450, 300,
@@ -15,7 +15,7 @@ var _lightMatrixProj = matrix_build_projection_perspective_fov(90, 1366/768, 100
 var _lightMatrix = matrix_multiply(_lightMatrixView, _lightMatrixProj);
 
 var _i = 0;
-repeat(3)
+repeat(2)
 {
     switch(_i)
     {
@@ -51,7 +51,6 @@ repeat(3)
         break;
         
         case 1:
-            /*
             //Start Cardboard's quick start renderer
             //You don't have to use this function but it does make things a lot easier
             CardboardRenderStateSet(1366, 768,
@@ -62,9 +61,10 @@ repeat(3)
             if (CARDBOARD_WRITE_NORMALS)
             {
                 CardboardLightingAmbienceSet(c_dkgray);
-                CardboardLightingPointSet(0, -240,  400, 300, 2200, c_yellow);
-                CardboardLightingPointSet(1,  240,  400, 300, 2200, c_white);
-                CardboardLightingPointSet(2,    0, -400, 300, 2200, c_red);
+                CardboardLightingDirectionalSet(0, 1, 1, -2, c_white);
+                //CardboardLightingPointSet(0, -240,  400, 300, 2200, c_yellow);
+                //CardboardLightingPointSet(1,  240,  400, 300, 2200, c_white);
+                //CardboardLightingPointSet(2,    0, -400, 300, 2200, c_red);
                 CardboardLightingStart();
             }
             
@@ -81,7 +81,6 @@ repeat(3)
             
             //Reset render state
             CardboardRenderStateReset();
-            */
         break;
         
         case 2:
