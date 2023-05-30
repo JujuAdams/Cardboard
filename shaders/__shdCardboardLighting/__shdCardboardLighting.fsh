@@ -85,7 +85,8 @@ vec3 AccumulateShadowMappedLights()
     factor = step(calcDepth, foundDepth + depthBias);
     
     //Adjust for normals
-    factor *= dotProduct;
+    //factor *= dotProduct;
+    factor *= step(0.01, dotProduct);
     
     //Adjust for distance from the light source
     factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
@@ -117,7 +118,8 @@ vec3 AccumulateShadowMappedLights()
     factor = step(calcDepth, foundDepth + depthBias);
     
     //Adjust for normals
-    factor *= dotProduct;
+    //factor *= dotProduct;
+    factor *= step(0.01, dotProduct);
     
     //Adjust for distance from the light source
     factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos1.w));
