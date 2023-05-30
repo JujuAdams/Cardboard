@@ -107,7 +107,7 @@ vec3 AccumulateShadowMappedLights()
     texCoord   = 0.5 + 0.5*vec2(v_vLightPos1.x, -v_vLightPos1.y) / v_vLightPos1.w;
     calcDepth  = (v_vLightPos1.z - u_vLightZ1.x) / (u_vLightZ1.y - u_vLightZ1.x);
     foundDepth = RGBToDepth(texture2D(u_sLightDepth1, texCoord).rgb);
-    dir        = u_vLightPos0.xyz - v_vPosition;
+    dir        = u_vLightPos1.xyz - v_vPosition;
     
     //Adjust for normals
     dotProduct = max(dot(normalize(v_vNormal), normalize(dir)), 0.0);
@@ -120,7 +120,7 @@ vec3 AccumulateShadowMappedLights()
     factor *= dotProduct;
     
     //Adjust for distance from the light source
-    factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
+    factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos1.w));
     
     //Clip the limits of the surface
     factor *= step(0.0, texCoord.x);
