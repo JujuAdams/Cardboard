@@ -10,25 +10,26 @@ var _lightMatrixView = matrix_build_lookat( 300 + _lightX, 450, 300,
                                            -150,           150,   0,
                                               0,             0,   1);
 
-var _lightMatrixProj = matrix_build_projection_perspective_fov(90, 1366/768, 100, _lightRadius);
+var _lightMatrixProj = matrix_build_projection_perspective_fov(90, 1366/768, 10, _lightRadius);
 
 var _lightMatrix = matrix_multiply(_lightMatrixView, _lightMatrixProj);
 
 var _i = 0;
-repeat(2)
+repeat(3)
 {
     switch(_i)
     {
         case 0:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
-            gpu_set_cullmode(cull_noculling);
+            gpu_set_cullmode(cull_counterclockwise);
             
             surface_set_target(surfaceDepth);
             draw_clear(c_white);
             
             shader_set(__shdCardboardDepth);
             shader_set_uniform_f(shader_get_uniform(__shdCardboardDepth, "u_fAlphaTestRef"), 0.5);
+            shader_set_uniform_f(shader_get_uniform(__shdCardboardDepth, "u_vZ"), 10, _lightRadius);
             
             var _oldView = matrix_get(matrix_view);
             var _oldProj = matrix_get(matrix_projection);
@@ -60,12 +61,12 @@ repeat(2)
             
             if (CARDBOARD_WRITE_NORMALS)
             {
-                CardboardLightingAmbienceSet(c_dkgray);
-                CardboardLightingDirectionalSet(0, 1, 1, -2, c_white);
-                //CardboardLightingPointSet(0, -240,  400, 300, 2200, c_yellow);
-                //CardboardLightingPointSet(1,  240,  400, 300, 2200, c_white);
-                //CardboardLightingPointSet(2,    0, -400, 300, 2200, c_red);
-                CardboardLightingShaderSet();
+                CardboardLightAmbienceSet(c_dkgray);
+                CardboardLightDirectionalSet(0, 1, 1, -2, c_white);
+                //CardboardLightPointSet(0, -240,  400, 300, 2200, c_yellow);
+                //CardboardLightPointSet(1,  240,  400, 300, 2200, c_white);
+                //CardboardLightPointSet(2,    0, -400, 300, 2200, c_red);
+                CardboardLightShaderSet();
             }
             
             //Draw the scene object
@@ -93,6 +94,7 @@ repeat(2)
             shader_set_uniform_matrix_array(shader_get_uniform(__shdCardboardTest, "u_mLightViewProj"), _lightMatrix);
             shader_set_uniform_f(shader_get_uniform(__shdCardboardTest, "u_vLightPos"), 300 + _lightX, 450, 300, _lightRadius);
             shader_set_uniform_f(shader_get_uniform(__shdCardboardTest, "u_fAlphaTestRef"), 0.5);
+            shader_set_uniform_f(shader_get_uniform(__shdCardboardTest, "u_vZ"), 10, _lightRadius);
             texture_set_stage(shader_get_sampler_index(__shdCardboardTest, "u_sLightDepth"), surface_get_texture(surfaceDepth));
             
             oScene.Draw();

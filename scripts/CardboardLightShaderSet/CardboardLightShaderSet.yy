@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CardboardLightingPointSet",
+  "name": "CardboardLightShaderSet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

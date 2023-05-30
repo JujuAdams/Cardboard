@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CardboardLightingShaderSet",
+  "name": "CardboardLightAmbienceSet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

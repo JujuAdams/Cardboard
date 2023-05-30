@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CardboardLightingDirectionalSet",
+  "name": "CardboardLightDirectionalSet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

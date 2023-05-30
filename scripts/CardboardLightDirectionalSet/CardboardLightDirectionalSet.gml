@@ -6,7 +6,7 @@
 /// @param z       z component of the light's direction vector
 /// @param color   Color of the light
 
-function CardboardLightingDirectionalSet(_index, _x, _y, _z, _color)
+function CardboardLightDirectionalSet(_index, _x, _y, _z, _color)
 {
     __CARDBOARD_GLOBAL
     
