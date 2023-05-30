@@ -10,7 +10,7 @@ repeat(2)
     {
         case 0:
             CardboardLightShadow(0, c_yellow, 300, 450, 300, -150, 150, 0, 45, 10, 1000);
-            CardboardLightShadow(1, c_yellow, 0, 0, 600, 0, -150, 0, 45, 10, 1000);
+            CardboardLightShadow(1, c_yellow, 0, 0, 600, 0, -250, 0, 50, 10, 1000);
             
             CardboardLightShadowStart(0);
             oScene.Draw();

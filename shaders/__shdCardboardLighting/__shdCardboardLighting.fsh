@@ -1,6 +1,6 @@
 #define LIGHT_COUNT  4
 #define BIAS_MAX     0.01
-#define BIAS_COEFF   0.005
+#define BIAS_COEFF   0.002
 
 varying vec3 v_vPosition;
 varying vec3 v_vNormal;
@@ -65,8 +65,9 @@ vec3 AccumulateShadowMappedLights()
     vec4  depthColor;
     float foundDepth;
     vec3  dir;
-    float factor;
+    float dotProduct;
     float depthBias;
+    float factor;
     
     
     
@@ -77,16 +78,17 @@ vec3 AccumulateShadowMappedLights()
     dir        = u_vLightPos0.xyz - v_vPosition;
     
     //Adjust for normals
-    factor = max(dot(normalize(v_vNormal), normalize(dir)), 0.0);
+    dotProduct = max(dot(normalize(v_vNormal), normalize(dir)), 0.0);
     
-    //Calculate the bias for the depth comparison
-    depthBias = clamp(BIAS_COEFF*tan(acos(factor)), 0.0, BIAS_MAX);
+    //Perform the depth comparison
+    depthBias = clamp(BIAS_COEFF*tan(acos(dotProduct)), 0.0, BIAS_MAX);
+    factor = step(calcDepth, foundDepth + depthBias);
     
-    //Perform the distance comparison
-    factor *= step(calcDepth, foundDepth + depthBias);
+    //Adjust for normals
+    factor *= dotProduct;
     
     //Adjust for distance from the light source
-    //factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
+    factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
     
     //Clip the limits of the surface
     factor *= step(0.0, texCoord.x);
@@ -108,16 +110,17 @@ vec3 AccumulateShadowMappedLights()
     dir        = u_vLightPos0.xyz - v_vPosition;
     
     //Adjust for normals
-    factor = max(dot(normalize(v_vNormal), normalize(dir)), 0.0);
+    dotProduct = max(dot(normalize(v_vNormal), normalize(dir)), 0.0);
     
-    //Calculate the bias for the depth comparison
-    depthBias = clamp(BIAS_COEFF*tan(acos(factor)), 0.0, BIAS_MAX);
+    //Perform the depth comparison
+    depthBias = clamp(BIAS_COEFF*tan(acos(dotProduct)), 0.0, BIAS_MAX);
+    factor = step(calcDepth, foundDepth + depthBias);
     
-    //Perform the distance comparison
-    factor *= step(calcDepth, foundDepth + depthBias);
+    //Adjust for normals
+    factor *= dotProduct;
     
     //Adjust for distance from the light source
-    //factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
+    factor *= max(0.0, 1.0 - (length(dir) / u_vLightPos0.w));
     
     //Clip the limits of the surface
     factor *= step(0.0, texCoord.x);
