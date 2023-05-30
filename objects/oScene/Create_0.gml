@@ -45,8 +45,8 @@ Draw = function()
 {
     CardboardModelSubmit(model);
     
-    CardboardSpriteExt(sprTest, 0,   -320,   0, 0,    2, 2, 0, current_time/15,    c_white, 1, true );
-    CardboardSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, 90,    c_white, 1, false);
+    CardboardSpriteExt(sprTest, 0,   -320,   0, 0,    2, 2, 0, 90,    c_white, 1, false);
+    CardboardSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, current_time/15,    c_white, 1, true );
     CardboardSpriteExt(sprTest, 0,      0, 320, 0,    2, 2, 0,  0,    c_white, 1, false);
     
     CardboardBatchForceSubmit();

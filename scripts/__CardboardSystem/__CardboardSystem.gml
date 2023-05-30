@@ -1,6 +1,8 @@
-#macro __CARDBOARD_VERSION     "1.3.0"
-#macro __CARDBOARD_DATE        "2023-05-07"
+#macro __CARDBOARD_VERSION     "2.0.0"
+#macro __CARDBOARD_DATE        "2023-05-30"
 #macro __CARDBOARD_MAX_IMAGES  1024
+#macro __CARDBOARD_Z_NEAR      -3000
+#macro __CARDBOARD_Z_FAR       3000
 
 #macro __CARDBOARD_LIGHT_COUNT  4
 

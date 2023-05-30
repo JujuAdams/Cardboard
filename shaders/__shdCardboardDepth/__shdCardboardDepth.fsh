@@ -1,13 +1,16 @@
-varying vec3 v_vPosition;
+varying vec2 v_vTexcoord;
+varying vec4 v_vPosition;
 
-vec3 depthToRGB(float depth)
+uniform float u_fAlphaTestRef;
+
+vec3 DepthToRGB(float depth)
 {
-    return vec3(floor(depth*255.0) / 255.0,
-	            fract(depth*255.0),
-				fract(depth*255.0*255.0));
+    return fract(floor(255.0*depth*vec3(1.0, 255.0, 65025.0)) / 255.0);
 }
 
 void main()
 {
-    gl_FragColor = vec4(depthToRGB(v_vPosition.z), 1.0);
+    if (u_fAlphaTestRef > texture2D(gm_BaseTexture, v_vTexcoord).a) discard;
+    
+    gl_FragColor = vec4(DepthToRGB(v_vPosition.z / v_vPosition.w), 1.0);
 }

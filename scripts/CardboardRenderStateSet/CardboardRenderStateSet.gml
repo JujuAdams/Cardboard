@@ -34,5 +34,5 @@ function CardboardRenderStateSet(_width, _height, _fromX, _fromY, _fromZ, _toX, 
     gpu_set_alphatestref(_alphaTestRef);
     
     CardboardViewMatrixSet(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric);
-    matrix_set(matrix_projection, matrix_build_projection_ortho(_width, _height, -3000, 3000));
+    matrix_set(matrix_projection, matrix_build_projection_ortho(_width, _height, __CARDBOARD_Z_NEAR, __CARDBOARD_Z_FAR));
 }
