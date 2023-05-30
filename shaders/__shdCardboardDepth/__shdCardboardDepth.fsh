@@ -2,6 +2,7 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vPosition;
 
 uniform float u_fAlphaTestRef;
+uniform vec2  u_vZ;
 
 vec3 DepthToRGB(float depth)
 {
@@ -12,5 +13,5 @@ void main()
 {
     if (u_fAlphaTestRef > texture2D(gm_BaseTexture, v_vTexcoord).a) discard;
     
-    gl_FragColor = vec4(DepthToRGB(v_vPosition.z / v_vPosition.w), 1.0);
+    gl_FragColor = vec4(DepthToRGB((v_vPosition.z - u_vZ.x) / (u_vZ.y - u_vZ.x)), 1.0);
 }
