@@ -36,13 +36,13 @@ function CardboardSprite(_sprite, _image, _x, _y, _z)
             vertex_position_3d(_vertexBuffer, _l, _y + CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v1);
             vertex_position_3d(_vertexBuffer, _r, _y + CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v1);
             
-            vertex_position_3d(_vertexBuffer, _l, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _t); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v0);
-            vertex_position_3d(_vertexBuffer, _r, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _t); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v0);
-            vertex_position_3d(_vertexBuffer, _l, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v1);
+            vertex_position_3d(_vertexBuffer, _l, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _t); vertex_normal(_vertexBuffer, 0, -1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v0);
+            vertex_position_3d(_vertexBuffer, _r, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _t); vertex_normal(_vertexBuffer, 0, -1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v0);
+            vertex_position_3d(_vertexBuffer, _l, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, -1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v1);
             
-            vertex_position_3d(_vertexBuffer, _r, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _t); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v0);
-            vertex_position_3d(_vertexBuffer, _r, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v1);
-            vertex_position_3d(_vertexBuffer, _l, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, 1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v1);
+            vertex_position_3d(_vertexBuffer, _r, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _t); vertex_normal(_vertexBuffer, 0, -1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v0);
+            vertex_position_3d(_vertexBuffer, _r, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, -1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u1, _v1);
+            vertex_position_3d(_vertexBuffer, _l, _y - CARDBOARD_DOUBLE_SIDED_SPACING, _b); vertex_normal(_vertexBuffer, 0, -1, 0); vertex_color(_vertexBuffer, c_white, 1.0); vertex_texcoord(_vertexBuffer, _u0, _v1);
         }
         else
         {
