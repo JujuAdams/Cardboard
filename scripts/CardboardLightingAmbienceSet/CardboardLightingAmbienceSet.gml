@@ -8,11 +8,6 @@ function CardboardLightingAmbienceSet(_color)
     
     with(_global)
     {
-        if (__lightingStarted)
-        {
-            __CardboardError("Cannot set ambient lighting after calling CardboardLightingStart()");
-        }
-        
         __lightingAmbience = _color;
     }
 }

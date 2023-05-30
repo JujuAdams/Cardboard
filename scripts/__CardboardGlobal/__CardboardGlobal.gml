@@ -5,8 +5,6 @@ function __CardboardGlobal()
     static _struct = {
         __doubleSided: true,
         
-        __lightingStarted: false,
-        
         __lightingAmbience:    c_white,
         __lightingPosRadArray: array_create(4*__CARDBOARD_LIGHT_COUNT, 0),
         __lightingColorArray:  array_create(3*__CARDBOARD_LIGHT_COUNT, 0),

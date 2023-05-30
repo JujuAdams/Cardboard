@@ -65,7 +65,7 @@ repeat(2)
                 //CardboardLightingPointSet(0, -240,  400, 300, 2200, c_yellow);
                 //CardboardLightingPointSet(1,  240,  400, 300, 2200, c_white);
                 //CardboardLightingPointSet(2,    0, -400, 300, 2200, c_red);
-                CardboardLightingStart();
+                CardboardLightingShaderSet();
             }
             
             //Draw the scene object
@@ -76,7 +76,7 @@ repeat(2)
             
             if (CARDBOARD_WRITE_NORMALS)
             {
-                CardboardLightingEnd();
+                shader_reset();
             }
             
             //Reset render state

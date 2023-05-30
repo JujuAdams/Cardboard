@@ -12,11 +12,6 @@ function CardboardLightingDirectionalSet(_index, _x, _y, _z, _color)
     
     with(_global)
     {
-        if (__lightingStarted)
-        {
-            __CardboardError("Cannot set lights after calling CardboardLightingStart()");
-        }
-        
         __lightingPosRadArray[@ 4*_index  ] = _x;
         __lightingPosRadArray[@ 4*_index+1] = _y;
         __lightingPosRadArray[@ 4*_index+2] = _z;

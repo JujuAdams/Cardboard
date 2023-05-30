@@ -18,7 +18,6 @@ function CardboardPartSysExt(_pSystem, _x, _y, _z, _xScale, _zScale, _yAngle, _z
 {
     __CARDBOARD_GLOBAL
     __CARDBOARD_PARTICLE_SYSTEM_COMMON_TEXTURE
-    __CARDBOARD_PARTICLE_SYSTEM_DISABLE_LIGHTING
     
     var _oldWorldMatrix = matrix_get(matrix_world);
     
@@ -30,6 +29,4 @@ function CardboardPartSysExt(_pSystem, _x, _y, _z, _xScale, _zScale, _yAngle, _z
     matrix_set(matrix_world, _matrix);
     part_system_drawit(_pSystem);
     matrix_set(matrix_world, _oldWorldMatrix);
-    
-    __CARDBOARD_PARTICLE_SYSTEM_REENABLE_LIGHTING
 }
