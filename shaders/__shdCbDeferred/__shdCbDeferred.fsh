@@ -40,11 +40,11 @@ void main()
     //Work backwards from the NDSpace coordinate to world space
     vec3 position = (u_mInverse*nsCoord).xyz;
     
-    vec3 lightFinal = vec3(0.0);
-    lightFinal += vec3(0.5, 0.5, 0.5)*AccumulateUnshadowedLight(position, normal, vec3(   1.0,    1.0,  -2.0),    0.0);
-    lightFinal += vec3(1.0, 1.0, 1.0)*AccumulateUnshadowedLight(position, normal, vec3(-320.0,    0.0, 100.0), 2200.0);
-    lightFinal += vec3(1.0, 1.0, 1.0)*AccumulateUnshadowedLight(position, normal, vec3( 240.0,  400.0, 300.0), 2200.0);
-    lightFinal += vec3(1.0, 0.0, 0.0)*AccumulateUnshadowedLight(position, normal, vec3(   0.0, -400.0, 300.0), 2000.0);
+    vec3 lightFinal = vec3(0.25);
+    lightFinal += vec3(0.2, 0.3, 0.4)*AccumulateUnshadowedLight(position, normal, vec3(   1.0,   -2.0,  -3.0),    0.0);
+    lightFinal += vec3(1.0, 0.0, 0.0)*AccumulateUnshadowedLight(position, normal, vec3(-320.0,    0.0, 160.0),  320.0);
+    lightFinal += vec3(1.0, 1.0, 1.0)*AccumulateUnshadowedLight(position, normal, vec3( 200.0,  200.0, 160.0),  400.0);
+    lightFinal += vec3(1.0, 0.0, 1.0)*AccumulateUnshadowedLight(position, normal, vec3(   0.0, -640.0, 320.0), 1000.0);
     
     gl_FragColor = texture2D(gm_BaseTexture, v_vTexcoord);
     gl_FragColor.rgb *= lightFinal;

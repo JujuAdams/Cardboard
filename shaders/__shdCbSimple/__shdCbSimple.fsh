@@ -10,28 +10,28 @@ uniform float u_fAlphaTestRef;
 uniform vec4  u_vPosRadArray[LIGHT_COUNT];
 uniform vec3  u_vColorArray[LIGHT_COUNT];
 
+float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, float radius)
+{
+    if (radius > 0.0)
+    {
+        //Point light
+        vec3 lightDir = lightVector - position;
+        return max(dot(normalize(normal), normalize(lightDir)), 0.0) * max(0.0, 1.0 - (length(lightDir) / radius));
+    }
+    else
+    {
+        //Directional light
+        return max(dot(normalize(normal), -normalize(lightVector)), 0.0);
+    }
+}
+
 vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
 {
     vec3 lightFinal;
-    vec3 lightDir;
-    float lightFactor;
     
     for(int i = 0; i < LIGHT_COUNT; i++)
     {
-        if (u_vPosRadArray[i].w > 0.0)
-        {
-            lightDir = u_vPosRadArray[i].xyz - position;
-            
-            lightFactor = max(dot(normalize(normal), normalize(lightDir)), 0.0);
-            lightFactor *= max(0.0, 1.0 - (length(lightDir) / u_vPosRadArray[i].w));
-            
-            lightFinal += u_vColorArray[i]*lightFactor;
-        }
-        else
-        {
-            lightFactor = max(dot(normalize(normal), -normalize(u_vPosRadArray[i].xyz)), 0.0);
-            lightFinal += u_vColorArray[i]*lightFactor;
-        }
+        lightFinal += u_vColorArray[i]*AccumulateUnshadowedLight(position, normal, u_vPosRadArray[i].xyz, u_vPosRadArray[i].w);
     }
     
     return lightFinal;
