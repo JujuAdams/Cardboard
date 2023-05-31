@@ -1,5 +1,5 @@
 #define BIAS_MAX    0.01
-#define BIAS_COEFF  0.002
+#define BIAS_COEFF  0.005
 
 varying vec2 v_vTexcoord;
 
@@ -17,7 +17,7 @@ uniform mat4      u_mLightViewProj;
 float RGBToDepth(vec3 color)
 {
 	color /= vec3(1.0, 255.0, 255.0*255.0);
-    return u_vZ.x + (u_vZ.y - u_vZ.x)*(color.r + color.g + color.b);
+    return color.r + color.g + color.b;
 }
 
 vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor, vec2 lightZRange)
@@ -62,7 +62,7 @@ void main()
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
     vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
                         1.0 - 2.0*v_vTexcoord.y,
-                        RGBToDepth(texture2D(u_sDepth, v_vTexcoord).rgb), 
+                        u_vZ.x + (u_vZ.y - u_vZ.x)*RGBToDepth(texture2D(u_sDepth, v_vTexcoord).rgb), 
                         1.0);
     
     //Work backwards from the NDSpace coordinate to world space
