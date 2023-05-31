@@ -50,6 +50,9 @@ function __CbGlobal()
             __ambient:     c_white,
             __posRadArray: array_create(4*__CB_LIGHT_COUNT, 0),
             __colorArray:  array_create(3*__CB_LIGHT_COUNT, 0),
+            
+            __deferredSurfaceDepth:  -1,
+            __deferredSurfaceNormal: -1,
         },
         
         __lightingShadowCurrent: undefined,
@@ -64,6 +67,9 @@ function __CbGlobal()
         __billboardYaw:    undefined,
         __billboardYawSin: 0,
         __billboardYawCos: 0,
+        
+        __deferredSurfaceDepth:  -1,
+        __deferredSurfaceNormal: -1,
         
         __autoBatching:        false,
         __batchTexturePointer: undefined,

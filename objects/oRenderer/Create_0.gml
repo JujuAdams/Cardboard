@@ -1,6 +1,6 @@
 CbCameraSizeSet(1366, 768);
 
-CbSystemLightModeSet(CB_LIGHT_MODE.SIMPLE);
+CbSystemLightModeSet(CB_LIGHT_MODE.DEFERRED);
 
 CbLightAmbientSet(c_gray);
 CbLightDirectional(0, 1, 1, -2, c_gray);
