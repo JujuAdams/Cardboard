@@ -21,17 +21,5 @@ function CbPassFunctionSet(_pass, _function)
         return;
     }
     
-    if (_pass == all)
-    {
-        var _i = 0;
-        repeat(CB_PASS.__SIZE)
-        {
-            CbPassFunctionSet(_i, _function);
-            ++_i;
-        }
-        
-        return;
-    }
-    
     _global.__pass[_pass].__function = _function;
 }

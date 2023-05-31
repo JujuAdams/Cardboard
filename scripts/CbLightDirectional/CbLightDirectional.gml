@@ -10,15 +10,15 @@ function CbLightDirectional(_index, _x, _y, _z, _color)
 {
     __CB_GLOBAL
     
-    with(_global)
+    with(_global.__lighting)
     {
-        __lightingPosRadArray[@ 4*_index  ] = _x;
-        __lightingPosRadArray[@ 4*_index+1] = _y;
-        __lightingPosRadArray[@ 4*_index+2] = _z;
-        __lightingPosRadArray[@ 4*_index+3] = 0;
+        __posRadArray[@ 4*_index  ] = _x;
+        __posRadArray[@ 4*_index+1] = _y;
+        __posRadArray[@ 4*_index+2] = _z;
+        __posRadArray[@ 4*_index+3] = 0;
         
-        __lightingColorArray[@ 3*_index  ] = color_get_red(  _color)/255;
-        __lightingColorArray[@ 3*_index+1] = color_get_green(_color)/255;
-        __lightingColorArray[@ 3*_index+2] = color_get_blue( _color)/255;
+        __colorArray[@ 3*_index  ] = color_get_red(  _color)/255;
+        __colorArray[@ 3*_index+1] = color_get_green(_color)/255;
+        __colorArray[@ 3*_index+2] = color_get_blue( _color)/255;
     }
 }

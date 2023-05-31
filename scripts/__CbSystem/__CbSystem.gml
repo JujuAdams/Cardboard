@@ -2,7 +2,7 @@
 #macro __CB_DATE        "2023-05-30"
 #macro __CB_MAX_IMAGES  1024
 
-#macro __CB_LIGHT_COUNT   4
+#macro __CB_LIGHT_COUNT   6
 #macro __CB_SHADOW_COUNT  2
 
 enum CB_PASS
@@ -35,6 +35,8 @@ function __CbInitialize()
     __CbTrace("Welcome to Cb by @jujuadams! This is version " + __CB_VERSION + ", " + __CB_DATE);
     
     __CB_GLOBAL
+    
+    if (GM_build_type == "run") global.__cardboardDebug = _global;
     
     if (CB_WRITE_NORMALS)
     {

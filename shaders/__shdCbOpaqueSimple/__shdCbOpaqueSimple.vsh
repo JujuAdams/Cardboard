@@ -7,11 +7,6 @@ varying vec3 v_vPosition;
 varying vec3 v_vNormal;
 varying vec4 v_vColour;
 varying vec2 v_vTexcoord;
-varying vec4 v_vLightPos0;
-varying vec4 v_vLightPos1;
-
-uniform mat4 u_mLightViewProj0;
-uniform mat4 u_mLightViewProj1;
 
 void main()
 {
@@ -22,6 +17,4 @@ void main()
     v_vNormal    = in_Normal;
     v_vColour    = in_Colour;
     v_vTexcoord  = in_TextureCoord;
-    v_vLightPos0 = u_mLightViewProj0*worldPos;
-    v_vLightPos1 = u_mLightViewProj1*worldPos;
 }

@@ -6,7 +6,7 @@ function __CbGlobal()
         
         //System-wide values
         __doubleSided:  true,
-        __lightMode:    true,
+        __lightMode:    CB_LIGHT_MODE.NONE,
         __alphaTestRef: 0.5,
         
         __camera: {
@@ -47,12 +47,10 @@ function __CbGlobal()
         ],
         
         __lighting: {
-            __ambient: c_white,
+            __ambient:     c_white,
+            __posRadArray: array_create(4*__CB_LIGHT_COUNT, 0),
+            __colorArray:  array_create(3*__CB_LIGHT_COUNT, 0),
         },
-        
-        __lightingAmbience:    c_white,
-        __lightingPosRadArray: array_create(4*__CB_LIGHT_COUNT, 0),
-        __lightingColorArray:  array_create(3*__CB_LIGHT_COUNT, 0),
         
         __lightingShadowCurrent: undefined,
         __lightingShadowArray: [new __CbClassShadowMap(), new __CbClassShadowMap()],

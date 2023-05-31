@@ -6,5 +6,5 @@ function CbLightAmbientSet(_color)
 {
     __CB_GLOBAL
     
-    return _global.__lighting.__ambient = _color;
+    _global.__lighting.__ambient = _color;
 }

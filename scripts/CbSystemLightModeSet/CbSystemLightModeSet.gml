@@ -2,10 +2,22 @@
 /// 
 /// The light mode should be specified using the CB_LIGHT_MODE enum
 /// 
-/// .NONE           = No lighting is applied
-/// .SIMPLE         = Forward rendering. Only point lights and directional lights will be rendered. Shadow mapping is disabled
-/// .ONE_SHADOW_MAP = Forward rendering with one shadow mapped light. As above, but a single shadow mapped light can be rendered
-/// .DEFERRED       = Deferred rendering. All Cardboard lights will be rendered. Unlimited shadow mapped lights supported
+/// .NONE
+///     No lighting is applied
+/// 
+/// .SIMPLE
+///     Forward rendering
+///     Up to 8 point lights and directional lights will be rendered
+///     Shadow mapping is disabled
+/// 
+/// .ONE_SHADOW_MAP
+///     Forward rendering with one shadow mapped light
+///     Up to 6 point lights and directional lights will be rendered
+///     A single shadow mapped light can be rendered
+/// 
+/// .DEFERRED
+///     Deferred rendering
+///     An unlimited number of lights of all types can be rendered
 /// 
 /// @param mode
 
