@@ -22,7 +22,7 @@ function __CbClassLightPoint(_x, _y, _z, _radius, _color) constructor
         __destroyed = true;
     }
     
-    static RenderDepth = function()
+    static __RenderDepth = function()
     {
         //Do nothing!
     }

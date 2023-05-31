@@ -27,7 +27,7 @@ function CbPassRender(_pass)
             var _i = 0;
             repeat(array_length(_array))
             {
-                _array[_i].RenderDepth(_function);
+                _array[_i].ref.__RenderDepth(_function);
                 ++_i;
             }
         break;

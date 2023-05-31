@@ -32,21 +32,21 @@ function CbSystemPrepareLighting()
                     ++_i;
                 }
             }
-        }
         
-        if (CbSystemLightModeGet() == CB_LIGHT_MODE.DEFERRED)
-        {
-            surface_set_target(__CbDeferredSurfaceDepthEnsure(surface_get_target()));
-        	draw_clear(c_white);
-            surface_reset_target();
-            
-            surface_set_target(__CbDeferredSurfaceNormalEnsure(surface_get_target()));
-        	draw_clear(c_gray);
-            surface_reset_target();
-            
-            surface_set_target(__CbDeferredSurfaceLightEnsure(surface_get_target()));
-        	draw_clear(c_black);
-            surface_reset_target();
+            if (CbSystemLightModeGet() == CB_LIGHT_MODE.DEFERRED)
+            {
+                surface_set_target(__CbDeferredSurfaceDepthEnsure(surface_get_target()));
+            	draw_clear(c_white);
+                surface_reset_target();
+                
+                surface_set_target(__CbDeferredSurfaceNormalEnsure(surface_get_target()));
+            	draw_clear(c_gray);
+                surface_reset_target();
+                
+                surface_set_target(__CbDeferredSurfaceLightEnsure(surface_get_target()));
+            	draw_clear(__ambient);
+                surface_reset_target();
+            }
         }
     }
 }

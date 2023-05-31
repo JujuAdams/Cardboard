@@ -8,7 +8,6 @@ uniform sampler2D u_sDepth;
 uniform sampler2D u_sNormal;
 uniform mat4      u_mCameraInverse;
 
-uniform vec3      u_vAmbient;
 uniform sampler2D u_sLightDepth;
 uniform vec4      u_vLightPos;
 uniform vec3      u_vLightColor;
@@ -70,6 +69,5 @@ void main()
     //Work backwards from the NDSpace coordinate to world space
     vec3 position = (u_mCameraInverse*nsCoord).xyz;
     
-    gl_FragColor = texture2D(gm_BaseTexture, v_vTexcoord);
-    gl_FragColor.rgb *= u_vAmbient + AccumulateShadowedLight(position, normal, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor, u_vLightZ);
+    gl_FragColor = vec4(AccumulateShadowedLight(position, normal, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor, u_vLightZ), 1.0);
 }

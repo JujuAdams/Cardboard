@@ -20,8 +20,6 @@ function CbPassRenderStateSet(_pass)
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
             gpu_set_cullmode(CB_BACKFACE_CULLING? cull_counterclockwise : cull_noculling);
-            gpu_set_alphatestenable(true);
-            gpu_set_alphatestref(_global.__alphaTestRef);
             
             CbPassShaderSet(_pass);
             
@@ -43,7 +41,6 @@ function CbPassRenderStateSet(_pass)
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(false); //Don't write into the alpha channel!
             gpu_set_cullmode(CB_BACKFACE_CULLING? cull_clockwise : cull_noculling);
-            gpu_set_alphatestenable(false);
             
             CbPassShaderSet(_pass);
             CbPassMatricesSet(_pass);

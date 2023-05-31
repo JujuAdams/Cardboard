@@ -1,4 +1,3 @@
-/// @param index
 /// @param color
 /// @param xFrom
 /// @param yFrom
@@ -13,7 +12,7 @@
 /// @param [yUp=0]
 /// @param [zUp=1]
 
-function __CbClassLightWithShadows(_index, _color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _near, _far, _xUp = 0, _yUp = 0, _zUp = 1) constructor
+function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _near, _far, _xUp = 0, _yUp = 0, _zUp = 1) constructor
 {
     __CB_GLOBAL
     array_push(_global.__lighting.__array, weak_ref_create(self));
@@ -64,24 +63,21 @@ function __CbClassLightWithShadows(_index, _color, _xFrom, _yFrom, _zFrom, _xTo,
         }
     }
     
-    static RenderDepth = function(_function)
+    static __RenderDepth = function(_function)
     {
         if (__destroyed) return;
         
         __Tick();
         __BuildMatrices();
         
-        var _oldViewMatrix = matrix_get(matrix_view);
-        var _oldProjMatrix = matrix_get(matrix_projection);
+        shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_vZ"), near, far);
         
         surface_set_target(__depthSurface);
+        draw_clear(c_gray);
         matrix_set(matrix_view,       __matrixView);
         matrix_set(matrix_projection, __matrixProj);
         _function();
         surface_reset_target();
-        
-        matrix_set(matrix_view,       _oldViewMatrix);
-        matrix_set(matrix_projection, _oldProjMatrix);
     }
     
     static __Tick = function()

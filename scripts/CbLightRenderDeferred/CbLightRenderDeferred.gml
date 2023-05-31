@@ -2,6 +2,8 @@ function CbLightRenderDeferred()
 {
     __CB_GLOBAL
     
+    if (CbSystemLightModeGet() != CB_LIGHT_MODE.DEFERRED) return;
+    
     var _matrices        = CbPassMatricesGet(CB_PASS.OPAQUE);
     var _vpMatrix        = matrix_multiply(_matrices.view, _matrices.projection);
     var _vpMatrixInverse = __CbMatrixInvert(_vpMatrix);
@@ -24,9 +26,6 @@ function CbLightRenderDeferred()
         
         with(__lighting)
         {
-            shader_set_uniform_f(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vAmbient"), colour_get_red(  __ambient)/255,
-                                                                                              colour_get_green(__ambient)/255,
-                                                                                              colour_get_blue( __ambient)/255);
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vPosRadArray"), __posRadArray);
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vColorArray"),  __colorArray);
             
@@ -70,7 +69,11 @@ function CbLightRenderDeferred()
         surface_reset_target();
     }
     
-    gpu_set_blendmode_ext(bm_zero, bm_src_color);
+    
+    
+    gpu_set_colorwriteenable(true, true, true, false);
+    gpu_set_blendmode_ext(bm_dest_color, bm_zero);
     draw_surface(__CbDeferredSurfaceLightEnsure(surface_get_target()), 0, 0);
+    gpu_set_colorwriteenable(true, true, true, true);
     gpu_set_blendmode(bm_normal);
 }
