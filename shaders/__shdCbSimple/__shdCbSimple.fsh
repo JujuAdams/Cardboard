@@ -5,8 +5,9 @@ varying vec3 v_vNormal;
 varying vec4 v_vColour;
 varying vec2 v_vTexcoord;
 
-uniform vec3  u_vAmbient;
 uniform float u_fAlphaTestRef;
+
+uniform vec3  u_vAmbient;
 uniform vec4  u_vPosRadArray[LIGHT_COUNT];
 uniform vec3  u_vColorArray[LIGHT_COUNT];
 

@@ -1,9 +1,15 @@
+#define LIGHT_COUNT  6
+
 varying vec2 v_vTexcoord;
 
 uniform vec2      u_vZ;
 uniform sampler2D u_sDepth;
 uniform sampler2D u_sNormal;
-uniform mat4      u_mInverse;
+uniform mat4      u_mCameraInverse;
+
+uniform vec3      u_vAmbient;
+uniform vec4      u_vPosRadArray[LIGHT_COUNT];
+uniform vec3      u_vColorArray[LIGHT_COUNT];
 
 float RGBToDepth(vec3 color)
 {
@@ -26,6 +32,18 @@ float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, fl
     }
 }
 
+vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
+{
+    vec3 lightFinal;
+    
+    for(int i = 0; i < LIGHT_COUNT; i++)
+    {
+        lightFinal += u_vColorArray[i]*AccumulateUnshadowedLight(position, normal, u_vPosRadArray[i].xyz, u_vPosRadArray[i].w);
+    }
+    
+    return lightFinal;
+}
+
 void main()
 {
     //Unpack the normal
@@ -38,14 +56,8 @@ void main()
                         1.0);
     
     //Work backwards from the NDSpace coordinate to world space
-    vec3 position = (u_mInverse*nsCoord).xyz;
-    
-    vec3 lightFinal = vec3(0.25);
-    lightFinal += vec3(0.2, 0.3, 0.4)*AccumulateUnshadowedLight(position, normal, vec3(   1.0,   -2.0,  -3.0),    0.0);
-    lightFinal += vec3(1.0, 0.0, 0.0)*AccumulateUnshadowedLight(position, normal, vec3(-320.0,    0.0, 160.0),  320.0);
-    lightFinal += vec3(1.0, 1.0, 1.0)*AccumulateUnshadowedLight(position, normal, vec3( 200.0,  200.0, 160.0),  400.0);
-    lightFinal += vec3(1.0, 0.0, 1.0)*AccumulateUnshadowedLight(position, normal, vec3(   0.0, -640.0, 320.0), 1000.0);
+    vec3 position = (u_mCameraInverse*nsCoord).xyz;
     
     gl_FragColor = texture2D(gm_BaseTexture, v_vTexcoord);
-    gl_FragColor.rgb *= lightFinal;
+    gl_FragColor.rgb *= u_vAmbient + AccumulateUnshadowedLights(position, normal);
 }

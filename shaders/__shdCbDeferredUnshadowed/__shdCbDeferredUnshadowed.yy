@@ -1,7 +1,7 @@
 {
   "resourceType": "GMShader",
   "resourceVersion": "1.0",
-  "name": "__shdCbDeferred",
+  "name": "__shdCbDeferredUnshadowed",
   "type": 1,
   "parent": {
     "name": "Shaders",
