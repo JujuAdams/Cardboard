@@ -60,6 +60,7 @@ function CbPassShaderSet(_pass)
                             shader_set_uniform_f(shader_get_uniform(__shdCbDeferredHLSL, "u_vZ"), __camera.__near, __camera.__far);
                         }
                         
+                        __oldRenderStateResetSurface = true;
                         surface_set_target_ext(0, __CbDeferredSurfaceDiffuseEnsure(_refSurface));
                         surface_set_target_ext(1, __CbDeferredSurfaceDepthEnsure(  _refSurface));
                         surface_set_target_ext(2, __CbDeferredSurfaceNormalEnsure( _refSurface));
@@ -72,9 +73,15 @@ function CbPassShaderSet(_pass)
             break;
             
             case CB_PASS.DEFERRED_LIGHT:
+                var _matrices        = CbPassMatricesGet(CB_PASS.OPAQUE);
+                var _vpMatrix        = matrix_multiply(_matrices.view, _matrices.projection);
+                var _vpMatrixInverse = __CbMatrixInvert(_vpMatrix);
+                
                 var _refSurface = surface_get_target();
                 
                 shader_set(__shdCbDeferred);
+                shader_set_uniform_f(shader_get_uniform(__shdCbDeferred, "u_vZ"), __camera.__near, __camera.__far);
+                shader_set_uniform_matrix_array(shader_get_uniform(__shdCbDeferred, "u_mInverse"), _vpMatrixInverse);
                 texture_set_stage(shader_get_sampler_index(__shdCbDeferred, "u_sDepth" ), surface_get_texture(__CbDeferredSurfaceDepthEnsure( _refSurface)));
                 texture_set_stage(shader_get_sampler_index(__shdCbDeferred, "u_sNormal"), surface_get_texture(__CbDeferredSurfaceNormalEnsure(_refSurface)));
             break;

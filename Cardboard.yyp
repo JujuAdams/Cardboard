@@ -42,6 +42,7 @@
     {"id":{"name":"CbDeferredLightStart","path":"scripts/CbDeferredLightStart/CbDeferredLightStart.yy",},"order":7,},
     {"id":{"name":"CbCameraSizeGet","path":"scripts/CbCameraSizeGet/CbCameraSizeGet.yy",},"order":7,},
     {"id":{"name":"CbSpriteQuad","path":"scripts/CbSpriteQuad/CbSpriteQuad.yy",},"order":7,},
+    {"id":{"name":"__CbMatrixInvert","path":"scripts/__CbMatrixInvert/__CbMatrixInvert.yy",},"order":17,},
     {"id":{"name":"__CbBatchComplete","path":"scripts/__CbBatchComplete/__CbBatchComplete.yy",},"order":3,},
     {"id":{"name":"CbSurfaceExt","path":"scripts/CbSurfaceExt/CbSurfaceExt.yy",},"order":4,},
     {"id":{"name":"CbPassMatricesSet","path":"scripts/CbPassMatricesSet/CbPassMatricesSet.yy",},"order":6,},

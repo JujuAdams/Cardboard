@@ -27,8 +27,8 @@ function __CbGlobal()
             
             __axonometric: true,
             
-            __near: -3000,
-            __far:   3000,
+            __near: -2048,
+            __far:   2048,
         },
         
         __pass: [
@@ -52,10 +52,11 @@ function __CbGlobal()
             __ambient:     c_white,
             __posRadArray: array_create(4*__CB_LIGHT_COUNT, 0),
             __colorArray:  array_create(3*__CB_LIGHT_COUNT, 0),
-            
-            __deferredSurfaceDepth:  -1,
-            __deferredSurfaceNormal: -1,
         },
+        
+        __deferredSurfaceDiffuse: -1,
+        __deferredSurfaceDepth:   -1,
+        __deferredSurfaceNormal:  -1,
         
         __lightingShadowCurrent: undefined,
         __lightingShadowArray: [new __CbClassShadowMap(), new __CbClassShadowMap()],
@@ -63,16 +64,11 @@ function __CbGlobal()
         __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
         __oldRenderStateMatrixView:       matrix_get(matrix_view),
         __oldRenderStateMatrixProjection: matrix_get(matrix_projection),
-        
-        __oldMatrixView: matrix_get(matrix_view),
+        __oldRenderStateResetSurface:     false,
         
         __billboardYaw:    undefined,
         __billboardYawSin: 0,
         __billboardYawCos: 0,
-        
-        __deferredSurfaceDiffuse: -1,
-        __deferredSurfaceDepth:   -1,
-        __deferredSurfaceNormal:  -1,
         
         __autoBatching:        false,
         __batchTexturePointer: undefined,

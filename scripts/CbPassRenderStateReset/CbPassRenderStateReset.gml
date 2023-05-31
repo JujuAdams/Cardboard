@@ -12,7 +12,11 @@ function CbPassRenderStateReset(_pass)
     gpu_set_alphatestenable(false);
     shader_reset();
     
-    if (_pass != CB_PASS.DEFERRED_LIGHT) surface_reset_target();
+    if (_global.__oldRenderStateResetSurface)
+    {
+        _global.__oldRenderStateResetSurface = false;
+        surface_reset_target();
+    }
     
     //Restore the old matrices we've been using
     matrix_set(matrix_world,      _global.__oldRenderStateMatrixWorld);
