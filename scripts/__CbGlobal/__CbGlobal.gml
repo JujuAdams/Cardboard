@@ -3,7 +3,52 @@
 function __CbGlobal()
 {
     static _struct = {
-        __doubleSided: true,
+        
+        //System-wide values
+        __doubleSided:  true,
+        __lightMode:    true,
+        __alphaTestRef: 0.5,
+        
+        __camera: {
+            __width:  1920,
+            __height: 1080,
+            
+            __xFrom:   0,
+            __yFrom: 128,
+            __zFrom: 128,
+            
+            __xTo:   0,
+            __yTo: 128,
+            __zTo: 128,
+            
+            __xUp: 0,
+            __yUp: 0,
+            __zUp: 1,
+            
+            __axonometric: true,
+            
+            __near: -3000,
+            __far:   3000,
+        },
+        
+        __pass: [
+            { // CB_PASS.LIGHT_DEPTH
+                __function: undefined,
+            },
+            { // CB_PASS.OPAQUE
+                __function: undefined,
+            },
+            { // CB_PASS.TRANSPARENT
+                __function: undefined,
+            },
+            { // CB_PASS.DEFERRED_LIGHT
+                __function: undefined,
+            },
+        ],
+        
+        __lighting: {
+            __ambient: c_white,
+        },
         
         __lightingAmbience:    c_white,
         __lightingPosRadArray: array_create(4*__CB_LIGHT_COUNT, 0),
@@ -11,8 +56,6 @@ function __CbGlobal()
         
         __lightingShadowCurrent: undefined,
         __lightingShadowArray: [new __CbClassShadowMap(), new __CbClassShadowMap()],
-        
-        __alphaTestRef: 0.5,
         
         __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
         __oldRenderStateMatrixView:       matrix_get(matrix_view),

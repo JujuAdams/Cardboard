@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Forward Lighting",
-    "path": "folders/Cardboard/Forward Lighting.yy",
+    "name": "Lighting",
+    "path": "folders/Cardboard/Lighting.yy",
   },
 }

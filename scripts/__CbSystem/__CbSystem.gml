@@ -1,11 +1,26 @@
 #macro __CB_VERSION     "2.0.0"
 #macro __CB_DATE        "2023-05-30"
 #macro __CB_MAX_IMAGES  1024
-#macro __CB_Z_NEAR      -3000
-#macro __CB_Z_FAR       3000
 
 #macro __CB_LIGHT_COUNT   4
 #macro __CB_SHADOW_COUNT  2
+
+enum CB_PASS
+{
+    LIGHT_DEPTH,
+    OPAQUE,
+    TRANSPARENT,
+    DEFERRED_LIGHT,
+    __SIZE
+}
+
+enum CB_LIGHT_MODE
+{
+    NONE,
+    SIMPLE,
+    ONE_SHADOW_MAP,
+    DEFERRED,
+}
 
 
 

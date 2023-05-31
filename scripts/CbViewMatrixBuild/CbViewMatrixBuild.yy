@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "View Matrix Manual Control",
-    "path": "folders/Cardboard/View Matrix Manual Control.yy",
+    "name": "System",
+    "path": "folders/Cardboard/System.yy",
   },
 }

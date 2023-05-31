@@ -3,6 +3,27 @@ if (not surface_exists(surfaceDepth))
     surfaceDepth = surface_create(1366, 768);
 }
 
+CbSystemLightModeSet(CB_LIGHT_MODE.NONE);
+
+CbCameraSizeSet(1366, 768);
+CbCameraFromSet(oCamera.camFromX, oCamera.camFromY, oCamera.camFromZ);
+CbCameraToSet(oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+CbCameraAxonometricSet(axonometric);
+
+CbLightAmbientSet(c_gray);
+
+CbPassFunctionSet(all, function()
+{
+    //Draw the scene object
+    oScene.Draw();
+    
+    //Draw a lil triangle at the camera's "to" position
+    CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+});
+
+CbRender();
+
+/*
 var _i = 0;
 repeat(2)
 {
@@ -71,3 +92,4 @@ if (keyboard_check(ord("O")))
     CbDeferredLightDrawDebug(1, 0, 0);
     shader_reset();
 }
+*/
