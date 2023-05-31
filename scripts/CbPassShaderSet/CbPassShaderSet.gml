@@ -45,6 +45,8 @@ function CbPassShaderSet(_pass)
                     break;
                     
                     case CB_LIGHT_MODE.DEFERRED:
+                        var _refSurface = surface_get_target();
+                        
                         if (__CB_ON_OPENGL)
                         {
                             shader_set(__shdCbDeferredGLSL);
@@ -58,10 +60,9 @@ function CbPassShaderSet(_pass)
                             shader_set_uniform_f(shader_get_uniform(__shdCbDeferredHLSL, "u_vZ"), __camera.__near, __camera.__far);
                         }
                         
-                        var _diffuseSurface = surface_get_target();
-                        surface_set_target_ext(0, _diffuseSurface);
-                        surface_set_target_ext(1, __CbDeferredSurfaceDepthEnsure(_diffuseSurface));
-                        surface_set_target_ext(2, __CbDeferredSurfaceNormalEnsure(_diffuseSurface));
+                        surface_set_target_ext(0, __CbDeferredSurfaceDiffuseEnsure(_refSurface));
+                        surface_set_target_ext(1, __CbDeferredSurfaceDepthEnsure(  _refSurface));
+                        surface_set_target_ext(2, __CbDeferredSurfaceNormalEnsure( _refSurface));
                     break;
                 }
             break;
@@ -71,7 +72,11 @@ function CbPassShaderSet(_pass)
             break;
             
             case CB_PASS.DEFERRED_LIGHT:
-                shader_reset();
+                var _refSurface = surface_get_target();
+                
+                shader_set(__shdCbDeferred);
+                texture_set_stage(shader_get_sampler_index(__shdCbDeferred, "u_sDepth" ), surface_get_texture(__CbDeferredSurfaceDepthEnsure( _refSurface)));
+                texture_set_stage(shader_get_sampler_index(__shdCbDeferred, "u_sNormal"), surface_get_texture(__CbDeferredSurfaceNormalEnsure(_refSurface)));
             break;
         }
     }

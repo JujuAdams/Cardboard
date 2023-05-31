@@ -1,7 +1,7 @@
 /// Resets the GPU render state for the given pass
 /// This will set matrices, z-testing, and the current shader
 
-function CbPassRenderStateReset()
+function CbPassRenderStateReset(_pass)
 {
     __CB_GLOBAL
     
@@ -11,7 +11,8 @@ function CbPassRenderStateReset()
     gpu_set_cullmode(cull_noculling);
     gpu_set_alphatestenable(false);
     shader_reset();
-    surface_reset_target();
+    
+    if (_pass != CB_PASS.DEFERRED_LIGHT) surface_reset_target();
     
     //Restore the old matrices we've been using
     matrix_set(matrix_world,      _global.__oldRenderStateMatrixWorld);

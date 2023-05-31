@@ -41,7 +41,7 @@ function __CbInitialize()
     
     __CB_GLOBAL
     
-    if (GM_build_type == "run") global.__cardboardDebug = _global;
+    if (debug_mode && (GM_build_type == "run")) global.__cardboardDebug = _global;
     
     if (CB_WRITE_NORMALS)
     {

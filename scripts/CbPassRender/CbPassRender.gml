@@ -9,7 +9,7 @@ function CbPassRender(_pass)
     var _function = CbPassFunctionGet(_pass);
     
     //If a function hasn't been set for this pass then don't do anything
-    if (not is_method(_function)) return;
+    if (!is_method(_function) && (_pass != CB_PASS.DEFERRED_LIGHT)) return;
     
     //Don't render out the .LIGHT_DEPTH or .DEFERRED_LIGHT passes if we're not in a light mode
     //that supports deferred lights
@@ -42,15 +42,17 @@ function CbPassRender(_pass)
         break;
         
         case CB_PASS.DEFERRED_LIGHT:
-            var _array = CbLightArrayGet();
-            var _i = 0;
-            repeat(array_length(_array))
-            {
-                _array[_i].Render(_function);
-                ++_i;
-            }
+            draw_surface(__CbDeferredSurfaceDiffuseEnsure(surface_get_target()), 0, 0);
+            
+            //var _array = CbLightArrayGet();
+            //var _i = 0;
+            //repeat(array_length(_array))
+            //{
+            //    _array[_i].Render(_function);
+            //    ++_i;
+            //}
         break;
     }
     
-    CbPassRenderStateReset();
+    CbPassRenderStateReset(_pass);
 }

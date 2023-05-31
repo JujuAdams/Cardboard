@@ -35,8 +35,8 @@ function CbPassRenderStateSet(_pass)
             gpu_set_alphatestenable(true);
             gpu_set_alphatestref(_global.__alphaTestRef);
             
-            CbPassMatricesSet(_pass);
             CbPassShaderSet(_pass);
+            CbPassMatricesSet(_pass);
         break;
         
         case CB_PASS.TRANSPARENT:
@@ -45,8 +45,8 @@ function CbPassRenderStateSet(_pass)
             gpu_set_cullmode(CB_BACKFACE_CULLING? cull_clockwise : cull_noculling);
             gpu_set_alphatestenable(false);
             
-            CbPassMatricesSet(_pass);
             CbPassShaderSet(_pass);
+            CbPassMatricesSet(_pass);
         break;
         
         case CB_PASS.DEFERRED_LIGHT:
