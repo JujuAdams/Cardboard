@@ -48,17 +48,5 @@ function CbPassRenderStateSet(_pass)
             CbPassShaderSet(_pass);
             CbPassMatricesSet(_pass);
         break;
-        
-        case CB_PASS.DEFERRED_LIGHT:
-            gpu_set_ztestenable(false);
-            gpu_set_zwriteenable(false);
-            gpu_set_cullmode(cull_noculling);
-            gpu_set_alphatestenable(true);
-            gpu_set_alphatestref(_global.__alphaTestRef);
-            
-            CbPassShaderSet(_pass);
-            
-            //View and projection matrix not needed since we're working with surfaces
-        break;
     }
 }

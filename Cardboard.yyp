@@ -35,6 +35,7 @@
     {"id":{"name":"__CbError","path":"scripts/__CbError/__CbError.yy",},"order":7,},
     {"id":{"name":"__shdCbDeferredShadowed","path":"shaders/__shdCbDeferredShadowed/__shdCbDeferredShadowed.yy",},"order":6,},
     {"id":{"name":"CbSystemDoubleSidedGet","path":"scripts/CbSystemDoubleSidedGet/CbSystemDoubleSidedGet.yy",},"order":1,},
+    {"id":{"name":"CbLightRenderDeferred","path":"scripts/CbLightRenderDeferred/CbLightRenderDeferred.yy",},"order":10,},
     {"id":{"name":"__shdCbTest","path":"shaders/__shdCbTest/__shdCbTest.yy",},"order":12,},
     {"id":{"name":"__CbDeferredSurfaceNormalEnsure","path":"scripts/__CbDeferredSurfaceNormalEnsure/__CbDeferredSurfaceNormalEnsure.yy",},"order":16,},
     {"id":{"name":"CbLightShaderSet","path":"scripts/CbLightShaderSet/CbLightShaderSet.yy",},"order":5,},

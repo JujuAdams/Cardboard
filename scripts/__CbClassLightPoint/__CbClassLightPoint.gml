@@ -17,6 +17,11 @@ function __CbClassLightPoint(_x, _y, _z, _radius, _color) constructor
         __destroyed = true;
     }
     
+    static RenderDepth = function()
+    {
+        //Do nothing!
+    }
+    
     static __AddToGlobalArrays = function(_posRadArray, _posRadIndex, _colorArray, _colorIndex)
     {
         _posRadArray[@ _posRadIndex  ] = x;
