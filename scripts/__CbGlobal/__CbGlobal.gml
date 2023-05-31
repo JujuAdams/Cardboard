@@ -51,9 +51,10 @@ function __CbGlobal()
             __colorArray:  array_create(3*__CB_LIGHT_COUNT, 0),
         },
         
-        __deferredSurfaceLight: -1,
+        __deferredSurfaceDiffuse: -1,
         __deferredSurfaceDepth:   -1,
         __deferredSurfaceNormal:  -1,
+        __deferredSurfaceLight:   -1,
         
         __lightingShadowCurrent: undefined,
         __lightingShadowArray: [new __CbClassShadowMap(), new __CbClassShadowMap()],

@@ -63,6 +63,15 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         }
     }
     
+    static DrawDebug = function(_x, _y, _grayscale = false)
+    {
+        __Tick();
+        
+        if (_grayscale) shader_set(__shdCbDepthTest);
+        draw_surface(__depthSurface, _x, _y);
+        if (_grayscale) shader_reset();
+    }
+    
     static __RenderDepth = function(_function)
     {
         if (__destroyed) return;

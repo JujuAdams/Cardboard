@@ -14,6 +14,11 @@ if (keyboard_check(ord("L")))
     draw_surface(_surface, 0, 0);
 }
 
+if (keyboard_check(ord("K")))
+{
+    light4.DrawDebug(0, 0, true);
+}
+
 
 /*
 var _i = 0;

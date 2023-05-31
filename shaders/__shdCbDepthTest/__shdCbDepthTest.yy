@@ -4,7 +4,7 @@
   "name": "__shdCbDepthTest",
   "type": 1,
   "parent": {
-    "name": "(System)",
-    "path": "folders/Cardboard/(System).yy",
+    "name": "Shaders",
+    "path": "folders/Cardboard/(System)/Shaders.yy",
   },
 }

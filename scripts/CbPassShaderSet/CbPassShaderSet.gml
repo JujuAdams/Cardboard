@@ -62,7 +62,16 @@ function CbPassShaderSet(_pass)
                         }
                         
                         __renderStateResetSurface = true;
-                        surface_set_target_ext(0, _refSurface);
+                        
+                        if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND)
+                        {
+                            surface_set_target_ext(0, __CbDeferredSurfaceDiffuseEnsure(_refSurface));
+                        }
+                        else
+                        {
+                            surface_set_target_ext(0, _refSurface);
+                        }
+                        
                         surface_set_target_ext(1, __CbDeferredSurfaceDepthEnsure(  _refSurface));
                         surface_set_target_ext(2, __CbDeferredSurfaceNormalEnsure( _refSurface));
                     break;

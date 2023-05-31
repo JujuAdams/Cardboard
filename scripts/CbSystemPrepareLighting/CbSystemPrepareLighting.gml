@@ -35,6 +35,13 @@ function CbSystemPrepareLighting()
         
             if (CbSystemLightModeGet() == CB_LIGHT_MODE.DEFERRED)
             {
+                if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND)
+                {
+                    surface_set_target(__CbDeferredSurfaceDiffuseEnsure(surface_get_target()));
+                	draw_clear_alpha(c_black, 0);
+                    surface_reset_target();
+                }
+                
                 surface_set_target(__CbDeferredSurfaceDepthEnsure(surface_get_target()));
             	draw_clear(c_white);
                 surface_reset_target();

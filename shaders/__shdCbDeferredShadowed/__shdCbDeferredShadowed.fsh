@@ -37,8 +37,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
     float factor = step(calcDepth, foundDepth + depthBias);
     
     //Adjust for normals
-    //factor *= dotProduct;
-    factor *= step(0.01, dotProduct);
+    factor *= dotProduct;
     
     //Adjust for distance from the light source
     factor *= max(0.0, 1.0 - (length(dir) / radius));

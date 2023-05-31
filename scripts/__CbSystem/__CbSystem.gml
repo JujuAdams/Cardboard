@@ -10,6 +10,8 @@
 #macro __CB_ON_WEB      (os_browser != browser_not_a_browser)
 #macro __CB_ON_OPENGL   (!__CB_ON_DIRECTX || __CB_ON_WEB)
 
+#macro __CB_SURFACE_SET_TARGET_EXT_WORKAROUND  true
+
 enum CB_PASS
 {
     LIGHT_DEPTH,

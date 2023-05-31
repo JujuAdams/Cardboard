@@ -3,13 +3,14 @@ varying vec4 v_vColour;
 
 float RGBToDepth(vec3 color)
 {
-	return dot(color, 1.0 / vec3(1.0, 255.0, 65025.0));	
+	color /= vec3(1.0, 255.0, 255.0*255.0);
+    return color.r + color.g + color.b;
 }
 
 void main()
 {
     vec4  sample = texture2D(gm_BaseTexture, v_vTexcoord);
-    float depth  = RGBToDepth(texture2D(gm_BaseTexture, v_vTexcoord).rgb);
+    float depth  = 1.0 - RGBToDepth(texture2D(gm_BaseTexture, v_vTexcoord).rgb);
     
     gl_FragColor = vec4(depth, depth, depth, 1.0);
 }

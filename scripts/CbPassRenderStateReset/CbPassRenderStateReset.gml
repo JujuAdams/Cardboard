@@ -22,4 +22,9 @@ function CbPassRenderStateReset(_pass)
     matrix_set(matrix_world,      _global.__oldRenderStateMatrixWorld);
     matrix_set(matrix_view,       _global.__oldRenderStateMatrixView);
     matrix_set(matrix_projection, _global.__oldRenderStateMatrixProjection);
+    
+    if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND && (_pass == CB_PASS.OPAQUE) && (CbSystemLightModeGet() == CB_LIGHT_MODE.DEFERRED))
+    {
+        draw_surface(__CbDeferredSurfaceDiffuseEnsure(application_surface), 0, 0);
+    }
 }
