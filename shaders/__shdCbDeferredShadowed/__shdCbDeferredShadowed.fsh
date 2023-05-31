@@ -8,6 +8,7 @@ uniform sampler2D u_sDepth;
 uniform sampler2D u_sNormal;
 uniform mat4      u_mCameraInverse;
 
+uniform vec3      u_vAmbient;
 uniform sampler2D u_sLightDepth;
 uniform vec4      u_vLightPos;
 uniform vec3      u_vLightColor;
@@ -22,7 +23,7 @@ float RGBToDepth(vec3 color)
 
 vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor, vec2 lightZRange)
 {
-    vec4  lightSpacePos = lightMatrix*position;
+    vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
     vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
     float calcDepth     = (lightSpacePos.z - lightZRange.x) / (lightZRange.y - lightZRange.x);
     

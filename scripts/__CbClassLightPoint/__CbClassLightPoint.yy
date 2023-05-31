@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbSystemClearDeferredLighting",
+  "name": "__CbClassLightPoint",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "System",
-    "path": "folders/Cardboard/System.yy",
+    "name": "Classes",
+    "path": "folders/Cardboard/(System)/Classes.yy",
   },
 }

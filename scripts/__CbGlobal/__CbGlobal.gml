@@ -10,8 +10,8 @@ function __CbGlobal()
         __alphaTestRef: 0.5,
         
         __camera: {
-            __width:  1920,
-            __height: 1080,
+            __width:  surface_get_width(application_surface),
+            __height: surface_get_height(application_surface),
             
             __xFrom:   0,
             __yFrom: 128,
@@ -27,8 +27,8 @@ function __CbGlobal()
             
             __axonometric: true,
             
-            __near: -2048,
-            __far:   2048,
+            __near: -2000,
+            __far:   2000,
         },
         
         __pass: [
