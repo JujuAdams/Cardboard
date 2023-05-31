@@ -1,1 +1,0 @@
-#macro __CARDBOARD_FORCE_SUBMIT_CONDITION  if (!_global.__autoBatching && !_global.__buildingModel) CardboardBatchForceSubmit();

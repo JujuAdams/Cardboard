@@ -9,51 +9,51 @@ repeat(2)
     switch(_i)
     {
         case 0:
-            CardboardLightShadow(0, c_yellow, 300, 450, 300, -150, 150, 0, 45, 10, 1000);
-            CardboardLightShadow(1, c_yellow, 0, 0, 600, 0, -250, 0, 50, 10, 1000);
+            CbLightShadow(0, c_yellow, 300, 450, 300, -150, 150, 0, 45, 10, 1000);
+            CbLightShadow(1, c_yellow, 0, 0, 600, 0, -250, 0, 50, 10, 1000);
             
-            CardboardLightShadowStart(0);
+            CbLightShadowStart(0);
             oScene.Draw();
-            CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
-            CardboardLightShadowEnd();
+            CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+            CbLightShadowEnd();
             
-            CardboardLightShadowStart(1);
+            CbLightShadowStart(1);
             oScene.Draw();
-            CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
-            CardboardLightShadowEnd();
+            CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+            CbLightShadowEnd();
         break;
         
         case 1:
-            //Start Cardboard's quick start renderer
+            //Start Cb's quick start renderer
             //You don't have to use this function but it does make things a lot easier
-            CardboardRenderStateSet(1366, 768,
+            CbRenderStateSet(1366, 768,
                                     oCamera.camFromX, oCamera.camFromY, oCamera.camFromZ,
                                     oCamera.camToX, oCamera.camToY, oCamera.camToZ,
                                     axonometric);
             
-            if (CARDBOARD_WRITE_NORMALS)
+            if (CB_WRITE_NORMALS)
             {
-                CardboardLightAmbience(c_dkgray);
-                //CardboardLightDirectional(0, 1, 1, -2, c_gray);
-                //CardboardLightPoint(0, -240,  400, 300, 2200, c_yellow);
-                //CardboardLightPoint(1,  240,  400, 300, 2200, c_white);
-                //CardboardLightPoint(2,    0, -400, 300, 2200, c_red);
-                CardboardLightShaderSet();
+                CbLightAmbience(c_dkgray);
+                //CbLightDirectional(0, 1, 1, -2, c_gray);
+                //CbLightPoint(0, -240,  400, 300, 2200, c_yellow);
+                //CbLightPoint(1,  240,  400, 300, 2200, c_white);
+                //CbLightPoint(2,    0, -400, 300, 2200, c_red);
+                CbLightShaderSet();
             }
             
             //Draw the scene object
             oScene.Draw();
             
             //Draw a lil triangle at the camera's "to" position
-            CardboardSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+            CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
             
-            if (CARDBOARD_WRITE_NORMALS)
+            if (CB_WRITE_NORMALS)
             {
                 shader_reset();
             }
             
             //Reset render state
-            CardboardRenderStateReset();
+            CbRenderStateReset();
         break;
     }
     
@@ -62,12 +62,12 @@ repeat(2)
 
 if (keyboard_check(ord("L")))
 {
-    CardboardLightShadowDrawDebug(0, 0, 0);
+    CbLightShadowDrawDebug(0, 0, 0);
 }
 
 if (keyboard_check(ord("O")))
 {
-    shader_set(__shdCardboardDepthTest);
-    CardboardLightShadowDrawDebug(1, 0, 0);
+    shader_set(__shdCbDepthTest);
+    CbLightShadowDrawDebug(1, 0, 0);
     shader_reset();
 }
