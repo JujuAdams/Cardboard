@@ -32,7 +32,8 @@ void main()
     vec3 normal = 2.0*texture2D(u_sNormal, v_vTexcoord).rgb - 1.0;
     
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
-    vec4 nsCoord = vec4(2.0*vec2(v_vTexcoord.x, -v_vTexcoord.y) - 1.0,
+    vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
+                        1.0 - 2.0*v_vTexcoord.y,
                         RGBToDepth(texture2D(u_sDepth, v_vTexcoord).rgb), 
                         1.0);
     
