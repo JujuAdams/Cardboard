@@ -1,7 +1,7 @@
 /// @param index
 /// @param [setShader=true]
 
-function CbLightShadowStart(_index, _setShader = true)
+function CbDeferredLightStart(_index, _setShader = true)
 {
     __CB_GLOBAL
     

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbLightShadowStart",
+  "name": "CbLightModeGet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Forward Lighting",
-    "path": "folders/Cardboard/Forward Lighting.yy",
+    "name": "Default Renderer",
+    "path": "folders/Cardboard/Default Renderer.yy",
   },
 }

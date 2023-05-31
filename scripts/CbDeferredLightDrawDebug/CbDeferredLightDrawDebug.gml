@@ -2,7 +2,7 @@
 /// @param x
 /// @param y
 
-function CbLightShadowDrawDebug(_index, _x, _y)
+function CbDeferredLightDrawDebug(_index, _x, _y)
 {
     __CB_GLOBAL
     

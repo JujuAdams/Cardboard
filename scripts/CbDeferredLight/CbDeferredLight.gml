@@ -13,7 +13,7 @@
 /// @param [yUp=0]
 /// @param [zUp=1]
 
-function CbLightShadow(_index, _color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _near, _far, _xUp = 0, _yUp = 0, _zUp = 1)
+function CbDeferredLight(_index, _color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _near, _far, _xUp = 0, _yUp = 0, _zUp = 1)
 {
     __CB_GLOBAL
     

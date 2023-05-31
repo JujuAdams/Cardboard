@@ -1,4 +1,4 @@
-function CbLightShadowEnd()
+function CbDeferredLightEnd()
 {
     __CB_GLOBAL
     

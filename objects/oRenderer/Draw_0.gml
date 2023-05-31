@@ -9,18 +9,18 @@ repeat(2)
     switch(_i)
     {
         case 0:
-            CbLightShadow(0, c_yellow, 300, 450, 300, -150, 150, 0, 45, 10, 1000);
-            CbLightShadow(1, c_yellow, 0, 0, 600, 0, -250, 0, 50, 10, 1000);
+            CbDeferredLight(0, c_yellow, 300, 450, 300, -150, 150, 0, 45, 10, 1000);
+            CbDeferredLight(1, c_yellow, 0, 0, 600, 0, -250, 0, 50, 10, 1000);
             
-            CbLightShadowStart(0);
+            CbDeferredLightStart(0);
             oScene.Draw();
             CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
-            CbLightShadowEnd();
+            CbDeferredLightEnd();
             
-            CbLightShadowStart(1);
+            CbDeferredLightStart(1);
             oScene.Draw();
             CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
-            CbLightShadowEnd();
+            CbDeferredLightEnd();
         break;
         
         case 1:
@@ -62,12 +62,12 @@ repeat(2)
 
 if (keyboard_check(ord("L")))
 {
-    CbLightShadowDrawDebug(0, 0, 0);
+    CbDeferredLightDrawDebug(0, 0, 0);
 }
 
 if (keyboard_check(ord("O")))
 {
     shader_set(__shdCbDepthTest);
-    CbLightShadowDrawDebug(1, 0, 0);
+    CbDeferredLightDrawDebug(1, 0, 0);
     shader_reset();
 }
