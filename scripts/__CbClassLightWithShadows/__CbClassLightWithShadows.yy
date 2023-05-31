@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbDeferredLight",
+  "name": "__CbClassLightWithShadows",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Cardboard/Lighting.yy",
+    "name": "Classes",
+    "path": "folders/Cardboard/(System)/Classes.yy",
   },
 }

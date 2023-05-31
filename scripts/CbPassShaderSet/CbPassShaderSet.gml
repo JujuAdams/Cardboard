@@ -60,8 +60,8 @@ function CbPassShaderSet(_pass)
                             shader_set_uniform_f(shader_get_uniform(__shdCbGBufferHLSL, "u_vZ"), __camera.__near, __camera.__far);
                         }
                         
-                        __oldRenderStateResetSurface = true;
-                        surface_set_target_ext(0, __CbDeferredSurfaceDiffuseEnsure(_refSurface));
+                        __renderStateResetSurface = true;
+                        surface_set_target_ext(0, _refSurface);
                         surface_set_target_ext(1, __CbDeferredSurfaceDepthEnsure(  _refSurface));
                         surface_set_target_ext(2, __CbDeferredSurfaceNormalEnsure( _refSurface));
                     break;

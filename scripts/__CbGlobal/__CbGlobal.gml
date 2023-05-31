@@ -51,7 +51,7 @@ function __CbGlobal()
             __colorArray:  array_create(3*__CB_LIGHT_COUNT, 0),
         },
         
-        __deferredSurfaceDiffuse: -1,
+        __deferredSurfaceLight: -1,
         __deferredSurfaceDepth:   -1,
         __deferredSurfaceNormal:  -1,
         
@@ -61,7 +61,7 @@ function __CbGlobal()
         __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
         __oldRenderStateMatrixView:       matrix_get(matrix_view),
         __oldRenderStateMatrixProjection: matrix_get(matrix_projection),
-        __oldRenderStateResetSurface:     false,
+        __renderStateResetSurface:     false,
         
         __billboardYaw:    undefined,
         __billboardYawSin: 0,

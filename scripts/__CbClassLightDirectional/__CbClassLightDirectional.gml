@@ -2,6 +2,9 @@ function __CbClassLightDirectional(_dx, _dy, _dz, _color) constructor
 {
     __CB_GLOBAL
     array_push(_global.__lighting.__array, weak_ref_create(self));
+    static __hasShadows = false;
+    
+    
     
     visible = true;
     dx      = _dx;
@@ -10,6 +13,8 @@ function __CbClassLightDirectional(_dx, _dy, _dz, _color) constructor
     color   = _color;
     
     __destroyed = false;
+    
+    
     
     static Destroy = function()
     {

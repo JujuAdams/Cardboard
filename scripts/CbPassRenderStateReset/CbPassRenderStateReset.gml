@@ -12,9 +12,9 @@ function CbPassRenderStateReset(_pass)
     gpu_set_alphatestenable(false);
     shader_reset();
     
-    if (_global.__oldRenderStateResetSurface)
+    if (_global.__renderStateResetSurface)
     {
-        _global.__oldRenderStateResetSurface = false;
+        _global.__renderStateResetSurface = false;
         surface_reset_target();
     }
     
