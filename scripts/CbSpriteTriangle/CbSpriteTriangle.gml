@@ -25,16 +25,16 @@ function CbSpriteTriangle()
 {
     __CB_GLOBAL
     
-    var _sprite = argument[0];
-    var _image  = argument[1];
-    var _x1     = argument[2];
-    var _y1     = argument[3];
-    var _z1     = argument[4];
-    var _u1prop = argument[5];
-    var _v1prop = argument[6];
-    var _x2     = argument[7];
-    var _y2     = argument[8];
-    var _z2     = argument[9];
+    var _sprite = argument[ 0];
+    var _image  = argument[ 1];
+    var _x1     = argument[ 2];
+    var _y1     = argument[ 3];
+    var _z1     = argument[ 4];
+    var _u1prop = argument[ 5];
+    var _v1prop = argument[ 6];
+    var _x2     = argument[ 7];
+    var _y2     = argument[ 8];
+    var _z2     = argument[ 9];
     var _u2prop = argument[10];
     var _v2prop = argument[11];
     var _x3     = argument[12];

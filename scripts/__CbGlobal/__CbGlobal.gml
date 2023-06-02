@@ -78,6 +78,8 @@ function __CbGlobal()
         
         __model:         undefined,
         __buildingModel: false,
+        
+        __tilesetDict: {},
     };
     
     return _struct;

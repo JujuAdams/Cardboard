@@ -7,4 +7,4 @@
 #macro CB_DOUBLE_SIDED_SPACING  0.1
 
 // Whether to use backface culling
-#macro CB_BACKFACE_CULLING  false
+#macro CB_BACKFACE_CULLING  true

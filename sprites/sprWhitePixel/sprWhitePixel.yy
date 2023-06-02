@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Cardboard",
-    "path": "Cardboard.yyp",
+    "name": "Assets",
+    "path": "folders/Assets.yy",
   },
 }
