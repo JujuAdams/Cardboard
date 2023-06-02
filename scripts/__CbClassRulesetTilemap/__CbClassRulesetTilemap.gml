@@ -9,29 +9,39 @@ function __CbClassRulesetTilemap(_tileset) constructor
     __tilesetHeight = _tilesetData.__tilesetHeight;
     
     __dictionary = {};
-    __bottomless = false;
-    __backless   = false;
-    __sideless   = false;
+    
+    __removeLeft   = false;
+    __removeRight  = false;
+    __removeUp     = false;
+    __removeBottom = false;
     
     
     
-    static Bottomless = function(_state)
+    static RemoveLeft = function(_state)
     {
-        __bottomless = _state;
+        __removeLeft = _state;
         return self;
     }
     
-    static Backless = function(_state)
+    static RemoveRight = function(_state)
     {
-        __backless = _state;
+        __removeRight = _state;
         return self;
     }
     
-    static Sideless = function(_state)
+    static RemoveUp = function(_state)
     {
-        __sideless = _state;
+        __removeUp = _state;
         return self;
     }
+    
+    static RemoveBottom = function(_state)
+    {
+        __removeBottom = _state;
+        return self;
+    }
+    
+    
     
     static RemapBasic = function(_x, _y, _xNew, _yNew)
     {

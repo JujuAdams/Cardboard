@@ -30,16 +30,18 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
     if (is_struct(_tilesetRuleset))
     {
         var _tileDict  = _tilesetRuleset.__dictionary;
-        var _hasBottom = not _tilesetRuleset.__bottomless;
-        var _hasBack   = not _tilesetRuleset.__backless;
-        var _hasSides  = not _tilesetRuleset.__sideless;
+        var _hasLeft   = not _tilesetRuleset.__removeLeft;
+        var _hasRight  = not _tilesetRuleset.__removeRight;
+        var _hasUp     = not _tilesetRuleset.__removeUp;
+        var _hasBottom = not _tilesetRuleset.__removeBottom;
     }
     else
     {
         var _tileDict  = {};
+        var _hasLeft   = true
+        var _hasRight  = true;
+        var _hasUp     = true;
         var _hasBottom = true;
-        var _hasBack   = true;
-        var _hasSides  = true;
     }
     
     var _zMap   = 0;
@@ -56,7 +58,7 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
             var _tileIndex = tilemap_get(_tilemap, _xMap, _yMap);
             if (_tileIndex != 0)
             {
-                if (_hasSides && ((_xMap <= 0) || (tilemap_get(_tilemap, _xMap-1, _yMap) <= 0)))
+                if (_hasLeft && ((_xMap <= 0) || (tilemap_get(_tilemap, _xMap-1, _yMap) <= 0)))
                 {
                     var _indexArray = _tileDict[$ _tileIndex];
                     if (is_array(_indexArray))
@@ -79,7 +81,7 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
                                c_white, 1);
                 }
                 
-                if (_hasSides && ((_xMap >= _tilemapHeight-1) || (tilemap_get(_tilemap, _xMap+1, _yMap) <= 0)))
+                if (_hasRight && ((_xMap >= _tilemapHeight-1) || (tilemap_get(_tilemap, _xMap+1, _yMap) <= 0)))
                 {
                     var _indexArray = _tileDict[$ _tileIndex];
                     if (is_array(_indexArray))
@@ -102,7 +104,7 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
                                c_white, 1);
                 }
                 
-                if (_hasBack && ((_yMap <= 0) || (tilemap_get(_tilemap, _xMap, _yMap-1) <= 0)))
+                if (_hasUp && ((_yMap <= 0) || (tilemap_get(_tilemap, _xMap, _yMap-1) <= 0)))
                 {
                     var _indexArray = _tileDict[$ _tileIndex];
                     if (is_array(_indexArray))
