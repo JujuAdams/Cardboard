@@ -26,7 +26,7 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
     var _tilesetData  = __CbGetTileset(_tileset);
     var _tilesetWidth = _tilesetData.__tilesetWidth;
     
-    var _tilesetRuleset = _ruleset.__tilesetDict[$ _tileset];
+    var _tilesetRuleset = is_struct(_ruleset)? _ruleset.__tilesetDict[$ _tileset] : undefined;
     if (is_struct(_tilesetRuleset))
     {
         var _tileDict  = _tilesetRuleset.__dictionary;
