@@ -57,7 +57,7 @@ function __CbClassRulesetTilemap(_tileset) constructor
         return self;
     }
     
-    static RemapTopDown = function(_x, _y, _xAbove, _yAbove, _xEdge, _yEdge)
+    static RemapEdgeAbove = function(_x, _y, _xEdge, _yEdge, _xAbove, _yAbove)
     {
         __dictionary[$ _x + __tilesetWidth*_y] = [
                                                     _xEdge,  _yEdge,  //Left
