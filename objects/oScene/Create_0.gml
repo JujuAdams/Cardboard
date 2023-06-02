@@ -6,6 +6,7 @@ _ruleset.AddTileset(tsTiles).RemapEdge(1,0,   0,1).RemapBasic(0,1,   1,0);
 
 var _array = ["Tiles_1", "Tiles_2"];
 
+CbSpriteFloorExt(sprHi, 0, 0, 0, 0, 100, 100, 0, c_white, 1);
 CbTilemapProcess3D(_ruleset, _array, 0, 0, 0, 100, 100, 100);
 CbLayerArrayHide(_array);
 

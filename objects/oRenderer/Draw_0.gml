@@ -16,7 +16,7 @@ if (keyboard_check(ord("L")))
 
 if (keyboard_check(ord("K")))
 {
-    light4.DrawDebug(0, 0, true);
+    light2.DrawDebug(0, 0, true);
 }
 
 
