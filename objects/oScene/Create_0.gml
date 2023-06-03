@@ -2,7 +2,7 @@
 CbModelBegin();
 
 var _ruleset = CbRuleset();
-_ruleset.AddTileset(tsTiles).RemapEdge(1,0,   0,1).RemapBasic(0,1,   1,0);
+_ruleset.AddTileset(tsTiles).RemapEdgeAbove(1,0,   0,1, 1,0).RemapEdgeAbove(1,0,   0,1, 1,0);
 
 var _array = ["Tiles_1", "Tiles_2"];
 
