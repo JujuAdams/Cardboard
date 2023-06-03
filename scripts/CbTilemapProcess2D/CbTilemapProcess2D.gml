@@ -20,7 +20,6 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
     
     var _tilemapWidth  = tilemap_get_width(  _tilemap);
     var _tilemapHeight = tilemap_get_height( _tilemap);
-    var _tilemapDepth  = 1;
     
     var _tileset      = tilemap_get_tileset(_tilemap);
     var _tilesetData  = __CbGetTileset(_tileset);
@@ -150,7 +149,7 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
                                c_white, 1);
                 }
                 
-                if (_hasBottom && ((_zMap <= 0) || (_tilemapBelow == undefined) || (tilemap_get(_tilemapBelow, _xMap, _yMap) <= 0)))
+                if (_hasBottom && ((_tilemapBelow == undefined) || (tilemap_get(_tilemapBelow, _xMap, _yMap) <= 0)))
                 {
                     var _indexArray = _tileDict[$ _tileIndex];
                     if (is_array(_indexArray))
@@ -173,7 +172,7 @@ function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _x
                                c_white, 1);
                 }
                 
-                if ((_zMap >= _tilemapDepth-1) || (_tilemapAbove == undefined) || (tilemap_get(_tilemapAbove, _xMap, _yMap) <= 0))
+                if ((_tilemapAbove == undefined) || (tilemap_get(_tilemapAbove, _xMap, _yMap) <= 0))
                 {
                     var _indexArray = _tileDict[$ _tileIndex];
                     if (is_array(_indexArray))
