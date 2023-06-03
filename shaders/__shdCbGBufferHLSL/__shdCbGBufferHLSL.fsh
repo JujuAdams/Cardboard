@@ -18,7 +18,6 @@ uniform float2 u_vZ;
 
 float3 DepthToRGB(float depth)
 {
-    depth = (depth - u_vZ.x) / (u_vZ.y - u_vZ.x);
     return frac(floor(255.0*depth*float3(1.0, 255.0, 65025.0)) / 255.0);
 }
 
@@ -29,7 +28,7 @@ OUTPUT main(PS In)
     Out.Colour0 = In.Colour*gm_BaseTextureObject.Sample(gm_BaseTexture, In.Texcoord);
     if (u_fAlphaTestRef > Out.Colour0.a) discard;
     
-    Out.Colour1 = float4(DepthToRGB(In.Position.z), 1.0);
+    Out.Colour1 = float4(DepthToRGB(In.Position.z / In.Position.w), 1.0);
     Out.Colour2 = float4(0.5 + 0.5*In.Normal, 1.0);
     
     return Out;

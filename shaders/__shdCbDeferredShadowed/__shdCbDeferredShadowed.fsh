@@ -1,5 +1,5 @@
 #define BIAS_MAX    0.01
-#define BIAS_COEFF  0.005
+#define BIAS_COEFF  0.0002
 
 varying vec2 v_vTexcoord;
 
@@ -24,7 +24,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
 {
     vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
     vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
-    float calcDepth     = (lightSpacePos.z - lightZRange.x) / (lightZRange.y - lightZRange.x);
+    float calcDepth     = lightSpacePos.z / lightSpacePos.w;
     
     float foundDepth = RGBToDepth(texture2D(lightDepthTexture, texCoord).rgb);
     vec3  dir        = lightPosition - position;
@@ -34,7 +34,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
     
     //Perform the depth comparison
     float depthBias = clamp(BIAS_COEFF*tan(acos(dotProduct)), 0.0, BIAS_MAX);
-    float factor = step(calcDepth, foundDepth + depthBias);
+    float factor = step(max(0.0, calcDepth), foundDepth + depthBias);
     
     //Adjust for normals
     factor *= dotProduct;
@@ -62,7 +62,7 @@ void main()
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
     vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
                         1.0 - 2.0*v_vTexcoord.y,
-                        u_vZ.x + (u_vZ.y - u_vZ.x)*RGBToDepth(texture2D(u_sDepth, v_vTexcoord).rgb), 
+                        RGBToDepth(texture2D(u_sDepth, v_vTexcoord).rgb), 
                         1.0);
     
     //Work backwards from the NDSpace coordinate to world space
