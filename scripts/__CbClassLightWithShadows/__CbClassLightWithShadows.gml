@@ -8,11 +8,8 @@
 /// @param FoV
 /// @param near
 /// @param far
-/// @param [xUp=0]
-/// @param [yUp=0]
-/// @param [zUp=1]
 
-function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _near, _far, _xUp = 0, _yUp = 1, _zUp = 0) constructor
+function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _near, _far) constructor
 {
     __CB_GLOBAL
     array_push(_global.__lighting.__array, weak_ref_create(self));
@@ -34,15 +31,15 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
     near  = _near;
     far   = _far;
     
-    xUp   = _xUp;
-    yUp   = _yUp;
-    zUp   = _zUp;
+    xUp   = 0;
+    yUp   = 1;
+    zUp   = 0;
     
     visible = true;
     color   = _color;
     
-    __width  = 1366;
-    __height =  768;
+    __width  = 300;
+    __height = 300;
     
     __depthSurface = -1;
     
