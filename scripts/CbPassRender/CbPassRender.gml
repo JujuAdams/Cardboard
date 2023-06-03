@@ -34,6 +34,7 @@ function CbPassRender(_pass)
         
         case CB_PASS.OPAQUE:
         case CB_PASS.TRANSPARENT:
+        case CB_PASS.UNLIT:
             _function();
             
             //If we've got a pending batch then submit that before resetting draw state

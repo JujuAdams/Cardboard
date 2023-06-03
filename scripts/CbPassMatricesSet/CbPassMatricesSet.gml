@@ -12,6 +12,7 @@ function CbPassMatricesSet(_pass)
     {
         case CB_PASS.OPAQUE:
         case CB_PASS.TRANSPARENT:
+        case CB_PASS.UNLIT:
             var _matrixStruct = CbPassMatricesGet(_pass);
             matrix_set(matrix_view, _matrixStruct.view);
             matrix_set(matrix_projection, _matrixStruct.projection);

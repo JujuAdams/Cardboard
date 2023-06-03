@@ -41,6 +41,9 @@ function __CbGlobal()
             { // CB_PASS.TRANSPARENT
                 __function: undefined,
             },
+            { // CB_PASS.UNLIT
+                __function: undefined,
+            },
         ],
         
         __lighting: {

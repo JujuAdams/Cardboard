@@ -17,6 +17,7 @@ enum CB_PASS
     LIGHT_DEPTH,
     OPAQUE,
     TRANSPARENT,
+    UNLIT,
     __SIZE
 }
 

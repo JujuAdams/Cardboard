@@ -5,4 +5,5 @@ function CbRender()
     CbPassRender(CB_PASS.OPAQUE);
     CbPassRender(CB_PASS.TRANSPARENT);
     CbLightRenderDeferred();
+    CbPassRender(CB_PASS.UNLIT);
 }

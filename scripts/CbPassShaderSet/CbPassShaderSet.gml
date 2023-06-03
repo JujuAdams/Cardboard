@@ -72,6 +72,7 @@ function CbPassShaderSet(_pass)
             break;
             
             case CB_PASS.TRANSPARENT:
+            case CB_PASS.UNLIT:
                 shader_reset();
             break;
         }

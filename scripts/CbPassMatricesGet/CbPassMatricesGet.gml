@@ -14,6 +14,7 @@ function CbPassMatricesGet(_pass)
     {
         case CB_PASS.OPAQUE:
         case CB_PASS.TRANSPARENT:
+        case CB_PASS.UNLIT:
             with(_global.__camera)
             {
                 return {
@@ -24,7 +25,7 @@ function CbPassMatricesGet(_pass)
         break;
         
         default:
-            __CbError("CbPassSurfacesGet() not supported for pass ", _pass);
+            __CbError("CbPassMatricesGet() not supported for pass ", _pass);
         break;
     }
 }
