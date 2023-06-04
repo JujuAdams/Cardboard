@@ -4,7 +4,7 @@ function CbLightRenderDeferred()
     
     if (CbSystemLightModeGet() != CB_LIGHT_MODE.DEFERRED) return;
     
-    var _matrices        = CbPassMatricesGet(CB_PASS.OPAQUE);
+    var _matrices        = CbCameraMatricesGet();
     var _vpMatrix        = matrix_multiply(_matrices.view, _matrices.projection);
     var _vpMatrixInverse = __CbMatrixInvert(_vpMatrix);
     
