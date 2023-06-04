@@ -6,10 +6,11 @@
 /// @param yTo
 /// @param zTo
 /// @param FoV
+/// @param radius
 /// @param near
 /// @param far
 
-function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _near, _far) constructor
+function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _radius, _near, _far) constructor
 {
     __CB_GLOBAL
     array_push(_global.__lighting.__array, weak_ref_create(self));
@@ -27,13 +28,14 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
     yTo   = _yTo;
     zTo   = _zTo;
     
-    fov   = _fov;
-    near  = _near;
-    far   = _far;
-    
     xUp   = 0;
     yUp   = 1;
     zUp   = 0;
+    
+    fov    = _fov;
+    radius = _radius;
+    near   = _near;
+    far    = _far;
     
     visible = true;
     color   = _color;
@@ -128,7 +130,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         __BuildMatrices();
         
         shader_set_uniform_matrix_array(_u_mLightViewProj, __matrixViewProj);
-        shader_set_uniform_f(_u_vLightPos, xFrom, yFrom, zFrom, far);
+        shader_set_uniform_f(_u_vLightPos, xFrom, yFrom, zFrom, radius);
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
@@ -148,7 +150,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         __BuildMatrices();
         
         shader_set_uniform_matrix_array(_u_mLightViewProj, __matrixViewProj);
-        shader_set_uniform_f(_u_vLightPos, xFrom, yFrom, zFrom, far);
+        shader_set_uniform_f(_u_vLightPos, xFrom, yFrom, zFrom, radius);
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
