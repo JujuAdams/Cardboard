@@ -51,6 +51,7 @@ function CbPassShaderSet(_pass)
                             shader_set_uniform_f_array(shader_get_uniform(__shdCbOneShadowMap, "u_vPosRadArray"), __posRadArray);
                             shader_set_uniform_f_array(shader_get_uniform(__shdCbOneShadowMap, "u_vColorArray"),  __colorArray);
                             
+                            var _shadowedLightFound = false;
                             var _i = 0;
                             repeat(array_length(__array))
                             {
@@ -59,11 +60,18 @@ function CbPassShaderSet(_pass)
                                     if (__hasShadows && visible)
                                     {
                                         __SetDeferredUniformsForOneShadowMap();
+                                        _shadowedLightFound = true;
                                         break;
                                     }
                                 }
                                 
                                 ++_i;
+                            }
+                            
+                            //Ensure that we reset the shadowed light colour if it disappears for some reason
+                            if (_shadowedLightFound)
+                            {
+                                shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_vLightColor"), 0, 0, 0);
                             }
                         }
                     break;
