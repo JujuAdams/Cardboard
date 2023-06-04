@@ -1,6 +1,6 @@
-//light1.x = oCamera.camToX;
-//light1.y = oCamera.camToY + 20;
-//light1.z = oCamera.camToZ;
+light1.x = oCamera.camToX;
+light1.y = oCamera.camToY + 20;
+light1.z = oCamera.camToZ;
 
 light2.xFrom = oCamera.camToX;
 light2.yFrom = oCamera.camToY + 10;
