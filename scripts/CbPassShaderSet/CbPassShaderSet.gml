@@ -69,7 +69,7 @@ function CbPassShaderSet(_pass)
                             }
                             
                             //Ensure that we reset the shadowed light colour if it disappears for some reason
-                            if (_shadowedLightFound)
+                            if (not _shadowedLightFound)
                             {
                                 shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_vLightColor"), 0, 0, 0);
                             }
