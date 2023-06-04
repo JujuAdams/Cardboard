@@ -17,9 +17,9 @@ function CbSurfaceFloor(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin = 0)
     
     //Cache the vertex positions
     var _l = _x - _xOrigin;
-    var _t = _z + _yOrigin;
+    var _t = _y + _yOrigin;
     var _r = _l + surface_get_width(_surface);
-    var _b = _t - surface_get_height(_surface);
+    var _b = _t + surface_get_height(_surface);
     
     //Add this surface to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
