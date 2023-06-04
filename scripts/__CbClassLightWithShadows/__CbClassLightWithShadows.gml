@@ -122,7 +122,6 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         static _u_mLightViewProj = shader_get_uniform(__shdCbDeferredShadowed, "u_mLightViewProj");
         static _u_vLightPos      = shader_get_uniform(__shdCbDeferredShadowed, "u_vLightPos");
         static _u_vLightColor    = shader_get_uniform(__shdCbDeferredShadowed, "u_vLightColor");
-        static _u_vLightZ        = shader_get_uniform(__shdCbDeferredShadowed, "u_vLightZ");
         static _u_sLightDepth    = shader_get_sampler_index(__shdCbDeferredShadowed, "u_sLightDepth");
         
         __Tick();
@@ -133,7 +132,6 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
-        shader_set_uniform_f(_u_vLightZ, near, far);
         texture_set_stage(_u_sLightDepth, surface_get_texture(__depthSurface));
     }
     
@@ -144,7 +142,6 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         static _u_mLightViewProj = shader_get_uniform(__shdCbOneShadowMap, "u_mLightViewProj");
         static _u_vLightPos      = shader_get_uniform(__shdCbOneShadowMap, "u_vLightPos");
         static _u_vLightColor    = shader_get_uniform(__shdCbOneShadowMap, "u_vLightColor");
-        static _u_vLightZ        = shader_get_uniform(__shdCbOneShadowMap, "u_vLightZ");
         static _u_sLightDepth    = shader_get_sampler_index(__shdCbOneShadowMap, "u_sLightDepth");
         
         __Tick();
@@ -155,7 +152,6 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
-        shader_set_uniform_f(_u_vLightZ, near, far);
         texture_set_stage(_u_sLightDepth, surface_get_texture(__depthSurface));
     }
 }

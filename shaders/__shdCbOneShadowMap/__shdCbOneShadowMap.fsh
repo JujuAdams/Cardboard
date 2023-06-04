@@ -17,7 +17,6 @@ uniform vec3  u_vColorArray[LIGHT_COUNT];
 uniform sampler2D u_sLightDepth;
 uniform vec4      u_vLightPos;
 uniform vec3      u_vLightColor;
-uniform vec2      u_vLightZ;
 uniform mat4      u_mLightViewProj;
 
 float RGBToDepth(vec3 color)
@@ -53,7 +52,7 @@ vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
     return lightFinal;
 }
 
-vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor, vec2 lightZRange)
+vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
 {
     vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
     vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
@@ -94,5 +93,5 @@ void main()
     
     gl_FragColor.rgb *= u_vAmbient
                       + AccumulateUnshadowedLights(v_vPosition, v_vNormal)
-                      + AccumulateShadowedLight(v_vPosition, v_vNormal, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor, u_vLightZ);
+                      + AccumulateShadowedLight(v_vPosition, v_vNormal, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor);
 }
