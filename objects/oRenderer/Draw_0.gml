@@ -14,7 +14,7 @@ if (keyboard_check(ord("L")))
     draw_surface(_surface, 0, 0);
 }
 
-if (keyboard_check(ord("K")))
-{
-    light2.DrawDebug(0, 0);
-}
+//if (keyboard_check(ord("K")))
+//{
+//    light2.DrawDebug(0, 0);
+//}
