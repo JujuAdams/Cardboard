@@ -42,7 +42,32 @@ function CbPassShaderSet(_pass)
                     break;
                     
                     case CB_LIGHT_MODE.ONE_SHADOW_MAP:
-                        __CbError("Not currently supported");
+                        shader_set(__shdCbOneShadowMap);
+                        shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_fAlphaTestRef"), __alphaTestRef);
+                        
+                        with(__lighting)
+                        {
+                            shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_vAmbient"), colour_get_red(  __ambient)/255,
+                                                                                                        colour_get_green(__ambient)/255,
+                                                                                                        colour_get_blue( __ambient)/255);
+                            shader_set_uniform_f_array(shader_get_uniform(__shdCbOneShadowMap, "u_vPosRadArray"), __posRadArray);
+                            shader_set_uniform_f_array(shader_get_uniform(__shdCbOneShadowMap, "u_vColorArray"),  __colorArray);
+                            
+                            var _i = 0;
+                            repeat(array_length(__array))
+                            {
+                                with(__array[_i].ref)
+                                {
+                                    if (__hasShadows && visible)
+                                    {
+                                        __SetDeferredUniformsForOneShadowMap();
+                                        break;
+                                    }
+                                }
+                                
+                                ++_i;
+                            }
+                        }
                     break;
                     
                     case CB_LIGHT_MODE.DEFERRED:
