@@ -15,8 +15,6 @@ function CbPassShaderSet(_pass)
             case CB_PASS.LIGHT_DEPTH:
                 shader_set(__shdCbDepth);
                 shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_fAlphaTestRef"), __alphaTestRef);
-                
-                //Uniform "u_vZ" is set per light
             break;
             
             case CB_PASS.OPAQUE:
@@ -77,13 +75,11 @@ function CbPassShaderSet(_pass)
                         {
                             shader_set(__shdCbGBufferGLSL);
                             shader_set_uniform_f(shader_get_uniform(__shdCbGBufferGLSL, "u_fAlphaTestRef"), __alphaTestRef);
-                            shader_set_uniform_f(shader_get_uniform(__shdCbGBufferGLSL, "u_vZ"), __camera.__near, __camera.__far);
                         }
                         else
                         {
                             shader_set(__shdCbGBufferHLSL);
                             shader_set_uniform_f(shader_get_uniform(__shdCbGBufferHLSL, "u_fAlphaTestRef"), __alphaTestRef);
-                            shader_set_uniform_f(shader_get_uniform(__shdCbGBufferHLSL, "u_vZ"), __camera.__near, __camera.__far);
                         }
                         
                         __renderStateResetSurface = true;

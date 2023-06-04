@@ -2,7 +2,6 @@
 
 varying vec2 v_vTexcoord;
 
-uniform vec2      u_vZ;
 uniform sampler2D u_sDepth;
 uniform sampler2D u_sNormal;
 uniform mat4      u_mCameraInverse;
@@ -13,7 +12,7 @@ uniform vec3      u_vColorArray[LIGHT_COUNT];
 float RGBToDepth(vec3 color)
 {
 	color /= vec3(1.0, 255.0, 255.0*255.0);
-    return u_vZ.x + (u_vZ.y - u_vZ.x)*(color.r + color.g + color.b);
+    return color.r + color.g + color.b;
 }
 
 float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, float radius)

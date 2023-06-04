@@ -76,8 +76,6 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         __Tick();
         __BuildMatrices();
         
-        shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_vZ"), near, far);
-        
         surface_set_target(__depthSurface);
         draw_clear(c_gray);
         matrix_set(matrix_view,       __matrixView);

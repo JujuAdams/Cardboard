@@ -3,7 +3,6 @@
 
 varying vec2 v_vTexcoord;
 
-uniform vec2      u_vZ;
 uniform sampler2D u_sDepth;
 uniform sampler2D u_sNormal;
 uniform mat4      u_mCameraInverse;

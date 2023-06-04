@@ -2,7 +2,6 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vPosition;
 
 uniform float u_fAlphaTestRef;
-uniform vec2  u_vZ;
 
 vec3 DepthToRGB(float depth)
 {

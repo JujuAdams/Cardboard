@@ -13,8 +13,7 @@ struct OUTPUT
     float4 Colour2: SV_Target2;
 };
 
-uniform float  u_fAlphaTestRef;
-uniform float2 u_vZ;
+uniform float u_fAlphaTestRef;
 
 float3 DepthToRGB(float depth)
 {
