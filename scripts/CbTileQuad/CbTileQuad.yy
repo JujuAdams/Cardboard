@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Tilemaps",
-    "path": "folders/Cardboard/Tilemaps.yy",
+    "name": "3D",
+    "path": "folders/Cardboard/Tilemaps/3D.yy",
   },
 }
