@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbPassMatricesGet",
+  "name": "CbCameraMatricesSet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Passes",
-    "path": "folders/Cardboard/Passes.yy",
+    "name": "Camera",
+    "path": "folders/Cardboard/Camera.yy",
   },
 }

@@ -34,7 +34,7 @@ function CbPassRenderStateSet(_pass)
             gpu_set_alphatestref(_global.__alphaTestRef);
             
             CbPassShaderSet(_pass);
-            CbPassMatricesSet(_pass);
+            CbCameraMatricesSet();
         break;
         
         case CB_PASS.TRANSPARENT:
@@ -43,7 +43,7 @@ function CbPassRenderStateSet(_pass)
             gpu_set_cullmode(CB_BACKFACE_CULLING? cull_clockwise : cull_noculling);
             
             CbPassShaderSet(_pass);
-            CbPassMatricesSet(_pass);
+            CbCameraMatricesSet();
         break;
         
         case CB_PASS.UNLIT:
@@ -54,7 +54,7 @@ function CbPassRenderStateSet(_pass)
             gpu_set_alphatestref(_global.__alphaTestRef);
             
             CbPassShaderSet(_pass);
-            CbPassMatricesSet(_pass);
+            CbCameraMatricesSet();
         break;
     }
 }
