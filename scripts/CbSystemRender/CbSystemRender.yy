@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbPassFunctionSet",
+  "name": "CbSystemRender",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Pass",
-    "path": "folders/Cardboard/Pass.yy",
+    "name": "System",
+    "path": "folders/Cardboard/System.yy",
   },
 }

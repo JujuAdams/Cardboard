@@ -1,8 +1,5 @@
 /// Builds a z-tilt view matrix
 /// 
-/// This can be used in your own rendering pipeline, though you may find the
-/// use of CbViewMatrixSet() or CbRenderStateSet() convenient
-/// 
 /// @param fromX               x-coordinate of the camera
 /// @param fromY               y-coordinate of the camera
 /// @param fromZ               z-coordinate of the camera

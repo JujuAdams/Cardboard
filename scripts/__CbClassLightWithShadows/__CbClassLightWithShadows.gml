@@ -78,9 +78,14 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         
         surface_set_target(__depthSurface);
         draw_clear(c_gray);
-        matrix_set(matrix_view,       __matrixView);
-        matrix_set(matrix_projection, __matrixProj);
-        _function();
+        
+        if (_function != undefined)
+        {
+            matrix_set(matrix_view,       __matrixView);
+            matrix_set(matrix_projection, __matrixProj);
+            _function();
+        }
+        
         surface_reset_target();
     }
     

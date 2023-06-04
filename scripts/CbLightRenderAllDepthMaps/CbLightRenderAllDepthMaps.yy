@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbPassFunctionSet",
+  "name": "CbLightRenderAllDepthMaps",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Pass",
-    "path": "folders/Cardboard/Pass.yy",
+    "name": "Lighting",
+    "path": "folders/Cardboard/Lighting.yy",
   },
 }

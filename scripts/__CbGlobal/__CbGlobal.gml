@@ -65,6 +65,7 @@ function __CbGlobal()
         __lightingShadowCurrent: undefined,
         __lightingShadowArray: [new __CbClassShadowMap(), new __CbClassShadowMap()],
         
+        __oldMatrixSet: false,
         __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
         __oldRenderStateMatrixView:       matrix_get(matrix_view),
         __oldRenderStateMatrixProjection: matrix_get(matrix_projection),

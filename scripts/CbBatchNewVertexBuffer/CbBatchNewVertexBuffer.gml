@@ -21,6 +21,7 @@ function CbBatchNewVertexBuffer(_texture)
     
     if (_global.__buildingModel) __CbError("Cannot use CbBatchNewVertexBuffer() whilst a model is being built\nUse CbModelNewVertexBuffer() to instead");
     
+    //If we've got a pending batch then submit that before resetting draw state
     CbBatchForceSubmit();
     
     _global.__batchTexturePointer = _texture;

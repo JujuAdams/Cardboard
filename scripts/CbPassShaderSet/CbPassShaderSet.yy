@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Passes",
-    "path": "folders/Cardboard/Passes.yy",
+    "name": "Pass",
+    "path": "folders/Cardboard/Pass.yy",
   },
 }

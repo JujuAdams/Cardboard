@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbPassFunctionSet",
+  "name": "CbPassFunctionExist",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
