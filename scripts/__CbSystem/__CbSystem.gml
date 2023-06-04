@@ -39,7 +39,7 @@ function __CbInitialize()
     if (_initialized) return;
     _initialized = true;
     
-    __CbTrace("Welcome to Cb by @jujuadams! This is version " + __CB_VERSION + ", " + __CB_DATE);
+    __CbTrace("Welcome to Cardboard by @jujuadams! This is version " + __CB_VERSION + ", " + __CB_DATE);
     
     __CB_GLOBAL
     
