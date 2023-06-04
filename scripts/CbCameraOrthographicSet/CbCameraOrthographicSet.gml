@@ -1,7 +1,8 @@
 /// @param [near=-2048]
 /// @param [far=2048]
+/// @param [axonometric=true]
 
-function CbCameraOrthographicSet(_near = -2048, _far = 2048)
+function CbCameraOrthographicSet(_near = -2048, _far = 2048, _axonometric = true)
 {
     __CB_GLOBAL
     
@@ -11,5 +12,7 @@ function CbCameraOrthographicSet(_near = -2048, _far = 2048)
         
         __near = _near;
         __far  = _far;
+        
+        __axonometric = _axonometric;
     }
 }
