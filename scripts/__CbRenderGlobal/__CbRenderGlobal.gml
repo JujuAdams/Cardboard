@@ -6,6 +6,7 @@ function __CbRenderGlobal()
         __lightMode:         CB_LIGHT_MODE.NONE,
         __alphaTestRef:      0.5,
         __surfaceWorkaround: false,
+        __backfaceCulling:   true,
         
         __fog: {
             __enabled: false,

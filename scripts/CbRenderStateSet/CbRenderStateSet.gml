@@ -14,7 +14,7 @@ function CbRenderStateSet(_pass)
         case CB_PASS.LIGHT_DEPTH:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
-            gpu_set_cullmode(CB_BACKFACE_CULLING? cull_counterclockwise : cull_noculling);
+            gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);
             
             CbRenderShaderSet(_pass);
             
@@ -25,7 +25,7 @@ function CbRenderStateSet(_pass)
         case CB_PASS.UNLIT:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
-            gpu_set_cullmode(CB_BACKFACE_CULLING? cull_clockwise : cull_noculling);
+            gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);
             gpu_set_alphatestenable(true);
             gpu_set_alphatestref(_global.__alphaTestRef);
             
@@ -36,7 +36,7 @@ function CbRenderStateSet(_pass)
         case CB_PASS.TRANSPARENT:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(false); //Don't write into the depth buffer!
-            gpu_set_cullmode(CB_BACKFACE_CULLING? cull_clockwise : cull_noculling);
+            gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);
             
             CbRenderShaderSet(_pass);
             CbCameraMatricesSet();

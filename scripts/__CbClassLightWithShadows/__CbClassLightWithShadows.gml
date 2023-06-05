@@ -44,8 +44,8 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
     
     
     
-    __width  = 300;
-    __height = 300;
+    __width  = CB_DEFAULT_DEFERRED_LIGHT_WIDTH;
+    __height = CB_DEFAULT_DEFERRED_LIGHT_HEIGHT;
     
     __depthSurface = -1;
     
