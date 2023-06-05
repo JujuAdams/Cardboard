@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbRuleset",
+  "name": "__CbClassTilemapsToModelRuleset",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Cardboard/Build/Tiles.yy",
+    "name": "Classes",
+    "path": "folders/Cardboard/(System)/Classes.yy",
   },
 }

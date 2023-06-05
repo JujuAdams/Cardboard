@@ -1,20 +1,20 @@
-/// Draws a sprite perpendicular to the floor ("standing up")
+/// Draws a tile perpendicular to the floor ("standing up")
 /// 
 /// This function treats a z angle of 0 degrees as facing a camera pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)
-/// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn
+/// If auto-batching is turned on or you are building a model then the tile may not be immediately drawn
 /// 
 /// @param tileset    Tileset to draw the tile from
-/// @param tileX      
-/// @param tileY      
-/// @param x          x-coordinate to draw the sprite at
-/// @param y          y-coordinate to draw the sprite at
-/// @param z          z-coordinate to draw the sprite at
-/// @param xScale     Scale of the sprite on the x-axis
-/// @param zScale     Scale of the sprite on the z-axis
-/// @param yAngle     Rotation of the sprite around the y-axis
-/// @param zAngle     Rotation of the sprite around the z-axis
-/// @param color      Blend color for the sprite (c_white is "no blending")
-/// @param alpha      Blend alpha for the sprite (0 being transparent and 1 being 100% opacity)
+/// @param tileX      Grid x-coordinate of the tile on the tileset
+/// @param tileY      Grid y-coordinate of the tile on the tileset
+/// @param x          x-coordinate to draw the tile at
+/// @param y          y-coordinate to draw the tile at
+/// @param z          z-coordinate to draw the tile at
+/// @param xScale     Scale of the tile on the x-axis
+/// @param zScale     Scale of the tile on the z-axis
+/// @param yAngle     Rotation of the tile around the y-axis
+/// @param zAngle     Rotation of the tile around the z-axis
+/// @param color      Blend color for the tile (c_white is "no blending")
+/// @param alpha      Blend alpha for the tile (0 being transparent and 1 being 100% opacity)
 /// @param cruciform
 
 function CbTileExt(_tileset, _tileX, _tileY, _x, _y, _z, _xScale, _zScale, _yAngle, _zAngle, _color, _alpha, _cruciform)
@@ -55,7 +55,7 @@ function CbTileExt(_tileset, _tileX, _tileY, _x, _y, _z, _xScale, _zScale, _yAng
     var _rbX = _rbX0*_cos + _x;
     var _rbY = _rbX0*_sin + _y;
     
-    //Add this sprite to the vertex buffer
+    //Add this tile to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
     
     if (CB_WRITE_NORMALS)

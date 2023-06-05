@@ -23,7 +23,7 @@ function CbTilemapsToModel(_ruleset, _tilemapArray, _xOffset, _yOffset, _zOffset
         _tilemapBelow = _tilemap;
         _tilemap      = _tilemapAbove;
         _tilemapAbove = _tilemapArray[_i];
-        __CbTilemapsToModel(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zWorld, _xSize, _ySize, _zSize);
+        __CbTilemapToModelInternal(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zWorld, _xSize, _ySize, _zSize);
         
         _zWorld += _zSize;
         ++_i;
@@ -32,8 +32,10 @@ function CbTilemapsToModel(_ruleset, _tilemapArray, _xOffset, _yOffset, _zOffset
     _tilemapBelow = _tilemap;
     _tilemap      = _tilemapAbove;
     _tilemapAbove = undefined;
-    __CbTilemapsToModel(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zWorld, _xSize, _ySize, _zSize);
+    __CbTilemapToModelInternal(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zWorld, _xSize, _ySize, _zSize);
 }
+
+
 
 /// @param ruleset
 /// @param tilemapBelow
@@ -45,8 +47,7 @@ function CbTilemapsToModel(_ruleset, _tilemapArray, _xOffset, _yOffset, _zOffset
 /// @param xSize
 /// @param ySize
 /// @param zSize
-
-function __CbTilemapsToModel(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zOffset, _xSize, _ySize, _zSize)
+function __CbTilemapToModelInternal(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zOffset, _xSize, _ySize, _zSize)
 {
     if (is_string(_tilemapBelow)) _tilemapBelow = layer_tilemap_get_id(layer_get_id(_tilemapBelow));
     if (is_string(_tilemap     )) _tilemap      = layer_tilemap_get_id(layer_get_id(_tilemap));
@@ -80,7 +81,6 @@ function __CbTilemapsToModel(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _
         var _hasBottom = true;
     }
     
-    var _zMap   = 0;
     var _zWorld = _zOffset + _zSize;
     
     var _yWorld = _yOffset;

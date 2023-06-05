@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "__CbClassRuleset",
+  "name": "__CbClassTilemapRuleset",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

@@ -1,11 +1,11 @@
 /// Draws a tile parallel to the floor ("lying down")
 /// 
 /// This function presumes that the camera is pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)
-/// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn
+/// If auto-batching is turned on or you are building a model then the tile may not be immediately drawn
 /// 
 /// @param tileset  Tileset to draw the tile from
-/// @param tileX    
-/// @param tileY    
+/// @param tileX    Grid x-coordinate of the tile on the tileset
+/// @param tileY    Grid y-coordinate of the tile on the tileset
 /// @param x        x-coordinate to draw the tile at
 /// @param y        y-coordinate to draw the tile at
 /// @param z        z-coordinate to draw the tile at
@@ -22,7 +22,7 @@ function CbTileFloor(_tileset, _tileX, _tileY, _x, _y, _z)
     var _r = _x + _tileWidth;
     var _b = _y + _tileHeight;
     
-    //Add this sprite to the vertex buffer
+    //Add this tile to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
     
     if (CB_WRITE_NORMALS)

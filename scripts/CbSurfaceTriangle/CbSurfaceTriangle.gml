@@ -46,7 +46,7 @@ function CbSurfaceTriangle()
     
     __CB_SURFACE_COMMON_TEXTURE
     
-    //Add this sprite to the vertex buffer
+    //Add this surface to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
     
     if (CB_WRITE_NORMALS)

@@ -1,4 +1,4 @@
-function __CbClassRulesetTilemap(_tileset) constructor
+function __CbClassTilemapRuleset(_tileset) constructor
 {
     __tilesetIndex = _tileset;
     

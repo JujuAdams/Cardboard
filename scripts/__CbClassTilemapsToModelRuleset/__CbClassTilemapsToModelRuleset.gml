@@ -1,4 +1,4 @@
-function __CbClassRuleset() constructor
+function __CbClassTilemapsToModelRuleset() constructor
 {
     __tilesetDict = {};
     
@@ -7,7 +7,7 @@ function __CbClassRuleset() constructor
         var _ruleset = __tilesetDict[$ _tileset];
         if (!is_struct(_ruleset))
         {
-            _ruleset = new __CbClassRulesetTilemap(_tileset);
+            _ruleset = new __CbClassTilemapRuleset(_tileset);
             __tilesetDict[$ _tileset] = _ruleset;
         }
         

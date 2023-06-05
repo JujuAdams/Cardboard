@@ -1,10 +1,10 @@
 /// Draws a tile stretched over an arbitrary quadrilateral
 /// 
-/// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn
+/// If auto-batching is turned on or you are building a model then the tile may not be immediately drawn
 /// 
 /// @param tileset  Tileset to draw the tile from
-/// @param tileX    
-/// @param tileY    
+/// @param tileX    Grid x-coordinate of the tile on the tileset
+/// @param tileY    Grid y-coordinate of the tile on the tileset
 /// @param x1       x-coordinate for the top-left corner of the texture
 /// @param y1       y-coordinate for the top-left corner of the texture
 /// @param z1       z-coordinate for the top-left corner of the texture
@@ -17,8 +17,8 @@
 /// @param x4       x-coordinate for the bottom-right corner of the texture
 /// @param y4       y-coordinate for the bottom-right corner of the texture
 /// @param z4       z-coordinate for the bottom-right corner of the texture
-/// @param color    Blend color for the sprite (c_white is "no blending")
-/// @param alpha    Blend alpha for the sprite (0 being transparent and 1 being 100% opacity)
+/// @param color    Blend color for the tile (c_white is "no blending")
+/// @param alpha    Blend alpha for the tile (0 being transparent and 1 being 100% opacity)
 
 function CbTileQuad()
 {
@@ -75,7 +75,7 @@ function CbTileQuad()
     
     
     
-    //Add this sprite to the vertex buffer
+    //Add this tile to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
     
     if (CB_WRITE_NORMALS)

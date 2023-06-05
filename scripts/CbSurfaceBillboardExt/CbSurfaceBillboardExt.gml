@@ -56,7 +56,7 @@ function CbSurfaceBillboardExt(_surface, _x, _y, _z, _xScale, _zScale, _yAngle, 
     var _rbX = _rbX0*_cos + _x;
     var _rbY = _rbX0*_sin + _y;
     
-    //Add this sprite to the vertex buffer
+    //Add this surface to the vertex buffer
     var _vertexBuffer = _global.__batchVertexBuffer;
     
     if (CB_WRITE_NORMALS)
