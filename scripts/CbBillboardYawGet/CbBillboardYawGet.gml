@@ -4,5 +4,5 @@ function CbBillboardYawGet()
 {
     __CB_GLOBAL
     
-    return _global.__billboardYaw;
+    return _global.__billboard.__yaw;
 }

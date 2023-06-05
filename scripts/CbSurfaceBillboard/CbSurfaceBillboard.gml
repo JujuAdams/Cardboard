@@ -26,8 +26,8 @@ function CbSurfaceBillboard(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin = 0)
     var _b = _t - surface_get_height(_surface);
     
     //Perform a simple 2D rotation
-    var _sin = _global.__billboardYawSin;
-    var _cos = _global.__billboardYawCos;
+    var _sin = _global.__billboard.__yawSin;
+    var _cos = _global.__billboard.__yawCos;
     
     var _lX = _l*_cos + _x;
     var _lY = _l*_sin + _y;

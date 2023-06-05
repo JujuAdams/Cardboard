@@ -11,7 +11,7 @@ function CbCameraPerpsectiveSet(_FoV, _near = 1, _far = 2048, _axonometric = fal
     {
         __orthographic = false;
         
-        __perspectiveFoV = _FoV;
+        __fieldOfView = _FoV;
         __near           = _near;
         __far            = _far;
         

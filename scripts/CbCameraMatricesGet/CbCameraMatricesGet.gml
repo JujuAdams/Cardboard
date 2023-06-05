@@ -10,14 +10,14 @@ function CbCameraMatricesGet()
         {
             if (__orthographic)
             {
-                var _view       = CbViewMatrixBuild(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __axonometric, __xUp, __yUp, __zUp);
+                var _view       = CbBuildViewMatrix(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __axonometric, __xUp, __yUp, __zUp);
                 var _projection = matrix_build_projection_ortho(__width, -__height, __near, __far);
                 
             }
             else
             {
-                var _view       = CbViewMatrixBuild(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __axonometric, -__xUp, -__yUp, -__zUp);
-                var _projection = matrix_build_projection_perspective_fov(__perspectiveFoV, -__width/__height, __near, __far);
+                var _view       = CbBuildViewMatrix(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __axonometric, -__xUp, -__yUp, -__zUp);
+                var _projection = matrix_build_projection_perspective_fov(__fieldOfView, -__width/__height, __near, __far);
             }
             
             return {
@@ -33,11 +33,11 @@ function CbCameraMatricesGet()
             }
             else
             {
-                var _projection = matrix_build_projection_perspective_fov(__perspectiveFoV, __width/__height, __near, __far);
+                var _projection = matrix_build_projection_perspective_fov(__fieldOfView, __width/__height, __near, __far);
             }
             
             return {
-                view: CbViewMatrixBuild(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __axonometric, __xUp, __yUp, __zUp),
+                view: CbBuildViewMatrix(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __axonometric, __xUp, __yUp, __zUp),
                 projection: _projection,
             };
         }

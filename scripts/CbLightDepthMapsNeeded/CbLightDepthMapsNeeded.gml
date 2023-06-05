@@ -1,5 +1,5 @@
 function CbLightDepthMapsNeeded()
 {
-    var _lightMode = CbSystemLightModeGet();
+    var _lightMode = CbLightModeGet();
     return ((_lightMode == CB_LIGHT_MODE.ONE_SHADOW_MAP) || (_lightMode == CB_LIGHT_MODE.DEFERRED));
 }

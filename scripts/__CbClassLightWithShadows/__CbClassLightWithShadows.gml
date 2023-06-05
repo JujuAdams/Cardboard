@@ -40,6 +40,10 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
     visible = true;
     color   = _color;
     
+    depthFunction = undefined;
+    
+    
+    
     __width  = 300;
     __height = 300;
     
@@ -71,7 +75,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         if (_grayscale) shader_reset();
     }
     
-    static __RenderDepth = function(_function)
+    static __RenderDepth = function()
     {
         if (__destroyed) return;
         
@@ -81,6 +85,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         surface_set_target(__depthSurface);
         draw_clear(c_gray);
         
+        var _function = depthFunction ?? _global.__lighting.__defaultDepthFunction;
         if (_function != undefined)
         {
             matrix_set(matrix_view,       __matrixView);

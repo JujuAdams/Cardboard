@@ -5,7 +5,10 @@ function CbBillboardYawReset()
 {
     __CB_GLOBAL
     
-    _global.__billboardYaw    = undefined;
-    _global.__billboardYawSin = 0;
-    _global.__billboardYawCos = 0;
+    with(_global.__billboard)
+    {
+        __yaw    = undefined;
+        __yawSin = 0;
+        __yawCos = 0;
+    }
 }

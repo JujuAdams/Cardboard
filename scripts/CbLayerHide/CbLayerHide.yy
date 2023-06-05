@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Cardboard/Build/Tiles.yy",
+    "name": "Build",
+    "path": "folders/Cardboard/Build.yy",
   },
 }

@@ -27,8 +27,8 @@ function CbTileBillboard(_tileset, _tileX, _tileY, _x, _y, _z)
     var _b = _tileHeight;
     
     //Perform a simple 2D rotation
-    var _sin = _global.__billboardYawSin;
-    var _cos = _global.__billboardYawCos;
+    var _sin = _global.__billboard.__yawSin;
+    var _cos = _global.__billboard.__yawCos;
     
     var _lX =  _l*_cos + _x;
     var _lY =  _l*_sin + _y;

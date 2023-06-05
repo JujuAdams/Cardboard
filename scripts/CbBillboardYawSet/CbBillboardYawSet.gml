@@ -10,8 +10,11 @@ function CbBillboardYawSet(_fromX, _fromY, _toX, _toY)
 {
     __CB_GLOBAL
     
-    //FIXME - this is janky af lmao
-    _global.__billboardYaw    = point_direction(_fromX, _fromY, _toX, _toY) - 90;
-    _global.__billboardYawSin = dsin(-_global.__billboardYaw);
-    _global.__billboardYawCos = dcos(-_global.__billboardYaw);
+    with(_global.__billboard)
+    {
+        //FIXME - this is janky af lmao
+        __yaw    = point_direction(_fromX, _fromY, _toX, _toY) - 90;
+        __yawSin = dsin(-__yaw);
+        __yawCos = dcos(-__yaw);
+    }
 }

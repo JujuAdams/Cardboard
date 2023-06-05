@@ -1,6 +1,6 @@
 CbCameraFromSet(oCamera.camFromX, oCamera.camFromY, oCamera.camFromZ);
 CbCameraToSet(oCamera.camToX, oCamera.camToY, oCamera.camToZ);
-CbSystemRender();
+CbRenderSystem(opaqueFunc, undefined, unlitFunc);
 
 if (keyboard_check(ord("O")))
 {

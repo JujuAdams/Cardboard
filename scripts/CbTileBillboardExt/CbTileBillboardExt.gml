@@ -45,8 +45,8 @@ function CbTileBillboardExt(_tileset, _tileX, _tileY, _x, _y, _z, _xScale, _zSca
     var _rbZ  = -(_r*_sin + _b*_cos) + _z;
     
     //Perform a less simple 2D rotation
-    var _sin = _global.__billboardYawSin;
-    var _cos = _global.__billboardYawCos;
+    var _sin = _global.__billboard.__yawSin;
+    var _cos = _global.__billboard.__yawCos;
     
     var _ltX = _ltX0*_cos + _x;
     var _ltY = _ltX0*_sin + _y;
