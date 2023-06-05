@@ -3,10 +3,11 @@
 #define BIAS_MAX    0.01
 #define BIAS_COEFF  0.0002
 
-varying vec3 v_vPosition;
-varying vec3 v_vNormal;
-varying vec4 v_vColour;
-varying vec2 v_vTexcoord;
+varying vec3  v_vWorldPos;
+varying float v_fViewZ;
+varying vec3  v_vNormal;
+varying vec4  v_vColour;
+varying vec2  v_vTexcoord;
 
 uniform float u_fAlphaTestRef;
 
@@ -18,6 +19,14 @@ uniform sampler2D u_sLightDepth;
 uniform vec4      u_vLightPos;
 uniform vec3      u_vLightColor;
 uniform mat4      u_mLightViewProj;
+
+uniform vec2 u_vFogParams;
+uniform vec3 u_vFogColor;
+
+vec3 ApplyFog(vec3 color, float viewZ, vec3 fogColor, vec2 fogParams)
+{
+    return mix(color, fogColor, clamp((viewZ - fogParams.x) / (fogParams.y - fogParams.x), 0.0, 1.0));
+}
 
 float RGBToDepth(vec3 color)
 {
@@ -92,6 +101,8 @@ void main()
     if (u_fAlphaTestRef > gl_FragColor.a) discard;
     
     gl_FragColor.rgb *= u_vAmbient
-                      + AccumulateUnshadowedLights(v_vPosition, v_vNormal)
-                      + AccumulateShadowedLight(v_vPosition, v_vNormal, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor);
+                      + AccumulateUnshadowedLights(v_vWorldPos, v_vNormal)
+                      + AccumulateShadowedLight(v_vWorldPos, v_vNormal, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor);
+    
+    gl_FragColor.rgb = ApplyFog(gl_FragColor.rgb, v_fViewZ, u_vFogColor, u_vFogParams);
 }

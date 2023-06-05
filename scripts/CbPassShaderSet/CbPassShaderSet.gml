@@ -23,11 +23,41 @@ function CbPassShaderSet(_pass)
                     case CB_LIGHT_MODE.NONE:
                         shader_set(__shdCbNone);
                         shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_fAlphaTestRef"), __alphaTestRef);
+                        
+                        with(__fog)
+                        {
+                            if (__enabled)
+                            {
+                                shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_vFogParams"), __near, __far);
+                                shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_vFogColor"), colour_get_red(  __color)/255,
+                                                                                                     colour_get_green(__color)/255,
+                                                                                                     colour_get_blue( __color)/255);
+                            }
+                            else
+                            {
+                                shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_vFogParams"), 999998, 999999);
+                            }
+                        }
                     break;
                     
                     case CB_LIGHT_MODE.SIMPLE:
                         shader_set(__shdCbSimple);
                         shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_fAlphaTestRef"), __alphaTestRef);
+                        
+                        with(__fog)
+                        {
+                            if (__enabled)
+                            {
+                                shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_vFogParams"), __near, __far);
+                                shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_vFogColor"), colour_get_red(  __color)/255,
+                                                                                                       colour_get_green(__color)/255,
+                                                                                                       colour_get_blue( __color)/255);
+                            }
+                            else
+                            {
+                                shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_vFogParams"), 999998, 999999);
+                            }
+                        }
                         
                         with(__lighting)
                         {
@@ -42,6 +72,21 @@ function CbPassShaderSet(_pass)
                     case CB_LIGHT_MODE.ONE_SHADOW_MAP:
                         shader_set(__shdCbOneShadowMap);
                         shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_fAlphaTestRef"), __alphaTestRef);
+                        
+                        with(__fog)
+                        {
+                            if (__enabled)
+                            {
+                                shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_vFogParams"), __near, __far);
+                                shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_vFogColor"), colour_get_red(  __color)/255,
+                                                                                                             colour_get_green(__color)/255,
+                                                                                                             colour_get_blue( __color)/255);
+                            }
+                            else
+                            {
+                                shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_vFogParams"), 999998, 999999);
+                            }
+                        }
                         
                         with(__lighting)
                         {

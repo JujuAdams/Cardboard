@@ -9,6 +9,13 @@ function __CbGlobal()
         __lightMode:    CB_LIGHT_MODE.NONE,
         __alphaTestRef: 0.5,
         
+        __fog: {
+            __enabled: false,
+            __color:   c_black,
+            __near:    500,
+            __far:     1000,
+        },
+        
         __camera: {
             __orthographic: true,
             
