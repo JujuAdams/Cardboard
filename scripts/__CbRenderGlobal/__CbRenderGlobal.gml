@@ -35,8 +35,8 @@ function __CbRenderGlobal()
             
             __axonometric: true,
             
-            __near: -2048,
-            __far:   2048,
+            __near: -1024,
+            __far:   1024,
             
             __fieldOfView: 90,
         },
