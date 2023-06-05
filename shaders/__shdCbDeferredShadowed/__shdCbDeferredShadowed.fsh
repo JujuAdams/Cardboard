@@ -1,5 +1,5 @@
-#define BIAS_MAX    0.01
-#define BIAS_COEFF  0.0002
+#define BIAS_MAX    0.005
+#define BIAS_COEFF  0.0005
 
 varying vec2 v_vTexcoord;
 

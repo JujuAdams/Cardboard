@@ -1,7 +1,7 @@
 #define LIGHT_COUNT  6
 
-#define BIAS_MAX    0.01
-#define BIAS_COEFF  0.0002
+#define BIAS_MAX    0.005
+#define BIAS_COEFF  0.0005
 
 varying vec3  v_vWorldPos;
 varying float v_fViewZ;
