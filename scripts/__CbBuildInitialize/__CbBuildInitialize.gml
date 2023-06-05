@@ -1,5 +1,5 @@
 #macro __CB_BUILD_VERSION  "2.0.0"
-#macro __CB_BUILD_DATE     "2023-05-30"
+#macro __CB_BUILD_DATE     "2023-06-05"
 
 #macro __CB_MAX_IMAGES  1024
 
@@ -16,8 +16,7 @@ function __CbBuildInitialize()
     __CbTrace("Welcome to Cardboard (Build) by @jujuadams! This is version " + __CB_BUILD_VERSION + ", " + __CB_BUILD_DATE);
     
     __CB_GLOBAL_BUILD
-    
-    if (debug_mode && (GM_build_type == "run")) global.__cardboardDebug = _global;
+    if (debug_mode && (GM_build_type == "run")) global.__cardboardDebugBuild = _global;
     
     with(_global.__batch)
     {

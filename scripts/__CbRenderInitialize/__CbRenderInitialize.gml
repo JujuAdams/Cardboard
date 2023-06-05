@@ -1,5 +1,5 @@
 #macro __CB_RENDER_VERSION  "2.0.0"
-#macro __CB_RENDER_DATE     "2023-05-30"
+#macro __CB_RENDER_DATE     "2023-06-05"
 
 #macro __CB_LIGHT_COUNT  6
 
@@ -33,4 +33,7 @@ function __CbRenderInitialize()
     _initialized = true;
     
     __CbTrace("Welcome to Cardboard (Render) by @jujuadams! This is version " + __CB_RENDER_VERSION + ", " + __CB_RENDER_DATE);
+    
+    __CB_GLOBAL_RENDER
+    if (debug_mode && (GM_build_type == "run")) global.__cardboardDebugRender = _global;
 }
