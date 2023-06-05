@@ -2,7 +2,7 @@
 
 function CbDoubleSidedGet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     return _global.__doubleSided;
 }

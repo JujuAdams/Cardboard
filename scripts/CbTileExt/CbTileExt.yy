@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Tiles",
-    "path": "folders/Cardboard/Build/Tiles.yy",
+    "path": "folders/Cardboard/Build Functions/Tiles.yy",
   },
 }

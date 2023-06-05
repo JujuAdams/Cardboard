@@ -21,7 +21,7 @@
 
 function CbSpriteQuad(_sprite, _image, _x1, _y1, _z1, _x2, _y2, _z2, _x3, _y3, _z3, _x4, _y4, _z4, _color, _alpha)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     __CB_SPRITE_COMMON_TEXTURE
     __CB_SPRITE_COMMON_UVS
     

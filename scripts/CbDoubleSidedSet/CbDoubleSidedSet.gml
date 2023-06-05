@@ -7,7 +7,7 @@
 
 function CbDoubleSidedSet(_state)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     _global.__doubleSided = _state;
 }

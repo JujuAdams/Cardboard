@@ -5,7 +5,7 @@
 
 function CbFogSet(_enabled, _color = undefined, _near = undefined, _far = undefined)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     if (_enabled)
     {

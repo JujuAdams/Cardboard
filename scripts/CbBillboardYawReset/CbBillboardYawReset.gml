@@ -3,7 +3,7 @@
 
 function CbBillboardYawReset()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     with(_global.__billboard)
     {

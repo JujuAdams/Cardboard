@@ -16,7 +16,7 @@
 
 function CbSurfaceBillboard(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin = 0)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     __CB_SURFACE_COMMON_TEXTURE
     
     //Cache the vertex positions

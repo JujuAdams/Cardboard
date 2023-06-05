@@ -1,6 +1,6 @@
 function CbRenderDeferredLights()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     if (CbLightModeGet() != CB_LIGHT_MODE.DEFERRED) return;
     

@@ -24,7 +24,7 @@
 
 function CbSpriteTriangle()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     var _sprite = argument[ 0];
     var _image  = argument[ 1];

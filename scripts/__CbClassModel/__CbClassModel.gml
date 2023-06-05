@@ -1,6 +1,6 @@
 function __CbClassModel() constructor
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     array = [];
     

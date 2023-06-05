@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Lighting",
-    "path": "folders/Cardboard/Render/Lighting.yy",
+    "path": "folders/Cardboard/Render Functions/Lighting.yy",
   },
 }

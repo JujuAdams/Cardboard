@@ -6,7 +6,7 @@
 
 function CbAlphaTestSet(_alphaTestRef)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     _global.__alphaTestRef = clamp(_alphaTestRef, 0, 1);
 }

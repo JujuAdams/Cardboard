@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Camera",
-    "path": "folders/Cardboard/Render/Camera.yy",
+    "path": "folders/Cardboard/Render Functions/Camera.yy",
   },
 }

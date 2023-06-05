@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Fog",
-    "path": "folders/Cardboard/Render/Fog.yy",
+    "path": "folders/Cardboard/Render Functions/Fog.yy",
   },
 }

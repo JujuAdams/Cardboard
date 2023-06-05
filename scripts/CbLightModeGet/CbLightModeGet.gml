@@ -2,7 +2,7 @@
 
 function CbLightModeGet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     return _global.__lightMode;
 }

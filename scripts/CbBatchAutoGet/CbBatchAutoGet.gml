@@ -2,7 +2,7 @@
 
 function CbBatchAutoGet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     return _global.__batch.__auto;
 }

@@ -1,7 +1,7 @@
 if (show_info)
 {
-    var _string  = "Cardboard " + __CB_VERSION + "\n";
-        _string += "@jujuadams " + __CB_DATE + "\n";
+    var _string  = "Cardboard " + __CB_BUILD_VERSION + "\n";
+        _string += "@jujuadams " + __CB_BUILD_DATE + "\n";
         _string += "\n";
         _string += "FPS = " + string(fps) + " (" + string(fps_smoothed) + ")\n";
         _string += "\n";

@@ -4,7 +4,7 @@
 
 function CbBatchForceSubmit()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     if (_global.__model != undefined) __CbError("Cannot force submit a batch whilst creating a model");
     

@@ -5,6 +5,6 @@
   "type": 2,
   "parent": {
     "name": "Shaders",
-    "path": "folders/Cardboard/Render/(System)/Shaders.yy",
+    "path": "folders/Cardboard/Render Functions/(System)/Shaders.yy",
   },
 }

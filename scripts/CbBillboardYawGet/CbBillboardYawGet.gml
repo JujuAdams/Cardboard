@@ -2,7 +2,7 @@
 
 function CbBillboardYawGet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     return _global.__billboard.__yaw;
 }

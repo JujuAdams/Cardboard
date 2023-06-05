@@ -5,7 +5,7 @@
 
 function CbCameraPerpsectiveSet(_FoV, _near = 1, _far = 2048, _axonometric = false)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     with(_global.__camera)
     {

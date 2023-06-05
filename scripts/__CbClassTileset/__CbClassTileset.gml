@@ -2,7 +2,7 @@
 
 function __CbClassTileset(_tileset) constructor
 {
-    static __global      = __CbGlobal();
+    static __global      = __CbBuildGlobal();
     static __tilesetDict = __global.__tilesetDict;
     
     __tilesetDict[$ _tileset] = self;

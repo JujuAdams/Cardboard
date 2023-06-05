@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Pipeline",
-    "path": "folders/Cardboard/Render/Pipeline.yy",
+    "path": "folders/Cardboard/Render Functions/Pipeline.yy",
   },
 }

@@ -15,7 +15,7 @@
 
 function CbPartSysBillboardExt(_pSystem, _x, _y, _z, _xScale, _zScale, _yAngle)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     return CbPartSysExt(_pSystem, _x, _y, _z, _xScale, _zScale, _yAngle, _global.__billboard.__yaw);
 }

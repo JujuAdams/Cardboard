@@ -12,7 +12,7 @@
 
 function CbPartSys(_pSystem, _x, _y, _z)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     __CB_PARTICLE_SYSTEM_COMMON_TEXTURE
     
     var _oldWorldMatrix = matrix_get(matrix_world);

@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Render",
-    "path": "folders/Cardboard/Render.yy",
+    "name": "Render Functions",
+    "path": "folders/Cardboard/Render Functions.yy",
   },
 }

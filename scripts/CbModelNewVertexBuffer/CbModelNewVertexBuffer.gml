@@ -10,7 +10,7 @@
 
 function CbModelNewVertexBuffer(_texture)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     if (_global.__model == undefined) __CbError("Cannot use CbModelNewVertexBuffer() when a model is not being built\nUse CbBatchNewVertexBuffer() to instead");
     

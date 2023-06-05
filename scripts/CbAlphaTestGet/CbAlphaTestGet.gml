@@ -4,7 +4,7 @@
 
 function CbAlphaTestGet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     return _global.__alphaTestRef;
 }

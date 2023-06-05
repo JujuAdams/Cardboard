@@ -1,6 +1,6 @@
 function __CbDeferredSurfaceLightEnsure(_refSurface)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     with(_global.__lighting)
     {

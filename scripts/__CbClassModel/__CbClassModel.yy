@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Classes",
-    "path": "folders/Cardboard/Build/(System)/Classes.yy",
+    "path": "folders/Cardboard/Build Functions/(System)/Classes.yy",
   },
 }

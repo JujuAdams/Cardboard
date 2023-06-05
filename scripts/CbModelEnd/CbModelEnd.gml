@@ -6,7 +6,7 @@
 
 function CbModelEnd()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     if (_global.__model == undefined) __CbError("No model has been created");
     

@@ -2,7 +2,7 @@
 
 function CbRenderShaderReset()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     shader_reset();
     

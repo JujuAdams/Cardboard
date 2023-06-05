@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Model",
-    "path": "folders/Cardboard/Build/Model.yy",
+    "path": "folders/Cardboard/Build Functions/Model.yy",
   },
 }

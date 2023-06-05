@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Build",
-    "path": "folders/Cardboard/Build.yy",
+    "name": "Build Functions",
+    "path": "folders/Cardboard/Build Functions.yy",
   },
 }

@@ -9,6 +9,6 @@ function __CbError()
         ++_i;
     }
     
-    show_debug_message("Cardboard " + string(__CB_VERSION) + ": " + string_replace_all(_string, "\n", "\n          "));
-    show_error("Cardboard " + string(__CB_VERSION) + ":\n" + _string + "\n ", true);
+    show_debug_message("Cardboard: " + string_replace_all(_string, "\n", "\n          "));
+    show_error("Cardboard:\n" + _string + "\n ", true);
 }

@@ -1,6 +1,6 @@
 function __CbBatchComplete()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     if (_global.__model != undefined)
     {

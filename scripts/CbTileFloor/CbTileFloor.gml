@@ -12,7 +12,7 @@
 
 function CbTileFloor(_tileset, _tileX, _tileY, _x, _y, _z)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     __CB_TILE_COMMON_TEXTURE
     __CB_TILE_COMMON_UVS
     

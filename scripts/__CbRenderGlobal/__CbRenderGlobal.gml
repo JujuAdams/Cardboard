@@ -1,34 +1,11 @@
-#macro __CB_GLOBAL  static _global = __CbGlobal();
+#macro __CB_GLOBAL_RENDER  static _global = __CbRenderGlobal();
 
-function __CbGlobal()
+function __CbRenderGlobal()
 {
     static _struct = {
-        
-        __doubleSided:         true,
-        __vertexFormat:        undefined,
-        __texturePageIndexMap: ds_map_create(),
-        __model:               undefined,
-        
-        __tilesetDict: {},
-        
-        __billboard: {
-            __yaw:    undefined,
-            __yawSin: 0,
-            __yawCos: 0,
-        },
-        
-        __batch: {
-            __auto:           false,
-            __texturePointer: undefined,
-            __textureIndex:   undefined,
-            __vertexBuffer:   vertex_create_buffer(),
-        },
-        
-        
-        
-        __lightMode:           CB_LIGHT_MODE.NONE,
-        __alphaTestRef:        0.5,
-        __surfaceWorkaround:   false,
+        __lightMode:         CB_LIGHT_MODE.NONE,
+        __alphaTestRef:      0.5,
+        __surfaceWorkaround: false,
         
         __fog: {
             __enabled: false,

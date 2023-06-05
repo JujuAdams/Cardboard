@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "__CbInitialize",
+  "name": "__CbRenderInitialize",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
     "name": "(System)",
-    "path": "folders/Cardboard/(System).yy",
+    "path": "folders/Cardboard/Render Functions/(System).yy",
   },
 }

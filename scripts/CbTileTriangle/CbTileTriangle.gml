@@ -25,7 +25,7 @@
         
 function CbTileTriangle()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     var _tileset = argument[ 0];
     var _tileX   = argument[ 1];

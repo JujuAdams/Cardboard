@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Particles",
-    "path": "folders/Cardboard/Build/Particles.yy",
+    "path": "folders/Cardboard/Build Functions/Particles.yy",
   },
 }

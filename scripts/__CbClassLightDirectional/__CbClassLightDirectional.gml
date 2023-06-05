@@ -1,6 +1,6 @@
 function __CbClassLightDirectional(_dx, _dy, _dz, _color) constructor
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     array_push(_global.__lighting.__array, weak_ref_create(self));
     static __hasShadows = false;
     

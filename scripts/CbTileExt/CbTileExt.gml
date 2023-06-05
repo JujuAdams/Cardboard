@@ -19,7 +19,7 @@
 
 function CbTileExt(_tileset, _tileX, _tileY, _x, _y, _z, _xScale, _zScale, _yAngle, _zAngle, _color, _alpha, _cruciform)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     __CB_TILE_COMMON_TEXTURE
     __CB_TILE_COMMON_UVS
     

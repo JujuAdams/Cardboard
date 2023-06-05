@@ -1,6 +1,6 @@
 function CbFogGet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     with(__fog)
     {

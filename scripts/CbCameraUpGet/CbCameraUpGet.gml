@@ -2,7 +2,7 @@
 
 function CbCameraUpGet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     with(_global.__camera)
     {

@@ -23,7 +23,7 @@
 
 function CbSurfaceTriangle()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     var _surface = argument[0];
     var _x1      = argument[1];

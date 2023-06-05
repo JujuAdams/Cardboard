@@ -23,7 +23,7 @@
 
 function CbLightModeSet(_mode)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     if (!CB_WRITE_NORMALS && (_mode != CB_LIGHT_MODE.NONE))
     {

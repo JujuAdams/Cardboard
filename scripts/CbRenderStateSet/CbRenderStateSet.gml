@@ -7,7 +7,7 @@
 
 function CbRenderStateSet(_pass)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     switch(_pass)
     {

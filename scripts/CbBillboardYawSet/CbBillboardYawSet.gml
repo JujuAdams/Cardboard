@@ -8,7 +8,7 @@
 
 function CbBillboardYawSet(_fromX, _fromY, _toX, _toY)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     with(_global.__billboard)
     {

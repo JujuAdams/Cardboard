@@ -2,7 +2,7 @@
 
 function CbCameraMatricesSet()
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     //Track matrices that are being used
     with(_global.__old)

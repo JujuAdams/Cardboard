@@ -1,47 +1,21 @@
-#macro __CB_VERSION     "2.0.0"
-#macro __CB_DATE        "2023-05-30"
+#macro __CB_BUILD_VERSION  "2.0.0"
+#macro __CB_BUILD_DATE     "2023-05-30"
+
 #macro __CB_MAX_IMAGES  1024
 
-#macro __CB_LIGHT_COUNT   6
-#macro __CB_SHADOW_COUNT  2
-
-#macro __CB_ON_DIRECTX  ((os_type == os_windows) || (os_type == os_xboxone) || (os_type == os_xboxseriesxs) || (os_type == os_uwp) || (os_type == os_win8native) || (os_type == os_winphone))
-#macro __CB_ON_MOBILE   ((os_type == os_ios) || (os_type == os_android) || (os_type == os_tvos))
-#macro __CB_ON_WEB      (os_browser != browser_not_a_browser)
-#macro __CB_ON_OPENGL   (!__CB_ON_DIRECTX || __CB_ON_WEB)
-
-#macro __CB_SURFACE_SET_TARGET_EXT_WORKAROUND  true
-
-enum CB_PASS
-{
-    LIGHT_DEPTH,
-    OPAQUE,
-    TRANSPARENT,
-    UNLIT,
-    __SIZE
-}
-
-enum CB_LIGHT_MODE
-{
-    NONE,
-    SIMPLE,
-    ONE_SHADOW_MAP,
-    DEFERRED,
-}
 
 
+__CbBuildInitialize();
 
-__CbInitialize();
-
-function __CbInitialize()
+function __CbBuildInitialize()
 {
     static _initialized = false;
     if (_initialized) return;
     _initialized = true;
     
-    __CbTrace("Welcome to Cardboard by @jujuadams! This is version " + __CB_VERSION + ", " + __CB_DATE);
+    __CbTrace("Welcome to Cardboard (Build) by @jujuadams! This is version " + __CB_BUILD_VERSION + ", " + __CB_BUILD_DATE);
     
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     
     if (debug_mode && (GM_build_type == "run")) global.__cardboardDebug = _global;
     

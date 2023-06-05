@@ -21,7 +21,7 @@
 
 function CbTileBillboardExt(_tileset, _tileX, _tileY, _x, _y, _z, _xScale, _zScale, _yAngle, _color, _alpha)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     __CB_TILE_COMMON_TEXTURE
     __CB_TILE_COMMON_UVS
     

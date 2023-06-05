@@ -16,7 +16,7 @@
 
 function CbSpriteFloorExt(_sprite, _image, _x, _y, _z, _xScale, _yScale, _zAngle, _color, _alpha)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_BUILD
     __CB_SPRITE_COMMON_TEXTURE
     __CB_SPRITE_COMMON_UVS
     

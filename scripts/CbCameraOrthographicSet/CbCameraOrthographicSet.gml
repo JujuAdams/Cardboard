@@ -4,7 +4,7 @@
 
 function CbCameraOrthographicSet(_near = -2048, _far = 2048, _axonometric = true)
 {
-    __CB_GLOBAL
+    __CB_GLOBAL_RENDER
     
     with(_global.__camera)
     {

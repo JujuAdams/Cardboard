@@ -1,6 +1,6 @@
 function __CbTrace()
 {
-    var _string = "Cardboard " + string(__CB_VERSION) + ": ";
+    var _string = "Cardboard: ";
     
     var _i = 0
     repeat(argument_count)
