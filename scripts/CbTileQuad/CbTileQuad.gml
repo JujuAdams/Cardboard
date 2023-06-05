@@ -3,8 +3,8 @@
 /// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn
 /// 
 /// @param tileset  Tileset to draw the tile from
-/// @param tileX    Image of the sprite to draw
-/// @param tileY    Image of the sprite to draw
+/// @param tileX    
+/// @param tileY    
 /// @param x1       x-coordinate for the top-left corner of the texture
 /// @param y1       y-coordinate for the top-left corner of the texture
 /// @param z1       z-coordinate for the top-left corner of the texture

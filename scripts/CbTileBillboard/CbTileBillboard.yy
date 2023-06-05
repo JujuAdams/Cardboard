@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbTilemapProcess3D",
+  "name": "CbTileBillboard",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "3D",
-    "path": "folders/Cardboard/Tilemaps/3D.yy",
+    "name": "Tiles",
+    "path": "folders/Cardboard/Build/Tiles.yy",
   },
 }

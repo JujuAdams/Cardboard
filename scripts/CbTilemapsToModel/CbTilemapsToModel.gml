@@ -1,4 +1,41 @@
 /// @param ruleset
+/// @param tilemapArray
+/// @param xOffset
+/// @param yOffset
+/// @param zOffset
+/// @param xSize
+/// @param ySize
+/// @param zSize
+
+function CbTilemapsToModel(_ruleset, _tilemapArray, _xOffset, _yOffset, _zOffset, _xSize, _ySize, _zSize)
+{
+    if (array_length(_tilemapArray) <= 0) return;
+    
+    var _tilemapBelow = undefined;
+    var _tilemap      = undefined;
+    var _tilemapAbove = _tilemapArray[0];
+    
+    var _zWorld = _zOffset;
+    
+    var _i = 1;
+    repeat(array_length(_tilemapArray)-1)
+    {
+        _tilemapBelow = _tilemap;
+        _tilemap      = _tilemapAbove;
+        _tilemapAbove = _tilemapArray[_i];
+        __CbTilemapsToModel(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zWorld, _xSize, _ySize, _zSize);
+        
+        _zWorld += _zSize;
+        ++_i;
+    }
+    
+    _tilemapBelow = _tilemap;
+    _tilemap      = _tilemapAbove;
+    _tilemapAbove = undefined;
+    __CbTilemapsToModel(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zWorld, _xSize, _ySize, _zSize);
+}
+
+/// @param ruleset
 /// @param tilemapBelow
 /// @param tilemap
 /// @param tilemapAbove
@@ -9,7 +46,7 @@
 /// @param ySize
 /// @param zSize
 
-function CbTilemapProcess2D(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zOffset, _xSize, _ySize, _zSize)
+function __CbTilemapsToModel(_ruleset, _tilemapBelow, _tilemap, _tilemapAbove, _xOffset, _yOffset, _zOffset, _xSize, _ySize, _zSize)
 {
     if (is_string(_tilemapBelow)) _tilemapBelow = layer_tilemap_get_id(layer_get_id(_tilemapBelow));
     if (is_string(_tilemap     )) _tilemap      = layer_tilemap_get_id(layer_get_id(_tilemap));
