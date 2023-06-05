@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Cardboard/Sprites.yy",
+    "path": "folders/Cardboard/Build/Sprites.yy",
   },
 }

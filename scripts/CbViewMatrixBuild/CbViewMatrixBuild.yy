@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "System",
-    "path": "folders/Cardboard/System.yy",
+    "name": "Render",
+    "path": "folders/Cardboard/Render.yy",
   },
 }

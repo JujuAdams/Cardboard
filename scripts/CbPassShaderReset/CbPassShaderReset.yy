@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Pass",
-    "path": "folders/Cardboard/Pass.yy",
+    "path": "folders/Cardboard/Render/Pass.yy",
   },
 }

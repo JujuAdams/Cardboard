@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Batching",
-    "path": "folders/Cardboard/Batching.yy",
+    "path": "folders/Cardboard/Build/Batching.yy",
   },
 }

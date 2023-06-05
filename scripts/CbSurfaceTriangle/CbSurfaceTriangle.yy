@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Surfaces",
-    "path": "folders/Cardboard/Surfaces.yy",
+    "path": "folders/Cardboard/Build/Surfaces.yy",
   },
 }
