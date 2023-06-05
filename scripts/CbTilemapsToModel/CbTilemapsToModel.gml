@@ -60,7 +60,7 @@ function __CbTilemapToModelInternal(_ruleset, _tilemapBelow, _tilemap, _tilemapA
     var _tilemapHeight = tilemap_get_height( _tilemap);
     
     var _tileset      = tilemap_get_tileset(_tilemap);
-    var _tilesetData  = __CbGetTileset(_tileset);
+    var _tilesetData  = __CbTilesetDataGet(_tileset);
     var _tilesetWidth = _tilesetData.__tilesetWidth;
     
     var _tilesetRuleset = is_struct(_ruleset)? _ruleset.__tilesetDict[$ _tileset] : undefined;

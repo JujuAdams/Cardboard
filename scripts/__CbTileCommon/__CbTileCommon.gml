@@ -1,5 +1,5 @@
 #macro __CB_TILE_COMMON_TEXTURE ;\
-var _tilesetData = __CbGetTileset(_tileset);\
+var _tilesetData = __CbTilesetDataGet(_tileset);\
 var _texture     = _tilesetData.__texture;\
 ;\
 ;\ //Break the batch if we've swapped texture

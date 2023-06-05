@@ -111,6 +111,4 @@ function __CbInitialize()
         
         ++_sprite;
     }
-    
-    time_source_start(time_source_create(time_source_global, 1, time_source_units_frames, __CbTick, [], -1));
 }

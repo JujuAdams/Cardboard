@@ -13,7 +13,7 @@ function CbTilemap(_tilemap, _xOffset, _yOffset, _zOffset, _xSize, _ySize)
     var _tilemapHeight = tilemap_get_height(_tilemap);
     
     var _tileset      = tilemap_get_tileset(_tilemap);
-    var _tilesetData  = __CbGetTileset(_tileset);
+    var _tilesetData  = __CbTilesetDataGet(_tileset);
     var _tilesetWidth = _tilesetData.__tilesetWidth;
     
     var _yWorld = _yOffset;

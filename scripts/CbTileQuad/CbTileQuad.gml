@@ -45,7 +45,7 @@ function CbTileQuad()
     static _borderWidth  = 2;
     static _borderHeight = 2;
     
-    var _tilesetData   = __CbGetTileset(_tileset);
+    var _tilesetData   = __CbTilesetDataGet(_tileset);
     var _texture       = _tilesetData.__texture;
     var _uvs           = _tilesetData.__UVs;
     var _tilesetU0     = _uvs[0];

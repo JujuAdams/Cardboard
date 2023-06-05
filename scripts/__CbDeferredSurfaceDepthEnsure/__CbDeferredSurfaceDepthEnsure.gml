@@ -2,24 +2,24 @@ function __CbDeferredSurfaceDepthEnsure(_refSurface)
 {
     __CB_GLOBAL
     
-    with(_global)
+    with(_global.__lighting)
     {
         var _width  = surface_get_width( _refSurface);
         var _height = surface_get_height(_refSurface);
         
-        if (surface_exists(__deferredSurfaceDepth)
-        &&   ((_width  != surface_get_width( __deferredSurfaceDepth))
-           || (_height != surface_get_height(__deferredSurfaceDepth))))
+        if (surface_exists(__surfaceDepth)
+        &&   ((_width  != surface_get_width( __surfaceDepth))
+           || (_height != surface_get_height(__surfaceDepth))))
         {
-            surface_free(__deferredSurfaceDepth);
-            __deferredSurfaceDepth = -1;
+            surface_free(__surfaceDepth);
+            __surfaceDepth = -1;
         }
         
-        if (not surface_exists(__deferredSurfaceDepth))
+        if (not surface_exists(__surfaceDepth))
         {
-            __deferredSurfaceDepth = surface_create(_width, _height);
+            __surfaceDepth = surface_create(_width, _height);
         }
         
-        return __deferredSurfaceDepth;
+        return __surfaceDepth;
     }
 }

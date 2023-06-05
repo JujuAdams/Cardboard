@@ -1,6 +1,6 @@
 /// @param tileset
 
-function __CbGetTileset(_tilesetIndex)
+function __CbTilesetDataGet(_tilesetIndex)
 {
     static _tilesetDict = __CbGlobal().__tilesetDict;
     var _tileset = _tilesetDict[$ _tilesetIndex];

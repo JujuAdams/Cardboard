@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Billboard Manual Control",
-    "path": "folders/Cardboard/Render/Camera/Billboard Manual Control.yy",
+    "path": "folders/Cardboard/Build/Billboard Manual Control.yy",
   },
 }

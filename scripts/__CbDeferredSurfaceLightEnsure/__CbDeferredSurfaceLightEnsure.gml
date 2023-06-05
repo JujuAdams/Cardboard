@@ -2,24 +2,24 @@ function __CbDeferredSurfaceLightEnsure(_refSurface)
 {
     __CB_GLOBAL
     
-    with(_global)
+    with(_global.__lighting)
     {
         var _width  = surface_get_width( _refSurface);
         var _height = surface_get_height(_refSurface);
         
-        if (surface_exists(__deferredSurfaceLight)
-        &&   ((_width  != surface_get_width( __deferredSurfaceLight))
-           || (_height != surface_get_height(__deferredSurfaceLight))))
+        if (surface_exists(__surfaceLight)
+        &&   ((_width  != surface_get_width( __surfaceLight))
+           || (_height != surface_get_height(__surfaceLight))))
         {
-            surface_free(__deferredSurfaceLight);
-            __deferredSurfaceLight = -1;
+            surface_free(__surfaceLight);
+            __surfaceLight = -1;
         }
         
-        if (not surface_exists(__deferredSurfaceLight))
+        if (not surface_exists(__surfaceLight))
         {
-            __deferredSurfaceLight = surface_create(_width, _height);
+            __surfaceLight = surface_create(_width, _height);
         }
         
-        return __deferredSurfaceLight;
+        return __surfaceLight;
     }
 }

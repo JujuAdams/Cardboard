@@ -2,24 +2,24 @@ function __CbDeferredSurfaceNormalEnsure(_refSurface)
 {
     __CB_GLOBAL
     
-    with(_global)
+    with(_global.__lighting)
     {
         var _width  = surface_get_width( _refSurface);
         var _height = surface_get_height(_refSurface);
         
-        if (surface_exists(__deferredSurfaceNormal)
-        &&   ((_width  != surface_get_width( __deferredSurfaceNormal))
-           || (_height != surface_get_height(__deferredSurfaceNormal))))
+        if (surface_exists(__surfaceNormal)
+        &&   ((_width  != surface_get_width( __surfaceNormal))
+           || (_height != surface_get_height(__surfaceNormal))))
         {
-            surface_free(__deferredSurfaceNormal);
-            __deferredSurfaceNormal = -1;
+            surface_free(__surfaceNormal);
+            __surfaceNormal = -1;
         }
         
-        if (not surface_exists(__deferredSurfaceNormal))
+        if (not surface_exists(__surfaceNormal))
         {
-            __deferredSurfaceNormal = surface_create(_width, _height);
+            __surfaceNormal = surface_create(_width, _height);
         }
         
-        return __deferredSurfaceNormal;
+        return __surfaceNormal;
     }
 }

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "__CbGetTileset",
+  "name": "__CbTilesetDataGet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
     "name": "(System)",
-    "path": "folders/Cardboard/(System).yy",
+    "path": "folders/Cardboard/Build/(System).yy",
   },
 }

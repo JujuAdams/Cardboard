@@ -50,6 +50,10 @@ function __CbGlobal()
             __colorArray:  array_create(3*__CB_LIGHT_COUNT, 0),
             
             __defaultDepthFunction: undefined,
+            
+            __surfaceDepth:  -1,
+            __surfaceNormal: -1,
+            __surfaceLight:  -1,
         },
         
         __billboard: {
@@ -57,10 +61,6 @@ function __CbGlobal()
             __yawSin: 0,
             __yawCos: 0,
         },
-        
-        __deferredSurfaceDepth:  -1,
-        __deferredSurfaceNormal: -1,
-        __deferredSurfaceLight:  -1,
         
         __oldRenderState: {
             __set:              false,

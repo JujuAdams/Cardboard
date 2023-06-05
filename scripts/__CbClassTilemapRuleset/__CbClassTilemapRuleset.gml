@@ -2,7 +2,7 @@ function __CbClassTilemapRuleset(_tileset) constructor
 {
     __tilesetIndex = _tileset;
     
-    var _tilesetData = __CbGetTileset(_tileset);
+    var _tilesetData = __CbTilesetDataGet(_tileset);
     __tileWidth     = _tilesetData.__tileWidth;
     __tileHeight    = _tilesetData.__tileHeight;
     __tilesetWidth  = _tilesetData.__tilesetWidth;
