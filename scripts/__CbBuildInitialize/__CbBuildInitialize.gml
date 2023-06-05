@@ -18,6 +18,7 @@ function __CbBuildInitialize()
     __CB_GLOBAL_BUILD
     if (debug_mode && (GM_build_type == "run")) global.__cardboardDebugBuild = _global;
     
+    //Set up vertex formats
     with(_global.__batch)
     {
         if (CB_WRITE_NORMALS)
