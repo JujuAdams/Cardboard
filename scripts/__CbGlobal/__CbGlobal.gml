@@ -4,10 +4,31 @@ function __CbGlobal()
 {
     static _struct = {
         
-        //System-wide values
-        __doubleSided:  true,
-        __lightMode:    CB_LIGHT_MODE.NONE,
-        __alphaTestRef: 0.5,
+        __doubleSided:         true,
+        __vertexFormat:        undefined,
+        __texturePageIndexMap: ds_map_create(),
+        __model:               undefined,
+        
+        __tilesetDict: {},
+        
+        __billboard: {
+            __yaw:    undefined,
+            __yawSin: 0,
+            __yawCos: 0,
+        },
+        
+        __batch: {
+            __auto:           false,
+            __texturePointer: undefined,
+            __textureIndex:   undefined,
+            __vertexBuffer:   vertex_create_buffer(),
+        },
+        
+        
+        
+        __lightMode:           CB_LIGHT_MODE.NONE,
+        __alphaTestRef:        0.5,
+        __surfaceWorkaround:   false,
         
         __fog: {
             __enabled: false,
@@ -56,35 +77,12 @@ function __CbGlobal()
             __surfaceLight:  -1,
         },
         
-        __billboard: {
-            __yaw:    undefined,
-            __yawSin: 0,
-            __yawCos: 0,
-        },
-        
-        __oldRenderState: {
+        __old: {
             __set:              false,
             __worldMatrix:      matrix_get(matrix_world),
             __viewMatrix:       matrix_get(matrix_view),
             __projectionMatrix: matrix_get(matrix_projection),
         },
-        
-        __surfaceWorkaround: false,
-        
-        __batch: {
-            __auto:           false,
-            __texturePointer: undefined,
-            __textureIndex:   undefined,
-            __vertexBuffer:   vertex_create_buffer(),
-        },
-        
-        __vertexFormat: undefined,
-        
-        __texturePageIndexMap: ds_map_create(),
-        
-        __model: undefined,
-        
-        __tilesetDict: {},
     };
     
     return _struct;

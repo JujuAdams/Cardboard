@@ -13,7 +13,7 @@ function CbRenderStateReset()
     gpu_set_cullmode(cull_noculling);
     gpu_set_alphatestenable(false);
     
-    with(_global.__oldRenderState)
+    with(_global.__old)
     {
         //Restore the old matrices we've been using
         __set = false;

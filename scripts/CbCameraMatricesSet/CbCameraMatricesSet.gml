@@ -5,7 +5,7 @@ function CbCameraMatricesSet()
     __CB_GLOBAL
     
     //Track matrices that are being used
-    with(_global.__oldRenderState)
+    with(_global.__old)
     {
         if (not __set)
         {

@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "(System)",
-    "path": "folders/Cardboard/Render/(System).yy",
+    "path": "folders/Cardboard/(System).yy",
   },
 }
