@@ -89,9 +89,6 @@ function __CbInitialize()
             var _bottom = _top + _uvs[7]*sprite_get_height(_sprite);
             
             _texturePageIndexMap[? __CB_MAX_IMAGES*_sprite + _image] = {
-                spriteName: sprite_get_name(_sprite),
-                image:      _image,
-                
                 texturePointer: sprite_get_texture(_sprite, _image),
                 textureIndex:   _framesArray[_image].texture,
                 
