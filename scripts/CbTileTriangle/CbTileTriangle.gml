@@ -52,7 +52,7 @@ function CbTileTriangle()
     __CB_TILE_COMMON_UVS
     
     //Add this tile to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

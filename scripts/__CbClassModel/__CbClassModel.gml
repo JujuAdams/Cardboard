@@ -8,24 +8,27 @@ function __CbClassModel() constructor
     {
         if (!is_array(array)) return;
         
-        //Don't do anything we know this batch is empty
-        if (_global.__batchTexturePointer == undefined) return;
-        
-        //End the batch we have
-        vertex_end(_global.__batchVertexBuffer);
-        
-        array_push(array, {
-            vertexBuffer:   _global.__batchVertexBuffer,
-            texturePointer: _global.__batchTexturePointer,
-        });
-        
-        //Clear the batch's texture state
-        _global.__batchTexturePointer = undefined;
-        _global.__batchTextureIndex   = undefined;
-        
-        //Then start the vertex buffer again!
-        _global.__batchVertexBuffer = vertex_create_buffer();
-        vertex_begin(_global.__batchVertexBuffer, _global.__vertexFormat);
+        with(_global.__batch)
+        {
+            //Don't do anything we know this batch is empty
+            if (__texturePointer == undefined) return;
+            
+            //End the batch we have
+            vertex_end(__vertexBuffer);
+            
+            array_push(other.array, {
+                vertexBuffer:   __vertexBuffer,
+                texturePointer: __texturePointer,
+            });
+            
+            //Clear the batch's texture state
+            __texturePointer = undefined;
+            __textureIndex   = undefined;
+            
+            //Then start the vertex buffer again!
+            __vertexBuffer = vertex_create_buffer();
+            vertex_begin(__vertexBuffer, __vertexFormat);
+        }
     }
     
     static __Submit = function()

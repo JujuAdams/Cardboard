@@ -6,5 +6,5 @@ function CbBatchAutoSet(_state)
 {
     __CB_GLOBAL
     
-    _global.__autoBatching = _state;
+    _global.__batch.__auto = _state;
 }

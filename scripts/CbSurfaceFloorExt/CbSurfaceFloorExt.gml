@@ -40,7 +40,7 @@ function CbSurfaceFloorExt(_surface, _x, _y, _z, _xScale, _yScale, _zAngle, _col
     var _rbY = _y + _r*_sin + _b*_cos;
     
     //Add this surface to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Render",
-    "path": "folders/Cardboard/Render.yy",
+    "name": "Pipeline",
+    "path": "folders/Cardboard/Render/Pipeline.yy",
   },
 }

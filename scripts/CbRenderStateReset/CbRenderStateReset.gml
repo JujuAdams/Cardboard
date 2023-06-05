@@ -13,8 +13,12 @@ function CbRenderStateReset()
     gpu_set_cullmode(cull_noculling);
     gpu_set_alphatestenable(false);
     
-    //Restore the old matrices we've been using
-    matrix_set(matrix_world,      _global.__oldRenderStateMatrixWorld);
-    matrix_set(matrix_view,       _global.__oldRenderStateMatrixView);
-    matrix_set(matrix_projection, _global.__oldRenderStateMatrixProjection);
+    with(_global.__oldRenderState)
+    {
+        //Restore the old matrices we've been using
+        __set = false;
+        matrix_set(matrix_world,      __worldMatrix);
+        matrix_set(matrix_view,       __viewMatrix);
+        matrix_set(matrix_projection, __projectionMatrix);
+    }
 }

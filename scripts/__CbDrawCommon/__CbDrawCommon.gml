@@ -1,1 +1,1 @@
-#macro __CB_FORCE_SUBMIT_CONDITION  if (!_global.__autoBatching && !_global.__buildingModel) CbBatchForceSubmit();
+#macro __CB_FORCE_SUBMIT_CONDITION  if (!_global.__batch.__auto && (_global.__model == undefined)) CbBatchForceSubmit();

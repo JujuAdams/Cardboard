@@ -12,12 +12,15 @@ function CbModelNewVertexBuffer(_texture)
 {
     __CB_GLOBAL
     
-    if (!_global.__buildingModel) __CbError("Cannot use CbModelNewVertexBuffer() when a model is not being built\nUse CbBatchNewVertexBuffer() to instead");
+    if (_global.__model == undefined) __CbError("Cannot use CbModelNewVertexBuffer() when a model is not being built\nUse CbBatchNewVertexBuffer() to instead");
     
     _global.__model.__AddBatch();
     
-    _global.__batchTexturePointer = _texture;
-    _global.__batchTextureIndex   = undefined;
-    
-    return _global.__batchVertexBuffer;
+    with(_global.__batch)
+    {
+        __texturePointer = _texture;
+        __textureIndex   = undefined;
+        
+        return __vertexBuffer;
+    }
 }

@@ -3,12 +3,11 @@ var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);\
 var _imageData = _global.__texturePageIndexMap[? __CB_MAX_IMAGES*_sprite + _flooredImage];\
 ;\
 ;\//Break the batch if we've swapped texture
-if (_imageData.textureIndex != _global.__batchTextureIndex)\
+if (_imageData.textureIndex != _global.__batch.__textureIndex)\
 {\
     __CbBatchComplete();\
-    ;\
-    _global.__batchTexturePointer = _imageData.texturePointer;\
-    _global.__batchTextureIndex   = _imageData.textureIndex;\
+    _global.__batch.__texturePointer = _imageData.texturePointer;\
+    _global.__batch.__textureIndex   = _imageData.textureIndex;\
 }
 
 

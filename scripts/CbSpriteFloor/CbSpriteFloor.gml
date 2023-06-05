@@ -22,7 +22,7 @@ function CbSpriteFloor(_sprite, _image, _x, _y, _z)
     var _b = _y + _imageData.bottom;
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

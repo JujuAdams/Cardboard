@@ -62,22 +62,27 @@ function __CbGlobal()
         __deferredSurfaceNormal: -1,
         __deferredSurfaceLight:  -1,
         
-        __oldMatrixSet: false,
-        __oldRenderStateMatrixWorld:      matrix_get(matrix_world),
-        __oldRenderStateMatrixView:       matrix_get(matrix_view),
-        __oldRenderStateMatrixProjection: matrix_get(matrix_projection),
-        __renderStateResetSurface:     false,
+        __oldRenderState: {
+            __set:              false,
+            __worldMatrix:      matrix_get(matrix_world),
+            __viewMatrix:       matrix_get(matrix_view),
+            __projectionMatrix: matrix_get(matrix_projection),
+        },
         
-        __autoBatching:        false,
-        __batchTexturePointer: undefined,
-        __batchTextureIndex:   undefined,
-        __batchVertexBuffer:   vertex_create_buffer(),
-        __vertexFormat:        undefined,
+        __surfaceWorkaround: false,
+        
+        __batch: {
+            __auto:           false,
+            __texturePointer: undefined,
+            __textureIndex:   undefined,
+            __vertexBuffer:   vertex_create_buffer(),
+        },
+        
+        __vertexFormat: undefined,
         
         __texturePageIndexMap: ds_map_create(),
         
-        __model:         undefined,
-        __buildingModel: false,
+        __model: undefined,
         
         __tilesetDict: {},
     };

@@ -8,14 +8,11 @@ function CbModelEnd()
 {
     __CB_GLOBAL
     
-    if (!_global.__buildingModel) __CbError("No model has been created");
+    if (_global.__model == undefined) __CbError("No model has been created");
     
     __CbBatchComplete();
     
     var _model = _global.__model;
-    
-    _global.__buildingModel = false;
-    _global.__model         = undefined;
-    
+    _global.__model = undefined;
     return _model;
 }

@@ -24,7 +24,7 @@ function CbSurfaceQuad(_sprite, _image, _x1, _y1, _z1, _x2, _y2, _z2, _x3, _y3, 
     __CB_SURFACE_COMMON_TEXTURE
     
     //Add this surface to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

@@ -47,7 +47,7 @@ function CbSurfaceTriangle()
     __CB_SURFACE_COMMON_TEXTURE
     
     //Add this surface to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

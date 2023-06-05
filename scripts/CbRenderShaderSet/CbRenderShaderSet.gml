@@ -135,7 +135,7 @@ function CbRenderShaderSet(_pass)
                             shader_set_uniform_f(shader_get_uniform(__shdCbGBufferHLSL, "u_fAlphaTestRef"), __alphaTestRef);
                         }
                         
-                        __renderStateResetSurface = true;
+                        __surfaceWorkaround = true;
                         if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND) surface_set_target(__CbDeferredSurfaceNormalEnsure(_refSurface));
                         
                         surface_set_target_ext(0, _refSurface);

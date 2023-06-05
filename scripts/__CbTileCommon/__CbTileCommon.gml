@@ -3,11 +3,11 @@ var _tilesetData = __CbGetTileset(_tileset);\
 var _texture     = _tilesetData.__texture;\
 ;\
 ;\ //Break the batch if we've swapped texture
-if (_texture != _global.__batchTextureIndex)\
+if (_texture != _global.__batch.__textureIndex)\
 {\
     __CbBatchComplete();\
-    _global.__batchTexturePointer = _texture;\
-    _global.__batchTextureIndex   = undefined;\
+    _global.__batch.__texturePointer = _texture;\
+    _global.__batch.__textureIndex   = undefined;\
 }
 
 

@@ -37,7 +37,7 @@ function CbSurfaceBillboard(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin = 0)
     var _bZ = _b + _z;
     
     //Add this surface to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

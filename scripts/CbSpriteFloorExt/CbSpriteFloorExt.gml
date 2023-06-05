@@ -40,7 +40,7 @@ function CbSpriteFloorExt(_sprite, _image, _x, _y, _z, _xScale, _yScale, _zAngle
     var _rbY = _y + _r*_sin + _b*_cos;
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

@@ -50,7 +50,7 @@ function CbSpriteTriangle()
     __CB_SPRITE_COMMON_UVS
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

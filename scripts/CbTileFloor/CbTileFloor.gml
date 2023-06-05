@@ -23,7 +23,7 @@ function CbTileFloor(_tileset, _tileX, _tileY, _x, _y, _z)
     var _b = _y + _tileHeight;
     
     //Add this tile to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

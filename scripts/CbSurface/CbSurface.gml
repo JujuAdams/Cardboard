@@ -22,7 +22,7 @@ function CbSurface(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin = 0)
     var _b = _t - surface_get_height(_surface);
     
     //Add this surface to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

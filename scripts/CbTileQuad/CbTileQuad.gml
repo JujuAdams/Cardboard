@@ -60,12 +60,11 @@ function CbTileQuad()
     var _textureHeight = _tilesetData.__textureHeight;
     
     //Break the batch if we've swapped texture
-    if (_texture != _global.__batchTextureIndex)
+    if (_texture != _global.__batch.__textureIndex)
     {
         __CbBatchComplete();
-        
-        _global.__batchTexturePointer = _texture;
-        _global.__batchTextureIndex   = undefined;
+        _global.__batch.__texturePointer = _texture;
+        _global.__batch.__textureIndex   = undefined;
     }
     
     var _u0 = lerp(_tilesetU0, _tilesetU1, (_borderWidth  + _tileWidthExt *_tileX              ) / _textureWidth );
@@ -76,7 +75,7 @@ function CbTileQuad()
     
     
     //Add this tile to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

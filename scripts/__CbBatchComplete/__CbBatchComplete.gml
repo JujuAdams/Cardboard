@@ -2,7 +2,7 @@ function __CbBatchComplete()
 {
     __CB_GLOBAL
     
-    if (_global.__buildingModel)
+    if (_global.__model != undefined)
     {
         _global.__model.__AddBatch();
     }

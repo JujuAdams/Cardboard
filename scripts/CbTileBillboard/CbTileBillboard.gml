@@ -38,7 +38,7 @@ function CbTileBillboard(_tileset, _tileX, _tileY, _x, _y, _z)
     var _bZ = -_b + _z;
     
     //Add this tile to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

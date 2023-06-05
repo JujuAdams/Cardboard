@@ -37,7 +37,7 @@ function CbSpriteBillboard(_sprite, _image, _x, _y, _z)
     var _bZ = -_b + _z;
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {

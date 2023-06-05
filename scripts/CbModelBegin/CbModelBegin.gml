@@ -8,10 +8,9 @@ function CbModelBegin()
 {
     __CB_GLOBAL
     
-    if (_global.__buildingModel) __CbError("Only one model can be created at a time");
+    if (_global.__model != undefined) __CbError("Only one model can be created at a time");
     
     __CbBatchComplete();
     
-    _global.__buildingModel = true;
     _global.__model = new __CbClassModel();
 }

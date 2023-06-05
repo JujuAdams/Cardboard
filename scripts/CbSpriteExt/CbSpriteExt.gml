@@ -55,7 +55,7 @@ function CbSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _zA
     var _rbY = _rbX0*_sin + _y;
     
     //Add this sprite to the vertex buffer
-    var _vertexBuffer = _global.__batchVertexBuffer;
+    var _vertexBuffer = _global.__batch.__vertexBuffer;
     
     if (CB_WRITE_NORMALS)
     {
