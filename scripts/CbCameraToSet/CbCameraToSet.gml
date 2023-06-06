@@ -12,6 +12,9 @@ function CbCameraToSet(_x, _y, _z)
         __yTo = _y;
         __zTo = _z;
         
-        CbBillboardYawSet(__xFrom, __yFrom, _x, _y);
+        if (_global.__billboardYawSetFunc != undefined)
+        {
+            _global.__billboardYawSetFunc(__xFrom, __yFrom, __xTo, __yTo);
+        }
     }
 }

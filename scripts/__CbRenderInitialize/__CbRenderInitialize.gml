@@ -36,4 +36,13 @@ function __CbRenderInitialize()
     
     __CB_GLOBAL_RENDER
     if (debug_mode && (GM_build_type == "run")) global.__cardboardDebugRender = _global;
+    
+    try
+    {
+        _global.__billboardYawSetFunc = CbBillboardYawSet;
+    }
+    catch(_error)
+    {
+        __CbTrace("Warning! Could not find CbBillboardYawSet()");
+    }
 }

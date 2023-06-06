@@ -41,6 +41,8 @@ function __CbRenderGlobal()
             __fieldOfView: 90,
         },
         
+        __billboardYawSetFunc: undefined,
+        
         __lighting: {
             __array: [],
             
