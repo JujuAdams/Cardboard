@@ -14,5 +14,14 @@ function CbModelEnd()
     
     var _model = _global.__model;
     _global.__model = undefined;
+    
+    if (CB_WRITE_NORMALS)
+    {
+        _model.__indexMax = _global.__indexInteger;
+        
+        _global.__indexInteger = _global.__modelIndexInteger;
+        _global.__modelIndexInteger = undefined;
+    }
+    
     return _model;
 }

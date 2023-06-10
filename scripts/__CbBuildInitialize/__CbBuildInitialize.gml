@@ -2,6 +2,8 @@
 #macro __CB_BUILD_DATE     "2023-06-05"
 
 #macro __CB_MAX_IMAGES  1024
+#macro __CB_INDEX_START  0x000000
+#macro __CB_INDEX_INCREMENT  2
 
 
 
@@ -28,6 +30,7 @@ function __CbBuildInitialize()
             vertex_format_add_normal();      //12 bytes
             vertex_format_add_color();       // 4 bytes
             vertex_format_add_texcoord();    // 8 bytes
+            vertex_format_add_color();       // 4 bytes
             __vertexFormat = vertex_format_end();
         }
         else
@@ -82,4 +85,10 @@ function __CbBuildInitialize()
         
         ++_sprite;
     }
+    
+    time_source_start(time_source_create(time_source_global, 1, time_source_units_frames, function()
+    {
+        __CB_GLOBAL_BUILD
+        _global.__indexInteger = __CB_INDEX_START;
+    }, [], -1));
 }

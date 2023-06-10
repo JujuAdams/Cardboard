@@ -83,7 +83,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         __BuildMatrices();
         
         surface_set_target(__depthSurface);
-        draw_clear(c_gray);
+        draw_clear_alpha(c_black, 0);
         
         var _function = depthFunction ?? _global.__lighting.__defaultDepthFunction;
         if (_function != undefined)

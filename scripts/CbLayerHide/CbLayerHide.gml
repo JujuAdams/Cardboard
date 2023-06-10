@@ -1,4 +1,4 @@
-/// @param array
+/// @param __array
 
 function CbLayerArrayHide(_array)
 {

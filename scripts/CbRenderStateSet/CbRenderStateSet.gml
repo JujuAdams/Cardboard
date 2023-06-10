@@ -15,8 +15,10 @@ function CbRenderStateSet(_pass)
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
             gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);
+            gpu_set_blendmode_ext(bm_one, bm_zero);
             
             CbRenderShaderSet(_pass);
+            CbIndexReset();
             
             //View and projection matrix is set per light
         break;
@@ -31,6 +33,7 @@ function CbRenderStateSet(_pass)
             
             CbRenderShaderSet(_pass);
             CbCameraMatricesSet();
+            CbIndexReset();
         break;
         
         case CB_PASS.TRANSPARENT:
@@ -40,6 +43,7 @@ function CbRenderStateSet(_pass)
             
             CbRenderShaderSet(_pass);
             CbCameraMatricesSet();
+            CbIndexReset();
         break;
     }
 }

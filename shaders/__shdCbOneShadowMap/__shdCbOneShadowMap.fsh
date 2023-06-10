@@ -8,8 +8,10 @@ varying float v_fViewZ;
 varying vec3  v_vNormal;
 varying vec4  v_vColour;
 varying vec2  v_vTexcoord;
+varying vec3  v_vColour1;
 
 uniform float u_fAlphaTestRef;
+uniform vec3  u_vIndexOffset;
 
 uniform vec3  u_vAmbient;
 uniform vec4  u_vPosRadArray[LIGHT_COUNT];
@@ -61,21 +63,54 @@ vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
     return lightFinal;
 }
 
-vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
+//vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
+//{
+//    vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
+//    vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
+//    float calcDepth     = lightSpacePos.z / lightSpacePos.w;
+//    
+//    float foundDepth = RGBToDepth(texture2D(lightDepthTexture, texCoord).rgb);
+//    vec3  dir        = lightPosition - position;
+//    
+//    //Adjust for normals
+//    float dotProduct = max(dot(normalize(normal), normalize(dir)), 0.0);
+//    
+//    //Perform the depth comparison
+//    float depthBias = clamp(BIAS_COEFF*tan(acos(dotProduct)), 0.0, BIAS_MAX);
+//    float factor = step(max(0.0, calcDepth), foundDepth + depthBias);
+//    
+//    //Adjust for normals
+//    factor *= dotProduct;
+//    
+//    //Adjust for distance from the light source
+//    factor *= max(0.0, 1.0 - (length(dir) / radius));
+//    
+//    //Clip the limits of the surface
+//    factor *= step(0.0, texCoord.x);
+//    factor *= step(texCoord.x, 1.0);
+//    factor *= step(0.0, texCoord.y);
+//    factor *= step(texCoord.y, 1.0);
+//    
+//    //FIXME - Placeholder circular light
+//    factor *= step(2.0*length(texCoord.xy - 0.5), 1.0);
+//    
+//    return factor*lightColor;
+//}
+
+vec3 AccumulateShadowedLight(vec3 position, vec3 normal, vec3 index, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
 {
     vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
     vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
-    float calcDepth     = lightSpacePos.z / lightSpacePos.w;
     
-    float foundDepth = RGBToDepth(texture2D(lightDepthTexture, texCoord).rgb);
+    vec3  foundIndex = texture2D(lightDepthTexture, texCoord).rgb;
     vec3  dir        = lightPosition - position;
     
     //Adjust for normals
     float dotProduct = max(dot(normalize(normal), normalize(dir)), 0.0);
     
     //Perform the depth comparison
-    float depthBias = clamp(BIAS_COEFF*tan(acos(dotProduct)), 0.0, BIAS_MAX);
-    float factor = step(max(0.0, calcDepth), foundDepth + depthBias);
+    float factor = (lightSpacePos.z / lightSpacePos.w >= 0.0)? 1.0 : 0.0;
+    factor *= (length(index - foundIndex) < 0.01)? 1.0 : 0.0;
     
     //Adjust for normals
     factor *= dotProduct;
@@ -102,7 +137,7 @@ void main()
     
     gl_FragColor.rgb *= u_vAmbient
                       + AccumulateUnshadowedLights(v_vWorldPos, v_vNormal)
-                      + AccumulateShadowedLight(v_vWorldPos, v_vNormal, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor);
+                      + AccumulateShadowedLight(v_vWorldPos, v_vNormal, v_vColour1 + u_vIndexOffset, u_mLightViewProj, u_sLightDepth, u_vLightPos.xyz, u_vLightPos.w, u_vLightColor);
     
     gl_FragColor.rgb = ApplyFog(gl_FragColor.rgb, v_fViewZ, u_vFogColor, u_vFogParams);
 }

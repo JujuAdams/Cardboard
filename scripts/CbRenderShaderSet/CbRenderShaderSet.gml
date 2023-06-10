@@ -7,14 +7,20 @@
 function CbRenderShaderSet(_pass)
 {
     __CB_GLOBAL_RENDER
+    static _buildGlobal = __CbBuildGlobal();
     
     with(_global)
     {
         switch(_pass)
         {
             case CB_PASS.LIGHT_DEPTH:
-                shader_set(__shdCbDepth);
-                shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_fAlphaTestRef"), __alphaTestRef);
+                //shader_set(__shdCbDepth);
+                //shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_fAlphaTestRef"), __alphaTestRef);
+                
+                shader_set(__shdCbIndex);
+                shader_set_uniform_f(shader_get_uniform(__shdCbIndex, "u_fAlphaTestRef"), __alphaTestRef);
+                _buildGlobal.__shaderIndexOffsetUniform = shader_get_uniform(__shdCbIndex, "u_vIndexOffset");
+                shader_set_uniform_f(_buildGlobal.__shaderIndexOffsetUniform, 0, 0, 0);
             break;
             
             case CB_PASS.OPAQUE:
@@ -72,6 +78,8 @@ function CbRenderShaderSet(_pass)
                     case CB_LIGHT_MODE.ONE_SHADOW_MAP:
                         shader_set(__shdCbOneShadowMap);
                         shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_fAlphaTestRef"), __alphaTestRef);
+                        _buildGlobal.__shaderIndexOffsetUniform = shader_get_uniform(__shdCbOneShadowMap, "u_vIndexOffset");
+                        shader_set_uniform_f(_buildGlobal.__shaderIndexOffsetUniform, 0, 0, 0);
                         
                         with(__fog)
                         {

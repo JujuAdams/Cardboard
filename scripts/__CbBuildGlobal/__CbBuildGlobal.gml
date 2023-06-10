@@ -6,7 +6,11 @@ function __CbBuildGlobal()
         __doubleSided:         true,
         __vertexFormat:        undefined,
         __texturePageIndexMap: ds_map_create(),
+        __indexInteger:        0,
         __model:               undefined,
+        __modelIndexInteger:   undefined,
+        
+        __shaderIndexOffsetUniform: -1,
         
         __tilesetDict: {},
         

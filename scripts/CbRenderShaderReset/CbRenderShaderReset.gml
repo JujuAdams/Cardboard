@@ -3,6 +3,7 @@
 function CbRenderShaderReset()
 {
     __CB_GLOBAL_RENDER
+    static _buildGlobal = __CbBuildGlobal();
     
     shader_reset();
     
@@ -12,4 +13,6 @@ function CbRenderShaderReset()
         surface_reset_target();
         if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND) surface_reset_target();
     }
+    
+    _buildGlobal.__shaderIndexOffsetUniform = -1;
 }

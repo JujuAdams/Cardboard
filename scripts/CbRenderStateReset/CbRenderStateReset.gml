@@ -12,6 +12,7 @@ function CbRenderStateReset()
     gpu_set_zwriteenable(false);
     gpu_set_cullmode(cull_noculling);
     gpu_set_alphatestenable(false);
+    gpu_set_blendmode(bm_normal);
     
     with(_global.__old)
     {

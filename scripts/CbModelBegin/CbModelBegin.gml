@@ -13,4 +13,10 @@ function CbModelBegin()
     __CbBatchComplete();
     
     _global.__model = new __CbClassModel();
+    
+    if (CB_WRITE_NORMALS)
+    {
+        _global.__modelIndexInteger = _global.__indexInteger - __CB_INDEX_START;
+        _global.__indexInteger = 0;
+    }
 }
