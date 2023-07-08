@@ -17,6 +17,8 @@ function __CbRenderGlobal()
         
         __camera: {
             __orthographic: true,
+            __axonometric:  true,
+            __zTilt:        true,
             
             __width:  surface_get_width(application_surface),
             __height: surface_get_height(application_surface),
@@ -32,8 +34,6 @@ function __CbRenderGlobal()
             __xUp: 0,
             __yUp: 0,
             __zUp: 1,
-            
-            __axonometric: true,
             
             __near: -1024,
             __far:   1024,

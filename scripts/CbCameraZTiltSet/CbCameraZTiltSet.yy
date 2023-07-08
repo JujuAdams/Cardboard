@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CbBuildViewMatrix",
+  "name": "CbCameraZTiltSet",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Render Functions",
-    "path": "folders/Cardboard/Render Functions.yy",
+    "name": "Camera",
+    "path": "folders/Cardboard/Render Functions/Camera.yy",
   },
 }
