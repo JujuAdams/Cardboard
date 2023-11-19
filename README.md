@@ -6,7 +6,7 @@
 
 <p align="center"><a href="https://github.com/JujuAdams/Cardboard/releases/">Download the .yymps</a></p>
 
-<p align="center">Chat about Cardboard on the <a href="https://discord.gg/8krYCqr">Discord server</a></p>
+<p align="center">Chat about Cardboard on the <a href="https://discord.gg/djcxkRNW6r">Discord server</a></p>
 
 &nbsp;
 
