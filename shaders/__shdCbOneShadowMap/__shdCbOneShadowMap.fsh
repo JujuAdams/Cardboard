@@ -1,8 +1,5 @@
 #define LIGHT_COUNT  6
 
-#define BIAS_MAX    0.005
-#define BIAS_COEFF  0.0005
-
 varying vec3  v_vWorldPos;
 varying float v_fViewZ;
 varying vec3  v_vNormal;
@@ -21,6 +18,7 @@ uniform sampler2D u_sLightDepth;
 uniform vec4      u_vLightPos;
 uniform vec3      u_vLightColor;
 uniform mat4      u_mLightViewProj;
+uniform vec2      u_vLightTexel;
 
 uniform vec2 u_vFogParams;
 uniform vec3 u_vFogColor;
@@ -63,57 +61,28 @@ vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
     return lightFinal;
 }
 
-//vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
-//{
-//    vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
-//    vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
-//    float calcDepth     = lightSpacePos.z / lightSpacePos.w;
-//    
-//    float foundDepth = RGBToDepth(texture2D(lightDepthTexture, texCoord).rgb);
-//    vec3  dir        = lightPosition - position;
-//    
-//    //Adjust for normals
-//    float dotProduct = max(dot(normalize(normal), normalize(dir)), 0.0);
-//    
-//    //Perform the depth comparison
-//    float depthBias = clamp(BIAS_COEFF*tan(acos(dotProduct)), 0.0, BIAS_MAX);
-//    float factor = step(max(0.0, calcDepth), foundDepth + depthBias);
-//    
-//    //Adjust for normals
-//    factor *= dotProduct;
-//    
-//    //Adjust for distance from the light source
-//    factor *= max(0.0, 1.0 - (length(dir) / radius));
-//    
-//    //Clip the limits of the surface
-//    factor *= step(0.0, texCoord.x);
-//    factor *= step(texCoord.x, 1.0);
-//    factor *= step(0.0, texCoord.y);
-//    factor *= step(texCoord.y, 1.0);
-//    
-//    //FIXME - Placeholder circular light
-//    factor *= step(2.0*length(texCoord.xy - 0.5), 1.0);
-//    
-//    return factor*lightColor;
-//}
-
 vec3 AccumulateShadowedLight(vec3 position, vec3 normal, vec3 index, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
 {
     vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
     vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
     
-    vec3  foundIndex = texture2D(lightDepthTexture, texCoord).rgb;
-    vec3  dir        = lightPosition - position;
+    vec3  foundIndex0 = texture2D(lightDepthTexture, texCoord                              ).rgb;
+    vec3  foundIndex1 = texture2D(lightDepthTexture, texCoord + vec2(-u_vLightTexel.x, 0.0)).rgb;
+    vec3  foundIndex2 = texture2D(lightDepthTexture, texCoord + vec2( u_vLightTexel.x, 0.0)).rgb;
+    vec3  foundIndex3 = texture2D(lightDepthTexture, texCoord + vec2(0.0, -u_vLightTexel.y)).rgb;
+    vec3  foundIndex4 = texture2D(lightDepthTexture, texCoord + vec2(0.0,  u_vLightTexel.y)).rgb;
+    
+    vec3  dir = lightPosition - position;
+    
+    ////Perform the index comparison
+    float factor = 1.0 - (((length(index - foundIndex0) > 0.01)? 1.0 : 0.0)
+                        * ((length(index - foundIndex1) > 0.01)? 1.0 : 0.0)
+                        * ((length(index - foundIndex2) > 0.01)? 1.0 : 0.0)
+                        * ((length(index - foundIndex3) > 0.01)? 1.0 : 0.0)
+                        * ((length(index - foundIndex4) > 0.01)? 1.0 : 0.0));
     
     //Adjust for normals
-    float dotProduct = max(dot(normalize(normal), normalize(dir)), 0.0);
-    
-    //Perform the depth comparison
-    float factor = (lightSpacePos.z / lightSpacePos.w >= 0.0)? 1.0 : 0.0;
-    factor *= (length(index - foundIndex) < 0.01)? 1.0 : 0.0;
-    
-    //Adjust for normals
-    factor *= dotProduct;
+    factor *= max(dot(normalize(normal), normalize(dir)), 0.0);
     
     //Adjust for distance from the light source
     factor *= max(0.0, 1.0 - (length(dir) / radius));
