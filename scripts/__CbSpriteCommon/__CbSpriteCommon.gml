@@ -1,6 +1,6 @@
 #macro __CB_SPRITE_COMMON_TEXTURE ;\
 var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);\
-var _imageData = _global.__texturePageIndexMap[? __CB_MAX_IMAGES*_sprite + _flooredImage];\
+var _imageData = _global.__texturePageIndexMap[? __CB_MAX_IMAGES*real(_sprite) + _flooredImage];\
 ;\
 ;\//Break the batch if we've swapped texture
 if (_imageData.textureIndex != _global.__batch.__textureIndex)\
