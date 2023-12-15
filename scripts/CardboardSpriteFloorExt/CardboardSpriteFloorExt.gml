@@ -19,7 +19,7 @@ function CardboardSpriteFloorExt(_sprite, _image, _x, _y, _z, _xScale, _yScale, 
     __CARDBOARD_GLOBAL
     
     var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
+    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*real(_sprite) + _flooredImage];
     
     //Break the batch if we've swapped texture
     if (_imageData.textureIndex != _global.__batchTextureIndex)

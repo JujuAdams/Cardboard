@@ -24,7 +24,7 @@ function CardboardSpriteQuad(_sprite, _image, _x1, _y1, _z1, _x2, _y2, _z2, _x3,
     __CARDBOARD_GLOBAL
     
     var _flooredImage = floor(max(0, _image)) mod sprite_get_number(_sprite);
-    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*_sprite + _flooredImage];
+    var _imageData = _global.__texturePageIndexMap[? __CARDBOARD_MAX_IMAGES*real(_sprite) + _flooredImage];
     
     //Break the batch if we've swapped texture
     if (_imageData.textureIndex != _global.__batchTextureIndex)
