@@ -1,5 +1,5 @@
-#macro __CARDBOARD_VERSION     "1.2.0"
-#macro __CARDBOARD_DATE        "2023-05-07"
+#macro __CARDBOARD_VERSION     "1.2.1"
+#macro __CARDBOARD_DATE        "2023-12-15"
 #macro __CARDBOARD_MAX_IMAGES  1024
 
 
