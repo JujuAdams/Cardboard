@@ -108,5 +108,5 @@ function CbTileBillboardExt(_tileset, _tileX, _tileY, _x, _y, _z, _xScale, _zSca
         vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1);
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

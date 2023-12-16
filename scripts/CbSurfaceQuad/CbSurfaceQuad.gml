@@ -82,5 +82,5 @@ function CbSurfaceQuad(_sprite, _image, _x1, _y1, _z1, _x2, _y2, _z2, _x3, _y3, 
         vertex_position_3d(_vertexBuffer, _x4, _y4, _z4); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1);
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

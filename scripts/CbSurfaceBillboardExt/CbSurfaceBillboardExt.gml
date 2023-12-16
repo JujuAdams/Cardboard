@@ -107,5 +107,5 @@ function CbSurfaceBillboardExt(_surface, _x, _y, _z, _xScale, _zScale, _yAngle, 
         vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1);
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

@@ -87,5 +87,5 @@ function CbSpriteBillboard(_sprite, _image, _x, _y, _z)
         vertex_position_3d(_vertexBuffer, _rX, _rY, _bZ); vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, _u1, _v1);
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

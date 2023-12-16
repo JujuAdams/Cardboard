@@ -165,5 +165,5 @@ function CbSurfaceExt(_surface, _x, _y, _z, _xScale, _zScale, _yAngle, _zAngle, 
         }
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }
