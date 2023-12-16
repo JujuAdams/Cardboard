@@ -1,5 +1,5 @@
 #macro __CB_BUILD_VERSION  "2.0.0"
-#macro __CB_BUILD_DATE     "2023-06-05"
+#macro __CB_BUILD_DATE     "2023-12-15"
 
 #macro __CB_MAX_IMAGES  1024
 #macro __CB_INDEX_START  0x000000

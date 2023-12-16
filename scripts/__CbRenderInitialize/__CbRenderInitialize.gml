@@ -1,5 +1,5 @@
 #macro __CB_RENDER_VERSION  "2.0.0"
-#macro __CB_RENDER_DATE     "2023-06-05"
+#macro __CB_RENDER_DATE     "2023-12-15"
 
 #macro __CB_LIGHT_COUNT  6
 
