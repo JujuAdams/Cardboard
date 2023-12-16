@@ -167,5 +167,5 @@ function CbTileExt(_tileset, _tileX, _tileY, _x, _y, _z, _xScale, _zScale, _yAng
         }
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

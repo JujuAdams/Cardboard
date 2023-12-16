@@ -140,5 +140,5 @@ function CbSpriteExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yAngle, _zA
         }
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

@@ -95,5 +95,5 @@ function CbSpriteBillboardExt(_sprite, _image, _x, _y, _z, _xScale, _zScale, _yA
         vertex_position_3d(_vertexBuffer, _rbX, _rbY, _rbZ); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, _normalX, _normalY, 0); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u1, _v1); __CB_WRITE_INDEX
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

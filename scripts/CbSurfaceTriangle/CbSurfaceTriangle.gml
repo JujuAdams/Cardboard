@@ -84,5 +84,5 @@ function CbSurfaceTriangle()
         vertex_position_3d(_vertexBuffer, _x3, _y3, _z3); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, _normalX, _normalY, _normalZ); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, _u3prop, _v3prop); __CB_WRITE_INDEX
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

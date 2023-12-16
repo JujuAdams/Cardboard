@@ -75,5 +75,5 @@ function CbSurfaceBillboard(_surface, _x, _y, _z, _xOrigin = 0, _yOrigin = 0)
         vertex_position_3d(_vertexBuffer, _rX, _rY, _bZ); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, _normalX, _normalY, 0); } vertex_color(_vertexBuffer, c_white, 1); vertex_texcoord(_vertexBuffer, 1, 1); __CB_WRITE_INDEX
     }
     
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }

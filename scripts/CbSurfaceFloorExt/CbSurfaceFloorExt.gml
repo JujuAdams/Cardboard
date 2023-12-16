@@ -71,5 +71,5 @@ function CbSurfaceFloorExt(_surface, _x, _y, _z, _xScale, _yScale, _zAngle, _col
         vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
         vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1); __CB_WRITE_INDEX
     }
-    __CB_FORCE_SUBMIT_CONDITION
+    __CB_CONDITIONAL_SUBMIT
 }
