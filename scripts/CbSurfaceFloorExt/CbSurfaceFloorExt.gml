@@ -43,26 +43,33 @@ function CbSurfaceFloorExt(_surface, _x, _y, _z, _xScale, _yScale, _zAngle, _col
     //Add this surface to the vertex buffer
     var _vertexBuffer = _global.__batch.__vertexBuffer;
     
-    if (CB_WRITE_NORMALS)
+    if (_global.__doubleSided)
     {
-        vertex_position_3d(_vertexBuffer, _ltX, _ltY, _z); vertex_normal(_vertexBuffer, 0, 0, 1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 0); __CB_WRITE_INDEX
-        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); vertex_normal(_vertexBuffer, 0, 0, 1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
-        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z); vertex_normal(_vertexBuffer, 0, 0, 1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _ltX, _ltY, _z + CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0,  1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z + CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0,  1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z + CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0,  1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
         
-        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z); vertex_normal(_vertexBuffer, 0, 0, 1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
-        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); vertex_normal(_vertexBuffer, 0, 0, 1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
-        vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z); vertex_normal(_vertexBuffer, 0, 0, 1); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z + CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0,  1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z + CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0,  1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z + CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0,  1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1); __CB_WRITE_INDEX
+        
+        vertex_position_3d(_vertexBuffer, _ltX, _ltY, _z - CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, -1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z - CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, -1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z - CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, -1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
+        
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z - CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, -1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z - CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, -1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z - CB_DOUBLE_SIDED_SPACING); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, -1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
     }
     else
     {
-        vertex_position_3d(_vertexBuffer, _ltX, _ltY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 0);
-        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1);
-        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0);
+        vertex_position_3d(_vertexBuffer, _ltX, _ltY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
         
-        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0);
-        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1);
-        vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z); vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1);
+        vertex_position_3d(_vertexBuffer, _rtX, _rtY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 0); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _lbX, _lbY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 0, 1); __CB_WRITE_INDEX
+        vertex_position_3d(_vertexBuffer, _rbX, _rbY, _z); if (CB_WRITE_NORMALS) { vertex_normal(_vertexBuffer, 0, 0, 1); } vertex_color(_vertexBuffer, _color, _alpha); vertex_texcoord(_vertexBuffer, 1, 1); __CB_WRITE_INDEX
     }
-    
     __CB_FORCE_SUBMIT_CONDITION
 }
