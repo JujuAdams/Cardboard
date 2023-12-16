@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Batching",
-    "path": "folders/Cardboard/Build Functions/Batching.yy",
+    "name": "Pipeline",
+    "path": "folders/Cardboard/Render Functions/Pipeline.yy",
   },
 }

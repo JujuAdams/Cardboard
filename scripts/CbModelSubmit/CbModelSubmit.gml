@@ -5,7 +5,6 @@
 function CbModelSubmit(_model)
 {
     __CB_GLOBAL_BUILD
-    var __global = _global;
     
     var _r = color_get_red(  _global.__indexInteger)/255
     var _g = color_get_green(_global.__indexInteger)/255
