@@ -1,7 +1,8 @@
-// Whether vertex buffers built by Cb should include normals
+// Whether vertex buffers built by Cardboard should include normals
 // This is critical information for lighting scenes
 #macro CB_WRITE_NORMALS  true
 
+// Whether vertex buffers built by Cardboard should include indexes
 #macro CB_WRITE_INDEX  true
 
 // The space between layers when using the double-sided draw feature
