@@ -1,4 +1,4 @@
-CbCameraSizeSet(1366, 768);
+CbCameraSizeSet(1280, 720);
 
 CbLightModeSet(CB_LIGHT_MODE.ONE_SHADOW_MAP);
 CbLightAmbientSet(c_dkgray);
