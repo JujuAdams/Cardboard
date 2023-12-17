@@ -5,12 +5,14 @@ CbLightAmbientSet(c_dkgray);
 dir    = CbLightDirectional(1, -2, -3, make_color_rgb(0.2*255, 0.3*255, 0.4*255));
 light1 = CbLightPoint(0, 0, 50, 200, c_red);
 
-light2 = CbLightWithShadows(c_yellow, 300, 450, 90, -150, 0, 0, 140, 300);
-light2.depthFunction = function()
+CbLightDefaultDepthFunctionSet(function()
 {
     //Draw the scene object
     oScene.Draw();
-};
+});
+
+light2 = CbLightWithShadows(c_yellow, 300, 450, 90, -150, 0, 0, 140, 300);
+light3 = CbLightWithShadows(c_white, 300, 450, 90, -150, 0, 0, 80, 300);
 
 opaqueFunc = function()
 {
