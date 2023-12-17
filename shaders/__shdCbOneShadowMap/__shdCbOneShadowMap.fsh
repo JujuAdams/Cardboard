@@ -2,7 +2,7 @@
 
 #define BIAS_MIN    1e-5
 #define BIAS_MAX    3e-4
-#define BIAS_COEFF  1000.0
+#define BIAS_COEFF  1.0
 
 varying vec3  v_vWorldPos;
 varying float v_fViewZ;
@@ -69,7 +69,17 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
     float calcDepth     = lightSpacePos.z / lightSpacePos.w;
     
     float foundDepth = RGBToDepth(texture2D(lightDepthTexture, texCoord).rgb);
-    vec3  dir        = lightPosition - position;
+    
+    //Choose the lighting vector
+    vec3 dir;
+    if (radius > 0.0)
+    {
+        dir = lightPosition - position;
+    }
+    else
+    {
+        dir = lightPosition;
+    }
     
     //Adjust for normals
     float dotProduct = max(dot(normalize(normal), normalize(dir)), 0.0);
@@ -81,17 +91,20 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
     //Adjust for normals
     factor *= dotProduct;
     
-    //Adjust for distance from the light source
-    factor *= max(0.0, 1.0 - (length(dir) / radius));
-    
     //Clip the limits of the surface
     factor *= step(0.0, texCoord.x);
     factor *= step(texCoord.x, 1.0);
     factor *= step(0.0, texCoord.y);
     factor *= step(texCoord.y, 1.0);
     
-    //FIXME - Placeholder circular light
-    factor *= step(2.0*length(texCoord.xy - 0.5), 1.0);
+    if (radius > 0.0)
+    {
+        //Adjust for distance from the light source
+        factor *= max(0.0, 1.0 - (length(dir) / radius));
+        
+        //FIXME - Placeholder circular light
+        factor *= step(2.0*length(texCoord.xy - 0.5), 1.0);
+    }
     
     return factor*lightColor;
 }

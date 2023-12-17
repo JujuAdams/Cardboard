@@ -30,7 +30,7 @@ float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, fl
     else
     {
         //Directional light
-        return max(dot(normalize(normal), -normalize(lightVector)), 0.0);
+        return max(dot(normalize(normal), normalize(lightVector)), 0.0);
     }
 }
 
