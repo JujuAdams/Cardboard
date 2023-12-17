@@ -14,6 +14,7 @@
     {"id":{"name":"__CbClassLightPoint","path":"scripts/__CbClassLightPoint/__CbClassLightPoint.yy",},"order":2,},
     {"id":{"name":"CbRenderPrepareLighting","path":"scripts/CbRenderPrepareLighting/CbRenderPrepareLighting.yy",},"order":4,},
     {"id":{"name":"sprHi","path":"sprites/sprHi/sprHi.yy",},"order":2,},
+    {"id":{"name":"sprGuy","path":"sprites/sprGuy/sprGuy.yy",},"order":4,},
     {"id":{"name":"CbSpriteLayerFloor","path":"scripts/CbSpriteLayerFloor/CbSpriteLayerFloor.yy",},"order":1,},
     {"id":{"name":"CbBillboardYawSet","path":"scripts/CbBillboardYawSet/CbBillboardYawSet.yy",},"order":0,},
     {"id":{"name":"CbCameraToSet","path":"scripts/CbCameraToSet/CbCameraToSet.yy",},"order":2,},
@@ -103,7 +104,7 @@
     {"id":{"name":"__CbBuildInitialize","path":"scripts/__CbBuildInitialize/__CbBuildInitialize.yy",},"order":0,},
     {"id":{"name":"__CbClassTileset","path":"scripts/__CbClassTileset/__CbClassTileset.yy",},"order":3,},
     {"id":{"name":"CbSpriteBillboard","path":"scripts/CbSpriteBillboard/CbSpriteBillboard.yy",},"order":3,},
-    {"id":{"name":"sprWhitePixel","path":"sprites/sprWhitePixel/sprWhitePixel.yy",},"order":4,},
+    {"id":{"name":"sprWhitePixel","path":"sprites/sprWhitePixel/sprWhitePixel.yy",},"order":5,},
     {"id":{"name":"CbRenderStateReset","path":"scripts/CbRenderStateReset/CbRenderStateReset.yy",},"order":3,},
     {"id":{"name":"tsTiles","path":"tilesets/tsTiles/tsTiles.yy",},"order":1,},
     {"id":{"name":"__shdCbDepth","path":"shaders/__shdCbDepth/__shdCbDepth.yy",},"order":0,},
@@ -125,7 +126,7 @@
     {"id":{"name":"CbSpriteLayerBillboard","path":"scripts/CbSpriteLayerBillboard/CbSpriteLayerBillboard.yy",},"order":2,},
     {"id":{"name":"__CbRenderInitialize","path":"scripts/__CbRenderInitialize/__CbRenderInitialize.yy",},"order":0,},
     {"id":{"name":"CbRenderShaderSet","path":"scripts/CbRenderShaderSet/CbRenderShaderSet.yy",},"order":6,},
-    {"id":{"name":"sprTestWalls","path":"sprites/sprTestWalls/sprTestWalls.yy",},"order":5,},
+    {"id":{"name":"sprTestWalls","path":"sprites/sprTestWalls/sprTestWalls.yy",},"order":6,},
     {"id":{"name":"CbSpriteLayer","path":"scripts/CbSpriteLayer/CbSpriteLayer.yy",},"order":0,},
     {"id":{"name":"CbDoubleSidedSet","path":"scripts/CbDoubleSidedSet/CbDoubleSidedSet.yy",},"order":1,},
     {"id":{"name":"CbCameraUpSet","path":"scripts/CbCameraUpSet/CbCameraUpSet.yy",},"order":4,},
@@ -197,6 +198,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.0.0.19",
+    "IDEVersion": "2022.0.2.51",
   },
 }

@@ -1,6 +1,6 @@
 CbCameraSizeSet(1366, 768);
 
-CbLightModeSet(CB_LIGHT_MODE.DEFERRED);
+CbLightModeSet(CB_LIGHT_MODE.ONE_SHADOW_MAP);
 CbLightAmbientSet(c_dkgray);
 dir    = CbLightDirectional(1, -2, -3, make_color_rgb(0.2*255, 0.3*255, 0.4*255));
 light1 = CbLightPoint(0, 0, 50, 200, c_red);
