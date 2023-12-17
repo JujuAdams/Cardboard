@@ -1,4 +1,6 @@
-function CbRenderDeferredLights()
+/// @param [diffuseSurface]
+
+function CbRenderDeferredLights(_diffuseSurface = surface_get_target())
 {
     __CB_GLOBAL_RENDER
     
@@ -28,7 +30,7 @@ function CbRenderDeferredLights()
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vPosRadArray"), __posRadArray);
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vColorArray"),  __colorArray);
             
-            draw_surface(application_surface, 0, 0);
+            draw_surface(_diffuseSurface, 0, 0);
             
             shader_reset();
         }
@@ -51,7 +53,7 @@ function CbRenderDeferredLights()
                     if (__hasShadows && visible)
                     {
                         __SetDeferredUniforms();
-                        draw_surface(application_surface, 0, 0);
+                        draw_surface(_diffuseSurface, 0, 0);
                     }
                 }
                 

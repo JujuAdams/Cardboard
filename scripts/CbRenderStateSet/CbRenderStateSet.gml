@@ -18,13 +18,12 @@ function CbRenderStateSet(_pass)
             gpu_set_blendmode_ext(bm_one, bm_zero);
             
             CbRenderShaderSet(_pass);
+            //View and projection matrices are set per light
             CbIndexReset();
-            
-            //View and projection matrix is set per light
         break;
         
-        case CB_PASS.OPAQUE:
-        case CB_PASS.UNLIT:
+        case CB_PASS.LIT_OPAQUE:
+        case CB_PASS.UNLIT_OPAQUE:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
             gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);
@@ -36,7 +35,8 @@ function CbRenderStateSet(_pass)
             CbIndexReset();
         break;
         
-        case CB_PASS.TRANSPARENT:
+        case CB_PASS.LIT_ALPHA_BLEND:
+        case CB_PASS.UNLIT_ALPHA_BLEND:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(false); //Don't write into the depth buffer!
             gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);

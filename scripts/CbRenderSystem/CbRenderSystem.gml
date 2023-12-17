@@ -1,12 +1,16 @@
-/// @param [opaqueFunc]
-/// @param [transparentFunc]
-/// @param [unlitFunc]
+/// @param [litOpaqueFunc]
+/// @param [litAlphaBlendFunc]
+/// @param [unlitOpaqueFunc]
+/// @param [unlitAlphaBlendFunc]
 
-function CbRenderSystem(_opaqueFunc, _transparentFunc, _unlitFunc)
+function CbRenderSystem(_litOpaqueFunc = undefined, _litAlphaBlendFunc = undefined, _unlitOpaqueFunc = undefined, _unlitAlphaBlendFunc = undefined)
 {
+    var _diffuseSurface = surface_get_target();
+    
     CbRenderPrepareLighting();
-    CbRenderPass(_opaqueFunc, CB_PASS.OPAQUE);
-    CbRenderPass(_transparentFunc, CB_PASS.TRANSPARENT);
-    CbRenderDeferredLights();
-    CbRenderPass(_unlitFunc, CB_PASS.UNLIT);
+    CbRenderPass(_litOpaqueFunc,       CB_PASS.LIT_OPAQUE);
+    CbRenderPass(_litAlphaBlendFunc,   CB_PASS.LIT_ALPHA_BLEND);
+    CbRenderDeferredLights(_diffuseSurface);
+    CbRenderPass(_unlitOpaqueFunc,     CB_PASS.UNLIT_OPAQUE);
+    CbRenderPass(_unlitAlphaBlendFunc, CB_PASS.UNLIT_ALPHA_BLEND);
 }
