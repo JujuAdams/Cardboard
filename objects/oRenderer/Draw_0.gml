@@ -1,5 +1,3 @@
-CbCameraFromSet(oCamera.camFromX, oCamera.camFromY, oCamera.camFromZ);
-CbCameraToSet(oCamera.camToX, oCamera.camToY, oCamera.camToZ);
 CbRenderSystem(opaqueFunc, undefined, unlitFunc);
 
 if (keyboard_check(ord("O")))
@@ -16,5 +14,5 @@ if (keyboard_check(ord("L")))
 
 if (keyboard_check(ord("K")))
 {
-    light2.DrawDebug(0, 0);
+    light4.DrawDebug(0, 0);
 }

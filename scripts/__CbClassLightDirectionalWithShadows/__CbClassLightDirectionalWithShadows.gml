@@ -17,9 +17,6 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
     dx      = _dx;
     dy      = _dy;
     dz      = _dz;
-    xTo     = 0;
-    yTo     = 0;
-    zTo     = 0;
     color   = _color;
     
     near = _near;
@@ -39,6 +36,69 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
     __BuildMatrices();
     
     
+    
+    
+    static TrackCamera = function()
+    {
+        var _d = 1 / sqrt(dx*dx + dy*dy + dz*dz);
+        var _dx = _d*dx;
+        var _dy = _d*dy;
+        var _dz = _d*dz;
+        
+        __matrixView = matrix_build_lookat(-_dx, -_dy, -_dz,   0,0,0,   0,0,1);
+        
+        var _matrixView = __matrixView;
+        var _frustrumArray = array_create(8, undefined);
+        
+        with(CbCameraFrustrumCoordsGet())
+        {
+            _frustrumArray[0] = matrix_transform_vertex(_matrixView, tlNearX, tlNearY, tlNearZ);
+            _frustrumArray[1] = matrix_transform_vertex(_matrixView, trNearX, trNearY, trNearZ);
+            _frustrumArray[2] = matrix_transform_vertex(_matrixView, blNearX, blNearY, blNearZ);
+            _frustrumArray[3] = matrix_transform_vertex(_matrixView, brNearX, brNearY, brNearZ);
+            _frustrumArray[4] = matrix_transform_vertex(_matrixView,  tlFarX,  tlFarY,  tlFarZ);
+            _frustrumArray[5] = matrix_transform_vertex(_matrixView,  trFarX,  trFarY,  trFarZ);
+            _frustrumArray[6] = matrix_transform_vertex(_matrixView,  blFarX,  blFarY,  blFarZ);
+            _frustrumArray[7] = matrix_transform_vertex(_matrixView,  brFarX,  brFarY,  brFarZ);
+        }
+        
+        var _minX =  infinity;
+        var _minY =  infinity;
+        var _minZ =  infinity;
+        var _maxX = -infinity;
+        var _maxY = -infinity;
+        var _maxZ = -infinity;
+        
+        var _i = 0;
+        repeat(8)
+        {
+            var _position = _frustrumArray[_i];
+            var _x = _position[0];
+            var _y = _position[1];
+            var _z = _position[2];
+            
+            _minX = min(_minX, _x);
+            _minY = min(_minY, _y);
+            _minZ = min(_minZ, _z);
+            
+            _maxX = max(_maxX, _x);
+            _maxY = max(_maxY, _y);
+            _maxZ = max(_maxZ, _z);
+            
+            ++_i;
+        }
+        
+        var _left   =  _minX;
+        var _right  =  _maxX;
+        var _top    =  _maxY;
+        var _bottom =  _minY;
+        var _near   = -_maxZ;
+        var _far    = -_minZ;
+        
+        __matrixProj = matrix_build_projection_ortho(_right - _left, _bottom - _top, _near, _far);
+        
+        __matrixViewProj = matrix_multiply(__matrixView, __matrixProj);
+    }
     
     static Destroy = function()
     {
@@ -98,8 +158,8 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
     
     static __BuildMatrices = function()
     {
-        __matrixView = matrix_build_lookat(xTo - dx, yTo - dy, zTo - dz,
-                                           xTo, yTo, zTo,
+        __matrixView = matrix_build_lookat(-dx, -dy, -dz,
+                                           0, 0, 0,
                                            0, 0, 1);
         
         __matrixProj = matrix_build_projection_ortho(__width, __height, near, far);
@@ -117,7 +177,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
         static _u_sLightDepth    = shader_get_sampler_index(__shdCbDeferredShadowed, "u_sLightDepth");
         
         __Tick();
-        __BuildMatrices();
+        //__BuildMatrices();
         
         shader_set_uniform_matrix_array(_u_mLightViewProj, __matrixViewProj);
         shader_set_uniform_f(_u_vLightPos, -dx, -dy, -dz, 0);
@@ -137,7 +197,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
         static _u_sLightDepth    = shader_get_sampler_index(__shdCbOneShadowMap, "u_sLightDepth");
         
         __Tick();
-        __BuildMatrices();
+        //__BuildMatrices();
         
         shader_set_uniform_matrix_array(_u_mLightViewProj, __matrixViewProj);
         shader_set_uniform_f(_u_vLightPos, -dx, -dy, -dz, 0);

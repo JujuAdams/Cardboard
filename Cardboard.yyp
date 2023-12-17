@@ -67,6 +67,7 @@
     {"id":{"name":"CbSurfaceBillboard","path":"scripts/CbSurfaceBillboard/CbSurfaceBillboard.yy",},"order":3,},
     {"id":{"name":"CbSurface","path":"scripts/CbSurface/CbSurface.yy",},"order":1,},
     {"id":{"name":"CbLightAmbientGet","path":"scripts/CbLightAmbientGet/CbLightAmbientGet.yy",},"order":2,},
+    {"id":{"name":"CbCameraFrustrumCoordsGet","path":"scripts/CbCameraFrustrumCoordsGet/CbCameraFrustrumCoordsGet.yy",},"order":13,},
     {"id":{"name":"CbBatchNewVertexBuffer","path":"scripts/CbBatchNewVertexBuffer/CbBatchNewVertexBuffer.yy",},"order":3,},
     {"id":{"name":"sprTest","path":"sprites/sprTest/sprTest.yy",},"order":3,},
     {"id":{"name":"CbLightModeGet","path":"scripts/CbLightModeGet/CbLightModeGet.yy",},"order":1,},
