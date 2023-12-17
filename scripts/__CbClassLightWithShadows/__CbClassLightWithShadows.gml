@@ -32,8 +32,6 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
     yUp   = sqrt(2);
     zUp   = sqrt(2);
     
-    autoUpVector = true;
-    
     fov    = _fov;
     radius = _radius;
     near   = _near;
