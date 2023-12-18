@@ -55,7 +55,7 @@ Draw = function()
 {
     CbModelSubmit(model);
     
-    CbSpriteLayerBillboard("Assets_1", 0, 0, 0);
+    CbSpriteLayer("Assets_1", 0, 0, 0, 0);
     
     CbSpriteExt(sprTest, 0,   -320,   0, 0,    2, 2, 0, 90,    c_white, 1, false);
     CbSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, current_time/15,    c_white, 1, true );

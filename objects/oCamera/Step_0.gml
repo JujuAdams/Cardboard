@@ -1,5 +1,5 @@
 // Q/E rotates the camera
-yawTarget += 45*(keyboard_check_pressed(ord("E")) - keyboard_check_pressed(ord("Q")));
+yawTarget += 22.5*(keyboard_check_pressed(ord("E")) - keyboard_check_pressed(ord("Q")));
 yaw = lerp(yaw, yawTarget, 0.3);
 
 //WASD and shift/space translate the camera linearly
