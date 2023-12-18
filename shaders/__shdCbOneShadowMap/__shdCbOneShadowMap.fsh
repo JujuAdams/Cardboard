@@ -1,9 +1,5 @@
 #define LIGHT_COUNT  6
 
-#define BIAS_MIN    1e-5
-#define BIAS_MAX    2e-3
-#define BIAS_COEFF  1.0
-
 varying vec3  v_vWorldPos;
 varying float v_fViewZ;
 varying vec3  v_vNormal;
@@ -20,6 +16,7 @@ uniform sampler2D u_sLightDepth;
 uniform vec4      u_vLightPos;
 uniform vec3      u_vLightColor;
 uniform mat4      u_mLightViewProj;
+uniform vec3      u_vShadowMapBias;
 
 uniform vec2 u_vFogParams;
 uniform vec3 u_vFogColor;
@@ -85,7 +82,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
     float dotProduct = max(dot(normalize(normal), normalize(dir)), 0.0);
     
     //Perform the depth comparison
-    float depthBias = clamp(BIAS_COEFF * dotProduct, BIAS_MIN, BIAS_MAX);
+    float depthBias = clamp(u_vShadowMapBias.z*dotProduct, u_vShadowMapBias.x, u_vShadowMapBias.y);
     float factor = step(max(0.0, calcDepth), foundDepth + depthBias);
     
     //Adjust for normals

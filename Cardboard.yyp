@@ -314,6 +314,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Camera","folderPath":"folders/Cardboard/Render Functions/Camera.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fog","folderPath":"folders/Cardboard/Render Functions/Fog.yy","order":6,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Lighting","folderPath":"folders/Cardboard/Render Functions/Lighting.yy","order":5,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Matrices","folderPath":"folders/Cardboard/Render Functions/Matrices.yy","order":7,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Options","folderPath":"folders/Cardboard/Render Functions/Options.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Pipeline","folderPath":"folders/Cardboard/Render Functions/Pipeline.yy","order":3,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Matrix Chain","folderPath":"folders/Matrix Chain.yy","order":11,},
@@ -332,7 +333,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Length _ Distance _ Normalise","folderPath":"folders/Vectors/3D/Length _ Distance _ Normalise.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Limits","folderPath":"folders/Vectors/3D/Limits.yy","order":5,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Vector Product","folderPath":"folders/Vectors/3D/Vector Product.yy","order":6,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Matrices","folderPath":"folders/Cardboard/Render Functions/Matrices.yy","order":7,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

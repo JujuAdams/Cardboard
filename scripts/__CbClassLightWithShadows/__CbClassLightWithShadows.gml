@@ -42,6 +42,10 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
     
     depthFunction = undefined;
     
+    shadowMapBiasMin   = 0.00001;
+    shadowMapBiasMax   = 0.0003;
+    shadowMapBiasCoeff = 1;
+    
     
     
     __width  = CB_DEFAULT_DEFERRED_LIGHT_WIDTH;
@@ -129,6 +133,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         static _u_mLightViewProj = shader_get_uniform(__shdCbDeferredShadowed, "u_mLightViewProj");
         static _u_vLightPos      = shader_get_uniform(__shdCbDeferredShadowed, "u_vLightPos");
         static _u_vLightColor    = shader_get_uniform(__shdCbDeferredShadowed, "u_vLightColor");
+        static _u_vShadowMapBias = shader_get_uniform(__shdCbDeferredShadowed, "u_vShadowMapBias");
         static _u_sLightDepth    = shader_get_sampler_index(__shdCbDeferredShadowed, "u_sLightDepth");
         
         __Tick();
@@ -139,6 +144,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
+        shader_set_uniform_f(_u_vShadowMapBias, shadowMapBiasMin, shadowMapBiasMax, shadowMapBiasCoeff);
         texture_set_stage(_u_sLightDepth, surface_get_texture(__depthSurface));
     }
     
@@ -149,6 +155,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         static _u_mLightViewProj = shader_get_uniform(__shdCbOneShadowMap, "u_mLightViewProj");
         static _u_vLightPos      = shader_get_uniform(__shdCbOneShadowMap, "u_vLightPos");
         static _u_vLightColor    = shader_get_uniform(__shdCbOneShadowMap, "u_vLightColor");
+        static _u_vShadowMapBias = shader_get_uniform(__shdCbOneShadowMap, "u_vShadowMapBias");
         static _u_sLightDepth    = shader_get_sampler_index(__shdCbOneShadowMap, "u_sLightDepth");
         
         __Tick();
@@ -159,6 +166,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
+        shader_set_uniform_f(_u_vShadowMapBias, shadowMapBiasMin, shadowMapBiasMax, shadowMapBiasCoeff);
         texture_set_stage(_u_sLightDepth, surface_get_texture(__depthSurface));
     }
 }
