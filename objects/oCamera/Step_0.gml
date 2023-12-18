@@ -24,6 +24,5 @@ cameraHeight += (keyboard_check_pressed(ord("O")) - keyboard_check_pressed(ord("
 if (keyboard_check_pressed(ord("J")))
 {
     TurnFrustrumIntoWireframe(CbCameraFrustrumCoordsGet());
-    TurnFrustrumIntoBox(CbCameraFrustrumCoordsGet());
-    CbCameraPerpsectiveSet(90);
+    //TurnFrustrumIntoBox(CbCameraFrustrumCoordsGet());
 }

@@ -1,22 +1,22 @@
 // Feather disable all
 
-function TurnFrustrumIntoWireframe(_frustrum)
+function TurnFrustrumIntoWireframe(_frustrum, _sprite = s3dWhite)
 {
     with(_frustrum)
     {
-        instance_create_depth(0, 0, 0, oDebugLine, { a: tlNear, b: trNear, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: blNear, b: brNear, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: tlNear, b: blNear, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: trNear, b: brNear, });
+        instance_create_depth(0, 0, 0, oDebugLine, { a: tlNear, b: trNear, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: blNear, b: brNear, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: tlNear, b: blNear, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: trNear, b: brNear, }).sprite = _sprite;
         
-        instance_create_depth(0, 0, 0, oDebugLine, { a: tlFar, b: trFar, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: blFar, b: brFar, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: tlFar, b: blFar, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: trFar, b: brFar, });
+        instance_create_depth(0, 0, 0, oDebugLine, { a: tlFar, b: trFar, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: blFar, b: brFar, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: tlFar, b: blFar, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: trFar, b: brFar, }).sprite = _sprite;
         
-        instance_create_depth(0, 0, 0, oDebugLine, { a: tlNear, b: tlFar, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: trNear, b: trFar, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: blNear, b: blFar, });
-        instance_create_depth(0, 0, 0, oDebugLine, { a: brNear, b: brFar, });
+        instance_create_depth(0, 0, 0, oDebugLine, { a: tlNear, b: tlFar, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: trNear, b: trFar, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: blNear, b: blFar, }).sprite = _sprite;
+        instance_create_depth(0, 0, 0, oDebugLine, { a: brNear, b: brFar, }).sprite = _sprite;
     }
 }
