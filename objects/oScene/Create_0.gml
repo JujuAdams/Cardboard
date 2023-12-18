@@ -9,6 +9,7 @@ var _array = ["Tiles_1", "Tiles_2", "Tiles_3"];
 CbSpriteFloorExt(sprHi, 0, 0, 0, 0, 100, 100, 0, c_white, 1);
 CbTilemapsToModel(_ruleset, _array, 0, 0, 0, 100, 100, 100);
 CbLayerArrayHide(_array);
+CbLayerArrayHide("Assets_1");
 
 //CbSpriteFloorExt(sprHi, 0,  320,    0,   0, 5, 5, 0, c_red,    1);
 //CbSpriteFloorExt(sprHi, 0,    0, -320,   0, 5, 5, 0, c_aqua,   1);
@@ -54,13 +55,12 @@ Draw = function()
 {
     CbModelSubmit(model);
     
-    CbSpriteLayerBillboard("Assets_1", 0, 0, 0);
-    CbLayerArrayHide(["Assets_1"]);
-    
-    CbSpriteExt(sprTest, 0,   -320,   0, 0,    2, 2, 0, 90,    c_white, 1, false);
-    CbSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, current_time/15,    c_white, 1, true );
-    CbSpriteExt(sprTest, 0,      0, 320, 0,    2, 2, 0,  0,    c_white, 1, false);
-    CbSpriteExt(sprGuy, 0,    200, 400, 0,    2, 2, 0,  0,    c_white, 1, false);
+    //CbSpriteLayerBillboard("Assets_1", 0, 0, 0);
+    //
+    //CbSpriteExt(sprTest, 0,   -320,   0, 0,    2, 2, 0, 90,    c_white, 1, false);
+    //CbSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, current_time/15,    c_white, 1, true );
+    //CbSpriteExt(sprTest, 0,      0, 320, 0,    2, 2, 0,  0,    c_white, 1, false);
+    //CbSpriteExt(sprGuy, 0,    200, 400, 0,    2, 2, 0,  0,    c_white, 1, false);
     
     CbBatchForceSubmit();
 }

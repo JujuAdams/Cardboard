@@ -49,17 +49,16 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
         
         var _matrixView = __matrixView;
         var _frustrumArray = array_create(8, undefined);
-        
         with(CbCameraFrustrumCoordsGet())
         {
-            _frustrumArray[0] = matrix_transform_vertex(_matrixView, tlNearX, tlNearY, tlNearZ);
-            _frustrumArray[1] = matrix_transform_vertex(_matrixView, trNearX, trNearY, trNearZ);
-            _frustrumArray[2] = matrix_transform_vertex(_matrixView, blNearX, blNearY, blNearZ);
-            _frustrumArray[3] = matrix_transform_vertex(_matrixView, brNearX, brNearY, brNearZ);
-            _frustrumArray[4] = matrix_transform_vertex(_matrixView,  tlFarX,  tlFarY,  tlFarZ);
-            _frustrumArray[5] = matrix_transform_vertex(_matrixView,  trFarX,  trFarY,  trFarZ);
-            _frustrumArray[6] = matrix_transform_vertex(_matrixView,  blFarX,  blFarY,  blFarZ);
-            _frustrumArray[7] = matrix_transform_vertex(_matrixView,  brFarX,  brFarY,  brFarZ);
+            _frustrumArray[0] = matrix_transform_vertex(_matrixView, tlNear[0], tlNear[1], tlNear[2]);
+            _frustrumArray[1] = matrix_transform_vertex(_matrixView, trNear[0], trNear[1], trNear[2]);
+            _frustrumArray[2] = matrix_transform_vertex(_matrixView, blNear[0], blNear[1], blNear[2]);
+            _frustrumArray[3] = matrix_transform_vertex(_matrixView, brNear[0], brNear[1], brNear[2]);
+            _frustrumArray[4] = matrix_transform_vertex(_matrixView,  tlFar[0],  tlFar[1],  tlFar[2]);
+            _frustrumArray[5] = matrix_transform_vertex(_matrixView,  trFar[0],  trFar[1],  trFar[2]);
+            _frustrumArray[6] = matrix_transform_vertex(_matrixView,  blFar[0],  blFar[1],  blFar[2]);
+            _frustrumArray[7] = matrix_transform_vertex(_matrixView,  brFar[0],  brFar[1],  brFar[2]);
         }
         
         var _minX =  infinity;
@@ -90,8 +89,8 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
         
         var _left   =  _minX;
         var _right  =  _maxX;
-        var _top    =  _maxY;
-        var _bottom =  _minY;
+        var _top    =  _minY;
+        var _bottom =  _maxY;
         var _near   = -_maxZ;
         var _far    = -_minZ;
         

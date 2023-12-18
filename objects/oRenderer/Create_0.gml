@@ -26,4 +26,17 @@ opaqueFunc = function()
 unlitFunc = function()
 {
     //CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+    
+    gpu_set_cullmode(cull_noculling);
+    
+    with(oDebugLine)
+    {
+        b3d_draw_line_ab(a, b, 5, sprite);
+    }
+    
+    with(oDebugQuad)
+    {
+        b3d_draw_triangle(a, b, c, image_blend, false);
+        b3d_draw_triangle(b, c, d, image_blend, false);
+    }
 };

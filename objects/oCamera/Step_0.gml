@@ -20,3 +20,10 @@ camFromY = camToY + lengthdir_y(cameraDistance, yaw);
 camFromZ = camToZ + cameraHeight;
 
 cameraHeight += (keyboard_check_pressed(ord("O")) - keyboard_check_pressed(ord("L")));
+
+if (keyboard_check_pressed(ord("J")))
+{
+    TurnFrustrumIntoWireframe(CbCameraFrustrumCoordsGet());
+    TurnFrustrumIntoBox(CbCameraFrustrumCoordsGet());
+    CbCameraPerpsectiveSet(90);
+}
