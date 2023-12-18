@@ -1,4 +1,5 @@
 CbCameraSizeSet(1366, 768);
+CbDoubleSidedSet(true);
 
 CbLightModeSet(CB_LIGHT_MODE.ONE_SHADOW_MAP);
 CbLightAmbientSet(c_dkgray);
@@ -7,6 +8,7 @@ CbLightAmbientSet(c_dkgray);
 
 CbLightDefaultDepthFunctionSet(function()
 {
+    gpu_set_cullmode(cull_counterclockwise);
     //Draw the scene object
     oScene.Draw();
     //CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);

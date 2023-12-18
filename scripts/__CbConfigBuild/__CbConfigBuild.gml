@@ -4,4 +4,4 @@
 
 // The space between layers when using the double-sided draw feature
 // Set this value to as small as possible without seeing z-fighting
-#macro CB_DOUBLE_SIDED_SPACING  0.1
+#macro CB_DOUBLE_SIDED_SPACING  1.33
