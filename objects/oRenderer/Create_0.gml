@@ -8,10 +8,8 @@ CbLightAmbientSet(c_dkgray);
 
 CbLightDefaultDepthFunctionSet(function()
 {
-    gpu_set_cullmode(cull_counterclockwise);
     //Draw the scene object
     oScene.Draw();
-    //CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
 });
 
 //light2 = CbLightWithShadows(c_yellow, 300, 450, 90, -150, 0, 0, 140, 300);
@@ -27,8 +25,6 @@ opaqueFunc = function()
 
 unlitFunc = function()
 {
-    //CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
-    
     gpu_set_cullmode(cull_noculling);
     
     with(oDebugLine)

@@ -14,11 +14,9 @@ function CbRenderStateSet(_pass)
         case CB_PASS.LIGHT_DEPTH:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
-            gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);
-            
-            CbRenderShaderSet(_pass);
-            
+            gpu_set_cullmode(_global.__backfaceCulling? CB_DEPTH_MAP_CULLING_DIRECTION : cull_noculling);
             //View and projection matrix is set per light
+            CbRenderShaderSet(_pass);
         break;
         
         case CB_PASS.OPAQUE:
