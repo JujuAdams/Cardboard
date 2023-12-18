@@ -26,8 +26,8 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
     
     
     
-    __width  = CB_DEFAULT_DEFERRED_LIGHT_WIDTH;
-    __height = CB_DEFAULT_DEFERRED_LIGHT_HEIGHT;
+    __width  = CB_DEFAULT_DIRECTIONAL_LIGHT_WIDTH;
+    __height = CB_DEFAULT_DIRECTIONAL_LIGHT_HEIGHT;
     
     __depthSurface = -1;
     
@@ -37,18 +37,9 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
     
     
     
-    
     static TrackCamera = function()
     {
-        var _d = 1 / sqrt(dx*dx + dy*dy + dz*dz);
-        var _dx = _d*dx;
-        var _dy = _d*dy;
-        var _dz = _d*dz;
-        
-        __matrixView = matrix_build_lookat(_dx, _dy, _dz,   0,0,0,   0,0,1);
-        
-        var _matrixView = __matrixView;
-        var _inverseView = __CbMatrixInvert(_matrixView);
+        var _matrixView = matrix_build_lookat(-dx, -dy, -dz,   0,0,0,   0,0,1);
         var _frustrumArray = array_create(8, undefined);
         with(CbCameraFrustrumCoordsGet())
         {
@@ -62,12 +53,12 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
             _frustrumArray[7] = matrix_transform_vertex(_matrixView,  brFar[0],  brFar[1],  brFar[2]);
         }
         
-        var _minX =  infinity;
-        var _minY =  infinity;
-        var _minZ =  infinity;
-        var _maxX = -infinity;
-        var _maxY = -infinity;
-        var _maxZ = -infinity;
+        var _left   =  infinity;
+        var _top    =  infinity;
+        var _near   =  infinity;
+        var _right  = -infinity;
+        var _bottom = -infinity;
+        var _far    = -infinity;
         
         var _i = 0;
         repeat(8)
@@ -77,65 +68,26 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
             var _y = _position[1];
             var _z = _position[2];
             
-            _minX = min(_minX, _x);
-            _minY = min(_minY, _y);
-            _minZ = min(_minZ, _z);
+            _left = min(_left, _x);
+            _top  = min(_top,  _y);
+            _near = min(_near, _z);
             
-            _maxX = max(_maxX, _x);
-            _maxY = max(_maxY, _y);
-            _maxZ = max(_maxZ, _z);
+            _right  = max(_right,  _x);
+            _bottom = max(_bottom, _y);
+            _far    = max(_far,    _z);
             
             ++_i;
         }
         
-        var _left   =  _minX;
-        var _right  =  _maxX;
-        var _top    =  _maxY;
-        var _bottom =  _minY;
-        var _near   =  _minZ;
-        var _far    =  _maxZ;
-        
-        var _tlNear = matrix_transform_vertex(_inverseView, _left,  _top,    _near);
-        var _trNear = matrix_transform_vertex(_inverseView, _right, _top,    _near);
-        var _blNear = matrix_transform_vertex(_inverseView, _left,  _bottom, _near);
-        var _brNear = matrix_transform_vertex(_inverseView, _right, _bottom, _near);
-        var _tlFar  = matrix_transform_vertex(_inverseView, _left,  _top,    _far);
-        var _trFar  = matrix_transform_vertex(_inverseView, _right, _top,    _far);
-        var _blFar  = matrix_transform_vertex(_inverseView, _left,  _bottom, _far);
-        var _brFar  = matrix_transform_vertex(_inverseView, _right, _bottom, _far);
-        
-        var _native = matrix_build_projection_ortho(_right - _left, _bottom - _top, _near, _far);
-        __matrixProj = [2 / (_right - _left), 0, 0, 0,
-                        0, 2 / (_top - _bottom), 0, 0,
-                        0, 0, 1 / (_far - _near), 0,
-                        (_right + _left) / (_left - _right), (_bottom + _top) / (_bottom - _top), _near / (_near - _far), 1];
-        
-        if (keyboard_check_pressed(ord("K")))
-        {
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _tlNear, b: _trNear, }).sprite = s3dLime;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _tlNear, b: _blNear, }).sprite = s3dLime;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _blNear, b: _brNear, }).sprite = s3dLime;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _trNear, b: _brNear, }).sprite = s3dLime;
-            
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _tlFar, b: _trFar, }).sprite = s3dGreen;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _tlFar, b: _blFar, }).sprite = s3dGreen;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _blFar, b: _brFar, }).sprite = s3dGreen;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _trFar, b: _brFar, }).sprite = s3dGreen;
-            
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _tlNear, b: _tlFar,  }).sprite = s3dLime;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _trNear, b: _trFar,  }).sprite = s3dLime;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _blNear, b: _blFar,  }).sprite = s3dLime;
-            instance_create_depth(0, 0, 0, oDebugLine, { a: _brNear, b: _brFar,  }).sprite = s3dLime;
-            CbCameraPerpsectiveSet(90);
-        }
+        __matrixView = _matrixView;
+        __matrixProj = matrix_build_projection_ortho_ext(_left, _top, _right, _bottom, _near, _far);
+        __matrixViewProj = matrix_multiply(__matrixView, __matrixProj);
         
         if (keyboard_check_pressed(ord("K")))
         {
             CbCameraPerpsectiveSet(90);
             TurnFrustrumIntoWireframe(CbFrustrumCoordsGet(__matrixView, __matrixProj), s3dRed);
         }
-        
-        __matrixViewProj = matrix_multiply(__matrixView, __matrixProj);
     }
     
     static Destroy = function()
@@ -163,7 +115,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
         if (__destroyed) return;
         
         __Tick();
-        __BuildMatrices();
+        //__BuildMatrices();
         
         surface_set_target(__depthSurface);
         draw_clear(c_gray);

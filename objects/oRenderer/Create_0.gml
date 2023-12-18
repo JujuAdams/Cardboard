@@ -9,7 +9,7 @@ CbLightDefaultDepthFunctionSet(function()
 {
     //Draw the scene object
     oScene.Draw();
-    CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+    //CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
 });
 
 //light2 = CbLightWithShadows(c_yellow, 300, 450, 90, -150, 0, 0, 140, 300);
@@ -20,7 +20,7 @@ opaqueFunc = function()
 {
     //Draw the scene object
     oScene.Draw();
-    CbSpriteBillboard(sprTest, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+    CbSpriteBillboard(sprGuy, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
 };
 
 unlitFunc = function()

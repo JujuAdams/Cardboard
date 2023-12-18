@@ -1,5 +1,5 @@
-yaw       = 270;
-yawTarget = 270;
+yaw       = 270 - 22.5;
+yawTarget = 270 - 22.5;
 
 cameraDistance = 200;
 cameraHeight   = cameraDistance*0.575; //roughly isometric

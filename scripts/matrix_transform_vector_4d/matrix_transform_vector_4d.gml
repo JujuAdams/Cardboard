@@ -1,5 +1,7 @@
 // Feather disable all
 
+/// Returns the vec4 result, as an array, of a matrix-vec4 multiplication.
+/// 
 /// @param matrix
 /// @param x
 /// @param y
