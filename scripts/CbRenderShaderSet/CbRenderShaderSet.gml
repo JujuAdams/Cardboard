@@ -12,7 +12,7 @@ function CbRenderShaderSet(_pass)
     {
         switch(_pass)
         {
-            case CB_PASS.LIGHT_DEPTH:
+            case CB_PASS.DEPTH_MAP:
                 shader_set(__shdCbDepth);
                 shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_fAlphaTestRef"), __alphaTestRef);
             break;

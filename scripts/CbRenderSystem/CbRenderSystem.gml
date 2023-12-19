@@ -1,3 +1,5 @@
+/// Convenience function that executes all Cardboard render passes, including lighting
+/// 
 /// @param [litOpaqueFunc]
 /// @param [litAlphaBlendFunc]
 /// @param [unlitOpaqueFunc]

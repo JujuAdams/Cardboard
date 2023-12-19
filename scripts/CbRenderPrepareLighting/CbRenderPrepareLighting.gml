@@ -1,3 +1,6 @@
+/// Prepares lighting for use. This function should be called once per frame before rendering
+/// either the CB_PASS.LIT_OPAQUE or CB_PASS.LIT_ALPHA_BLEND passes.
+
 function CbRenderPrepareLighting()
 {
     __CB_GLOBAL_RENDER
@@ -50,7 +53,7 @@ function CbRenderPrepareLighting()
             
             if (CbLightDepthMapsNeeded())
             {
-                CbRenderStateSet(CB_PASS.LIGHT_DEPTH);
+                CbRenderStateSet(CB_PASS.DEPTH_MAP);
                 
                 var _i = 0;
                 repeat(array_length(__array))

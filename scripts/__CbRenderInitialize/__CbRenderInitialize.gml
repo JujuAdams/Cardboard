@@ -7,7 +7,7 @@
 
 enum CB_PASS
 {
-    LIGHT_DEPTH,
+    DEPTH_MAP,
     LIT_OPAQUE,
     LIT_ALPHA_BLEND,
     UNLIT_OPAQUE,
