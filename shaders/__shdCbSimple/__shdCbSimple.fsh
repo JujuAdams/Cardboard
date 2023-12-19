@@ -36,7 +36,7 @@ float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, fl
 
 vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
 {
-    vec3 lightFinal;
+    vec3 lightFinal = vec3(0.0);
     
     for(int i = 0; i < LIGHT_COUNT; i++)
     {
