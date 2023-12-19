@@ -86,12 +86,6 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
         __matrixView = _matrixView;
         __matrixProj = matrix_build_projection_ortho_ext(_left, _top, _right, _bottom, _near, _far);
         __matrixViewProj = matrix_multiply(__matrixView, __matrixProj);
-        
-        if (keyboard_check_pressed(ord("K")))
-        {
-            CbCameraPerpsectiveSet(90);
-            TurnFrustrumIntoWireframe(CbFrustrumCoordsGet(__matrixView, __matrixProj), s3dRed);
-        }
     }
     
     static Destroy = function()
