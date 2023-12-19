@@ -1,10 +1,10 @@
+/// Renders lighting contributions from deferred lights 
+/// 
 /// @param [diffuseSurface]
 
 function CbRenderDeferredLights(_diffuseSurface = surface_get_target())
 {
     __CB_GLOBAL_RENDER
-    
-    if (CbLightModeGet() != CB_LIGHT_MODE.DEFERRED) return;
     
     var _matrices        = CbCameraMatricesGet();
     var _vpMatrix        = matrix_multiply(_matrices.view, _matrices.projection);
@@ -14,10 +14,10 @@ function CbRenderDeferredLights(_diffuseSurface = surface_get_target())
     
     with(_global)
     {
+        //Target the composite lighting surface
+        //This surface is prepared in CbRenderPrepareLighting()
         surface_set_target(__CbDeferredSurfaceLightEnsure(surface_get_target()));
         gpu_set_blendmode(bm_add);
-        
-        
         
         //Draw unshadowed lights first
         shader_set(__shdCbDeferredUnshadowed);
@@ -27,15 +27,13 @@ function CbRenderDeferredLights(_diffuseSurface = surface_get_target())
         
         with(__lighting)
         {
+            //These two arrays are prepared in CbRenderPrepareLighting()
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vPosRadArray"), __posRadArray);
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vColorArray"),  __colorArray);
-            
             draw_surface(_diffuseSurface, 0, 0);
-            
-            shader_reset();
         }
         
-        
+        shader_reset();
         
         //Then draw shadowed lights
         shader_set(__shdCbDeferredShadowed);
@@ -59,18 +57,15 @@ function CbRenderDeferredLights(_diffuseSurface = surface_get_target())
                 
                 ++_i;
             }
-            
-            shader_reset();
         }
         
-        
-        
+        shader_reset();
         gpu_set_blendmode(bm_normal);
         surface_reset_target();
     }
     
-    
-    
+    //Once we're done with compositing, transfer the resulting lighting onto the target surface
+    //with a multiplicative blend mode
     gpu_set_colorwriteenable(true, true, true, false);
     gpu_set_blendmode_ext(bm_dest_color, bm_zero);
     draw_surface(__CbDeferredSurfaceLightEnsure(surface_get_target()), 0, 0);

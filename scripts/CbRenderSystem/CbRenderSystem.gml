@@ -10,7 +10,7 @@ function CbRenderSystem(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _u
     CbRenderPrepareLighting();
     CbRenderPass(_litOpaqueFunc,       CB_PASS.LIT_OPAQUE);
     CbRenderPass(_litAlphaBlendFunc,   CB_PASS.LIT_ALPHA_BLEND);
-    if (CbLightDepthMapsNeeded()) CbRenderDeferredLights();
+    if (CbLightModeGet() == CB_LIGHT_MODE.DEFERRED) CbRenderDeferredLights();
     CbRenderPass(_unlitOpaqueFunc,     CB_PASS.UNLIT_OPAQUE);
     CbRenderPass(_unlitAlphaBlendFunc, CB_PASS.UNLIT_ALPHA_BLEND);
 }
