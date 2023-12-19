@@ -1,4 +1,4 @@
-// Whether vertex buffers built by Cb should include normals
+// Whether vertex buffers built by Cardboard should include normals
 // This is critical information for lighting scenes
 #macro CB_WRITE_NORMALS  true
 

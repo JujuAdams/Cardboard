@@ -1,4 +1,4 @@
-/// Starts the building process for a Cb model
+/// Starts the building process for a Cardboard model
 /// 
 /// This function returns <undefined>; CbModelEnd() returns the model
 ///
