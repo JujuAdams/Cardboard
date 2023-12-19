@@ -19,6 +19,7 @@
     {"id":{"name":"__CbClassLightPoint","path":"scripts/__CbClassLightPoint/__CbClassLightPoint.yy",},"order":0,},
     {"id":{"name":"CbLightDirectionalWithShadows","path":"scripts/CbLightDirectionalWithShadows/CbLightDirectionalWithShadows.yy",},"order":5,},
     {"id":{"name":"vec2_lerp","path":"scripts/vec2_lerp/vec2_lerp.yy",},"order":3,},
+    {"id":{"name":"sprLazy","path":"sprites/sprLazy/sprLazy.yy",},"order":7,},
     {"id":{"name":"CbRenderPrepareLighting","path":"scripts/CbRenderPrepareLighting/CbRenderPrepareLighting.yy",},"order":4,},
     {"id":{"name":"sprHi","path":"sprites/sprHi/sprHi.yy",},"order":2,},
     {"id":{"name":"matrix_build_projection_ortho_ext","path":"scripts/matrix_build_projection_ortho_ext/matrix_build_projection_ortho_ext.yy",},"order":0,},
@@ -132,6 +133,7 @@
     {"id":{"name":"CbCameraFromSet","path":"scripts/CbCameraFromSet/CbCameraFromSet.yy",},"order":0,},
     {"id":{"name":"CbRenderStateSet","path":"scripts/CbRenderStateSet/CbRenderStateSet.yy",},"order":2,},
     {"id":{"name":"CbRenderSystem","path":"scripts/CbRenderSystem/CbRenderSystem.yy",},"order":0,},
+    {"id":{"name":"shdBillboard","path":"shaders/shdBillboard/shdBillboard.yy",},"order":18,},
     {"id":{"name":"__shdCbSimple","path":"shaders/__shdCbSimple/__shdCbSimple.yy",},"order":3,},
     {"id":{"name":"vec2_scale","path":"scripts/vec2_scale/vec2_scale.yy",},"order":1,},
     {"id":{"name":"oRenderer","path":"objects/oRenderer/oRenderer.yy",},"order":1,},
@@ -342,6 +344,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.0.2.51",
+    "IDEVersion": "2022.0.1.31",
   },
 }
