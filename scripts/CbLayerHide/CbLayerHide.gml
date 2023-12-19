@@ -1,3 +1,5 @@
+/// Sets the visibility all specified layers to <false>
+/// 
 /// @param array
 
 function CbLayerArrayHide(_array)
