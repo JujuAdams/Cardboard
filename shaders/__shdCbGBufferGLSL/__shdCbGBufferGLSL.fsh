@@ -1,3 +1,5 @@
+precision highp float;
+
 varying vec3 v_vWorldPos;
 varying vec3 v_vNormal;
 varying vec4 v_vColour;

@@ -1,3 +1,5 @@
+precision highp float;
+
 varying vec2 v_vTexcoord;
 
 uniform sampler2D u_sDepth;

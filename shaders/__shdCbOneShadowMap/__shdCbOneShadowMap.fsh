@@ -1,3 +1,5 @@
+precision highp float;
+
 #define LIGHT_COUNT  6
 
 varying vec3  v_vWorldPos;
