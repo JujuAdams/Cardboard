@@ -1,12 +1,14 @@
-/// @param [opaqueFunc]
-/// @param [transparentFunc]
-/// @param [unlitFunc]
+/// @param [litOpaqueFunc]
+/// @param [litAlphaBlendFunc]
+/// @param [unlitOpaqueFunc]
+/// @param [unlitAlphaBlendFunc]
 
-function CbRenderSystem(_opaqueFunc, _transparentFunc, _unlitFunc)
+function CbRenderSystem(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAlphaBlendFunc)
 {
     CbRenderPrepareLighting();
-    CbRenderPass(_opaqueFunc, CB_PASS.OPAQUE);
-    CbRenderPass(_transparentFunc, CB_PASS.TRANSPARENT);
+    CbRenderPass(_litOpaqueFunc,       CB_PASS.LIT_OPAQUE);
+    CbRenderPass(_litAlphaBlendFunc,   CB_PASS.LIT_ALPHA_BLEND);
     if (CbLightDepthMapsNeeded()) CbRenderDeferredLights();
-    CbRenderPass(_unlitFunc, CB_PASS.UNLIT);
+    CbRenderPass(_unlitOpaqueFunc,     CB_PASS.UNLIT_OPAQUE);
+    CbRenderPass(_unlitAlphaBlendFunc, CB_PASS.UNLIT_ALPHA_BLEND);
 }

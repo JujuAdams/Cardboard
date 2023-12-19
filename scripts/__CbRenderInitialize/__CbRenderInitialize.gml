@@ -8,9 +8,10 @@
 enum CB_PASS
 {
     LIGHT_DEPTH,
-    OPAQUE,
-    TRANSPARENT,
-    UNLIT,
+    LIT_OPAQUE,
+    LIT_ALPHA_BLEND,
+    UNLIT_OPAQUE,
+    UNLIT_ALPHA_BLEND,
     __SIZE
 }
 

@@ -19,8 +19,8 @@ function CbRenderStateSet(_pass)
             CbRenderShaderSet(_pass);
         break;
         
-        case CB_PASS.OPAQUE:
-        case CB_PASS.UNLIT:
+        case CB_PASS.LIT_OPAQUE:
+        case CB_PASS.UNLIT_OPAQUE:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
             gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);
@@ -31,7 +31,8 @@ function CbRenderStateSet(_pass)
             CbCameraMatricesSet();
         break;
         
-        case CB_PASS.TRANSPARENT:
+        case CB_PASS.LIT_ALPHA_BLEND:
+        case CB_PASS.UNLIT_ALPHA_BLEND:
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(false); //Don't write into the depth buffer!
             gpu_set_cullmode(_global.__backfaceCulling? CB_BACKFACE_CULLING_DIRECTION : cull_noculling);

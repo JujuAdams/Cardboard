@@ -17,7 +17,7 @@ function CbRenderShaderSet(_pass)
                 shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_fAlphaTestRef"), __alphaTestRef);
             break;
             
-            case CB_PASS.OPAQUE:
+            case CB_PASS.LIT_OPAQUE:
                 switch(CbLightModeGet())
                 {
                     case CB_LIGHT_MODE.NONE:
@@ -145,8 +145,10 @@ function CbRenderShaderSet(_pass)
                 }
             break;
             
-            case CB_PASS.TRANSPARENT:
-            case CB_PASS.UNLIT:
+            case CB_PASS.LIT_ALPHA_BLEND:
+            case CB_PASS.UNLIT_OPAQUE:
+            case CB_PASS.UNLIT_ALPHA_BLEND:
+                //TODO
                 shader_reset();
             break;
         }
