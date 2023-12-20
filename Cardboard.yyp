@@ -113,7 +113,6 @@
     {"id":{"name":"vec3_minor_axis","path":"scripts/vec3_minor_axis/vec3_minor_axis.yy",},"order":5,},
     {"id":{"name":"matrix_chain_scale_xyz","path":"scripts/matrix_chain_scale_xyz/matrix_chain_scale_xyz.yy",},"order":13,},
     {"id":{"name":"vec3_entrywise_divide","path":"scripts/vec3_entrywise_divide/vec3_entrywise_divide.yy",},"order":2,},
-    {"id":{"name":"CardboardCamera","path":"scripts/CardboardCamera/CardboardCamera.yy",},"order":18,},
     {"id":{"name":"CbSurfaceQuad","path":"scripts/CbSurfaceQuad/CbSurfaceQuad.yy",},"order":7,},
     {"id":{"name":"vec3_invert","path":"scripts/vec3_invert/vec3_invert.yy",},"order":1,},
     {"id":{"name":"CbSurfaceBillboard","path":"scripts/CbSurfaceBillboard/CbSurfaceBillboard.yy",},"order":3,},
