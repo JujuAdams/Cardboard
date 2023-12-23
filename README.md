@@ -11,3 +11,5 @@
 &nbsp;
 
 <p align="center"><img src="./images/example.gif" style="display:block; margin:auto"></p>
+
+You may also be interested in [Luminous Chicken](https://dragonite.itch.io/chickens).
