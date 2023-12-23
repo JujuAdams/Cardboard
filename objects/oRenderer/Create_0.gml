@@ -12,8 +12,8 @@ CbLightDefaultDepthFunctionSet(function()
     oScene.Draw();
 });
 
-//light2 = CbLightWithShadows(c_yellow, 300, 450, 90, -150, 0, 0, 140, 300);
-//light3 = CbLightWithShadows(c_white, 300, 450, 90, -150, 0, 0, 80, 300);
+//light2 = CbLightConeWithShadows(c_yellow, 300, 450, 90, -150, 0, 0, 140, 300);
+//light3 = CbLightConeWithShadows(c_white, 300, 450, 90, -150, 0, 0, 80, 300);
 light4 = CbLightDirectionalWithShadows(-1, -1, -1, c_white);
 
 opaqueFunc = function()

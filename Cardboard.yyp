@@ -199,7 +199,7 @@
     {"id":{"name":"CbTileBillboardExt","path":"scripts/CbTileBillboardExt/CbTileBillboardExt.yy",},"order":6,},
     {"id":{"name":"__CbSpriteCommon","path":"scripts/__CbSpriteCommon/__CbSpriteCommon.yy",},"order":0,},
     {"id":{"name":"vec3_equal","path":"scripts/vec3_equal/vec3_equal.yy",},"order":1,},
-    {"id":{"name":"CbLightWithShadows","path":"scripts/CbLightWithShadows/CbLightWithShadows.yy",},"order":6,},
+    {"id":{"name":"CbLightConeWithShadows","path":"scripts/CbLightConeWithShadows/CbLightConeWithShadows.yy",},"order":6,},
     {"id":{"name":"b3d_draw_line_ab","path":"scripts/b3d_draw_line_ab/b3d_draw_line_ab.yy",},"order":2,},
     {"id":{"name":"vec2_subtract","path":"scripts/vec2_subtract/vec2_subtract.yy",},"order":2,},
     {"id":{"name":"vec3_lerp","path":"scripts/vec3_lerp/vec3_lerp.yy",},"order":3,},
