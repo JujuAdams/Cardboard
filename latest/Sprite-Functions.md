@@ -2,7 +2,7 @@
 
 &nbsp;
 
-## `CardboardSprite(sprite, image, x, y, z)`
+## `CbSprite(sprite, image, x, y, z)`
 
 **Returns:** N/A (`undefined`)
 
@@ -16,7 +16,7 @@
 
 &nbsp;
 
-## `CardboardSpriteExt(sprite, image, x, y, z, xScale, zScale, yAngle, zAngle, color, alpha)`
+## `CbSpriteExt(sprite, image, x, y, z, xScale, zScale, yAngle, zAngle, color, alpha)`
 
 **Returns:** N/A (`undefined`)
 
@@ -36,7 +36,7 @@
 
 &nbsp;
 
-## `CardboardSpriteFloor(sprite, image, x, y, z)`
+## `CbSpriteFloor(sprite, image, x, y, z)`
 
 **Returns:** N/A (`undefined`)
 
@@ -50,7 +50,7 @@
 
 &nbsp;
 
-## `CardboardSpriteFloorExt(sprite, image, x, y, z, xScale, yScale, zAngle, color, alpha)`
+## `CbSpriteFloorExt(sprite, image, x, y, z, xScale, yScale, zAngle, color, alpha)`
 
 **Returns:** N/A (`undefined`)
 
@@ -69,7 +69,7 @@
 
 &nbsp;
 
-## `CardboardSpriteBillboard(sprite, image, x, y, z)`
+## `CbSpriteBillboard(sprite, image, x, y, z)`
 
 **Returns:** N/A (`undefined`)
 
@@ -83,7 +83,7 @@
 
 &nbsp;
 
-## `CardboardSpriteBillboardExt(sprite, image, x, y, z, xScale, zScale, yAngle, color, alpha)`
+## `CbSpriteBillboardExt(sprite, image, x, y, z, xScale, zScale, yAngle, color, alpha)`
 
 **Returns:** N/A (`undefined`)
 
@@ -102,7 +102,7 @@
 
 &nbsp;
 
-## `CardboardSpriteQuad(sprite, image, x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, color, alpha)`
+## `CbSpriteQuad(sprite, image, x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, color, alpha)`
 
 **Returns:** N/A (`undefined`)
 
@@ -127,7 +127,7 @@
 
 &nbsp;
 
-## `CardboardSpriteTriangle(sprite, image, x1, y1, z1, u1, v1, x2, y2, z2, u2, v2, x3, y3, z3, u3, v3, color, alpha)`
+## `CbSpriteTriangle(sprite, image, x1, y1, z1, u1, v1, x2, y2, z2, u2, v2, x3, y3, z3, u3, v3, color, alpha)`
 
 **Returns:** N/A (`undefined`)
 
@@ -155,7 +155,7 @@
 
 &nbsp;
 
-## `CardboardBillboardYawSet(fromX, fromY, toX, toY)`
+## `CbBillboardYawSet(fromX, fromY, toX, toY)`
 
 **Returns:** N/A (`undefined`)
 
@@ -168,7 +168,7 @@
 
 &nbsp;
 
-## `CardboardBillboardYawReset()`
+## `CbBillboardYawReset()`
 
 **Returns:** N/A (`undefined`)
 
