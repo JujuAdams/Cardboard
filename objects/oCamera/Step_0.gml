@@ -25,12 +25,11 @@ if (keyboard_check_released(ord("F")))
 {
     TurnFrustrumIntoWireframe(CbCameraFrustrumCoordsGet());
     TurnFrustrumIntoBox(oRenderer.light4.GetFrustrumCoords());
-    //TurnFrustrumIntoBox(CbCameraFrustrumCoordsGet());
 }
 
 if (keyboard_check_released(ord("V")))
 {
-    if (CbCameraOrthographicGet())
+    if (CbCameraParamsGet().orthographic)
     {
         CbCameraPerpsectiveSet(90);
     }

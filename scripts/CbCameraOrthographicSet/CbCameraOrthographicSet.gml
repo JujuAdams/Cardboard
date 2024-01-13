@@ -10,8 +10,9 @@ function CbCameraOrthographicSet(_near = -2048, _far = 2048, _axonometric = true
     {
         __orthographic = true;
         
-        __near = _near;
-        __far  = _far;
+        __fieldOfView = undefined;
+        __near        = _near;
+        __far         = _far;
         
         __axonometric = _axonometric;
     }
