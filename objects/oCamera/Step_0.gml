@@ -21,8 +21,21 @@ camFromZ = camToZ + cameraHeight;
 
 cameraHeight += (keyboard_check_pressed(ord("O")) - keyboard_check_pressed(ord("L")));
 
-if (keyboard_check_pressed(ord("J")))
+if (keyboard_check_released(ord("F")))
 {
     TurnFrustrumIntoWireframe(CbCameraFrustrumCoordsGet());
+    TurnFrustrumIntoBox(oRenderer.light4.GetFrustrumCoords());
     //TurnFrustrumIntoBox(CbCameraFrustrumCoordsGet());
+}
+
+if (keyboard_check_released(ord("V")))
+{
+    if (CbCameraOrthographicGet())
+    {
+        CbCameraPerpsectiveSet(90);
+    }
+    else
+    {
+        CbCameraOrthographicSet();
+    }
 }
