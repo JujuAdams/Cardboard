@@ -2,10 +2,10 @@
 /// @param dY
 /// @param dZ
 /// @param color
-/// @param near
-/// @param far
+/// @param nearOffset
+/// @param farOffset
 
-function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far) constructor
+function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _nearOffset, _farOffset) constructor
 {
     __CB_GLOBAL_RENDER
     array_push(_global.__lighting.__array, weak_ref_create(self));
@@ -19,8 +19,8 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
     dz      = _dz;
     color   = _color;
     
-    near = _near;
-    far  = _far;
+    nearOffset = _nearOffset;
+    farOffset  = _farOffset;
     
     depthFunction = undefined;
     
@@ -43,7 +43,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
     
     static TrackCamera = function()
     {
-        var _matrixView = matrix_build_lookat(-dx, -dy, -dz,   0,0,0,   0,0,1);
+        var _matrixView = matrix_build_lookat(-dx, -dy, -dz,   0,0,0,   0,0,-1);
         var _frustrumArray = array_create(8, undefined);
         with(CbCameraFrustrumCoordsGet())
         {
@@ -84,8 +84,13 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
         }
         
         __matrixView = _matrixView;
-        __matrixProj = matrix_build_projection_ortho_ext(_left, _top, _right, _bottom, _near, _far);
+        __matrixProj = matrix_build_projection_ortho_ext(_left, _top, _right, _bottom, _near + nearOffset, _far + farOffset);
         __matrixViewProj = matrix_multiply(__matrixView, __matrixProj);
+    }
+    
+    static GetFrustrumCoords = function()
+    {
+        return CbFrustrumCoordsGet(__matrixView, __matrixProj);
     }
     
     static Destroy = function()
@@ -150,7 +155,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _near, _far
                                            0, 0, 0,
                                            0, 0, 1);
         
-        __matrixProj = matrix_build_projection_ortho(__width, __height, near, far);
+        __matrixProj = matrix_build_projection_ortho(__width, __height, nearOffset + 1, farOffset + 1024);
         
         __matrixViewProj = matrix_multiply(__matrixView, __matrixProj);
     }
