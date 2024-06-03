@@ -67,7 +67,7 @@
     {"name":"CbCameraMatricesSet","order":13,"path":"scripts/CbCameraMatricesSet/CbCameraMatricesSet.yy",},
     {"name":"CbCameraOrthographicSet","order":9,"path":"scripts/CbCameraOrthographicSet/CbCameraOrthographicSet.yy",},
     {"name":"CbCameraParamsGet","order":11,"path":"scripts/CbCameraParamsGet/CbCameraParamsGet.yy",},
-    {"name":"CbCameraPerpsectiveSet","order":10,"path":"scripts/CbCameraPerpsectiveSet/CbCameraPerpsectiveSet.yy",},
+    {"name":"CbCameraPerspectiveSet","order":10,"path":"scripts/CbCameraPerspectiveSet/CbCameraPerspectiveSet.yy",},
     {"name":"CbCameraSizeGet","order":7,"path":"scripts/CbCameraSizeGet/CbCameraSizeGet.yy",},
     {"name":"CbCameraSizeSet","order":6,"path":"scripts/CbCameraSizeSet/CbCameraSizeSet.yy",},
     {"name":"CbCameraToGet","order":3,"path":"scripts/CbCameraToGet/CbCameraToGet.yy",},

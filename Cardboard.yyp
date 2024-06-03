@@ -61,7 +61,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2022.0.2.51",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"Cardboard",
   "resources":[
@@ -150,7 +150,7 @@
     {"id":{"name":"CbCameraMatricesSet","path":"scripts/CbCameraMatricesSet/CbCameraMatricesSet.yy",},},
     {"id":{"name":"CbCameraOrthographicSet","path":"scripts/CbCameraOrthographicSet/CbCameraOrthographicSet.yy",},},
     {"id":{"name":"CbCameraParamsGet","path":"scripts/CbCameraParamsGet/CbCameraParamsGet.yy",},},
-    {"id":{"name":"CbCameraPerpsectiveSet","path":"scripts/CbCameraPerpsectiveSet/CbCameraPerpsectiveSet.yy",},},
+    {"id":{"name":"CbCameraPerspectiveSet","path":"scripts/CbCameraPerspectiveSet/CbCameraPerspectiveSet.yy",},},
     {"id":{"name":"CbCameraSizeGet","path":"scripts/CbCameraSizeGet/CbCameraSizeGet.yy",},},
     {"id":{"name":"CbCameraSizeSet","path":"scripts/CbCameraSizeSet/CbCameraSizeSet.yy",},},
     {"id":{"name":"CbCameraToGet","path":"scripts/CbCameraToGet/CbCameraToGet.yy",},},

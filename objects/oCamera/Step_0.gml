@@ -31,7 +31,7 @@ if (keyboard_check_released(ord("V")))
 {
     if (CbCameraParamsGet().orthographic)
     {
-        CbCameraPerpsectiveSet(90);
+        CbCameraPerspectiveSet(90);
     }
     else
     {

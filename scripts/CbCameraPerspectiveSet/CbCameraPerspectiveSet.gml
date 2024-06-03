@@ -3,7 +3,7 @@
 /// @param [far=2048]
 /// @param [axonometric=false]
 
-function CbCameraPerpsectiveSet(_FoV, _near = 1, _far = 2048, _axonometric = false)
+function CbCameraPerspectiveSet(_FoV, _near = 1, _far = 2048, _axonometric = false)
 {
     __CB_GLOBAL_RENDER
     
