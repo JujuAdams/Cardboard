@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbRenderPass",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Pipeline",
-    "path": "folders/Cardboard/Render Functions/Pipeline.yy",
+  "$GMScript":"",
+  "%Name":"CbRenderPass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbRenderPass",
+  "parent":{
+    "name":"Pipeline",
+    "path":"folders/Cardboard/Render Functions/Pipeline.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

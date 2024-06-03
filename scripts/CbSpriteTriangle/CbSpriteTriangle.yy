@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbSpriteTriangle",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Cardboard/Build Functions/Sprites.yy",
+  "$GMScript":"",
+  "%Name":"CbSpriteTriangle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSpriteTriangle",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Cardboard/Build Functions/Sprites.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec3_entrywise_min",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Entrywise",
-    "path": "folders/Vectors/3D/Entrywise.yy",
+  "$GMScript":"",
+  "%Name":"vec3_entrywise_min",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec3_entrywise_min",
+  "parent":{
+    "name":"Entrywise",
+    "path":"folders/Vectors/3D/Entrywise.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

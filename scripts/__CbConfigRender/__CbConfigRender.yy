@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__CbConfigRender",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Render Functions",
-    "path": "folders/Cardboard/Render Functions.yy",
+  "$GMScript":"",
+  "%Name":"__CbConfigRender",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbConfigRender",
+  "parent":{
+    "name":"Render Functions",
+    "path":"folders/Cardboard/Render Functions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

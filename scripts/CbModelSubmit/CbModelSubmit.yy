@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbModelSubmit",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Model",
-    "path": "folders/Cardboard/Build Functions/Model.yy",
+  "$GMScript":"",
+  "%Name":"CbModelSubmit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbModelSubmit",
+  "parent":{
+    "name":"Model",
+    "path":"folders/Cardboard/Build Functions/Model.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "b3d_vertex_add_quad",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Makers",
-    "path": "folders/Basic 3D/Makers.yy",
+  "$GMScript":"",
+  "%Name":"b3d_vertex_add_quad",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"b3d_vertex_add_quad",
+  "parent":{
+    "name":"Makers",
+    "path":"folders/Basic 3D/Makers.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

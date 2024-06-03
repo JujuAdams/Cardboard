@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbFrustrumCoordsGet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Matrices",
-    "path": "folders/Cardboard/Render Functions/Matrices.yy",
+  "$GMScript":"",
+  "%Name":"CbFrustrumCoordsGet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbFrustrumCoordsGet",
+  "parent":{
+    "name":"Matrices",
+    "path":"folders/Cardboard/Render Functions/Matrices.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

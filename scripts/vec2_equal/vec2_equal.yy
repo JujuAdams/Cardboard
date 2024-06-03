@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec2_equal",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Group",
-    "path": "folders/Vectors/2D/Group.yy",
+  "$GMScript":"",
+  "%Name":"vec2_equal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec2_equal",
+  "parent":{
+    "name":"Group",
+    "path":"folders/Vectors/2D/Group.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

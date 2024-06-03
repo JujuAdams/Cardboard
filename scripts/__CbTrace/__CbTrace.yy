@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__CbTrace",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "(System)",
-    "path": "folders/Cardboard/Common/(System).yy",
+  "$GMScript":"",
+  "%Name":"__CbTrace",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbTrace",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Cardboard/Common/(System).yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

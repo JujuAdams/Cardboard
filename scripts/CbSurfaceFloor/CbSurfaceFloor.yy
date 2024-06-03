@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbSurfaceFloor",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Surfaces",
-    "path": "folders/Cardboard/Build Functions/Surfaces.yy",
+  "$GMScript":"",
+  "%Name":"CbSurfaceFloor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSurfaceFloor",
+  "parent":{
+    "name":"Surfaces",
+    "path":"folders/Cardboard/Build Functions/Surfaces.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

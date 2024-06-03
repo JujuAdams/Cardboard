@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec2_major_axis",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Limits",
-    "path": "folders/Vectors/2D/Limits.yy",
+  "$GMScript":"",
+  "%Name":"vec2_major_axis",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec2_major_axis",
+  "parent":{
+    "name":"Limits",
+    "path":"folders/Vectors/2D/Limits.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec2_reflect",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Vector Product",
-    "path": "folders/Vectors/2D/Vector Product.yy",
+  "$GMScript":"",
+  "%Name":"vec2_reflect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec2_reflect",
+  "parent":{
+    "name":"Vector Product",
+    "path":"folders/Vectors/2D/Vector Product.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

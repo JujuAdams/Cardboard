@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__CbClassTilemapsToModelRuleset",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Classes",
-    "path": "folders/Cardboard/Build Functions/(System)/Classes.yy",
+  "$GMScript":"",
+  "%Name":"__CbClassTilemapsToModelRuleset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbClassTilemapsToModelRuleset",
+  "parent":{
+    "name":"Classes",
+    "path":"folders/Cardboard/Build Functions/(System)/Classes.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

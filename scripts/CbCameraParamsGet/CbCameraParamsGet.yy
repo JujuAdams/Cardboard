@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbCameraParamsGet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Camera",
-    "path": "folders/Cardboard/Render Functions/Camera.yy",
+  "$GMScript":"",
+  "%Name":"CbCameraParamsGet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbCameraParamsGet",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Cardboard/Render Functions/Camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbTileBillboard",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Tiles",
-    "path": "folders/Cardboard/Build Functions/Tiles.yy",
+  "$GMScript":"",
+  "%Name":"CbTileBillboard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbTileBillboard",
+  "parent":{
+    "name":"Tiles",
+    "path":"folders/Cardboard/Build Functions/Tiles.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

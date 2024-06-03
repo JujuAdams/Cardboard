@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbLightModeGet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Options",
-    "path": "folders/Cardboard/Render Functions/Options.yy",
+  "$GMScript":"",
+  "%Name":"CbLightModeGet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightModeGet",
+  "parent":{
+    "name":"Options",
+    "path":"folders/Cardboard/Render Functions/Options.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

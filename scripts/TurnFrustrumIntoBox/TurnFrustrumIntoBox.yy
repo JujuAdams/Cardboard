@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "TurnFrustrumIntoBox",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Cardboard",
-    "path": "Cardboard.yyp",
+  "$GMScript":"",
+  "%Name":"TurnFrustrumIntoBox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TurnFrustrumIntoBox",
+  "parent":{
+    "name":"Cardboard",
+    "path":"Cardboard.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

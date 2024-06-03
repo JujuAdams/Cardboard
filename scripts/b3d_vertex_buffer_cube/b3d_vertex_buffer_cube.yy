@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "b3d_vertex_buffer_cube",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Makers",
-    "path": "folders/Basic 3D/Makers.yy",
+  "$GMScript":"",
+  "%Name":"b3d_vertex_buffer_cube",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"b3d_vertex_buffer_cube",
+  "parent":{
+    "name":"Makers",
+    "path":"folders/Basic 3D/Makers.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

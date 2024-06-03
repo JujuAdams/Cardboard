@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__CbBuildGlobal",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "(System)",
-    "path": "folders/Cardboard/Build Functions/(System).yy",
+  "$GMScript":"",
+  "%Name":"__CbBuildGlobal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbBuildGlobal",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Cardboard/Build Functions/(System).yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

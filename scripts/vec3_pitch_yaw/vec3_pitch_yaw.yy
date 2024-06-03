@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec3_pitch_yaw",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "3D",
-    "path": "folders/Vectors/3D.yy",
+  "$GMScript":"",
+  "%Name":"vec3_pitch_yaw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec3_pitch_yaw",
+  "parent":{
+    "name":"3D",
+    "path":"folders/Vectors/3D.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

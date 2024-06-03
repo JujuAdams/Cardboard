@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbCameraZTiltSet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Camera",
-    "path": "folders/Cardboard/Render Functions/Camera.yy",
+  "$GMScript":"",
+  "%Name":"CbCameraZTiltSet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbCameraZTiltSet",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Cardboard/Render Functions/Camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

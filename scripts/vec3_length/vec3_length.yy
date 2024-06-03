@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec3_length",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Length _ Distance _ Normalise",
-    "path": "folders/Vectors/3D/Length _ Distance _ Normalise.yy",
+  "$GMScript":"",
+  "%Name":"vec3_length",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec3_length",
+  "parent":{
+    "name":"Length _ Distance _ Normalise",
+    "path":"folders/Vectors/3D/Length _ Distance _ Normalise.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

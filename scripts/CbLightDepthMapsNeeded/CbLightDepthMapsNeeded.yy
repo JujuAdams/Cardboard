@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbLightDepthMapsNeeded",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Lighting",
-    "path": "folders/Cardboard/Render Functions/Lighting.yy",
+  "$GMScript":"",
+  "%Name":"CbLightDepthMapsNeeded",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightDepthMapsNeeded",
+  "parent":{
+    "name":"Lighting",
+    "path":"folders/Cardboard/Render Functions/Lighting.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

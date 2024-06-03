@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec3_offset",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Basic",
-    "path": "folders/Vectors/3D/Basic.yy",
+  "$GMScript":"",
+  "%Name":"vec3_offset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec3_offset",
+  "parent":{
+    "name":"Basic",
+    "path":"folders/Vectors/3D/Basic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
