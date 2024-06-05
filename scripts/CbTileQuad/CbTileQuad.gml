@@ -42,12 +42,11 @@ function CbTileQuad()
     var _color   = argument[15];
     var _alpha   = argument[16];
     
-    static _borderWidth  = 2;
-    static _borderHeight = 2;
-    
     var _tilesetData   = __CbTilesetDataGet(_tileset);
     var _texture       = _tilesetData.__texture;
     var _uvs           = _tilesetData.__UVs;
+    var _borderWidth   = _tilesetData.__tileSeparatorH;
+    var _borderHeight  = _tilesetData.__tileSeparatorV;
     var _tilesetU0     = _uvs[0];
     var _tilesetV0     = _uvs[1];
     var _tilesetU1     = _uvs[2];

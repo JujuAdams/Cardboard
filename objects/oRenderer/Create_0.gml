@@ -38,3 +38,6 @@ unlitFunc = function()
         b3d_draw_triangle(b, c, d, image_blend, false);
     }
 };
+
+var _tileset = tileset_get_info(tsTiles);
+show_debug_message(json_stringify(_tileset, true));

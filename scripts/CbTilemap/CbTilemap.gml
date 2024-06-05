@@ -7,6 +7,8 @@
 
 function CbTilemap(_tilemap, _xOffset, _yOffset, _zOffset, _xSize, _ySize)
 {
+    __CB_GLOBAL_BUILD
+    
     if (is_string(_tilemap)) _tilemap = layer_tilemap_get_id(layer_get_id(_tilemap));
     
     var _tilemapWidth  = tilemap_get_width( _tilemap);
