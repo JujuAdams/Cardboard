@@ -7,25 +7,30 @@ function __CbClassTileset(_tileset) constructor
     
     __tilesetDict[$ _tileset] = self;
     
-    __tileset = _tileset;
+    __tileset     = _tileset;
+    __tilesetInfo = tileset_get_info(_tileset);
     
-    layer_set_target_room(0);
-    var _layer   = layer_create(0);
-    var _tilemap = layer_tilemap_create(_layer, 0, 0, _tileset, 1, 1);
+    __tileWidth      = __tilesetInfo.tile_width;
+    __tileHeight     = __tilesetInfo.tile_height;
+    __tileSeparatorH = __tilesetInfo.tile_horizontal_separator;
+    __tileSeparatorV = __tilesetInfo.tile_vertical_separator;
+    __textureWidth   = __tilesetInfo.width;
+    __textureHeight  = __tilesetInfo.height;
+    __tilesetWidth   = __tilesetInfo.tile_count  / __tilesetInfo.tile_columns;
+    __tilesetHeight  = __tilesetInfo.tile_columns;
     
-    __tileWidth  = tilemap_get_tile_width(_tilemap);
-    __tileHeight = tilemap_get_tile_height(_tilemap);
+    __tileAnimMap = ds_map_create();
     
-    layer_tilemap_destroy(_tilemap);
-    layer_destroy(_layer);
-    layer_reset_target_room();
+    var _framesStruct = __tilesetInfo.frames;
+    var _namesArray = variable_struct_get_names(_framesStruct);
+    var _i = 0;
+    repeat(array_length(_namesArray))
+    {
+        var _name = _namesArray[_i];
+        __tileAnimMap[? real(_name)] = _framesStruct[$ _name];
+        ++_i;
+    }
     
     __texture = tileset_get_texture(_tileset);
     __UVs     = tileset_get_uvs(_tileset);
-    
-    __textureWidth   = (__UVs[2] - __UVs[0]) / texture_get_texel_width(__texture);
-    __textureHeight  = (__UVs[3] - __UVs[1]) / texture_get_texel_height(__texture);
-    
-    __tilesetWidth  = __textureWidth  / (__tileWidth  + 4);
-    __tilesetHeight = __textureHeight / (__tileHeight + 4);
 }
