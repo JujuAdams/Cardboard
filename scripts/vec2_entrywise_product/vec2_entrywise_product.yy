@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec2_entrywise_product",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Entrywise",
-    "path": "folders/Vectors/2D/Entrywise.yy",
+  "$GMScript":"v1",
+  "%Name":"vec2_entrywise_product",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec2_entrywise_product",
+  "parent":{
+    "name":"Entrywise",
+    "path":"folders/Vectors/2D/Entrywise.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

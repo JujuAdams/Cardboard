@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbAlphaTestGet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Options",
-    "path": "folders/Cardboard/Render Functions/Options.yy",
+  "$GMScript":"v1",
+  "%Name":"CbAlphaTestGet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbAlphaTestGet",
+  "parent":{
+    "name":"Options",
+    "path":"folders/Cardboard/Render Functions/Options.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

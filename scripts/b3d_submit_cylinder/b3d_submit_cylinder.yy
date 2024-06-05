@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "b3d_submit_cylinder",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Submission",
-    "path": "folders/Basic 3D/Submission.yy",
+  "$GMScript":"v1",
+  "%Name":"b3d_submit_cylinder",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"b3d_submit_cylinder",
+  "parent":{
+    "name":"Submission",
+    "path":"folders/Basic 3D/Submission.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

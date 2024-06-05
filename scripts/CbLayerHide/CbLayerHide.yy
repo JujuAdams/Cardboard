@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbLayerHide",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Build Functions",
-    "path": "folders/Cardboard/Build Functions.yy",
+  "$GMScript":"v1",
+  "%Name":"CbLayerHide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLayerHide",
+  "parent":{
+    "name":"Build Functions",
+    "path":"folders/Cardboard/Build Functions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

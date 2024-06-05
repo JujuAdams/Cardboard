@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbPartSys",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Particles",
-    "path": "folders/Cardboard/Build Functions/Particles.yy",
+  "$GMScript":"v1",
+  "%Name":"CbPartSys",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbPartSys",
+  "parent":{
+    "name":"Particles",
+    "path":"folders/Cardboard/Build Functions/Particles.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

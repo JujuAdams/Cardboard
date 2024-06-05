@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbLightDirectional",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Lighting",
-    "path": "folders/Cardboard/Render Functions/Lighting.yy",
+  "$GMScript":"v1",
+  "%Name":"CbLightDirectional",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightDirectional",
+  "parent":{
+    "name":"Lighting",
+    "path":"folders/Cardboard/Render Functions/Lighting.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "b3d_closest_point_on_line",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Vectors",
-    "path": "folders/Basic 3D/Vectors.yy",
+  "$GMScript":"v1",
+  "%Name":"b3d_closest_point_on_line",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"b3d_closest_point_on_line",
+  "parent":{
+    "name":"Vectors",
+    "path":"folders/Basic 3D/Vectors.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

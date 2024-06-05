@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbBuildZTiltViewMatrix",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Render Functions",
-    "path": "folders/Cardboard/Render Functions.yy",
+  "$GMScript":"v1",
+  "%Name":"CbBuildZTiltViewMatrix",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbBuildZTiltViewMatrix",
+  "parent":{
+    "name":"Render Functions",
+    "path":"folders/Cardboard/Render Functions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

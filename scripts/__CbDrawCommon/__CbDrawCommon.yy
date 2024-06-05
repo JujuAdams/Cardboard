@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__CbDrawCommon",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "(System)",
-    "path": "folders/Cardboard/Build Functions/(System).yy",
+  "$GMScript":"v1",
+  "%Name":"__CbDrawCommon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbDrawCommon",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Cardboard/Build Functions/(System).yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

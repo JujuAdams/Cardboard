@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbBatchAutoGet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Batching",
-    "path": "folders/Cardboard/Build Functions/Batching.yy",
+  "$GMScript":"v1",
+  "%Name":"CbBatchAutoGet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbBatchAutoGet",
+  "parent":{
+    "name":"Batching",
+    "path":"folders/Cardboard/Build Functions/Batching.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

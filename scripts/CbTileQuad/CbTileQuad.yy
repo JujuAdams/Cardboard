@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbTileQuad",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Tiles",
-    "path": "folders/Cardboard/Build Functions/Tiles.yy",
+  "$GMScript":"v1",
+  "%Name":"CbTileQuad",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbTileQuad",
+  "parent":{
+    "name":"Tiles",
+    "path":"folders/Cardboard/Build Functions/Tiles.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

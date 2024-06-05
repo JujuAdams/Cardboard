@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec2_scale",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Basic",
-    "path": "folders/Vectors/2D/Basic.yy",
+  "$GMScript":"v1",
+  "%Name":"vec2_scale",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec2_scale",
+  "parent":{
+    "name":"Basic",
+    "path":"folders/Vectors/2D/Basic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

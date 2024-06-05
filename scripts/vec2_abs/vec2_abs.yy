@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec2_abs",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Limits",
-    "path": "folders/Vectors/2D/Limits.yy",
+  "$GMScript":"v1",
+  "%Name":"vec2_abs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec2_abs",
+  "parent":{
+    "name":"Limits",
+    "path":"folders/Vectors/2D/Limits.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

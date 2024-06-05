@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__CbMacros",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "(System)",
-    "path": "folders/Cardboard/Common/(System).yy",
+  "$GMScript":"v1",
+  "%Name":"__CbMacros",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbMacros",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Cardboard/Common/(System).yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

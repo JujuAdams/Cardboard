@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbSpriteLayerBillboard",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Sprite Layer",
-    "path": "folders/Cardboard/Build Functions/Sprite Layer.yy",
+  "$GMScript":"v1",
+  "%Name":"CbSpriteLayerBillboard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSpriteLayerBillboard",
+  "parent":{
+    "name":"Sprite Layer",
+    "path":"folders/Cardboard/Build Functions/Sprite Layer.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

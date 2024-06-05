@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbFogSet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Fog",
-    "path": "folders/Cardboard/Render Functions/Fog.yy",
+  "$GMScript":"v1",
+  "%Name":"CbFogSet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbFogSet",
+  "parent":{
+    "name":"Fog",
+    "path":"folders/Cardboard/Render Functions/Fog.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

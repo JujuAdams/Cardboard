@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbSpriteQuad",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Cardboard/Build Functions/Sprites.yy",
+  "$GMScript":"v1",
+  "%Name":"CbSpriteQuad",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSpriteQuad",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Cardboard/Build Functions/Sprites.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

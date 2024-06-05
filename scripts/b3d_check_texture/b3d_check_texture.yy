@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "b3d_check_texture",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Basic 3D",
-    "path": "folders/Basic 3D.yy",
+  "$GMScript":"v1",
+  "%Name":"b3d_check_texture",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"b3d_check_texture",
+  "parent":{
+    "name":"Basic 3D",
+    "path":"folders/Basic 3D.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

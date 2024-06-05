@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "TurnFrustrumIntoWireframe",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Cardboard",
-    "path": "Cardboard.yyp",
+  "$GMScript":"v1",
+  "%Name":"TurnFrustrumIntoWireframe",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TurnFrustrumIntoWireframe",
+  "parent":{
+    "name":"Cardboard",
+    "path":"Cardboard.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

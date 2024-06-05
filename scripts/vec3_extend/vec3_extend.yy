@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec3_extend",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Group",
-    "path": "folders/Vectors/3D/Group.yy",
+  "$GMScript":"v1",
+  "%Name":"vec3_extend",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec3_extend",
+  "parent":{
+    "name":"Group",
+    "path":"folders/Vectors/3D/Group.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

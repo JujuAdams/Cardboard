@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "matrix_chain_scale",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Matrix Chain",
-    "path": "folders/Matrix Chain.yy",
+  "$GMScript":"v1",
+  "%Name":"matrix_chain_scale",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"matrix_chain_scale",
+  "parent":{
+    "name":"Matrix Chain",
+    "path":"folders/Matrix Chain.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

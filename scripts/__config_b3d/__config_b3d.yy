@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__config_b3d",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Basic 3D",
-    "path": "folders/Basic 3D.yy",
+  "$GMScript":"v1",
+  "%Name":"__config_b3d",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__config_b3d",
+  "parent":{
+    "name":"Basic 3D",
+    "path":"folders/Basic 3D.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

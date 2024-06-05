@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbCameraMatricesGet",
+  "%Name":"CbCameraPerspectiveSet",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbCameraMatricesGet",
+  "name":"CbCameraPerspectiveSet",
   "parent":{
     "name":"Camera",
     "path":"folders/Cardboard/Render Functions/Camera.yy",

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbRenderStateSet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Pipeline",
-    "path": "folders/Cardboard/Render Functions/Pipeline.yy",
+  "$GMScript":"v1",
+  "%Name":"CbRenderStateSet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbRenderStateSet",
+  "parent":{
+    "name":"Pipeline",
+    "path":"folders/Cardboard/Render Functions/Pipeline.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

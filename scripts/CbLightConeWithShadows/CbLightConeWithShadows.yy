@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbLightConeWithShadows",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Lighting",
-    "path": "folders/Cardboard/Render Functions/Lighting.yy",
+  "$GMScript":"v1",
+  "%Name":"CbLightConeWithShadows",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightConeWithShadows",
+  "parent":{
+    "name":"Lighting",
+    "path":"folders/Cardboard/Render Functions/Lighting.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

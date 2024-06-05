@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CbDoubleSidedGet",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Build Functions",
-    "path": "folders/Cardboard/Build Functions.yy",
+  "$GMScript":"v1",
+  "%Name":"CbDoubleSidedGet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbDoubleSidedGet",
+  "parent":{
+    "name":"Build Functions",
+    "path":"folders/Cardboard/Build Functions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

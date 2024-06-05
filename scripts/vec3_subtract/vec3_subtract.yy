@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec3_subtract",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Basic",
-    "path": "folders/Vectors/3D/Basic.yy",
+  "$GMScript":"v1",
+  "%Name":"vec3_subtract",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec3_subtract",
+  "parent":{
+    "name":"Basic",
+    "path":"folders/Vectors/3D/Basic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

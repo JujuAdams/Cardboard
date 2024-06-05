@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vec2_average",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Group",
-    "path": "folders/Vectors/2D/Group.yy",
+  "$GMScript":"v1",
+  "%Name":"vec2_average",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vec2_average",
+  "parent":{
+    "name":"Group",
+    "path":"folders/Vectors/2D/Group.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
