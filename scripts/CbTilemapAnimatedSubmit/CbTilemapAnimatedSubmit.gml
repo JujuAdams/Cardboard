@@ -12,14 +12,14 @@ function CbTilemapAnimatedSubmit(_animatedTilemapModel, _frame, _setShader = tru
         if (CB_WRITE_NORMALS)
         {
             shader_set(__shdTilemapAnimatedNormals);
-            shader_set_uniform_f(_shdTilemapAnimatedNormals_u_fAnimFrame, floor(_frame));
+            shader_set_uniform_f(_shdTilemapAnimatedNormals_u_fAnimFrame, floor(_frame mod 256));
             vertex_submit(_animatedTilemapModel.__vertexBuffer, pr_trianglelist, _animatedTilemapModel.__texture);
             shader_reset();
         }
         else
         {
             shader_set(__shdTilemapAnimated);
-            shader_set_uniform_f(_shdTilemapAnimated_u_fAnimFrame, floor(_frame));
+            shader_set_uniform_f(_shdTilemapAnimated_u_fAnimFrame, floor(_frame mod 256));
             vertex_submit(_animatedTilemapModel.__vertexBuffer, pr_trianglelist, _animatedTilemapModel.__texture);
             shader_reset();
         }
