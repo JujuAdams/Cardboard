@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Animated Tileset Test","folderPath":"folders/Animated Tileset Test.yy","name":"Animated Tileset Test","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Assets","folderPath":"folders/Assets.yy","name":"Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Basic 3D","folderPath":"folders/Basic 3D.yy","name":"Basic 3D","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Drawing","folderPath":"folders/Basic 3D/Drawing.yy","name":"Drawing","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -40,7 +41,6 @@
     {"$GMFolder":"","%Name":"Matrices","folderPath":"folders/Cardboard/Render Functions/Matrices.yy","name":"Matrices","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Options","folderPath":"folders/Cardboard/Render Functions/Options.yy","name":"Options","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Pipeline","folderPath":"folders/Cardboard/Render Functions/Pipeline.yy","name":"Pipeline","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Animated Tileset Test","folderPath":"folders/Animated Tileset Test.yy","name":"Animated Tileset Test","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Matrix Chain","folderPath":"folders/Matrix Chain.yy","name":"Matrix Chain","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Vectors","folderPath":"folders/Vectors.yy","name":"Vectors","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"2D","folderPath":"folders/Vectors/2D.yy","name":"2D","resourceType":"GMFolder","resourceVersion":"2.0",},

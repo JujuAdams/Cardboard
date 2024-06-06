@@ -1,9 +1,9 @@
 {
   "FolderOrderSettings":[
+    {"name":"Animated Tileset Test","order":19,"path":"folders/Animated Tileset Test.yy",},
     {"name":"Basic 3D","order":1,"path":"folders/Basic 3D.yy",},
     {"name":"Cardboard","order":2,"path":"folders/Cardboard.yy",},
     {"name":"Classes","order":1,"path":"folders/Cardboard/Build Functions/(System)/Classes.yy",},
-    {"name":"Animated Tileset Test","order":19,"path":"folders/Animated Tileset Test.yy",},
     {"name":"Matrix Chain","order":3,"path":"folders/Matrix Chain.yy",},
     {"name":"Vectors","order":4,"path":"folders/Vectors.yy",},
   ],
