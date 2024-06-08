@@ -31,11 +31,11 @@ if (keyboard_check_released(ord("V")))
 {
     if (cbCamera.GetProjection().orthographic)
     {
-        cbCamera.SetPerspective(90);
+        cbCamera.SetPerspective(90, 1, 2048);
     }
     else
     {
-        cbCamera.SetOrthographic();
+        cbCamera.SetOrthographic(-2048, 2048);
     }
 }
 

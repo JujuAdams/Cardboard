@@ -1,8 +1,7 @@
 function CbRenderRecallMatrices()
 {
-    __CB_GLOBAL_RENDER
-    
-    with(_global.__old)
+    static _system = __CbCameraSystem();
+    with(_system)
     {
         __set = false;
         matrix_set(matrix_world,      __worldMatrix);

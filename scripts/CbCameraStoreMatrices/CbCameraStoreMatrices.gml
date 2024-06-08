@@ -1,8 +1,7 @@
-function CbRenderStoreMatrices()
+function CbCameraStoreMatrices()
 {
-    __CB_GLOBAL_RENDER
-    
-    with(_global.__old)
+    static _system = __CbCameraSystem();
+    with(_system)
     {
         if (not __set)
         {

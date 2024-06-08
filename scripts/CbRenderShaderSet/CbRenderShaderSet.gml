@@ -22,7 +22,7 @@ function CbRenderShaderSet(_pass, _viewMatrix = undefined, _projectionMatrix = u
             case CB_PASS.LIT_OPAQUE:
                 switch(CbLightModeGet())
                 {
-                    case CB_LIGHT_MODE.NONE:
+                    case CB_LIGHT_MODE.DISABLE_LIGHTING:
                         shader_set(__shdCbNoLights);
                         shader_set_uniform_f(shader_get_uniform(__shdCbNoLights, "u_fAlphaTestRef"), __alphaTestRef);
                         
@@ -42,7 +42,7 @@ function CbRenderShaderSet(_pass, _viewMatrix = undefined, _projectionMatrix = u
                         }
                     break;
                     
-                    case CB_LIGHT_MODE.NO_SHADOWS:
+                    case CB_LIGHT_MODE.NO_SHADOWED_LIGHTS:
                         shader_set(__shdCbSimpleLights);
                         shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_fAlphaTestRef"), __alphaTestRef);
                         
@@ -71,7 +71,7 @@ function CbRenderShaderSet(_pass, _viewMatrix = undefined, _projectionMatrix = u
                         }
                     break;
                     
-                    case CB_LIGHT_MODE.ONE_SHADOW_MAP:
+                    case CB_LIGHT_MODE.ONE_SHADOWED_LIGHT:
                         shader_set(__shdCbOneShadowMap);
                         shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_fAlphaTestRef"), __alphaTestRef);
                         

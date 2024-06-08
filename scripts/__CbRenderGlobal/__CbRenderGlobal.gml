@@ -3,7 +3,7 @@
 function __CbRenderGlobal()
 {
     static _struct = {
-        __lightMode:         CB_LIGHT_MODE.NONE,
+        __lightMode:         CB_LIGHT_MODE.DISABLE_LIGHTING,
         __alphaTestRef:      0.5,
         __surfaceWorkaround: false,
         __backfaceCulling:   true,

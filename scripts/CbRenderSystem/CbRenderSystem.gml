@@ -4,8 +4,8 @@
 /// @param [litAlphaBlendFunc]
 /// @param [unlitOpaqueFunc]
 /// @param [unlitAlphaBlendFunc]
-/// @param [viewMatrix]
-/// @param [projectionMatrix]
+/// @param [viewMatrixHint]
+/// @param [projectionMatrixHint]
 
 function CbRenderSystem(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAlphaBlendFunc, _viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
 {

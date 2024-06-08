@@ -16,18 +16,30 @@ function CbCameraGetFrustrumCoords(_viewMatrix, _projMatrix)
         brFar:  undefined,
     };
     
-    var _vpMatrixInverse = __CbCameraMatrixInvert(matrix_multiply(_viewMatrix, _projMatrix));
+    static _matrixTransformDivByW = function(_matrix, _x, _y, _z, _w)
+    {
+        var _vector = matrix_transform_vertex(_matrix, _x, _y, _z, _w);
+        
+        var _wResult = _vector[3];
+        _vector[0] /= _wResult;
+        _vector[1] /= _wResult;
+        _vector[2] /= _wResult;
+        _vector[3]  = (_wResult == 0)? 0 : 1;
+        
+        return _vector;
+    }
     
+    var _vpMatrixInverse = __CbCameraMatrixInvert(matrix_multiply(_viewMatrix, _projMatrix));
     with(_result)
     {
-        tlNear = matrix_transform_vector_4d_div_w(_vpMatrixInverse, -1, -1, 0, 1);
-        trNear = matrix_transform_vector_4d_div_w(_vpMatrixInverse,  1, -1, 0, 1);
-        blNear = matrix_transform_vector_4d_div_w(_vpMatrixInverse, -1,  1, 0, 1);
-        brNear = matrix_transform_vector_4d_div_w(_vpMatrixInverse,  1,  1, 0, 1);
-        tlFar  = matrix_transform_vector_4d_div_w(_vpMatrixInverse, -1, -1, 1, 1);
-        trFar  = matrix_transform_vector_4d_div_w(_vpMatrixInverse,  1, -1, 1, 1);
-        blFar  = matrix_transform_vector_4d_div_w(_vpMatrixInverse, -1,  1, 1, 1);
-        brFar  = matrix_transform_vector_4d_div_w(_vpMatrixInverse,  1,  1, 1, 1);
+        tlNear = _matrixTransformDivByW(_vpMatrixInverse, -1, -1, 0, 1);
+        trNear = _matrixTransformDivByW(_vpMatrixInverse,  1, -1, 0, 1);
+        blNear = _matrixTransformDivByW(_vpMatrixInverse, -1,  1, 0, 1);
+        brNear = _matrixTransformDivByW(_vpMatrixInverse,  1,  1, 0, 1);
+        tlFar  = _matrixTransformDivByW(_vpMatrixInverse, -1, -1, 1, 1);
+        trFar  = _matrixTransformDivByW(_vpMatrixInverse,  1, -1, 1, 1);
+        blFar  = _matrixTransformDivByW(_vpMatrixInverse, -1,  1, 1, 1);
+        brFar  = _matrixTransformDivByW(_vpMatrixInverse,  1,  1, 1, 1);
     }
     
     return _result;
