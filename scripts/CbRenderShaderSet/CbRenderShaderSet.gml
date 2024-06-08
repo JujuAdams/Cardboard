@@ -13,7 +13,8 @@ function CbRenderShaderSet(_pass)
         switch(_pass)
         {
             case CB_PASS.DEPTH_MAP:
-                shader_reset();
+                shader_set(__shdCbAlphaTestOnly);
+                shader_set_uniform_f(shader_get_uniform(__shdCbAlphaTestOnly, "u_fAlphaTestRef"), __alphaTestRef);
             break;
             
             case CB_PASS.LIT_OPAQUE:

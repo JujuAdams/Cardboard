@@ -308,6 +308,7 @@
     {"id":{"name":"vec3_square_length","path":"scripts/vec3_square_length/vec3_square_length.yy",},},
     {"id":{"name":"vec3_subtract","path":"scripts/vec3_subtract/vec3_subtract.yy",},},
     {"id":{"name":"vec3_triad_normal","path":"scripts/vec3_triad_normal/vec3_triad_normal.yy",},},
+    {"id":{"name":"__shdCbAlphaTestOnly","path":"shaders/__shdCbAlphaTestOnly/__shdCbAlphaTestOnly.yy",},},
     {"id":{"name":"__shdCbDeferredShadowed","path":"shaders/__shdCbDeferredShadowed/__shdCbDeferredShadowed.yy",},},
     {"id":{"name":"__shdCbDeferredUnshadowed","path":"shaders/__shdCbDeferredUnshadowed/__shdCbDeferredUnshadowed.yy",},},
     {"id":{"name":"__shdCbGBufferGLSL","path":"shaders/__shdCbGBufferGLSL/__shdCbGBufferGLSL.yy",},},
