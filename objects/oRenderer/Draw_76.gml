@@ -1,6 +1,3 @@
-CbCameraFromSet(oCamera.camFromX, oCamera.camFromY, oCamera.camFromZ);
-CbCameraToSet(oCamera.camToX, oCamera.camToY, oCamera.camToZ);
-
 if (variable_instance_exists(self, "light1"))
 {
     light1.x = oCamera.camToX;
@@ -32,5 +29,5 @@ if (variable_instance_exists(self, "light3"))
 
 if (variable_instance_exists(self, "light4"))
 {
-    light4.TrackCamera();
+    light4.TrackCamera(oCamera.cbCamera);
 }

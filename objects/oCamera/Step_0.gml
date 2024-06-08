@@ -23,18 +23,21 @@ cameraHeight += (keyboard_check_pressed(ord("O")) - keyboard_check_pressed(ord("
 
 if (keyboard_check_released(ord("F")))
 {
-    TurnFrustrumIntoWireframe(CbCameraGetFrustrumCoords());
+    TurnFrustrumIntoWireframe(cbCamera.GetFrustrumCoords());
     TurnFrustrumIntoBox(oRenderer.light4.GetFrustrumCoords());
 }
 
 if (keyboard_check_released(ord("V")))
 {
-    if (CbCameraParamsGet().orthographic)
+    if (cbCamera.GetProjection().orthographic)
     {
-        CbCameraPerspectiveSet(90);
+        cbCamera.SetOrthographic();
     }
     else
     {
-        CbCameraOrthographicSet();
+        cbCamera.SetPerspective(90);
     }
 }
+
+cbCamera.SetFrom(camFromX, camFromY, camFromZ);
+cbCamera.SetTo(camToX, camToY, camToZ);

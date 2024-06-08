@@ -2,13 +2,12 @@
 /// 
 /// @param [diffuseSurface]
 
-function CbRenderDeferredLights(_diffuseSurface = surface_get_target())
+function CbRenderDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurface = surface_get_target())
 {
     __CB_GLOBAL_RENDER
     
-    var _matrices        = CbCameraMatricesGet();
-    var _vpMatrix        = matrix_multiply(_matrices.view, _matrices.projection);
-    var _vpMatrixInverse = __CbMatrixInvert(_vpMatrix);
+    var _vpMatrix         = matrix_multiply(_viewMatrix, _projectionMatrix);
+    var _vpMatrixInverse  = __CbMatrixInvert(_vpMatrix);
     
     var _refSurface = surface_get_target();
     

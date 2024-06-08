@@ -1,24 +1,29 @@
 function CbCamera() constructor
 {
     __xFrom = 0;
-    __yFrom = 0;
-    __zFrom = 0;
+    __yFrom = 128;
+    __zFrom = 128;
     
     __xTo = 0;
-    __yTo = 0;
-    __zTo = 0;
+    __yTo = 128;
+    __zTo = 128;
     
     __xUp = 0;
     __yUp = 0;
-    __zUp = 0;
+    __zUp = 1;
     
-    __zTilt = false;
-    __axonometric = false;
+    __orthographic = true;
+    __axonometric  = true;
+    __zTilt        = true;
     
-    __orthographic = false;
-    __fieldOfView  = undefined;
-    __near         = 0;
-    __far          = 16000;
+    __fieldOfView  = 90;
+    __near         = -1024;
+    __far          =  1024;
+    
+    __width  = surface_get_width( application_surface);
+    __height = surface_get_height(application_surface);
+    
+    __billboardYawSetFunc = CbBillboardYawSet;
     
     static SetFrom = function(_x, _y, _z)
     {
@@ -92,20 +97,21 @@ function CbCamera() constructor
         return _result;
     }
     
-    static SetOrthographic = function(_near, _far)
+    static SetOrthographic = function(_near = undefined, _far = undefined)
     {
         __orthographic = true;
-        __fieldOfView  = undefined;
-        __near         = _near;
-        __far          = _far;
+        
+        if (_near != undefined) __near = _near;
+        if (_far  != undefined) __far  = _far;
     }
     
-    static SetPerspective = function(_fieldOfView, _near, _far)
+    static SetPerspective = function(_fieldOfView = undefined, _near = undefined, _far = undefined)
     {
-        __orthographic = true;
-        __fieldOfView  = _fieldOfView;
-        __near         = _near;
-        __far          = _far;
+        __orthographic = false;
+        
+        if (_fieldOfView != undefined) __fieldOfView = _fieldOfView;
+        if (_near        != undefined) __near        = _near;
+        if (_far         != undefined) __far         = _far;
     }
     
     static GetProjection = function()
@@ -166,6 +172,16 @@ function CbCamera() constructor
         {
             return matrix_build_projection_perspective_fov(__fieldOfView, _coeff*__width/__height, __near, __far);
         }
+    }
+    
+    static ApplyViewMatrix = function()
+    {
+        matrix_set(matrix_view, GetViewMatrix());
+    }
+    
+    static ApplyProjectionMatrix = function()
+    {
+        matrix_set(matrix_projection, GetProjectionMatrix());
     }
     
     static GetFrustrumCoords = function()

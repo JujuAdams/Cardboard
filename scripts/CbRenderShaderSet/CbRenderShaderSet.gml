@@ -3,8 +3,10 @@
 /// The pass should be specified using the CB_PASS enum
 /// 
 /// @param pass
+/// @param [viewMatrix]
+/// @param [projectionMatrix]
 
-function CbRenderShaderSet(_pass)
+function CbRenderShaderSet(_pass, _viewMatrix = undefined, _projectionMatrix = undefined)
 {
     __CB_GLOBAL_RENDER
     
@@ -118,6 +120,11 @@ function CbRenderShaderSet(_pass)
                             {
                                 shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_vLightColor"), 0, 0, 0);
                             }
+                            else
+                            {
+                                matrix_set(matrix_view,       _viewMatrix);
+                                matrix_set(matrix_projection, _projectionMatrix);
+                            }
                         }
                     break;
                     
@@ -140,6 +147,9 @@ function CbRenderShaderSet(_pass)
                         
                         surface_set_target_ext(0, _refSurface);
                         surface_set_target_ext(1, __CbDeferredSurfaceNormalEnsure(_refSurface));
+                        
+                        matrix_set(matrix_view,       _viewMatrix);
+                        matrix_set(matrix_projection, _projectionMatrix);
                     break;
                 }
             break;

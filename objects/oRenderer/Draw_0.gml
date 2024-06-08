@@ -1,4 +1,8 @@
-CbRenderSystem(opaqueFunc, undefined, unlitFunc);
+CbRenderStoreMatrices();
+oCamera.cbCamera.ApplyViewMatrix();
+oCamera.cbCamera.ApplyProjectionMatrix();
+CbRenderSystem(opaqueFunc, undefined, unlitFunc, undefined);
+CbRenderRecallMatrices();
 
 if (keyboard_check(ord("O")))
 {

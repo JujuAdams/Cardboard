@@ -11,3 +11,6 @@ camToZ = 0;
 camFromX = camToX + lengthdir_x(cameraDistance, yaw);
 camFromY = camToY + lengthdir_y(cameraDistance, yaw);
 camFromZ = camToZ + cameraHeight;
+
+cbCamera = new CbCamera();
+cbCamera.SetSize(1280, 720);

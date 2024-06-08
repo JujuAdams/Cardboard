@@ -4,8 +4,10 @@
 /// The pass should be specified using the CB_PASS enum
 /// 
 /// @param pass
+/// @param [viewMatrix]
+/// @param [projectionMatrix]
 
-function CbRenderStateSet(_pass)
+function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = undefined)
 {
     __CB_GLOBAL_RENDER
     
@@ -15,8 +17,7 @@ function CbRenderStateSet(_pass)
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
             gpu_set_cullmode(_global.__backfaceCulling? CB_DEPTH_MAP_CULLING_DIRECTION : cull_noculling);
-            //View and projection matrix is set per light
-            CbRenderShaderSet(_pass);
+            CbRenderShaderSet(_pass, _viewMatrix, _projectionMatrix);
         break;
         
         case CB_PASS.LIT_OPAQUE:
@@ -26,9 +27,7 @@ function CbRenderStateSet(_pass)
             gpu_set_cullmode(_global.__backfaceCulling? CB_CULLING_DIRECTION : cull_noculling);
             gpu_set_alphatestenable(true);
             gpu_set_alphatestref(_global.__alphaTestRef);
-            
-            CbRenderShaderSet(_pass);
-            CbCameraMatricesSet();
+            CbRenderShaderSet(_pass, _viewMatrix, _projectionMatrix);
         break;
         
         case CB_PASS.LIT_ALPHA_BLEND:
@@ -36,9 +35,7 @@ function CbRenderStateSet(_pass)
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(false); //Don't write into the depth buffer!
             gpu_set_cullmode(_global.__backfaceCulling? CB_CULLING_DIRECTION : cull_noculling);
-            
-            CbRenderShaderSet(_pass);
-            CbCameraMatricesSet();
+            CbRenderShaderSet(_pass, _viewMatrix, _projectionMatrix);
         break;
     }
 }
