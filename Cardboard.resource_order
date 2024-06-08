@@ -143,6 +143,7 @@
     {"name":"CbTilemapsToModelRuleset","order":11,"path":"scripts/CbTilemapsToModelRuleset/CbTilemapsToModelRuleset.yy",},
     {"name":"CbTileQuad","order":7,"path":"scripts/CbTileQuad/CbTileQuad.yy",},
     {"name":"CbTileTriangle","order":8,"path":"scripts/CbTileTriangle/CbTileTriangle.yy",},
+    {"name":"draw_surface_depth","order":20,"path":"scripts/draw_surface_depth/draw_surface_depth.yy",},
     {"name":"matrix_chain_begin","order":1,"path":"scripts/matrix_chain_begin/matrix_chain_begin.yy",},
     {"name":"matrix_chain_build","order":2,"path":"scripts/matrix_chain_build/matrix_chain_build.yy",},
     {"name":"matrix_chain_get","order":3,"path":"scripts/matrix_chain_get/matrix_chain_get.yy",},

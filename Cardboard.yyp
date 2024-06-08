@@ -227,6 +227,7 @@
     {"id":{"name":"CbTilemapsToModelRuleset","path":"scripts/CbTilemapsToModelRuleset/CbTilemapsToModelRuleset.yy",},},
     {"id":{"name":"CbTileQuad","path":"scripts/CbTileQuad/CbTileQuad.yy",},},
     {"id":{"name":"CbTileTriangle","path":"scripts/CbTileTriangle/CbTileTriangle.yy",},},
+    {"id":{"name":"draw_surface_depth","path":"scripts/draw_surface_depth/draw_surface_depth.yy",},},
     {"id":{"name":"matrix_build_projection_ortho_ext","path":"scripts/matrix_build_projection_ortho_ext/matrix_build_projection_ortho_ext.yy",},},
     {"id":{"name":"matrix_chain_begin","path":"scripts/matrix_chain_begin/matrix_chain_begin.yy",},},
     {"id":{"name":"matrix_chain_build","path":"scripts/matrix_chain_build/matrix_chain_build.yy",},},
