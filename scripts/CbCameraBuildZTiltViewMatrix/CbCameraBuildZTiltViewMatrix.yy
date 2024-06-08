@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbCameraPerspectiveSet",
+  "%Name":"CbCameraBuildZTiltViewMatrix",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbCameraPerspectiveSet",
+  "name":"CbCameraBuildZTiltViewMatrix",
   "parent":{
     "name":"Camera",
     "path":"folders/Cardboard/Camera.yy",

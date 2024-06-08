@@ -11,7 +11,7 @@
 /// @param [upY=0]             y-component of the camera's up vector
 /// @param [upZ=1]             z-component of the camera's up vector
 
-function CbBuildZTiltViewMatrix(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric = true, _upX = 0, _upY = 0, _upZ = 1)
+function CbCameraBuildZTiltViewMatrix(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _axonometric = true, _upX = 0, _upY = 0, _upZ = 1)
 {
     var _xyDistance = point_distance(_fromX, _fromY, _toX, _toY);
     var _yaw = point_direction(_fromX, _fromY, _toX, _toY);

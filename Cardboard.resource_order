@@ -1,7 +1,10 @@
 {
   "FolderOrderSettings":[
     {"name":"Cardboard","order":1,"path":"folders/Cardboard.yy",},
+    {"name":"Build Functions","order":1,"path":"folders/Cardboard/Build Functions.yy",},
     {"name":"Classes","order":1,"path":"folders/Cardboard/Build Functions/(System)/Classes.yy",},
+    {"name":"Common","order":2,"path":"folders/Cardboard/Common.yy",},
+    {"name":"Render Functions","order":3,"path":"folders/Cardboard/Render Functions.yy",},
     {"name":"Tests & Examples","order":18,"path":"folders/Tests & Examples.yy",},
     {"name":"Animated Tileset Test","order":16,"path":"folders/Tests & Examples/Animated Tileset Test.yy",},
     {"name":"Assets","order":1,"path":"folders/Tests & Examples/Assets.yy",},
@@ -69,7 +72,7 @@
     {"name":"CbBillboardMatrixGet","order":3,"path":"scripts/CbBillboardMatrixGet/CbBillboardMatrixGet.yy",},
     {"name":"CbBillboardYawGet","order":1,"path":"scripts/CbBillboardYawGet/CbBillboardYawGet.yy",},
     {"name":"CbBillboardYawReset","order":2,"path":"scripts/CbBillboardYawReset/CbBillboardYawReset.yy",},
-    {"name":"CbBuildZTiltViewMatrix","order":1,"path":"scripts/CbBuildZTiltViewMatrix/CbBuildZTiltViewMatrix.yy",},
+    {"name":"CbCameraBuildZTiltViewMatrix","order":15,"path":"scripts/CbCameraBuildZTiltViewMatrix/CbCameraBuildZTiltViewMatrix.yy",},
     {"name":"CbCameraFromGet","order":1,"path":"scripts/CbCameraFromGet/CbCameraFromGet.yy",},
     {"name":"CbCameraFrustrumCoordsGet","order":14,"path":"scripts/CbCameraFrustrumCoordsGet/CbCameraFrustrumCoordsGet.yy",},
     {"name":"CbCameraMatricesGet","order":12,"path":"scripts/CbCameraMatricesGet/CbCameraMatricesGet.yy",},
