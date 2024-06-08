@@ -10,8 +10,6 @@
   },
   "defaultScriptType":1,
   "Folders":[
-    {"$GMFolder":"","%Name":"Animated Tileset Test","folderPath":"folders/Tests & Examples/Animated Tileset Test.yy","name":"Animated Tileset Test","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Assets","folderPath":"folders/Tests & Examples/Assets.yy","name":"Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Cardboard","folderPath":"folders/Cardboard.yy","name":"Cardboard","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Build Functions","folderPath":"folders/Cardboard/Build Functions.yy","name":"Build Functions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"(System)","folderPath":"folders/Cardboard/Build Functions/(System).yy","name":"(System)","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -37,6 +35,9 @@
     {"$GMFolder":"","%Name":"Options","folderPath":"folders/Cardboard/Render Functions/Options.yy","name":"Options","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Pipeline","folderPath":"folders/Cardboard/Render Functions/Pipeline.yy","name":"Pipeline","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tests & Examples","folderPath":"folders/Tests & Examples.yy","name":"Tests & Examples","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Animated Tileset Test","folderPath":"folders/Tests & Examples/Animated Tileset Test.yy","name":"Animated Tileset Test","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Assets","folderPath":"folders/Tests & Examples/Assets.yy","name":"Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Example","folderPath":"folders/Tests & Examples/Example.yy","name":"Example","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Tests & Examples/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Basic 3D","folderPath":"folders/Tests & Examples/Scripts/Basic 3D.yy","name":"Basic 3D","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Drawing","folderPath":"folders/Tests & Examples/Scripts/Basic 3D/Drawing.yy","name":"Drawing","resourceType":"GMFolder","resourceVersion":"2.0",},

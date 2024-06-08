@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"TurnFrustrumIntoWireframe",
   "parent":{
-    "name":"Tests & Examples",
-    "path":"folders/Tests & Examples.yy",
+    "name":"Scripts",
+    "path":"folders/Tests & Examples/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

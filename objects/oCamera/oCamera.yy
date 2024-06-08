@@ -9,8 +9,8 @@
   "name":"oCamera",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tests & Examples",
-    "path":"folders/Tests & Examples.yy",
+    "name":"Example",
+    "path":"folders/Tests & Examples/Example.yy",
   },
   "parentObjectId":null,
   "persistent":false,
