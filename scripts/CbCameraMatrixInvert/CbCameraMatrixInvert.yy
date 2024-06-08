@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbCameraFrustrumCoordsGet",
+  "%Name":"CbCameraMatrixInvert",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbCameraFrustrumCoordsGet",
+  "name":"CbCameraMatrixInvert",
   "parent":{
     "name":"Camera",
     "path":"folders/Cardboard/Camera.yy",

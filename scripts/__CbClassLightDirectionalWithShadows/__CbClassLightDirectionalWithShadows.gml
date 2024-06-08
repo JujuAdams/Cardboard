@@ -45,7 +45,9 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _nearOffset
     {
         var _matrixView = matrix_build_lookat(-dx, -dy, -dz,   0,0,0,   0,0,-1);
         var _frustrumArray = array_create(8, undefined);
-        with(CbCameraFrustrumCoordsGet())
+        
+        var _cameraMatrices = CbCameraMatricesGet();
+        with(CbCameraGetFrustrumCoords(_cameraMatrices.view, _cameraMatrices.projection))
         {
             _frustrumArray[0] = matrix_transform_vertex(_matrixView, tlNear[0], tlNear[1], tlNear[2]);
             _frustrumArray[1] = matrix_transform_vertex(_matrixView, trNear[0], trNear[1], trNear[2]);
@@ -90,7 +92,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _nearOffset
     
     static GetFrustrumCoords = function()
     {
-        return CbFrustrumCoordsGet(__matrixView, __matrixProj);
+        return CbCameraGetFrustrumCoords(__matrixView, __matrixProj);
     }
     
     static Destroy = function()

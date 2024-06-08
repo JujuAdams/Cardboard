@@ -23,7 +23,7 @@ cameraHeight += (keyboard_check_pressed(ord("O")) - keyboard_check_pressed(ord("
 
 if (keyboard_check_released(ord("F")))
 {
-    TurnFrustrumIntoWireframe(CbCameraFrustrumCoordsGet());
+    TurnFrustrumIntoWireframe(CbCameraGetFrustrumCoords());
     TurnFrustrumIntoBox(oRenderer.light4.GetFrustrumCoords());
 }
 

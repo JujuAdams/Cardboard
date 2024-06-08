@@ -3,10 +3,8 @@
 /// @param viewMatrix
 /// @param projMatrix
 
-function CbFrustrumCoordsGet(_viewMatrix, _projMatrix)
+function CbCameraGetFrustrumCoords(_viewMatrix, _projMatrix)
 {
-    __CB_GLOBAL_RENDER
-    
     static _result = {
         tlNear: undefined,
         trNear: undefined,
@@ -18,7 +16,7 @@ function CbFrustrumCoordsGet(_viewMatrix, _projMatrix)
         brFar:  undefined,
     };
     
-    var _vpMatrixInverse = __CbMatrixInvert(matrix_multiply(_viewMatrix, _projMatrix));
+    var _vpMatrixInverse = CbCameraMatrixInvert(matrix_multiply(_viewMatrix, _projMatrix));
     
     with(_result)
     {
