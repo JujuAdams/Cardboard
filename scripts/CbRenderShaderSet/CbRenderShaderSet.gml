@@ -13,8 +13,7 @@ function CbRenderShaderSet(_pass)
         switch(_pass)
         {
             case CB_PASS.DEPTH_MAP:
-                shader_set(__shdCbDepth);
-                shader_set_uniform_f(shader_get_uniform(__shdCbDepth, "u_fAlphaTestRef"), __alphaTestRef);
+                shader_reset();
             break;
             
             case CB_PASS.LIT_OPAQUE:
@@ -139,8 +138,7 @@ function CbRenderShaderSet(_pass)
                         if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND) surface_set_target(__CbDeferredSurfaceNormalEnsure(_refSurface));
                         
                         surface_set_target_ext(0, _refSurface);
-                        surface_set_target_ext(1, __CbDeferredSurfaceDepthEnsure( _refSurface));
-                        surface_set_target_ext(2, __CbDeferredSurfaceNormalEnsure(_refSurface));
+                        surface_set_target_ext(1, __CbDeferredSurfaceNormalEnsure(_refSurface));
                     break;
                 }
             break;

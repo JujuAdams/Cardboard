@@ -11,12 +11,6 @@ uniform mat4      u_mCameraInverse;
 uniform vec4      u_vPosRadArray[LIGHT_COUNT];
 uniform vec3      u_vColorArray[LIGHT_COUNT];
 
-float RGBToDepth(vec3 color)
-{
-	color /= vec3(1.0, 255.0, 255.0*255.0);
-    return color.r + color.g + color.b;
-}
-
 float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, float radius)
 {
     if (radius > 0.0)
@@ -52,7 +46,7 @@ void main()
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
     vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
                         1.0 - 2.0*v_vTexcoord.y,
-                        RGBToDepth(texture2D(u_sDepth, v_vTexcoord).rgb), 
+                        texture2D(u_sDepth, v_vTexcoord).r, 
                         1.0);
     
     //Work backwards from the NDSpace coordinate to world space

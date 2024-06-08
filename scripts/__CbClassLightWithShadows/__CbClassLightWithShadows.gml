@@ -70,13 +70,11 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         }
     }
     
-    static DrawDebug = function(_x, _y, _grayscale = false)
+    static DrawDebug = function(_x, _y)
     {
         __Tick();
         
-        if (_grayscale) shader_set(__shdCbDepthTest);
-        draw_surface(__depthSurface, _x, _y);
-        if (_grayscale) shader_reset();
+        draw_surface_depth(__depthSurface, _x, _y);
     }
     
     static __RenderDepth = function()
@@ -145,7 +143,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
         shader_set_uniform_f(_u_vShadowMapBias, shadowMapBiasMin, shadowMapBiasMax, shadowMapBiasCoeff);
-        texture_set_stage(_u_sLightDepth, surface_get_texture(__depthSurface));
+        texture_set_stage(_u_sLightDepth, surface_get_texture_depth(__depthSurface));
     }
     
     static __SetDeferredUniformsForOneShadowMap = function()
@@ -167,6 +165,6 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
                                              color_get_green(color)/255,
                                              color_get_blue( color)/255);
         shader_set_uniform_f(_u_vShadowMapBias, shadowMapBiasMin, shadowMapBiasMax, shadowMapBiasCoeff);
-        texture_set_stage(_u_sLightDepth, surface_get_texture(__depthSurface));
+        texture_set_stage(_u_sLightDepth, surface_get_texture_depth(__depthSurface));
     }
 }

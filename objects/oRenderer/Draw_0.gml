@@ -2,8 +2,7 @@ CbRenderSystem(opaqueFunc, undefined, unlitFunc);
 
 if (keyboard_check(ord("O")))
 {
-    var _surface = __CbDeferredSurfaceDepthEnsure(application_surface);
-    draw_surface(_surface, 0, 0);
+    draw_surface_depth(application_surface, 0, 0);
 }
 
 if (keyboard_check(ord("L")))

@@ -12,19 +12,13 @@ uniform vec3      u_vLightColor;
 uniform mat4      u_mLightViewProj;
 uniform vec3      u_vShadowMapBias;
 
-float RGBToDepth(vec3 color)
-{
-	color /= vec3(1.0, 255.0, 255.0*255.0);
-    return color.r + color.g + color.b;
-}
-
 vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
 {
     vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
     vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
     float calcDepth     = lightSpacePos.z / lightSpacePos.w;
     
-    float foundDepth = RGBToDepth(texture2D(lightDepthTexture, texCoord).rgb);
+    float foundDepth = texture2D(lightDepthTexture, texCoord).r;
     
     //Choose the lighting vector
     vec3 dir;
@@ -73,7 +67,7 @@ void main()
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
     vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
                         1.0 - 2.0*v_vTexcoord.y,
-                        RGBToDepth(texture2D(u_sDepth, v_vTexcoord).rgb), 
+                        texture2D(u_sDepth, v_vTexcoord).r, 
                         1.0);
     
     //Work backwards from the NDSpace coordinate to world space

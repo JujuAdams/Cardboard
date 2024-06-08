@@ -88,7 +88,6 @@
     {"id":{"name":"__CbClassTileset","path":"scripts/__CbClassTileset/__CbClassTileset.yy",},},
     {"id":{"name":"__CbConfigBuild","path":"scripts/__CbConfigBuild/__CbConfigBuild.yy",},},
     {"id":{"name":"__CbConfigRender","path":"scripts/__CbConfigRender/__CbConfigRender.yy",},},
-    {"id":{"name":"__CbDeferredSurfaceDepthEnsure","path":"scripts/__CbDeferredSurfaceDepthEnsure/__CbDeferredSurfaceDepthEnsure.yy",},},
     {"id":{"name":"__CbDeferredSurfaceLightEnsure","path":"scripts/__CbDeferredSurfaceLightEnsure/__CbDeferredSurfaceLightEnsure.yy",},},
     {"id":{"name":"__CbDeferredSurfaceNormalEnsure","path":"scripts/__CbDeferredSurfaceNormalEnsure/__CbDeferredSurfaceNormalEnsure.yy",},},
     {"id":{"name":"__CbDrawCommon","path":"scripts/__CbDrawCommon/__CbDrawCommon.yy",},},
@@ -311,8 +310,6 @@
     {"id":{"name":"vec3_triad_normal","path":"scripts/vec3_triad_normal/vec3_triad_normal.yy",},},
     {"id":{"name":"__shdCbDeferredShadowed","path":"shaders/__shdCbDeferredShadowed/__shdCbDeferredShadowed.yy",},},
     {"id":{"name":"__shdCbDeferredUnshadowed","path":"shaders/__shdCbDeferredUnshadowed/__shdCbDeferredUnshadowed.yy",},},
-    {"id":{"name":"__shdCbDepth","path":"shaders/__shdCbDepth/__shdCbDepth.yy",},},
-    {"id":{"name":"__shdCbDepthTest","path":"shaders/__shdCbDepthTest/__shdCbDepthTest.yy",},},
     {"id":{"name":"__shdCbGBufferGLSL","path":"shaders/__shdCbGBufferGLSL/__shdCbGBufferGLSL.yy",},},
     {"id":{"name":"__shdCbGBufferHLSL","path":"shaders/__shdCbGBufferHLSL/__shdCbGBufferHLSL.yy",},},
     {"id":{"name":"__shdCbNone","path":"shaders/__shdCbNone/__shdCbNone.yy",},},
@@ -335,8 +332,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rmAnimatedTileset","path":"rooms/rmAnimatedTileset/rmAnimatedTileset.yy",},},
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
+    {"roomId":{"name":"rmAnimatedTileset","path":"rooms/rmAnimatedTileset/rmAnimatedTileset.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

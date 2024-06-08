@@ -28,12 +28,6 @@ vec3 ApplyFog(vec3 color, float viewZ, vec3 fogColor, vec2 fogParams)
     return mix(color, fogColor, clamp((viewZ - fogParams.x) / (fogParams.y - fogParams.x), 0.0, 1.0));
 }
 
-float RGBToDepth(vec3 color)
-{
-	color /= vec3(1.0, 255.0, 255.0*255.0);
-    return color.r + color.g + color.b;
-}
-
 float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, float radius)
 {
     if (radius > 0.0)
@@ -67,7 +61,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
     vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
     float calcDepth     = lightSpacePos.z / lightSpacePos.w;
     
-    float foundDepth = RGBToDepth(texture2D(lightDepthTexture, texCoord).rgb);
+    float foundDepth = texture2D(lightDepthTexture, texCoord).r;
     
     //Choose the lighting vector
     vec3 dir;
