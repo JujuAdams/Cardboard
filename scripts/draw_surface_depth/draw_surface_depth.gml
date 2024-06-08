@@ -1,3 +1,5 @@
+/// Draws the depth buffer for the given surface.
+/// 
 /// @param surface
 /// @param left
 /// @param top
