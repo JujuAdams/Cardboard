@@ -6,7 +6,7 @@
   "name":"vec2_major_axis",
   "parent":{
     "name":"Limits",
-    "path":"folders/Tests/Scripts/Vectors/2D/Limits.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/2D/Limits.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

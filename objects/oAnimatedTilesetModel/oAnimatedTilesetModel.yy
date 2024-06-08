@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Animated Tileset Test",
-    "path":"folders/Tests/Animated Tileset Test.yy",
+    "path":"folders/Tests & Examples/Animated Tileset Test.yy",
   },
   "parentObjectId":null,
   "persistent":false,

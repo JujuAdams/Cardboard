@@ -6,7 +6,7 @@
   "name":"vec2_dot",
   "parent":{
     "name":"Vector Product",
-    "path":"folders/Tests/Scripts/Vectors/2D/Vector Product.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/2D/Vector Product.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

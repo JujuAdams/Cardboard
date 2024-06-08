@@ -59,8 +59,8 @@
   ],
   "name":"rmMain",
   "parent":{
-    "name":"Tests",
-    "path":"folders/Tests.yy",
+    "name":"Tests & Examples",
+    "path":"folders/Tests & Examples.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

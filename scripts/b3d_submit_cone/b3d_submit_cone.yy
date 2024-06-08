@@ -6,7 +6,7 @@
   "name":"b3d_submit_cone",
   "parent":{
     "name":"Submission",
-    "path":"folders/Tests/Scripts/Basic 3D/Submission.yy",
+    "path":"folders/Tests & Examples/Scripts/Basic 3D/Submission.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

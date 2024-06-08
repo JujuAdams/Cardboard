@@ -6,7 +6,7 @@
   "name":"vec3_offset",
   "parent":{
     "name":"Basic",
-    "path":"folders/Tests/Scripts/Vectors/3D/Basic.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/3D/Basic.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

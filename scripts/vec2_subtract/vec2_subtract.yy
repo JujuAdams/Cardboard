@@ -6,7 +6,7 @@
   "name":"vec2_subtract",
   "parent":{
     "name":"Basic",
-    "path":"folders/Tests/Scripts/Vectors/2D/Basic.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/2D/Basic.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

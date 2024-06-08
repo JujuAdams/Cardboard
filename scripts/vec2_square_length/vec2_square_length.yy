@@ -6,7 +6,7 @@
   "name":"vec2_square_length",
   "parent":{
     "name":"Length _ Distance _ Normalise",
-    "path":"folders/Tests/Scripts/Vectors/2D/Length _ Distance _ Normalise.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/2D/Length _ Distance _ Normalise.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,12 +1,12 @@
 {
   "FolderOrderSettings":[
-    {"name":"Animated Tileset Test","order":16,"path":"folders/Tests/Animated Tileset Test.yy",},
-    {"name":"Assets","order":1,"path":"folders/Tests/Assets.yy",},
+    {"name":"Animated Tileset Test","order":16,"path":"folders/Tests & Examples/Animated Tileset Test.yy",},
+    {"name":"Assets","order":1,"path":"folders/Tests & Examples/Assets.yy",},
     {"name":"Cardboard","order":1,"path":"folders/Cardboard.yy",},
     {"name":"Classes","order":1,"path":"folders/Cardboard/Build Functions/(System)/Classes.yy",},
-    {"name":"Tests","order":18,"path":"folders/Tests.yy",},
-    {"name":"Matrix Chain","order":1,"path":"folders/Tests/Scripts/Matrix Chain.yy",},
-    {"name":"Vectors","order":2,"path":"folders/Tests/Scripts/Vectors.yy",},
+    {"name":"Tests & Examples","order":18,"path":"folders/Tests & Examples.yy",},
+    {"name":"Matrix Chain","order":1,"path":"folders/Tests & Examples/Scripts/Matrix Chain.yy",},
+    {"name":"Vectors","order":2,"path":"folders/Tests & Examples/Scripts/Vectors.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"oAnimatedTilesetModel","order":1,"path":"objects/oAnimatedTilesetModel/oAnimatedTilesetModel.yy",},

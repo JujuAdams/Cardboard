@@ -6,7 +6,7 @@
   "name":"__config_b3d",
   "parent":{
     "name":"Basic 3D",
-    "path":"folders/Tests/Scripts/Basic 3D.yy",
+    "path":"folders/Tests & Examples/Scripts/Basic 3D.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

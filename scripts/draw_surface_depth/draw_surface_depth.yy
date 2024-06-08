@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"draw_surface_depth",
   "parent":{
-    "name":"Tests",
-    "path":"folders/Tests.yy",
+    "name":"Tests & Examples",
+    "path":"folders/Tests & Examples.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

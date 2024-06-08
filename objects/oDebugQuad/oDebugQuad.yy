@@ -8,8 +8,8 @@
   "name":"oDebugQuad",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tests",
-    "path":"folders/Tests.yy",
+    "name":"Tests & Examples",
+    "path":"folders/Tests & Examples.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -6,7 +6,7 @@
   "name":"vec3_equal",
   "parent":{
     "name":"Group",
-    "path":"folders/Tests/Scripts/Vectors/3D/Group.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/3D/Group.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

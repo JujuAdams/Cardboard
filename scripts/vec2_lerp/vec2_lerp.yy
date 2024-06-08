@@ -6,7 +6,7 @@
   "name":"vec2_lerp",
   "parent":{
     "name":"Group",
-    "path":"folders/Tests/Scripts/Vectors/2D/Group.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/2D/Group.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

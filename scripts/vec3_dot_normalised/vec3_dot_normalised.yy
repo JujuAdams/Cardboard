@@ -6,7 +6,7 @@
   "name":"vec3_dot_normalised",
   "parent":{
     "name":"Vector Product",
-    "path":"folders/Tests/Scripts/Vectors/3D/Vector Product.yy",
+    "path":"folders/Tests & Examples/Scripts/Vectors/3D/Vector Product.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
