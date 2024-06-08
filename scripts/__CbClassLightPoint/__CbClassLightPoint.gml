@@ -1,7 +1,7 @@
 function __CbClassLightPoint(_x, _y, _z, _radius, _color) constructor
 {
     __CB_GLOBAL_RENDER
-    array_push(_global.__lighting.__array, weak_ref_create(self));
+    array_push(_global.__lighting.__lightStructArray, weak_ref_create(self));
     static __hasShadows = false;
     
     

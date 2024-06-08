@@ -16,12 +16,12 @@ function CbRenderPrepareLighting()
             var _colorIndex  = 0;
             
             var _i = 0;
-            repeat(array_length(__array))
+            repeat(array_length(__lightStructArray))
             {
-                var _light = __array[_i];
+                var _light = __lightStructArray[_i];
                 if (!weak_ref_alive(_light) || _light.ref.__destroyed)
                 {
-                    array_delete(__array, _i, 1);
+                    array_delete(__lightStructArray, _i, 1);
                 }
                 else
                 {
@@ -38,10 +38,6 @@ function CbRenderPrepareLighting()
         
             if (CbLightModeGet() == CB_LIGHT_MODE.DEFERRED)
             {
-                surface_set_target(__CbDeferredSurfaceDepthEnsure(surface_get_target()));
-            	draw_clear(c_white);
-                surface_reset_target();
-                
                 surface_set_target(__CbDeferredSurfaceNormalEnsure(surface_get_target()));
             	draw_clear(c_gray);
                 surface_reset_target();
@@ -56,9 +52,9 @@ function CbRenderPrepareLighting()
                 CbRenderStateSet(CB_PASS.DEPTH_MAP);
                 
                 var _i = 0;
-                repeat(array_length(__array))
+                repeat(array_length(__lightStructArray))
                 {
-                    var _weakRef = __array[_i];
+                    var _weakRef = __lightStructArray[_i];
                     if (weak_ref_alive(_weakRef) && !_weakRef.ref.__destroyed)
                     {
                         _weakRef.ref.__RenderDepth();
@@ -66,7 +62,7 @@ function CbRenderPrepareLighting()
                     }
                     else
                     {
-                        array_delete(__array, _i, 1);
+                        array_delete(__lightStructArray, _i, 1);
                     }
                 }
                 

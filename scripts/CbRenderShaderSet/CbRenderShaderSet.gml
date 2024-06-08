@@ -98,9 +98,9 @@ function CbRenderShaderSet(_pass)
                             
                             var _shadowedLightFound = false;
                             var _i = 0;
-                            repeat(array_length(__array))
+                            repeat(array_length(__lightStructArray))
                             {
-                                with(__array[_i].ref)
+                                with(__lightStructArray[_i].ref)
                                 {
                                     if (__hasShadows && visible)
                                     {

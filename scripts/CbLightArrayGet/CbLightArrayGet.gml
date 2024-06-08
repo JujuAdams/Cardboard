@@ -7,5 +7,5 @@ function CbLightArrayGet()
 {
     __CB_GLOBAL_RENDER
     
-    return _global.__lighting.__array;
+    return _global.__lighting.__lightStructArray;
 }

@@ -8,7 +8,7 @@
 function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _nearOffset, _farOffset) constructor
 {
     __CB_GLOBAL_RENDER
-    array_push(_global.__lighting.__array, weak_ref_create(self));
+    array_push(_global.__lighting.__lightStructArray, weak_ref_create(self));
     static __hasShadows = true;
     
     

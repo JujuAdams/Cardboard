@@ -13,7 +13,7 @@
 function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _zTo, _fov, _radius, _near, _far) constructor
 {
     __CB_GLOBAL_RENDER
-    array_push(_global.__lighting.__array, weak_ref_create(self));
+    array_push(_global.__lighting.__lightStructArray, weak_ref_create(self));
     static __hasShadows = true;
     
     

@@ -44,7 +44,7 @@ function __CbRenderGlobal()
         __billboardYawSetFunc: undefined,
         
         __lighting: {
-            __array: [],
+            __lightStructArray: [],
             
             __ambient:     c_white,
             __posRadArray: array_create(4*__CB_LIGHT_COUNT, 0),
