@@ -5,7 +5,7 @@
 /// .NONE
 ///     No lighting is applied
 /// 
-/// .SIMPLE
+/// .NO_SHADOWS
 ///     Forward rendering
 ///     Up to 8 point lights and directional lights will be rendered
 ///     Shadow mapping is disabled

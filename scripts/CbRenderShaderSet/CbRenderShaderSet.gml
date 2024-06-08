@@ -40,7 +40,7 @@ function CbRenderShaderSet(_pass)
                         }
                     break;
                     
-                    case CB_LIGHT_MODE.SIMPLE:
+                    case CB_LIGHT_MODE.NO_SHADOWS:
                         shader_set(__shdCbSimpleLights);
                         shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_fAlphaTestRef"), __alphaTestRef);
                         

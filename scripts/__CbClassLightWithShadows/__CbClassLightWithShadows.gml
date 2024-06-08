@@ -42,8 +42,8 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
     
     depthFunction = undefined;
     
-    shadowMapBiasMin   = 0.00001;
-    shadowMapBiasMax   = 0.0003;
+    shadowMapBiasMin   = 0.0/1000;
+    shadowMapBiasMax   = 0.1/1000;
     shadowMapBiasCoeff = 1;
     
     

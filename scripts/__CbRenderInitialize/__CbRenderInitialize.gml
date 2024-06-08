@@ -18,7 +18,7 @@ enum CB_PASS
 enum CB_LIGHT_MODE
 {
     NONE,
-    SIMPLE,
+    NO_SHADOWS,
     ONE_SHADOW_MAP,
     DEFERRED,
 }
