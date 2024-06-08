@@ -146,9 +146,8 @@ function CbCamera() constructor
     
     static GetViewMatrix = function()
     {
-        var _coeff = __CB_ON_OPENGL? -1 : 1;
-        
-        if (__CB_ON_OPENGL && __orthographic) _coeff = 1;
+        var _coeff = __CB_CAMERA_OPENGL? -1 : 1;
+        if (__CB_CAMERA_OPENGL && __orthographic) _coeff = 1;
         
         if (__zTilt)
         {
@@ -162,7 +161,7 @@ function CbCamera() constructor
     
     static GetProjectionMatrix = function()
     {
-        var _coeff = __CB_ON_OPENGL? -1 : 1;
+        var _coeff = __CB_CAMERA_OPENGL? -1 : 1;
         
         if (__orthographic)
         {

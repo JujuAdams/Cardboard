@@ -6,7 +6,7 @@ CbLightAmbientSet(c_dkgray);
 //light1 = CbLightPoint(-10, -10, 50, 200, c_white);
 
 //light2 = CbLightConeWithShadows(c_yellow, 300, 450, 90, -150, 0, 0, 140, 300);
-//light3 = CbLightConeWithShadows(c_white, 300, 450, 90, -150, 0, 0, 80, 300);
+light3 = CbLightConeWithShadows(c_white, 300, 450, 90, -150, 0, 0, 80, 300);
 light4 = CbLightDirectionalWithShadows(-1, -1, -1, c_navy, -1024);
 
 CbLightDefaultDepthFunctionSet(function()

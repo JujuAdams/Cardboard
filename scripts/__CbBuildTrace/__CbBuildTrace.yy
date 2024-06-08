@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"__CbTrace",
+  "%Name":"__CbBuildTrace",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"__CbTrace",
+  "name":"__CbBuildTrace",
   "parent":{
     "name":"(System)",
-    "path":"folders/Cardboard/Common/(System).yy",
+    "path":"folders/Cardboard/Build/(System).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

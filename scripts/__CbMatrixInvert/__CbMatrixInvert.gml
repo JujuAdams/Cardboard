@@ -136,7 +136,7 @@ function __CbMatrixInvert(_matrix)
     var _inverseDeterminant = 1 / (_matrix_0*_inv_0 + _matrix_1*_inv_4 + _matrix_2*_inv_8 + _matrix_3*_inv12);
     if (is_nan(_inverseDeterminant) || is_infinity(_inverseDeterminant))
     {
-        __CbTrace("Warning! Matrix determinant is zero");
+        if (GM_build_type == "run") show_debug_message("Warning! Matrix determinant is zero");
         return _matrix;
     }
     

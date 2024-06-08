@@ -131,7 +131,7 @@ function CbRenderShaderSet(_pass, _viewMatrix = undefined, _projectionMatrix = u
                     case CB_LIGHT_MODE.DEFERRED:
                         var _refSurface = surface_get_target();
                         
-                        if (__CB_ON_OPENGL)
+                        if (__CB_RENDER_OPENGL)
                         {
                             shader_set(__shdCbGBufferGLSL);
                             shader_set_uniform_f(shader_get_uniform(__shdCbGBufferGLSL, "u_fAlphaTestRef"), __alphaTestRef);

@@ -1,4 +1,4 @@
-function __CbTrace()
+function __CbBuildTrace()
 {
     var _string = "Cardboard: ";
     

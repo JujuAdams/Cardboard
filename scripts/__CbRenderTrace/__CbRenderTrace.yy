@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"__CbRenderGlobal",
+  "%Name":"__CbRenderTrace",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"__CbRenderGlobal",
+  "name":"__CbRenderTrace",
   "parent":{
     "name":"(System)",
     "path":"folders/Cardboard/Render/(System).yy",
