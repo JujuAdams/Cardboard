@@ -6,7 +6,7 @@
   "name":"vec2_min",
   "parent":{
     "name":"Limits",
-    "path":"folders/Vectors/2D/Limits.yy",
+    "path":"folders/Tests/Scripts/Vectors/2D/Limits.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

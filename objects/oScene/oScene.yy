@@ -8,8 +8,8 @@
   "name":"oScene",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cardboard",
-    "path":"Cardboard.yyp",
+    "name":"Tests",
+    "path":"folders/Tests.yy",
   },
   "parentObjectId":null,
   "persistent":false,

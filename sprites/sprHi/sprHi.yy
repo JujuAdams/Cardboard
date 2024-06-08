@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Assets",
-    "path":"folders/Assets.yy",
+    "path":"folders/Tests/Assets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

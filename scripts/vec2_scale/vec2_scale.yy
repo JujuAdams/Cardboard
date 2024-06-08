@@ -6,7 +6,7 @@
   "name":"vec2_scale",
   "parent":{
     "name":"Basic",
-    "path":"folders/Vectors/2D/Basic.yy",
+    "path":"folders/Tests/Scripts/Vectors/2D/Basic.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"draw_surface_depth",
   "parent":{
-    "name":"Cardboard",
-    "path":"Cardboard.yyp",
+    "name":"Tests",
+    "path":"folders/Tests.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

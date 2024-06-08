@@ -6,7 +6,7 @@
   "name":"vec2_extend",
   "parent":{
     "name":"Group",
-    "path":"folders/Vectors/2D/Group.yy",
+    "path":"folders/Tests/Scripts/Vectors/2D/Group.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

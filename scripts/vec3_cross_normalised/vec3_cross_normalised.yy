@@ -6,7 +6,7 @@
   "name":"vec3_cross_normalised",
   "parent":{
     "name":"Vector Product",
-    "path":"folders/Vectors/3D/Vector Product.yy",
+    "path":"folders/Tests/Scripts/Vectors/3D/Vector Product.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

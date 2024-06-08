@@ -6,7 +6,7 @@
   "name":"vec2_entrywise_divide",
   "parent":{
     "name":"Entrywise",
-    "path":"folders/Vectors/2D/Entrywise.yy",
+    "path":"folders/Tests/Scripts/Vectors/2D/Entrywise.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

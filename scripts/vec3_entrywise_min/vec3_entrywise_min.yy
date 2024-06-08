@@ -6,7 +6,7 @@
   "name":"vec3_entrywise_min",
   "parent":{
     "name":"Entrywise",
-    "path":"folders/Vectors/3D/Entrywise.yy",
+    "path":"folders/Tests/Scripts/Vectors/3D/Entrywise.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

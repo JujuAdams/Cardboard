@@ -6,7 +6,7 @@
   "name":"vec3_extend",
   "parent":{
     "name":"Group",
-    "path":"folders/Vectors/3D/Group.yy",
+    "path":"folders/Tests/Scripts/Vectors/3D/Group.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

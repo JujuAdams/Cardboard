@@ -6,7 +6,7 @@
   "name":"vec2_is_zero_length",
   "parent":{
     "name":"Length _ Distance _ Normalise",
-    "path":"folders/Vectors/2D/Length _ Distance _ Normalise.yy",
+    "path":"folders/Tests/Scripts/Vectors/2D/Length _ Distance _ Normalise.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

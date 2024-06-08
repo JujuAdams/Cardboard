@@ -6,7 +6,7 @@
   "name":"b3d_vertex_add_cube",
   "parent":{
     "name":"Makers",
-    "path":"folders/Basic 3D/Makers.yy",
+    "path":"folders/Tests/Scripts/Basic 3D/Makers.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

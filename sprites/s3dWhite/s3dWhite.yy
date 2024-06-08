@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Cardboard",
-    "path":"Cardboard.yyp",
+    "name":"Tests",
+    "path":"folders/Tests.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

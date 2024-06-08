@@ -6,7 +6,7 @@
   "name":"vec3_pitch_yaw",
   "parent":{
     "name":"3D",
-    "path":"folders/Vectors/3D.yy",
+    "path":"folders/Tests/Scripts/Vectors/3D.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

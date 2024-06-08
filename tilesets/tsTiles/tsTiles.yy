@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Assets",
-    "path":"folders/Assets.yy",
+    "path":"folders/Tests/Assets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

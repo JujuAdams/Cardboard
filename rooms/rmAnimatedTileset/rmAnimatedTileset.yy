@@ -25,7 +25,7 @@
   "name":"rmAnimatedTileset",
   "parent":{
     "name":"Animated Tileset Test",
-    "path":"folders/Animated Tileset Test.yy",
+    "path":"folders/Tests/Animated Tileset Test.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

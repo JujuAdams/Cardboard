@@ -6,7 +6,7 @@
   "name":"vec3_major_axis",
   "parent":{
     "name":"Limits",
-    "path":"folders/Vectors/3D/Limits.yy",
+    "path":"folders/Tests/Scripts/Vectors/3D/Limits.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

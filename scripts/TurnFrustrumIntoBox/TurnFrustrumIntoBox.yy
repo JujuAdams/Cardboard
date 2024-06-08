@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"TurnFrustrumIntoBox",
   "parent":{
-    "name":"Cardboard",
-    "path":"Cardboard.yyp",
+    "name":"Tests",
+    "path":"folders/Tests.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
