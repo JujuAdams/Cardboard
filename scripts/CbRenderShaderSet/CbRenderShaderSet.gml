@@ -20,51 +20,51 @@ function CbRenderShaderSet(_pass)
                 switch(CbLightModeGet())
                 {
                     case CB_LIGHT_MODE.NONE:
-                        shader_set(__shdCbNone);
-                        shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_fAlphaTestRef"), __alphaTestRef);
+                        shader_set(__shdCbNoLights);
+                        shader_set_uniform_f(shader_get_uniform(__shdCbNoLights, "u_fAlphaTestRef"), __alphaTestRef);
                         
                         with(__fog)
                         {
                             if (__enabled)
                             {
-                                shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_vFogParams"), __near, __far);
-                                shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_vFogColor"), colour_get_red(  __color)/255,
+                                shader_set_uniform_f(shader_get_uniform(__shdCbNoLights, "u_vFogParams"), __near, __far);
+                                shader_set_uniform_f(shader_get_uniform(__shdCbNoLights, "u_vFogColor"), colour_get_red(  __color)/255,
                                                                                                      colour_get_green(__color)/255,
                                                                                                      colour_get_blue( __color)/255);
                             }
                             else
                             {
-                                shader_set_uniform_f(shader_get_uniform(__shdCbNone, "u_vFogParams"), 999998, 999999);
+                                shader_set_uniform_f(shader_get_uniform(__shdCbNoLights, "u_vFogParams"), 999998, 999999);
                             }
                         }
                     break;
                     
                     case CB_LIGHT_MODE.SIMPLE:
-                        shader_set(__shdCbSimple);
-                        shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_fAlphaTestRef"), __alphaTestRef);
+                        shader_set(__shdCbSimpleLights);
+                        shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_fAlphaTestRef"), __alphaTestRef);
                         
                         with(__fog)
                         {
                             if (__enabled)
                             {
-                                shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_vFogParams"), __near, __far);
-                                shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_vFogColor"), colour_get_red(  __color)/255,
+                                shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_vFogParams"), __near, __far);
+                                shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_vFogColor"), colour_get_red(  __color)/255,
                                                                                                        colour_get_green(__color)/255,
                                                                                                        colour_get_blue( __color)/255);
                             }
                             else
                             {
-                                shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_vFogParams"), 999998, 999999);
+                                shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_vFogParams"), 999998, 999999);
                             }
                         }
                         
                         with(__lighting)
                         {
-                            shader_set_uniform_f(shader_get_uniform(__shdCbSimple, "u_vAmbient"), colour_get_red(  __ambient)/255,
+                            shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_vAmbient"), colour_get_red(  __ambient)/255,
                                                                                                   colour_get_green(__ambient)/255,
                                                                                                   colour_get_blue( __ambient)/255);
-                            shader_set_uniform_f_array(shader_get_uniform(__shdCbSimple, "u_vPosRadArray"), __posRadArray);
-                            shader_set_uniform_f_array(shader_get_uniform(__shdCbSimple, "u_vColorArray"),  __colorArray);
+                            shader_set_uniform_f_array(shader_get_uniform(__shdCbSimpleLights, "u_vPosRadArray"), __posRadArray);
+                            shader_set_uniform_f_array(shader_get_uniform(__shdCbSimpleLights, "u_vColorArray"),  __colorArray);
                         }
                     break;
                     

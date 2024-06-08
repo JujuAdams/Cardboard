@@ -1,7 +1,7 @@
 {
   "$GMShader":"",
-  "%Name":"__shdCbSimple",
-  "name":"__shdCbSimple",
+  "%Name":"__shdCbSimpleLights",
+  "name":"__shdCbSimpleLights",
   "parent":{
     "name":"Shaders",
     "path":"folders/Cardboard/Render Functions/(System)/Shaders.yy",
