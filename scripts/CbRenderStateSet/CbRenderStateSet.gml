@@ -17,6 +17,7 @@ function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = un
             gpu_set_ztestenable(true);
             gpu_set_zwriteenable(true);
             gpu_set_cullmode(_global.__backfaceCulling? CB_DEPTH_MAP_CULLING_DIRECTION : cull_noculling);
+            gpu_set_colorwriteenable(false, false, false, false);
             CbRenderShaderSet(_pass, _viewMatrix, _projectionMatrix);
         break;
         
@@ -27,6 +28,7 @@ function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = un
             gpu_set_cullmode(_global.__backfaceCulling? CB_CULLING_DIRECTION : cull_noculling);
             gpu_set_alphatestenable(true);
             gpu_set_alphatestref(_global.__alphaTestRef);
+            gpu_set_blendenable(false)
             CbRenderShaderSet(_pass, _viewMatrix, _projectionMatrix);
         break;
         

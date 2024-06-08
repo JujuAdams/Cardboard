@@ -109,7 +109,6 @@
     {"name":"CbRenderDeferredLights","order":5,"path":"scripts/CbRenderDeferredLights/CbRenderDeferredLights.yy",},
     {"name":"CbRenderPass","order":1,"path":"scripts/CbRenderPass/CbRenderPass.yy",},
     {"name":"CbRenderPrepareLighting","order":4,"path":"scripts/CbRenderPrepareLighting/CbRenderPrepareLighting.yy",},
-    {"name":"CbRenderShaderReset","order":7,"path":"scripts/CbRenderShaderReset/CbRenderShaderReset.yy",},
     {"name":"CbRenderShaderSet","order":6,"path":"scripts/CbRenderShaderSet/CbRenderShaderSet.yy",},
     {"name":"CbRenderStateReset","order":3,"path":"scripts/CbRenderStateReset/CbRenderStateReset.yy",},
     {"name":"CbRenderStateSet","order":2,"path":"scripts/CbRenderStateSet/CbRenderStateSet.yy",},
