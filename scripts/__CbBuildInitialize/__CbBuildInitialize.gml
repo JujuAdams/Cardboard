@@ -16,7 +16,6 @@ function __CbBuildInitialize()
     __CbBuildTrace("Welcome to Cardboard (Build) by @jujuadams! This is version " + __CB_BUILD_VERSION + ", " + __CB_BUILD_DATE);
     
     __CB_GLOBAL_BUILD
-    if (debug_mode && (GM_build_type == "run")) global.__cardboardDebugBuild = _global;
     
     //Set up vertex formats
     with(_global.__batch)
@@ -50,7 +49,7 @@ function __CbBuildInitialize()
         var _framesArray = sprite_get_info(_sprite).frames;
         
         var _number = sprite_get_number(_sprite);
-        if (_number > __CB_MAX_IMAGES) __CbError("Image number cannot exceed ", __CB_MAX_IMAGES, " (", sprite_get_name(_sprite), ")");
+        if (_number > __CB_MAX_IMAGES) __CbBuildError("Image number cannot exceed ", __CB_MAX_IMAGES, " (", sprite_get_name(_sprite), ")");
         
         var _image = 0;
         repeat(_number)

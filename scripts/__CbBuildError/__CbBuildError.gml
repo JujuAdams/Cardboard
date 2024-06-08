@@ -1,4 +1,4 @@
-function __CbError()
+function __CbBuildError()
 {
     var _string = "";
     

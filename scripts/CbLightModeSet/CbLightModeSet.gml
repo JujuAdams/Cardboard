@@ -25,10 +25,5 @@ function CbLightModeSet(_mode)
 {
     __CB_GLOBAL_RENDER
     
-    if (!CB_WRITE_NORMALS && (_mode != CB_LIGHT_MODE.DISABLE_LIGHTING))
-    {
-        __CbError("Cannot set lighting mode when CB_WRITE_NORMALS is set to <false>");
-    }
-    
     _global.__lightMode = _mode;
 }
