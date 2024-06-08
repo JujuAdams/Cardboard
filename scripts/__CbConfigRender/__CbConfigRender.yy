@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"__CbConfigRender",
   "parent":{
-    "name":"Render Functions",
-    "path":"folders/Cardboard/Render Functions.yy",
+    "name":"Render",
+    "path":"folders/Cardboard/Render.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

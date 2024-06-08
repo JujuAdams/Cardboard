@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbRenderSystem",
+  "%Name":"CbRender",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbRenderSystem",
+  "name":"CbRender",
   "parent":{
-    "name":"Pipeline",
-    "path":"folders/Cardboard/Render Functions/Pipeline.yy",
+    "name":"Render",
+    "path":"folders/Cardboard/Render.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

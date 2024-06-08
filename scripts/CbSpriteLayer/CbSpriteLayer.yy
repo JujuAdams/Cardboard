@@ -6,7 +6,7 @@
   "name":"CbSpriteLayer",
   "parent":{
     "name":"Sprite Layer",
-    "path":"folders/Cardboard/Build Functions/Sprite Layer.yy",
+    "path":"folders/Cardboard/Build/Sprite Layer.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

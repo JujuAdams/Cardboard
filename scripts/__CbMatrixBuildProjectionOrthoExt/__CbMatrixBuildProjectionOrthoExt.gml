@@ -13,7 +13,7 @@
 /// @param near
 /// @param far
 
-function matrix_build_projection_ortho_ext(_left, _top, _right, _bottom, _near, _far)
+function __CbMatrixBuildProjectionOrthoExt(_left, _top, _right, _bottom, _near, _far)
 {
     return [2 / (_right - _left), 0, 0, 0,
             0, 2 / (_top - _bottom), 0, 0,

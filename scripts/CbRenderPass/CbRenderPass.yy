@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CbRenderPass",
   "parent":{
-    "name":"Pipeline",
-    "path":"folders/Cardboard/Render Functions/Pipeline.yy",
+    "name":"Manual Pipeline",
+    "path":"folders/Cardboard/Render/Manual Pipeline.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -4,7 +4,7 @@
   "name":"__shdTilemapAnimatedNormals",
   "parent":{
     "name":"(System)",
-    "path":"folders/Cardboard/Build Functions/(System).yy",
+    "path":"folders/Cardboard/Build/(System).yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

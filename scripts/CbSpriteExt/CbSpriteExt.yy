@@ -6,7 +6,7 @@
   "name":"CbSpriteExt",
   "parent":{
     "name":"Sprites",
-    "path":"folders/Cardboard/Build Functions/Sprites.yy",
+    "path":"folders/Cardboard/Build/Sprites.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

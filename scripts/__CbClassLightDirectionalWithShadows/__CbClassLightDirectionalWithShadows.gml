@@ -85,7 +85,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _nearOffset
         }
         
         __matrixView = _matrixView;
-        __matrixProj = matrix_build_projection_ortho_ext(_left, _top, _right, _bottom, _near + nearOffset, _far + farOffset);
+        __matrixProj = __CbMatrixBuildProjectionOrthoExt(_left, _top, _right, _bottom, _near + nearOffset, _far + farOffset);
         __matrixViewProj = matrix_multiply(__matrixView, __matrixProj);
     }
     

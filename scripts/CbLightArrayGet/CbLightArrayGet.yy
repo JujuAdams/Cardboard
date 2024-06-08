@@ -6,7 +6,7 @@
   "name":"CbLightArrayGet",
   "parent":{
     "name":"Lighting",
-    "path":"folders/Cardboard/Render Functions/Lighting.yy",
+    "path":"folders/Cardboard/Render/Lighting.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

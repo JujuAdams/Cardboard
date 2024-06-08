@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CbFogSet",
   "parent":{
-    "name":"Fog",
-    "path":"folders/Cardboard/Render Functions/Fog.yy",
+    "name":"Options",
+    "path":"folders/Cardboard/Render/Options.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

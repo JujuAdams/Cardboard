@@ -6,7 +6,7 @@
   "name":"CbPartSys",
   "parent":{
     "name":"Particles",
-    "path":"folders/Cardboard/Build Functions/Particles.yy",
+    "path":"folders/Cardboard/Build/Particles.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -4,7 +4,7 @@
   "name":"__shdCbSimpleLights",
   "parent":{
     "name":"Shaders",
-    "path":"folders/Cardboard/Render Functions/(System)/Shaders.yy",
+    "path":"folders/Cardboard/Render/(System)/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

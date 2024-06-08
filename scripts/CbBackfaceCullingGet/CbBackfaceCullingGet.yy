@@ -6,7 +6,7 @@
   "name":"CbBackfaceCullingGet",
   "parent":{
     "name":"Options",
-    "path":"folders/Cardboard/Render Functions/Options.yy",
+    "path":"folders/Cardboard/Render/Options.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

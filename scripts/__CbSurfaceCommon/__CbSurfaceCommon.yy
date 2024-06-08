@@ -6,7 +6,7 @@
   "name":"__CbSurfaceCommon",
   "parent":{
     "name":"Surfaces",
-    "path":"folders/Cardboard/Build Functions/Surfaces.yy",
+    "path":"folders/Cardboard/Build/Surfaces.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

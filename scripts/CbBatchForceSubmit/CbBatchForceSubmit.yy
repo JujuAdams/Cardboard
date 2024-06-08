@@ -6,7 +6,7 @@
   "name":"CbBatchForceSubmit",
   "parent":{
     "name":"Batching",
-    "path":"folders/Cardboard/Build Functions/Batching.yy",
+    "path":"folders/Cardboard/Build/Batching.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

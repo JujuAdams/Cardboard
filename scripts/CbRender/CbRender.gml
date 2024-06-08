@@ -7,7 +7,7 @@
 /// @param [viewMatrixHint]
 /// @param [projectionMatrixHint]
 
-function CbRenderSystem(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAlphaBlendFunc, _viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
+function CbRender(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAlphaBlendFunc, _viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
 {
     CbRenderPrepareLighting();
     
