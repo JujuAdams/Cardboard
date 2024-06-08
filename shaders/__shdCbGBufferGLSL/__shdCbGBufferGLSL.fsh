@@ -5,8 +5,6 @@ varying vec3 v_vNormal;
 varying vec4 v_vColour;
 varying vec2 v_vTexcoord;
 
-uniform float u_fAlphaTestRef;
-
 uniform vec2 u_vFogParams;
 uniform vec3 u_vFogColor;
 
@@ -18,7 +16,7 @@ vec3 ApplyFog(vec3 color, float viewZ, vec3 fogColor, vec2 fogParams)
 void main()
 {
     gl_FragColor[0] = v_vColour*texture2D(gm_BaseTexture, v_vTexcoord);
-    if (u_fAlphaTestRef > (gl_FragColor[0]).a) discard;
+    if (gm_AlphaRefValue >= (gl_FragColor[0]).a) discard;
     gl_FragColor[1] = vec4(0.5 + 0.5*v_vNormal, 1.0);
     
     gl_FragColor.rgb = ApplyFog(gl_FragColor.rgb, v_fViewZ, u_vFogColor, u_vFogParams);

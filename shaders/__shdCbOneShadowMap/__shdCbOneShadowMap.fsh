@@ -8,8 +8,6 @@ varying vec3  v_vNormal;
 varying vec4  v_vColour;
 varying vec2  v_vTexcoord;
 
-uniform float u_fAlphaTestRef;
-
 uniform vec3  u_vAmbient;
 uniform vec4  u_vPosRadArray[LIGHT_COUNT];
 uniform vec3  u_vColorArray[LIGHT_COUNT];
@@ -105,7 +103,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
 void main()
 {
     gl_FragColor = v_vColour*texture2D(gm_BaseTexture, v_vTexcoord);
-    if (u_fAlphaTestRef > gl_FragColor.a) discard;
+    if (gm_AlphaRefValue >= gl_FragColor.a) discard;
     
     gl_FragColor.rgb *= u_vAmbient
                       + AccumulateUnshadowedLights(v_vWorldPos, v_vNormal)

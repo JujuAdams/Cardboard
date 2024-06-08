@@ -19,11 +19,10 @@ function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = un
                 gpu_set_ztestenable(true);
                 gpu_set_zwriteenable(true);
                 gpu_set_cullmode(__backfaceCulling? CB_DEPTH_MAP_CULLING_DIRECTION : cull_noculling);
+                gpu_set_alphatestenable(true);
+                gpu_set_alphatestref(__alphaTestRef);
                 gpu_set_colorwriteenable(false, false, false, false);
                 gpu_set_blendenable(false);
-                
-                shader_set(__shdCbAlphaTestOnly);
-                shader_set_uniform_f(shader_get_uniform(__shdCbAlphaTestOnly, "u_fAlphaTestRef"), __alphaTestRef);
             break;
             
             case CB_PASS.LIT_OPAQUE:
@@ -38,7 +37,6 @@ function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = un
                 {
                     case CB_LIGHT_MODE.DISABLE_LIGHTING:
                         shader_set(__shdCbNoLights);
-                        shader_set_uniform_f(shader_get_uniform(__shdCbNoLights, "u_fAlphaTestRef"), __alphaTestRef);
                         
                         with(__fog)
                         {
@@ -58,7 +56,6 @@ function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = un
                     
                     case CB_LIGHT_MODE.NO_SHADOWED_LIGHTS:
                         shader_set(__shdCbSimpleLights);
-                        shader_set_uniform_f(shader_get_uniform(__shdCbSimpleLights, "u_fAlphaTestRef"), __alphaTestRef);
                         
                         with(__fog)
                         {
@@ -87,7 +84,6 @@ function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = un
                     
                     case CB_LIGHT_MODE.ONE_SHADOWED_LIGHT:
                         shader_set(__shdCbOneShadowMap);
-                        shader_set_uniform_f(shader_get_uniform(__shdCbOneShadowMap, "u_fAlphaTestRef"), __alphaTestRef);
                         
                         with(__fog)
                         {
@@ -145,20 +141,10 @@ function CbRenderStateSet(_pass, _viewMatrix = undefined, _projectionMatrix = un
                     case CB_LIGHT_MODE.DEFERRED:
                         var _refSurface = surface_get_target();
                         
-                        if (__CB_RENDER_OPENGL)
-                        {
-                            shader_set(__shdCbGBufferGLSL);
-                            shader_set_uniform_f(shader_get_uniform(__shdCbGBufferGLSL, "u_fAlphaTestRef"), __alphaTestRef);
-                        }
-                        else
-                        {
-                            shader_set(__shdCbGBufferHLSL);
-                            shader_set_uniform_f(shader_get_uniform(__shdCbGBufferHLSL, "u_fAlphaTestRef"), __alphaTestRef);
-                        }
-                        
-                        __surfaceWorkaround = true;
+                        shader_set(__CB_RENDER_OPENGL? __shdCbGBufferGLSL : __shdCbGBufferHLSL);
                         if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND) surface_set_target(__CbDeferredSurfaceNormalEnsure(_refSurface));
                         
+                        __surfaceWorkaround = true;
                         surface_set_target_ext(0, _refSurface);
                         surface_set_target_ext(1, __CbDeferredSurfaceNormalEnsure(_refSurface));
                         
