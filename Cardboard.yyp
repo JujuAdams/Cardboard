@@ -178,7 +178,6 @@
     {"id":{"name":"CbRenderDeferredLights","path":"scripts/CbRenderDeferredLights/CbRenderDeferredLights.yy",},},
     {"id":{"name":"CbRenderPass","path":"scripts/CbRenderPass/CbRenderPass.yy",},},
     {"id":{"name":"CbRenderPrepareLighting","path":"scripts/CbRenderPrepareLighting/CbRenderPrepareLighting.yy",},},
-    {"id":{"name":"CbRenderShaderSet","path":"scripts/CbRenderShaderSet/CbRenderShaderSet.yy",},},
     {"id":{"name":"CbRenderStateReset","path":"scripts/CbRenderStateReset/CbRenderStateReset.yy",},},
     {"id":{"name":"CbRenderStateSet","path":"scripts/CbRenderStateSet/CbRenderStateSet.yy",},},
     {"id":{"name":"CbSprite","path":"scripts/CbSprite/CbSprite.yy",},},
