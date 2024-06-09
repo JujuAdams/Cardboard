@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbRenderPass",
+  "%Name":"CbRenderStateAlphaBlend",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbRenderPass",
+  "name":"CbRenderStateAlphaBlend",
   "parent":{
     "name":"Manual Pipeline",
     "path":"folders/Cardboard/Render/Manual Pipeline.yy",

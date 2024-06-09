@@ -25,5 +25,5 @@ function CbLightModeSet(_mode)
 {
     __CB_GLOBAL_RENDER
     
-    _global.__lightMode = _mode;
+    _global.__lighting.__lightMode = _mode;
 }

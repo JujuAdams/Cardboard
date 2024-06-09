@@ -37,7 +37,6 @@ function __CbRenderSystem()
     _system = {};
     with(_system)
     {
-        __lightMode         = CB_LIGHT_MODE.DISABLE_LIGHTING;
         __alphaTestRef      = 0.5;
         __surfaceWorkaround = false;
         __backfaceCulling   = true;
@@ -50,6 +49,7 @@ function __CbRenderSystem()
         };
         
         __lighting = {
+            __lightMode: CB_LIGHT_MODE.DISABLE_LIGHTING,
             __lightStructArray: [],
             
             __ambient:     c_white,

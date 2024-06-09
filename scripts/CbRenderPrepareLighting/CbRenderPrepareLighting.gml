@@ -36,9 +36,9 @@ function CbRenderPrepareLighting()
                 }
             }
             
-            if (CbLightDepthMapsNeeded())
+            if ((__lightMode == CB_LIGHT_MODE.ONE_SHADOWED_LIGHT) || (__lightMode == CB_LIGHT_MODE.DEFERRED))
             {
-                CbRenderStateSet(CB_PASS.DEPTH_MAP);
+                CbRenderStateDepthOnly();
                 
                 var _i = 0;
                 repeat(array_length(__lightStructArray))
@@ -58,14 +58,14 @@ function CbRenderPrepareLighting()
                 CbRenderStateReset();
             }
             
-            if (CbLightModeGet() == CB_LIGHT_MODE.DEFERRED)
+            if (__lightMode == CB_LIGHT_MODE.DEFERRED)
             {
                 surface_set_target(__CbDeferredSurfaceNormalEnsure(surface_get_target()));
-            	draw_clear(c_gray);
+                draw_clear(c_gray);
                 surface_reset_target();
                 
                 surface_set_target(__CbDeferredSurfaceLightEnsure(surface_get_target()));
-            	draw_clear(__ambient);
+                draw_clear(__ambient);
                 surface_reset_target();
             }
         }
