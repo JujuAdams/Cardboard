@@ -176,7 +176,7 @@ function CbCamera() constructor
         }
     }
     
-    static Apply = function()
+    static ApplyMatrices = function()
     {
         matrix_set(matrix_view, GetViewMatrix());
         matrix_set(matrix_projection, GetProjectionMatrix());
@@ -187,7 +187,7 @@ function CbCamera() constructor
         __oldViewMatrix       = matrix_get(matrix_view);
         __oldProjectionMatrix = matrix_get(matrix_projection);
         
-        Apply();
+        ApplyMatrices();
         
         gpu_set_ztestenable(true);
         gpu_set_zwriteenable(true);
