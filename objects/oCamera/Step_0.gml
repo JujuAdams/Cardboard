@@ -27,6 +27,16 @@ if (keyboard_check_released(ord("F")))
     TurnFrustrumIntoBox(oRenderer.light4.GetFrustrumCoords());
 }
 
+if (keyboard_check_released(ord("Z")))
+{
+    cbCamera.SetZTilt(not cbCamera.GetZTilt());
+}
+
+if (keyboard_check_released(ord("X")))
+{
+    cbCamera.SetAxonometric(not cbCamera.GetAxonometric());
+}
+
 if (keyboard_check_released(ord("V")))
 {
     if (cbCamera.GetProjection().orthographic)

@@ -173,7 +173,7 @@ function CbCamera() constructor
         
         if (__zTilt)
         {
-            return CbCameraBuildZTiltViewMatrix(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __axonometric, _coeff*__xUp, _coeff*__yUp, _coeff*__zUp);
+            return CbCameraBuildZTiltViewMatrix(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __orthographic && __axonometric, _coeff*__xUp, _coeff*__yUp, _coeff*__zUp);
         }
         else
         {
