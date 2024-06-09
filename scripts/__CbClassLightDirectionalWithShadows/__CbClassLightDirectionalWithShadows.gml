@@ -25,7 +25,7 @@ function __CbClassLightDirectionalWithShadows(_dx, _dy, _dz, _color, _nearOffset
     depthFunction = undefined;
     
     shadowMapBiasMin   = 0.1/1000;
-    shadowMapBiasMax   = 0.5/1000;
+    shadowMapBiasMax   = 1.0/1000;
     shadowMapBiasCoeff = 1;
     
     
