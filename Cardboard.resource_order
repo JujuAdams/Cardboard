@@ -85,8 +85,6 @@
     {"name":"CbCamera","order":1,"path":"scripts/CbCamera/CbCamera.yy",},
     {"name":"CbCameraBuildZTiltViewMatrix","order":3,"path":"scripts/CbCameraBuildZTiltViewMatrix/CbCameraBuildZTiltViewMatrix.yy",},
     {"name":"CbCameraGetFrustrumCoords","order":2,"path":"scripts/CbCameraGetFrustrumCoords/CbCameraGetFrustrumCoords.yy",},
-    {"name":"CbCameraRecallMatrices","order":5,"path":"scripts/CbCameraRecallMatrices/CbCameraRecallMatrices.yy",},
-    {"name":"CbCameraStoreMatrices","order":4,"path":"scripts/CbCameraStoreMatrices/CbCameraStoreMatrices.yy",},
     {"name":"CbDoubleSidedGet","order":2,"path":"scripts/CbDoubleSidedGet/CbDoubleSidedGet.yy",},
     {"name":"CbDoubleSidedSet","order":1,"path":"scripts/CbDoubleSidedSet/CbDoubleSidedSet.yy",},
     {"name":"CbFogGet","order":1,"path":"scripts/CbFogGet/CbFogGet.yy",},

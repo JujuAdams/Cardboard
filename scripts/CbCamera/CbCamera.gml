@@ -1,3 +1,5 @@
+#macro __CB_CAMERA_OPENGL  (((os_type != os_windows) && (os_type != os_xboxone) && (os_type != os_xboxseriesxs)) || (os_browser != browser_not_a_browser))
+
 function CbCamera() constructor
 {
     __xFrom = 0;
@@ -23,7 +25,14 @@ function CbCamera() constructor
     __width  = surface_get_width( application_surface);
     __height = surface_get_height(application_surface);
     
-    __billboardYawSetFunc = CbBillboardYawSet;
+    try
+    {
+        __billboardYawSetFunc = CbBillboardYawSet;
+    }
+    catch(_error)
+    {
+        __billboardYawSetFunc = undefined;
+    }
     
     __oldViewMatrix       = matrix_get(matrix_view);
     __oldProjectionMatrix = matrix_get(matrix_projection);
@@ -145,6 +154,16 @@ function CbCamera() constructor
     static GetAxonometric = function()
     {
         return __axonometric;
+    }
+    
+    static SetBillboardYawCallback = function(_function)
+    {
+        __billboardYawSetFunc = _function;
+    }
+    
+    static GetBillboardYawCallback = function()
+    {
+        return __billboardYawSetFunc;
     }
     
     static GetViewMatrix = function()
