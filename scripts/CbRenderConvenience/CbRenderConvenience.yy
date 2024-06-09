@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbRender",
+  "%Name":"CbRenderConvenience",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbRender",
+  "name":"CbRenderConvenience",
   "parent":{
     "name":"Render",
     "path":"folders/Cardboard/Render.yy",

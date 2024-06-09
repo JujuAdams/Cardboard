@@ -1,10 +1,14 @@
 /// Renders lighting contributions from deferred lights 
 /// 
+/// @param viewMatrix
+/// @param projectionMatrix
 /// @param [diffuseSurface]
 
-function CbRenderDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurface = surface_get_target())
+function CbRenderDrawDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurface = surface_get_target())
 {
     __CB_GLOBAL_RENDER
+    
+    if (CbLightModeGet() != CB_LIGHT_MODE.DEFERRED) return;
     
     var _vpMatrix         = matrix_multiply(_viewMatrix, _projectionMatrix);
     var _vpMatrixInverse  = __CbMatrixInvert(_vpMatrix);
@@ -14,7 +18,7 @@ function CbRenderDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurface 
     with(_global)
     {
         //Target the composite lighting surface
-        //This surface is prepared in CbRenderPrepareLighting()
+        //This surface is prepared in CbRenderPreDrawLighting()
         surface_set_target(__CbDeferredSurfaceLightEnsure(surface_get_target()));
         gpu_set_blendmode(bm_add);
         
@@ -26,7 +30,7 @@ function CbRenderDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurface 
         
         with(__lighting)
         {
-            //These two arrays are prepared in CbRenderPrepareLighting()
+            //These two arrays are prepared in CbRenderPreDrawLighting()
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vPosRadArray"), __posRadArray);
             shader_set_uniform_f_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_vColorArray"),  __colorArray);
             draw_surface(_diffuseSurface, 0, 0);

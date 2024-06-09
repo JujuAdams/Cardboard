@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CbRenderStateDepthOnly",
   "parent":{
-    "name":"Manual Pipeline",
-    "path":"folders/Cardboard/Render/Manual Pipeline.yy",
+    "name":"Pipeline",
+    "path":"folders/Cardboard/Render/Pipeline.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

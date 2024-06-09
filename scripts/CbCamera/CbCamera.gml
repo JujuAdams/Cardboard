@@ -25,6 +25,9 @@ function CbCamera() constructor
     
     __billboardYawSetFunc = CbBillboardYawSet;
     
+    __oldViewMatrix       = matrix_get(matrix_view);
+    __oldProjectionMatrix = matrix_get(matrix_projection);
+    
     static SetFrom = function(_x, _y, _z)
     {
         __xFrom = _x;
@@ -173,14 +176,46 @@ function CbCamera() constructor
         }
     }
     
-    static ApplyViewMatrix = function()
+    static Apply = function()
     {
         matrix_set(matrix_view, GetViewMatrix());
+        matrix_set(matrix_projection, GetProjectionMatrix());
     }
     
-    static ApplyProjectionMatrix = function()
+    static Start = function(_alphaTestRef = 0.5, _backfaceCulling = cull_noculling)
     {
-        matrix_set(matrix_projection, GetProjectionMatrix());
+        __oldViewMatrix       = matrix_get(matrix_view);
+        __oldProjectionMatrix = matrix_get(matrix_projection);
+        
+        Apply();
+        
+        gpu_set_ztestenable(true);
+        gpu_set_zwriteenable(true);
+        gpu_set_cullmode(_backfaceCulling);
+        
+        if (_alphaTestRef >= 0)
+        {
+            gpu_set_alphatestenable(true);
+            gpu_set_alphatestref(_alphaTestRef);
+            gpu_set_blendenable(false);
+        }
+        else
+        {
+            gpu_set_alphatestenable(false);
+            gpu_set_blendenable(true);
+        }
+    }
+    
+    static End = function()
+    {
+        matrix_set(matrix_view,       __oldViewMatrix);
+        matrix_set(matrix_projection, __oldProjectionMatrix);
+        
+        gpu_set_ztestenable(false);
+        gpu_set_zwriteenable(false);
+        gpu_set_cullmode(cull_noculling);
+        gpu_set_alphatestenable(false);
+        gpu_set_blendenable(true);
     }
     
     static GetFrustrumCoords = function()

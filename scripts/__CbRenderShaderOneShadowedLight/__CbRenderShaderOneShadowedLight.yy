@@ -6,7 +6,7 @@
   "name":"__CbRenderShaderOneShadowedLight",
   "parent":{
     "name":"Shader Setters",
-    "path":"folders/Cardboard/Render/Manual Pipeline/Shader Setters.yy",
+    "path":"folders/Cardboard/Render/(System)/Shaders/Shader Setters.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

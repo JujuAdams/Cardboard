@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CbLightDefaultDepthFunctionSet",
   "parent":{
-    "name":"Lighting",
-    "path":"folders/Cardboard/Render/Lighting.yy",
+    "name":"Lights",
+    "path":"folders/Cardboard/Render/Lights.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

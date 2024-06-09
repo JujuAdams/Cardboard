@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbRenderStateReset",
+  "%Name":"CbRenderDrawDeferredLights",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbRenderStateReset",
+  "name":"CbRenderDrawDeferredLights",
   "parent":{
     "name":"Pipeline",
     "path":"folders/Cardboard/Render/Pipeline.yy",

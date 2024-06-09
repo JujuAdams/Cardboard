@@ -1,8 +1,5 @@
-CbCameraStoreMatrices();
-oCamera.cbCamera.ApplyViewMatrix();
-oCamera.cbCamera.ApplyProjectionMatrix();
-CbRender(opaqueFunc, undefined, unlitFunc, undefined);
-CbCameraRecallMatrices();
+oCamera.cbCamera.Apply();
+CbRenderConvenience(opaqueFunc, undefined, unlitFunc);
 
 if (keyboard_check(ord("O")))
 {

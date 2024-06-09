@@ -7,11 +7,11 @@
 /// @param [viewMatrixHint]
 /// @param [projectionMatrixHint]
 
-function CbRender(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAlphaBlendFunc, _viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
+function CbRenderConvenience(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAlphaBlendFunc, _viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
 {
     if ((_litOpaqueFunc != undefined) || (_litAlphaBlendFunc != undefined))
     {
-        CbRenderPrepareLighting();
+        CbRenderPreDrawLighting();
         
         if (_litOpaqueFunc != undefined)
         {
@@ -29,7 +29,7 @@ function CbRender(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAl
             CbRenderStateReset();
         }
         
-        if (CbLightModeGet() == CB_LIGHT_MODE.DEFERRED) CbRenderDeferredLights(_viewMatrix, _projectionMatrix);
+        CbRenderDrawDeferredLights(_viewMatrix, _projectionMatrix);
     }
     
     if (_unlitOpaqueFunc != undefined)
