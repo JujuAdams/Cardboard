@@ -50,7 +50,7 @@ void main()
                         1.0);
     
     //Work backwards from the NDSpace coordinate to world space
-    vec3 position = (u_mCameraInverse*nsCoord).xyz;
+    vec4 position = u_mCameraInverse*nsCoord;
     
-    gl_FragColor = vec4(AccumulateUnshadowedLights(position, normal), 1.0);
+    gl_FragColor = vec4(AccumulateUnshadowedLights(position.xyz / position.w, normal), 1.0);
 }
