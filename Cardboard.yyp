@@ -304,6 +304,7 @@
     {"id":{"name":"__shdCbSimpleLights","path":"shaders/__shdCbSimpleLights/__shdCbSimpleLights.yy",},},
     {"id":{"name":"__shdTilemapAnimated","path":"shaders/__shdTilemapAnimated/__shdTilemapAnimated.yy",},},
     {"id":{"name":"__shdTilemapAnimatedNormals","path":"shaders/__shdTilemapAnimatedNormals/__shdTilemapAnimatedNormals.yy",},},
+    {"id":{"name":"shdLinearizeDepth","path":"shaders/shdLinearizeDepth/shdLinearizeDepth.yy",},},
     {"id":{"name":"s3dGreen","path":"sprites/s3dGreen/s3dGreen.yy",},},
     {"id":{"name":"s3dLime","path":"sprites/s3dLime/s3dLime.yy",},},
     {"id":{"name":"s3dRed","path":"sprites/s3dRed/s3dRed.yy",},},

@@ -6,11 +6,6 @@ CbRenderConvenience(opaqueFunc, undefined, unlitFunc);
 //unlitFunc();
 //oCamera.cbCamera.End();
 
-if (keyboard_check(ord("O")))
-{
-    draw_surface_depth(application_surface, 0, 0);
-}
-
 if (keyboard_check(ord("L")))
 {
     var _surface = __CbDeferredSurfaceNormalEnsure(application_surface);
