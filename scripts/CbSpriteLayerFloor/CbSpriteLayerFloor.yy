@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CbSpriteLayerFloor",
   "parent":{
-    "name":"Sprite Layer",
-    "path":"folders/Cardboard/Build/Sprite Layer.yy",
+    "name":"Sprite Layers",
+    "path":"folders/Cardboard/Build/Sprite Layers.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
