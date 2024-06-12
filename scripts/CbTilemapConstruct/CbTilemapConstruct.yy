@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbTilemapConstruct",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbTilemapConstruct",
+  "parent":{
+    "name":"Cardboard",
+    "path":"Cardboard.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
