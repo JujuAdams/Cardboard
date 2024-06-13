@@ -1,4 +1,4 @@
-CbDoubleSidedSet(true);
+CbDoubleSidedSet(false);
 
 CbModelBegin();
 CbTilemapConstruct("Tiles_1");
