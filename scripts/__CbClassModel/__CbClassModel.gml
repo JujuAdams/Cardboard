@@ -31,6 +31,33 @@ function __CbClassModel() constructor
         }
     }
     
+    static __AddVertexBuffer = function(_vertexBuffer, _texturePointer)
+    {
+        array_push(array, {
+            vertexBuffer:   _vertexBuffer,
+            texturePointer: _texturePointer,
+        });
+    }
+    
+    static __AppendVertexBuffer = function(_vertexBuffer, _texturePointer)
+    {
+        var _i = 0;
+        repeat(array_length(array))
+        {
+            var _foundTexture = array[_i].texturePointer;
+            if (_foundTexture == _texturePointer)
+            {
+                var _destinationVertexBuffer = array[_i].vertexBuffer;
+                vertex_update_buffer_from_vertex(_destinationVertexBuffer, vertex_get_number(_destinationVertexBuffer), _vertexBuffer);
+                return;
+            }
+            
+            ++_i;
+        }
+        
+        __AddVertexBuffer(_vertexBuffer, _texturePointer);
+    }
+    
     static __Submit = function()
     {
         if (!is_array(array)) return;

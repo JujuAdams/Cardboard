@@ -109,6 +109,8 @@
     {"name":"CbLightModeGet","order":3,"path":"scripts/CbLightModeGet/CbLightModeGet.yy",},
     {"name":"CbLightModeSet","order":2,"path":"scripts/CbLightModeSet/CbLightModeSet.yy",},
     {"name":"CbLightPoint","order":3,"path":"scripts/CbLightPoint/CbLightPoint.yy",},
+    {"name":"CbModelAddVertexBuffer","order":5,"path":"scripts/CbModelAddVertexBuffer/CbModelAddVertexBuffer.yy",},
+    {"name":"CbModelAppendVertexBuffer","order":6,"path":"scripts/CbModelAppendVertexBuffer/CbModelAppendVertexBuffer.yy",},
     {"name":"CbModelDestroy","order":3,"path":"scripts/CbModelDestroy/CbModelDestroy.yy",},
     {"name":"CbModelEnd","order":1,"path":"scripts/CbModelEnd/CbModelEnd.yy",},
     {"name":"CbModelNewVertexBuffer","order":4,"path":"scripts/CbModelNewVertexBuffer/CbModelNewVertexBuffer.yy",},

@@ -171,6 +171,8 @@
     {"id":{"name":"CbLightModeGet","path":"scripts/CbLightModeGet/CbLightModeGet.yy",},},
     {"id":{"name":"CbLightModeSet","path":"scripts/CbLightModeSet/CbLightModeSet.yy",},},
     {"id":{"name":"CbLightPoint","path":"scripts/CbLightPoint/CbLightPoint.yy",},},
+    {"id":{"name":"CbModelAddVertexBuffer","path":"scripts/CbModelAddVertexBuffer/CbModelAddVertexBuffer.yy",},},
+    {"id":{"name":"CbModelAppendVertexBuffer","path":"scripts/CbModelAppendVertexBuffer/CbModelAppendVertexBuffer.yy",},},
     {"id":{"name":"CbModelBegin","path":"scripts/CbModelBegin/CbModelBegin.yy",},},
     {"id":{"name":"CbModelDestroy","path":"scripts/CbModelDestroy/CbModelDestroy.yy",},},
     {"id":{"name":"CbModelEnd","path":"scripts/CbModelEnd/CbModelEnd.yy",},},
