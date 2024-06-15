@@ -12,5 +12,7 @@ function CbModelBegin()
     
     __CbBatchComplete();
     
-    _global.__model = new __CbClassModel();
+    var _model = new __CbClassModel();
+    _global.__model = _model;
+    return _model;
 }

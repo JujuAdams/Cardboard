@@ -84,4 +84,49 @@ function __CbClassModel() constructor
         
         array = undefined;
     }
+    
+    static __BakeTransform = function(_zRotation, _xScale, _yScale, _zScale, _xOffset, _yOffset, _zOffset)
+    {
+        var _vertexFormat = _global.__batch.__vertexFormat;
+        
+        var _i = 0;
+        repeat(array_length(array))
+        {
+            __CbVertexBufferBakeTransform(0, array[_i].vertexBuffer, _vertexFormat, _zRotation, _xScale, _yScale, _zScale, _xOffset, _yOffset, _zOffset);
+            ++_i;
+        }
+    }
+    
+    static __BakeTransformMatrix = function(_matrix)
+    {
+        var _vertexFormat = _global.__batch.__vertexFormat;
+        
+        var _i = 0;
+        repeat(array_length(array))
+        {
+            __CbVertexBufferBakeTransformMatrix(0, array[_i].vertexBuffer, _vertexFormat, _matrix);
+            ++_i;
+        }
+    }
+    
+    static __CopyWithTransform = function(_sourceModel, _zRotation, _xScale, _yScale, _zScale, _xOffset, _yOffset, _zOffset)
+    {
+        var _vertexFormat = _global.__batch.__vertexFormat;
+        
+        var _sourceArray = _sourceModel.array;
+        var _i = 0;
+        repeat(array_length(_sourceArray))
+        {
+            var _sourceVertexBuffer = _sourceArray[_i].vertexBuffer;
+            var _texturePointer     = _sourceArray[_i].texturePointer;
+            
+            var _newVertexBuffer = __CbVertexBufferBakeTransform(1, _sourceVertexBuffer, _vertexFormat, _zRotation, _xScale, _yScale, _zScale, _xOffset, _yOffset, _zOffset);
+            array_push(array, {
+                vertexBuffer:   _newVertexBuffer,
+                texturePointer: _texturePointer,
+            });
+            
+            ++_i;
+        }
+    }
 }

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbVertexBufferBakeTransform",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbVertexBufferBakeTransform",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Cardboard/Build/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
