@@ -7,8 +7,13 @@ function CbTilemapConstruct(_layer)
     var _tilemapWidth  = tilemap_get_width(_tilemap);
     var _tilemapHeight = tilemap_get_height(_tilemap);
     
-    var _tileset       = tilemap_get_tileset(_tilemap);
-    var _tilesetData   = __CbTilesetDataGet(_tileset);
+    var _tileset     = tilemap_get_tileset(_tilemap);
+    var _tilesetData = __CbTilesetDataGet(_tileset);
+    
+    var _tileWidth  = _tilesetData.__tileWidth;
+    var _tileHeight = _tilesetData.__tileHeight;
+    var _tileDepth  = _tileHeight;
+    
     var _tilesetWidth  = _tilesetData.__tilesetWidth;
     var _tilesetHeight = _tilesetData.__tilesetHeight;
     
@@ -64,11 +69,18 @@ function CbTilemapConstruct(_layer)
                         var _xFill = _packed & 0xFFFFFFFF;
                         var _yFill = _packed >> 32;
                         
+                        var _delta = _deltaGrid[# _xFill, _yFill];
+                        
+                        //Backfill displaced tiles
+                        if (_delta > 0)
+                        {
+                            CbTileFloor(_tileset, 6, 0, _tileWidth*_xFill, _tileHeight*_yFill, 0);
+                        }
+                        
                         var _tileIndex = tilemap_get(_tilemap, _xFill, _yFill);
                         var _directionality = _directionalityArray[_tileIndex];
                         if (_directionality > 0)
                         {
-                            var _delta = _deltaGrid[# _xFill, _yFill];
                             
                             if ((_directionality & 0x1) && (_xFill < _tilemapWidth-1))
                             {
@@ -144,11 +156,11 @@ function CbTilemapConstruct(_layer)
             
             if ((_xTile == 6) && (_yTile == 1))
             {
-                CbTile(_tileset, _xTile, _yTile, 32*_xCell, 32*(_yCell + _delta + 1), 32*(_delta + 1));
+                CbTile(_tileset, _xTile, _yTile, _tileWidth*_xCell, _tileHeight*(_yCell + _delta + 1), _tileDepth*(_delta + 1));
             }
             else
             {
-                CbTileFloor(_tileset, _xTile, _yTile, 32*_xCell, 32*(_yCell + _delta), 32*_delta);
+                CbTileFloor(_tileset, _xTile, _yTile, _tileWidth*_xCell, _tileHeight*(_yCell + _delta), _tileDepth*_delta);
                 _zGrid[# _xCell, _yCell + _delta] = _delta;
             }
             
@@ -175,7 +187,7 @@ function CbTilemapConstruct(_layer)
                     var _zCell = _zLeft+1;
                     repeat(_diffLeft)
                     {
-                        CbTileExt(_tileset, 6, 1, 32*_xCell, 32*_yCell, 32*_zCell, 1, 1, 0, 270, c_white, 1, false);
+                        CbTileExt(_tileset, 6, 1, _tileWidth*_xCell, _tileHeight*_yCell, _tileDepth*_zCell, 1, 1, 0, 270, c_white, 1, false);
                         ++_zCell;
                     }
                 }
@@ -188,7 +200,7 @@ function CbTilemapConstruct(_layer)
                     var _zCell = _zRight+1;
                     repeat(_diffRight)
                     {
-                        CbTileExt(_tileset, 6, 1, 32*(_xCell+1), 32*(_yCell+1), 32*_zCell, 1, 1, 0, 90, c_white, 1, false);
+                        CbTileExt(_tileset, 6, 1, _tileWidth*(_xCell+1), _tileHeight*(_yCell+1), _tileDepth*_zCell, 1, 1, 0, 90, c_white, 1, false);
                         ++_zCell;
                     }
                 }
@@ -201,7 +213,7 @@ function CbTilemapConstruct(_layer)
                     var _zCell = _zTop+1;
                     repeat(_diffTop)
                     {
-                        CbTileExt(_tileset, 6, 1, 32*(_xCell+1), 32*_yCell, 32*_zCell, 1, 1, 0, 180, c_white, 1, false);
+                        CbTileExt(_tileset, 6, 1, _tileWidth*(_xCell+1), _tileHeight*_yCell, _tileDepth*_zCell, 1, 1, 0, 180, c_white, 1, false);
                         ++_zCell;
                     }
                 }
