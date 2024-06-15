@@ -38,7 +38,6 @@
     {"name":"oGUIOverlay","order":2,"path":"objects/oGUIOverlay/oGUIOverlay.yy",},
     {"name":"oRenderer_1","order":7,"path":"objects/oRenderer_1/oRenderer_1.yy",},
     {"name":"oScene","order":4,"path":"objects/oScene/oScene.yy",},
-    {"name":"oTest","order":6,"path":"objects/oTest/oTest.yy",},
     {"name":"rmMain","order":7,"path":"rooms/rmMain/rmMain.yy",},
     {"name":"Room3","order":3,"path":"rooms/Room3/Room3.yy",},
     {"name":"__CbBatchComplete","order":3,"path":"scripts/__CbBatchComplete/__CbBatchComplete.yy",},

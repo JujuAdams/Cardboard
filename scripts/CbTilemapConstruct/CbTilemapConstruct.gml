@@ -224,4 +224,6 @@ function CbTilemapConstruct(_layer)
             
         ++_yCell;
     }
+    
+    return _deltaGrid;
 }
