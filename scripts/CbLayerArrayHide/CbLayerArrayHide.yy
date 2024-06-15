@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbLayerHide",
+  "%Name":"CbLayerArrayHide",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbLayerHide",
+  "name":"CbLayerArrayHide",
   "parent":{
     "name":"Build",
     "path":"folders/Cardboard/Build.yy",

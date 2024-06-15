@@ -1,4 +1,4 @@
-function __CbVertexBufferBakeTransform(_returnMode, _vertexBuffer, _vertexFormat, _zRotation = 0, _xScale = 1, _yScale = 1, _zScale = 1, _xOffset = 0, _yOffset = 0, _zOffset = 0)
+function __CbVertexBufferBakeTransform(_returnMode, _vertexBuffer, _vertexFormat, _xScale = 1, _yScale = 1, _zScale = 1, _zRotation = 0, _xOffset = 0, _yOffset = 0, _zOffset = 0)
 {
     var _buffer = buffer_create_from_vertex_buffer(_vertexBuffer, buffer_fixed, 1);
     var _info = vertex_format_get_info(_vertexFormat);
@@ -46,16 +46,16 @@ function __CbVertexBufferBakeTransform(_returnMode, _vertexBuffer, _vertexFormat
         var _y = buffer_peek(_buffer, _pos + _positionOffset + 4, buffer_f32);
         var _z = buffer_peek(_buffer, _pos + _positionOffset + 8, buffer_f32);
         
+        _x = _x*_xScale;
+        _y = _y*_yScale;
+        _z = _z*_zScale;
+        
         var _x2 = _x*_cos - _y*_sin;
         var _y2 = _x*_sin + _y*_cos;
         
-        _x = _x2*_xScale + _xOffset;
-        _y = _y2*_xScale + _yOffset;
-        _z =  _z*_xScale + _zOffset;
-        
-        buffer_poke(_buffer, _pos + _positionOffset,     buffer_f32, _x);
-        buffer_poke(_buffer, _pos + _positionOffset + 4, buffer_f32, _y);
-        buffer_poke(_buffer, _pos + _positionOffset + 8, buffer_f32, _z);
+        buffer_poke(_buffer, _pos + _positionOffset,     buffer_f32, _x2 + _xOffset);
+        buffer_poke(_buffer, _pos + _positionOffset + 4, buffer_f32, _y2 + _yOffset);
+        buffer_poke(_buffer, _pos + _positionOffset + 8, buffer_f32, _z  + _zOffset);
         
         if (_normalOffset != undefined)
         {
