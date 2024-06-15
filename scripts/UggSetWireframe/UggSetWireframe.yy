@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"UggSetWireframe",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UggSetWireframe",
+  "parent":{
+    "name":"Ugg",
+    "path":"folders/Ugg.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
