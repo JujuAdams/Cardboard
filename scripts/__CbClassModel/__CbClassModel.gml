@@ -129,4 +129,25 @@ function __CbClassModel() constructor
             ++_i;
         }
     }
+    
+    static __CopyWithTransformMatrix = function(_sourceModel, _matrix)
+    {
+        var _vertexFormat = _global.__batch.__vertexFormat;
+        
+        var _sourceArray = _sourceModel.array;
+        var _i = 0;
+        repeat(array_length(_sourceArray))
+        {
+            var _sourceVertexBuffer = _sourceArray[_i].vertexBuffer;
+            var _texturePointer     = _sourceArray[_i].texturePointer;
+            
+            var _newVertexBuffer = __CbVertexBufferBakeTransformMatrix(1, _sourceVertexBuffer, _vertexFormat, _matrix);
+            array_push(array, {
+                vertexBuffer:   _newVertexBuffer,
+                texturePointer: _texturePointer,
+            });
+            
+            ++_i;
+        }
+    }
 }

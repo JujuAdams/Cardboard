@@ -197,6 +197,7 @@
     {"id":{"name":"CbModelBakeTransformMatrix","path":"scripts/CbModelBakeTransformMatrix/CbModelBakeTransformMatrix.yy",},},
     {"id":{"name":"CbModelBegin","path":"scripts/CbModelBegin/CbModelBegin.yy",},},
     {"id":{"name":"CbModelCopyWithTransform","path":"scripts/CbModelCopyWithTransform/CbModelCopyWithTransform.yy",},},
+    {"id":{"name":"CbModelCopyWithTransformMatrix","path":"scripts/CbModelCopyWithTransformMatrix/CbModelCopyWithTransformMatrix.yy",},},
     {"id":{"name":"CbModelDestroy","path":"scripts/CbModelDestroy/CbModelDestroy.yy",},},
     {"id":{"name":"CbModelEnd","path":"scripts/CbModelEnd/CbModelEnd.yy",},},
     {"id":{"name":"CbModelNewVertexBuffer","path":"scripts/CbModelNewVertexBuffer/CbModelNewVertexBuffer.yy",},},
