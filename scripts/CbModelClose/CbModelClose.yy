@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbModelClose",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbModelClose",
+  "parent":{
+    "name":"Models",
+    "path":"folders/Cardboard/Build/Models.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

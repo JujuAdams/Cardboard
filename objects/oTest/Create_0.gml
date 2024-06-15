@@ -1,7 +1,8 @@
 CbDoubleSidedSet(false);
 
-CbModelBegin();
+model = CbModelCreate();
+CbModelOpen(model);
 CbTilemapConstruct("Tiles_1");
-model = CbModelEnd();
+CbModelClose();
 
 layer_destroy("Tiles_1");

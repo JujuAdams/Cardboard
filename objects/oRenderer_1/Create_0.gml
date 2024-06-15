@@ -3,16 +3,16 @@ layer_set_visible("Assets_1", false);
 CbLightModeSet(CB_LIGHT_MODE.DEFERRED);
 CbLightAmbientSet(c_dkgray);
 
-modelA = CbModelBegin();
+modelA = CbModelCreate();
+CbModelOpen(modelA);
 CbSpriteExt(sprHi, 0,   0,  32, 32, 1, 1, 0,   0, c_white, 1, false);
 CbSpriteExt(sprHi, 0,  32,   0, 32, 1, 1, 0,  90, c_white, 1, false);
 CbSpriteExt(sprHi, 0,   0, -32, 32, 1, 1, 0, 180, c_white, 1, false);
 CbSpriteExt(sprHi, 0, -32,   0, 32, 1, 1, 0, 270, c_white, 1, false);
 CbSpriteFloor(sprHi, 0, 0, 0, 64);
-CbModelEnd();
+CbModelClose();
 
-modelB = CbModelBegin();
-CbModelEnd();
+modelB = CbModelCreate();
 
 //CbModelCopyWithTransform(modelA, modelB);
 

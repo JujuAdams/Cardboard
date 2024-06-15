@@ -1,5 +1,7 @@
 //Pre-build "terrain"
-CbModelBegin();
+
+model = CbModelCreate();
+CbModelOpen(model);
 
 var _ruleset = CbTilemapsToModelRuleset();
 _ruleset.AddTileset(tsTiles).RemapEdgeAbove(1,0,   0,1, 1,0).RemapEdgeAbove(1,0,   0,1, 1,0);
@@ -48,7 +50,7 @@ CbLayerArrayHide("Assets_1");
 //                    160, -160,   0,
 //                    c_aqua, 1);
 
-model = CbModelEnd();
+CbModelClose();
 
 //Define a handy draw function that we can call from oRenderer later
 Draw = function()

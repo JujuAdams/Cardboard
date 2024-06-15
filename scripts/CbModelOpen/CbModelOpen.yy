@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbModelEnd",
+  "%Name":"CbModelOpen",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbModelEnd",
+  "name":"CbModelOpen",
   "parent":{
     "name":"Models",
     "path":"folders/Cardboard/Build/Models.yy",
