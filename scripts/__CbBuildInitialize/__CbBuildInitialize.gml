@@ -13,7 +13,7 @@ function __CbBuildInitialize()
     if (_initialized) return;
     _initialized = true;
     
-    __CbBuildTrace("Welcome to Cardboard Build by @jujuadams! This is version " + __CB_BUILD_VERSION + ", " + __CB_BUILD_DATE);
+    __CbBuildTrace("Welcome to Cardboard Build by Juju Adams! This is version " + __CB_BUILD_VERSION + ", " + __CB_BUILD_DATE);
     
     __CB_GLOBAL_BUILD
     

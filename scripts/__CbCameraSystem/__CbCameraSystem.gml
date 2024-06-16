@@ -9,7 +9,7 @@ function __CbCameraSystem()
     static _system = undefined;
     if (_system != undefined) return _system;
     
-    show_debug_message("CbCamera: Welcome to Cardboard Camera by @jujuadams! This is version " + __CB_CAMERA_VERSION + ", " + __CB_CAMERA_DATE);
+    show_debug_message("CbCamera: Welcome to Cardboard Camera by Juju Adams! This is version " + __CB_CAMERA_VERSION + ", " + __CB_CAMERA_DATE);
     
     _system = {};
     with(_system)
