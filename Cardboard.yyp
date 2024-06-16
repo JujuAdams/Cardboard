@@ -76,6 +76,7 @@
     {"id":{"name":"oDebugLine","path":"objects/oDebugLine/oDebugLine.yy",},},
     {"id":{"name":"oDebugQuad","path":"objects/oDebugQuad/oDebugQuad.yy",},},
     {"id":{"name":"oGUIOverlay","path":"objects/oGUIOverlay/oGUIOverlay.yy",},},
+    {"id":{"name":"oPositionTest","path":"objects/oPositionTest/oPositionTest.yy",},},
     {"id":{"name":"oRenderer_1","path":"objects/oRenderer_1/oRenderer_1.yy",},},
     {"id":{"name":"oRenderer","path":"objects/oRenderer/oRenderer.yy",},},
     {"id":{"name":"oScene","path":"objects/oScene/oScene.yy",},},

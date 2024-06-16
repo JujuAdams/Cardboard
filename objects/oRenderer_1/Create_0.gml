@@ -35,6 +35,11 @@ CbLightDefaultDepthFunctionSet(function()
     CbModelSubmit(modelB);
     CbSpriteLayer("Assets_1", 0, 0, 0, 0);
     CbModelSubmit(modelTilemap);
+    
+    with(oPositionTest)
+    {
+        drawFunc();
+    }
 });
 
 drawFunc = function()
@@ -43,6 +48,11 @@ drawFunc = function()
     CbSpriteLayer("Assets_1", 0, 0, 0, 0);
     CbModelSubmit(modelTilemap);
     CbSpriteBillboard(sprGuy, 0,    oCamera.camToX, oCamera.camToY, oCamera.camToZ);
+    
+    with(oPositionTest)
+    {
+        drawFunc();
+    }
 };
 
 dir = CbLightDirectional(-1, 2, 3, make_color_rgb(0.2*255, 0.3*255, 0.4*255));
