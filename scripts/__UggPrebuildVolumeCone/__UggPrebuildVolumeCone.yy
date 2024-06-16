@@ -6,7 +6,7 @@
   "name":"__UggPrebuildVolumeCone",
   "parent":{
     "name":"Volumes",
-    "path":"folders/Ugg/(System)/Volumes.yy",
+    "path":"folders/Tests & Examples/Scripts/Ugg/(System)/Volumes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

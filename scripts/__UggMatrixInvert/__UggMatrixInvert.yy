@@ -6,7 +6,7 @@
   "name":"__UggMatrixInvert",
   "parent":{
     "name":"(System)",
-    "path":"folders/Ugg/(System).yy",
+    "path":"folders/Tests & Examples/Scripts/Ugg/(System).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"__UggPrebuildWireframeCylinder",
   "parent":{
     "name":"Wireframes",
-    "path":"folders/Ugg/(System)/Wireframes.yy",
+    "path":"folders/Tests & Examples/Scripts/Ugg/(System)/Wireframes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
