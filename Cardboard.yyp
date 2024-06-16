@@ -197,7 +197,6 @@
     {"id":{"name":"CbTilemap","path":"scripts/CbTilemap/CbTilemap.yy",},},
     {"id":{"name":"CbTilemapAnimatedBuild","path":"scripts/CbTilemapAnimatedBuild/CbTilemapAnimatedBuild.yy",},},
     {"id":{"name":"CbTilemapAnimatedSubmit","path":"scripts/CbTilemapAnimatedSubmit/CbTilemapAnimatedSubmit.yy",},},
-    {"id":{"name":"CbTilemapConstruct","path":"scripts/CbTilemapConstruct/CbTilemapConstruct.yy",},},
     {"id":{"name":"CbTilemapsToModel","path":"scripts/CbTilemapsToModel/CbTilemapsToModel.yy",},},
     {"id":{"name":"CbTilemapsToModelRuleset","path":"scripts/CbTilemapsToModelRuleset/CbTilemapsToModelRuleset.yy",},},
     {"id":{"name":"CbTileQuad","path":"scripts/CbTileQuad/CbTileQuad.yy",},},

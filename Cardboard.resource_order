@@ -151,7 +151,6 @@
     {"name":"CbTileFloorExt","order":5,"path":"scripts/CbTileFloorExt/CbTileFloorExt.yy",},
     {"name":"CbTilemapAnimatedBuild","order":3,"path":"scripts/CbTilemapAnimatedBuild/CbTilemapAnimatedBuild.yy",},
     {"name":"CbTilemapAnimatedSubmit","order":4,"path":"scripts/CbTilemapAnimatedSubmit/CbTilemapAnimatedSubmit.yy",},
-    {"name":"CbTilemapConstruct","order":2,"path":"scripts/CbTilemapConstruct/CbTilemapConstruct.yy",},
     {"name":"CbTilemapsToModel","order":1,"path":"scripts/CbTilemapsToModel/CbTilemapsToModel.yy",},
     {"name":"CbTilemapsToModelRuleset","order":2,"path":"scripts/CbTilemapsToModelRuleset/CbTilemapsToModelRuleset.yy",},
     {"name":"CbTileQuad","order":7,"path":"scripts/CbTileQuad/CbTileQuad.yy",},
