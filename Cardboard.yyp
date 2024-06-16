@@ -214,6 +214,7 @@
     {"id":{"name":"CbRenderStateDepthOnly","path":"scripts/CbRenderStateDepthOnly/CbRenderStateDepthOnly.yy",},},
     {"id":{"name":"CbRenderStateOpaque","path":"scripts/CbRenderStateOpaque/CbRenderStateOpaque.yy",},},
     {"id":{"name":"CbRenderStateReset","path":"scripts/CbRenderStateReset/CbRenderStateReset.yy",},},
+    {"id":{"name":"CbRoomSpaceToWorldSpace","path":"scripts/CbRoomSpaceToWorldSpace/CbRoomSpaceToWorldSpace.yy",},},
     {"id":{"name":"CbSprite","path":"scripts/CbSprite/CbSprite.yy",},},
     {"id":{"name":"CbSpriteBillboard","path":"scripts/CbSpriteBillboard/CbSpriteBillboard.yy",},},
     {"id":{"name":"CbSpriteBillboardExt","path":"scripts/CbSpriteBillboardExt/CbSpriteBillboardExt.yy",},},

@@ -148,6 +148,7 @@
     {"name":"CbRenderStateAlphaBlend","order":2,"path":"scripts/CbRenderStateAlphaBlend/CbRenderStateAlphaBlend.yy",},
     {"name":"CbRenderStateOpaque","order":1,"path":"scripts/CbRenderStateOpaque/CbRenderStateOpaque.yy",},
     {"name":"CbRenderStateReset","order":3,"path":"scripts/CbRenderStateReset/CbRenderStateReset.yy",},
+    {"name":"CbRoomSpaceToWorldSpace","order":5,"path":"scripts/CbRoomSpaceToWorldSpace/CbRoomSpaceToWorldSpace.yy",},
     {"name":"CbSprite","order":1,"path":"scripts/CbSprite/CbSprite.yy",},
     {"name":"CbSpriteBillboard","order":3,"path":"scripts/CbSpriteBillboard/CbSpriteBillboard.yy",},
     {"name":"CbSpriteBillboardExt","order":6,"path":"scripts/CbSpriteBillboardExt/CbSpriteBillboardExt.yy",},

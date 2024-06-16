@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbRoomSpaceToWorldSpace",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbRoomSpaceToWorldSpace",
+  "parent":{
+    "name":"Tilemaps",
+    "path":"folders/Cardboard/Build/Tilemaps.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

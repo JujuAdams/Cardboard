@@ -48,22 +48,11 @@ function __CbClassSpriteLayerToModel() constructor
             var _conversionStruct = __dictionary[$ _key];
             if (_conversionStruct != undefined)
             {
-                if (__zGrid != undefined)
-                {
-                    var _x = layer_sprite_get_x(_asset) div __zGridCellWidth;
-                    var _y = layer_sprite_get_y(_asset) div __zGridCellHeight;
-                    var _z = __zGridCellDepth*(__zGrid[# clamp(_x, 0, __zGridWidth-1), clamp(_y, 0, __zGridHeight-1)] ?? 0);
-                    
-                    var _yOffset = _z;
-                    _z += _zOffset;
-                }
-                else
-                {
-                    var _yOffset = 0;
-                    var _z = _zOffset;
-                }
+                var _y = layer_sprite_get_y(_asset);
+                var _result = CbRoomSpaceToWorldSpace(layer_sprite_get_x(_asset), _y, __zGrid, __zGridCellWidth, __zGridCellHeight);
+                var _yOffset = _result.y - _y;
                 
-                CbModelCopyUsingSpriteAsset(_conversionStruct.__model, _destinationModel, _asset, 0, _yOffset, _z, _conversionStruct.__zScaleMode);
+                CbModelCopyUsingSpriteAsset(_conversionStruct.__model, _destinationModel, _asset, 0, _yOffset, _result.z + _zOffset, _conversionStruct.__zScaleMode);
             }
             
             ++_i;
