@@ -33,8 +33,6 @@
   "ResourceOrderSettings":[
     {"name":"oAnimatedTilesetModel","order":1,"path":"objects/oAnimatedTilesetModel/oAnimatedTilesetModel.yy",},
     {"name":"oCamera","order":3,"path":"objects/oCamera/oCamera.yy",},
-    {"name":"oDebugLine","order":5,"path":"objects/oDebugLine/oDebugLine.yy",},
-    {"name":"oDebugQuad","order":6,"path":"objects/oDebugQuad/oDebugQuad.yy",},
     {"name":"oGUIOverlay","order":2,"path":"objects/oGUIOverlay/oGUIOverlay.yy",},
     {"name":"oPositionTest","order":7,"path":"objects/oPositionTest/oPositionTest.yy",},
     {"name":"oRenderer_1","order":6,"path":"objects/oRenderer_1/oRenderer_1.yy",},
@@ -201,8 +199,6 @@
     {"name":"matrix_chain_set","order":14,"path":"scripts/matrix_chain_set/matrix_chain_set.yy",},
     {"name":"matrix_chain_translate_array","order":16,"path":"scripts/matrix_chain_translate_array/matrix_chain_translate_array.yy",},
     {"name":"matrix_chain_translate","order":15,"path":"scripts/matrix_chain_translate/matrix_chain_translate.yy",},
-    {"name":"TurnFrustrumIntoBox","order":4,"path":"scripts/TurnFrustrumIntoBox/TurnFrustrumIntoBox.yy",},
-    {"name":"TurnFrustrumIntoWireframe","order":3,"path":"scripts/TurnFrustrumIntoWireframe/TurnFrustrumIntoWireframe.yy",},
     {"name":"UggAABB","order":3,"path":"scripts/UggAABB/UggAABB.yy",},
     {"name":"UggArrow","order":4,"path":"scripts/UggArrow/UggArrow.yy",},
     {"name":"UggAxes","order":5,"path":"scripts/UggAxes/UggAxes.yy",},

@@ -15,6 +15,9 @@ function CbRenderConvenience(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFun
         
         if (_litOpaqueFunc != undefined)
         {
+            matrix_set(matrix_view, _viewMatrix);
+            matrix_set(matrix_projection, _projectionMatrix);
+            
             CbRenderStateOpaque(false, true, _viewMatrix, _projectionMatrix);
             _litOpaqueFunc();
             CbBatchForceSubmit();
@@ -23,6 +26,9 @@ function CbRenderConvenience(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFun
         
         if (_litAlphaBlendFunc != undefined)
         {
+            matrix_set(matrix_view, _viewMatrix);
+            matrix_set(matrix_projection, _projectionMatrix);
+            
             CbRenderStateAlphaBlend(false, _viewMatrix, _projectionMatrix);
             _litAlphaBlendFunc();
             CbBatchForceSubmit();
@@ -34,6 +40,9 @@ function CbRenderConvenience(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFun
     
     if (_unlitOpaqueFunc != undefined)
     {
+        matrix_set(matrix_view, _viewMatrix);
+        matrix_set(matrix_projection, _projectionMatrix);
+        
         CbRenderStateOpaque(true);
         _unlitOpaqueFunc();
         CbBatchForceSubmit();
@@ -42,6 +51,9 @@ function CbRenderConvenience(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFun
     
     if (_unlitAlphaBlendFunc != undefined)
     {
+        matrix_set(matrix_view, _viewMatrix);
+        matrix_set(matrix_projection, _projectionMatrix);
+        
         CbRenderStateAlphaBlend(true);
         _unlitAlphaBlendFunc();
         CbBatchForceSubmit();

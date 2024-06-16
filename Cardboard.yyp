@@ -73,8 +73,6 @@
   "resources":[
     {"id":{"name":"oAnimatedTilesetModel","path":"objects/oAnimatedTilesetModel/oAnimatedTilesetModel.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
-    {"id":{"name":"oDebugLine","path":"objects/oDebugLine/oDebugLine.yy",},},
-    {"id":{"name":"oDebugQuad","path":"objects/oDebugQuad/oDebugQuad.yy",},},
     {"id":{"name":"oGUIOverlay","path":"objects/oGUIOverlay/oGUIOverlay.yy",},},
     {"id":{"name":"oPositionTest","path":"objects/oPositionTest/oPositionTest.yy",},},
     {"id":{"name":"oRenderer_1","path":"objects/oRenderer_1/oRenderer_1.yy",},},
@@ -269,8 +267,6 @@
     {"id":{"name":"matrix_chain_set","path":"scripts/matrix_chain_set/matrix_chain_set.yy",},},
     {"id":{"name":"matrix_chain_translate_array","path":"scripts/matrix_chain_translate_array/matrix_chain_translate_array.yy",},},
     {"id":{"name":"matrix_chain_translate","path":"scripts/matrix_chain_translate/matrix_chain_translate.yy",},},
-    {"id":{"name":"TurnFrustrumIntoBox","path":"scripts/TurnFrustrumIntoBox/TurnFrustrumIntoBox.yy",},},
-    {"id":{"name":"TurnFrustrumIntoWireframe","path":"scripts/TurnFrustrumIntoWireframe/TurnFrustrumIntoWireframe.yy",},},
     {"id":{"name":"UggAABB","path":"scripts/UggAABB/UggAABB.yy",},},
     {"id":{"name":"UggArrow","path":"scripts/UggArrow/UggArrow.yy",},},
     {"id":{"name":"UggAxes","path":"scripts/UggAxes/UggAxes.yy",},},
@@ -376,8 +372,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
+    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"roomId":{"name":"rmAnimatedTileset","path":"rooms/rmAnimatedTileset/rmAnimatedTileset.yy",},},
   ],
   "templateType":null,
