@@ -204,6 +204,7 @@
     {"id":{"name":"CbModelNewVertexBuffer","path":"scripts/CbModelNewVertexBuffer/CbModelNewVertexBuffer.yy",},},
     {"id":{"name":"CbModelOpen","path":"scripts/CbModelOpen/CbModelOpen.yy",},},
     {"id":{"name":"CbModelSubmit","path":"scripts/CbModelSubmit/CbModelSubmit.yy",},},
+    {"id":{"name":"CbModelSubmitWithTransform","path":"scripts/CbModelSubmitWithTransform/CbModelSubmitWithTransform.yy",},},
     {"id":{"name":"CbPartSys","path":"scripts/CbPartSys/CbPartSys.yy",},},
     {"id":{"name":"CbPartSysBillboard","path":"scripts/CbPartSysBillboard/CbPartSysBillboard.yy",},},
     {"id":{"name":"CbPartSysBillboardExt","path":"scripts/CbPartSysBillboardExt/CbPartSysBillboardExt.yy",},},
