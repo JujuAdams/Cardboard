@@ -5,10 +5,15 @@ CbLightAmbientSet(c_dkgray);
 
 CbDoubleSidedSet(false);
 
-modelTilemap = CbModelCreate();
-CbModelOpen(modelTilemap);
-zGrid = CbTilemapConstruct("Tiles_1");
-CbModelClose();
+//modelTilemap = CbModelCreate();
+//CbModelOpen(modelTilemap);
+//zGrid = CbTilemapConstruct("Tiles_1");
+//CbModelClose();
+
+environment = CbEnvironmentCreate();
+environment.BuildFromTilemap(layer_tilemap_get_id("Tiles_1"));
+modelTilemap = environment.GetModel();
+zGrid = environment.GetRoomZOffsetGrid();
 CbLayerArrayHide("Tiles_1");
 
 modelA = CbModelCreate();

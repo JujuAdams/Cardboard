@@ -22,6 +22,7 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Cardboard/Build/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Surfaces","folderPath":"folders/Cardboard/Build/Surfaces.yy","name":"Surfaces","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tilemaps","folderPath":"folders/Cardboard/Build/Tilemaps.yy","name":"Tilemaps","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Environment","folderPath":"folders/Cardboard/Build/Environment.yy","name":"Environment","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tiles","folderPath":"folders/Cardboard/Build/Tiles.yy","name":"Tiles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Camera","folderPath":"folders/Cardboard/Camera.yy","name":"Camera","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Render","folderPath":"folders/Cardboard/Render.yy","name":"Render","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -46,7 +47,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.600.0.571",
+    "IDEVersion":"2024.600.0.562",
   },
   "name":"Cardboard",
   "resources":[
@@ -126,6 +127,8 @@
     {"id":{"name":"CbCameraGetFrustrumCoords","path":"scripts/CbCameraGetFrustrumCoords/CbCameraGetFrustrumCoords.yy",},},
     {"id":{"name":"CbDoubleSidedGet","path":"scripts/CbDoubleSidedGet/CbDoubleSidedGet.yy",},},
     {"id":{"name":"CbDoubleSidedSet","path":"scripts/CbDoubleSidedSet/CbDoubleSidedSet.yy",},},
+    {"id":{"name":"CbEnvironmentCreate","path":"scripts/CbEnvironmentCreate/CbEnvironmentCreate.yy",},},
+    {"id":{"name":"CbEnvironmentDestroy","path":"scripts/CbEnvironmentDestroy/CbEnvironmentDestroy.yy",},},
     {"id":{"name":"CbFogGet","path":"scripts/CbFogGet/CbFogGet.yy",},},
     {"id":{"name":"CbFogSet","path":"scripts/CbFogSet/CbFogSet.yy",},},
     {"id":{"name":"CbLayerArrayHide","path":"scripts/CbLayerArrayHide/CbLayerArrayHide.yy",},},
@@ -241,8 +244,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
     {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
+    {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
     {"roomId":{"name":"rmAnimatedTileset","path":"rooms/rmAnimatedTileset/rmAnimatedTileset.yy",},},
   ],
   "templateType":null,

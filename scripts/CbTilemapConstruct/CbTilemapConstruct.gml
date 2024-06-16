@@ -136,9 +136,6 @@ function CbTilemapConstruct(_layer)
         --_yCell;
     }
     
-    global.tilemapWidth  = _tilemapWidth;
-    global.tilemapHeight = _tilemapHeight;
-    
     var _zGrid = ds_grid_create(_tilemapWidth, _tilemapHeight);
     
     var _yCell = 0;
