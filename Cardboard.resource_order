@@ -45,6 +45,7 @@
     {"name":"__CbBuildError","order":9,"path":"scripts/__CbBuildError/__CbBuildError.yy",},
     {"name":"__CbBuildGlobal","order":2,"path":"scripts/__CbBuildGlobal/__CbBuildGlobal.yy",},
     {"name":"__CbBuildTrace","order":8,"path":"scripts/__CbBuildTrace/__CbBuildTrace.yy",},
+    {"name":"__CbCameraSystem","order":4,"path":"scripts/__CbCameraSystem/__CbCameraSystem.yy",},
     {"name":"__CbClassLightDirectional","order":1,"path":"scripts/__CbClassLightDirectional/__CbClassLightDirectional.yy",},
     {"name":"__CbClassLightDirectionalWithShadows","order":2,"path":"scripts/__CbClassLightDirectionalWithShadows/__CbClassLightDirectionalWithShadows.yy",},
     {"name":"__CbClassLightWithShadows","order":3,"path":"scripts/__CbClassLightWithShadows/__CbClassLightWithShadows.yy",},

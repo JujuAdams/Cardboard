@@ -88,6 +88,7 @@
     {"id":{"name":"__CbBuildGlobal","path":"scripts/__CbBuildGlobal/__CbBuildGlobal.yy",},},
     {"id":{"name":"__CbBuildInitialize","path":"scripts/__CbBuildInitialize/__CbBuildInitialize.yy",},},
     {"id":{"name":"__CbBuildTrace","path":"scripts/__CbBuildTrace/__CbBuildTrace.yy",},},
+    {"id":{"name":"__CbCameraSystem","path":"scripts/__CbCameraSystem/__CbCameraSystem.yy",},},
     {"id":{"name":"__CbClassLightDirectional","path":"scripts/__CbClassLightDirectional/__CbClassLightDirectional.yy",},},
     {"id":{"name":"__CbClassLightDirectionalWithShadows","path":"scripts/__CbClassLightDirectionalWithShadows/__CbClassLightDirectionalWithShadows.yy",},},
     {"id":{"name":"__CbClassLightPoint","path":"scripts/__CbClassLightPoint/__CbClassLightPoint.yy",},},

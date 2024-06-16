@@ -1,5 +1,5 @@
-#macro __CB_RENDER_VERSION  "2.0.0"
-#macro __CB_RENDER_DATE     "2023-12-17"
+#macro __CB_RENDER_VERSION  "3.0.0"
+#macro __CB_RENDER_DATE     "2024-06-16"
 
 #macro __CB_LIGHT_COUNT  6
 
@@ -32,7 +32,7 @@ function __CbRenderSystem()
     static _system = undefined;
     if (_system != undefined) return _system;
     
-    __CbRenderTrace("Welcome to Cardboard (Render) by @jujuadams! This is version " + __CB_RENDER_VERSION + ", " + __CB_RENDER_DATE);
+    __CbRenderTrace("Welcome to Cardboard Render by @jujuadams! This is version " + __CB_RENDER_VERSION + ", " + __CB_RENDER_DATE);
     
     _system = {};
     with(_system)

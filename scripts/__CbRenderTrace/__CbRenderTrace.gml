@@ -1,6 +1,6 @@
 function __CbRenderTrace()
 {
-    var _string = "Cardboard: ";
+    var _string = "CbRender: ";
     
     var _i = 0
     repeat(argument_count)

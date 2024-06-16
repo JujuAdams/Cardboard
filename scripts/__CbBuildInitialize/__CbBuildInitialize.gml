@@ -1,5 +1,5 @@
-#macro __CB_BUILD_VERSION  "2.0.0"
-#macro __CB_BUILD_DATE     "2023-12-17"
+#macro __CB_BUILD_VERSION  "3.0.0"
+#macro __CB_BUILD_DATE     "2024-06-16"
 
 #macro __CB_MAX_IMAGES  1024
 
@@ -13,7 +13,7 @@ function __CbBuildInitialize()
     if (_initialized) return;
     _initialized = true;
     
-    __CbBuildTrace("Welcome to Cardboard (Build) by @jujuadams! This is version " + __CB_BUILD_VERSION + ", " + __CB_BUILD_DATE);
+    __CbBuildTrace("Welcome to Cardboard Build by @jujuadams! This is version " + __CB_BUILD_VERSION + ", " + __CB_BUILD_DATE);
     
     __CB_GLOBAL_BUILD
     

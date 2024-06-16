@@ -1,6 +1,6 @@
 function __CbBuildTrace()
 {
-    var _string = "Cardboard: ";
+    var _string = "CbBuild: ";
     
     var _i = 0
     repeat(argument_count)
