@@ -16,6 +16,7 @@
 /// @param v2      V-coordinate, normalised to the size of the sprite's texture
 /// @param x3      x-coordinate for the bottom-left corner of the texture
 /// @param y3      y-coordinate for the bottom-left corner of the texture
+/// @param z3      z-coordinate for the bottom-left corner of the texture
 /// @param u3      U-coordinate, normalised to the size of the sprite's texture
 /// @param v3      V-coordinate, normalised to the size of the sprite's texture
 /// @param color   Blend color for the sprite (c_white is "no blending")
