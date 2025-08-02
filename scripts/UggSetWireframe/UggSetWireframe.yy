@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"UggSetWireframe",
   "parent":{
-    "name":"Ugg",
-    "path":"folders/Tests & Examples/Scripts/Ugg.yy",
+    "name":"Settings",
+    "path":"folders/Tests & Examples/Scripts/Ugg/Settings.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

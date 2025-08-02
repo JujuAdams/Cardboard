@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"UggPlane",
   "parent":{
-    "name":"Ugg",
-    "path":"folders/Tests & Examples/Scripts/Ugg.yy",
+    "name":"Shapes",
+    "path":"folders/Tests & Examples/Scripts/Ugg/Shapes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
