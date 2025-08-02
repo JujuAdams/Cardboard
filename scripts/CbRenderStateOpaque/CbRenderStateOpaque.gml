@@ -1,7 +1,7 @@
 /// @param [unlit=false]
 /// @param [alphaTest=true]
-/// @param [viewMatrixHint]
-/// @param [projectionMatrixHint]
+/// @param [viewMatrix]
+/// @param [projectionMatrix]
 
 function CbRenderStateOpaque(_unlit = false, _alphaTest = true, _viewMatrix = undefined, _projectionMatrix = undefined)
 {

@@ -43,29 +43,29 @@ function CbCameraBuildZTiltViewMatrix(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, 
         var _vc_s   = _value*_yc2 + _ys2;
         var _vs_c   = _value*_ys2 + _yc2;
         
-        _matrix[ 0] = _vc_s;
-        _matrix[ 1] = _sc_vsc;
-        _matrix[ 4] = _sc_vsc;
-        _matrix[ 5] = _vs_c;
-        _matrix[ 8] = _pitchSin*_yawCos;
-        _matrix[ 9] = -_pitchSin*_yawSin;
-        _matrix[10] = _pitchCos;
-        _matrix[12] = -(_toX*_vc_s)   - (_toY*_sc_vsc) - (_pz*_yawCos) + _toX;
-        _matrix[13] = -(_toX*_sc_vsc) - (_toY*_vs_c)   + (_pz*_yawSin) + _toY;
-        _matrix[14] = _toZ*(1 - _pitchCos);
+        _matrix[@  0] = _vc_s;
+        _matrix[@  1] = _sc_vsc;
+        _matrix[@  4] = _sc_vsc;
+        _matrix[@  5] = _vs_c;
+        _matrix[@  8] = _pitchSin*_yawCos;
+        _matrix[@  9] = -_pitchSin*_yawSin;
+        _matrix[@ 10] = _pitchCos;
+        _matrix[@ 12] = -(_toX*_vc_s)   - (_toY*_sc_vsc) - (_pz*_yawCos) + _toX;
+        _matrix[@ 13] = -(_toX*_sc_vsc) - (_toY*_vs_c)   + (_pz*_yawSin) + _toY;
+        _matrix[@ 14] = _toZ*(1 - _pitchCos);
     }
     else
     {
-        _matrix[ 0] = 1;
-        _matrix[ 1] = 0;
-        _matrix[ 4] = 0;
-        _matrix[ 5] = 1;
-        _matrix[ 8] =  _pitchSin*_yawCos;
-        _matrix[ 9] = -_pitchSin*_yawSin;
-        _matrix[10] =  _pitchCos;
-        _matrix[12] = -_pz*_yawCos;
-        _matrix[13] = _pz*_yawSin;
-        _matrix[14] = _toZ*(1 - _pitchCos);
+        _matrix[@  0] = 1;
+        _matrix[@  1] = 0;
+        _matrix[@  4] = 0;
+        _matrix[@  5] = 1;
+        _matrix[@  8] =  _pitchSin*_yawCos;
+        _matrix[@  9] = -_pitchSin*_yawSin;
+        _matrix[@ 10] =  _pitchCos;
+        _matrix[@ 12] = -_pz*_yawCos;
+        _matrix[@ 13] = _pz*_yawSin;
+        _matrix[@ 14] = _toZ*(1 - _pitchCos);
     }
     
     matrix_stack_push(matrix_build_lookat(_fromX, _fromY, _fromZ, _toX, _toY, _toZ, _upX, _upY, _upZ));

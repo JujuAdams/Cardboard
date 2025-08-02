@@ -4,8 +4,8 @@
 /// @param [litAlphaBlendFunc]
 /// @param [unlitOpaqueFunc]
 /// @param [unlitAlphaBlendFunc]
-/// @param [viewMatrixHint]
-/// @param [projectionMatrixHint]
+/// @param [viewMatrix]
+/// @param [projectionMatrix]
 
 function CbRenderConvenience(_litOpaqueFunc, _litAlphaBlendFunc, _unlitOpaqueFunc, _unlitAlphaBlendFunc, _viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
 {

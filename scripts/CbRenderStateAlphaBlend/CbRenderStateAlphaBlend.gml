@@ -1,6 +1,6 @@
 /// @param [unlit=false]
-/// @param [viewMatrixHint]
-/// @param [projectionMatrixHint]
+/// @param [viewMatrix]
+/// @param [projectionMatrix]
 
 function CbRenderStateAlphaBlend(_unlit = false, _viewMatrix = undefined, _projectionMatrix = undefined)
 {
