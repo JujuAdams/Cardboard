@@ -21,10 +21,21 @@ function CbCameraGetFrustrumCoords(_viewMatrix, _projMatrix)
         var _vector = matrix_transform_vertex(_matrix, _x, _y, _z, _w);
         
         var _wResult = _vector[3];
-        _vector[0] /= _wResult;
-        _vector[1] /= _wResult;
-        _vector[2] /= _wResult;
-        _vector[3]  = (_wResult == 0)? 0 : 1;
+        if (_wResult == 0)
+        {
+            //High unacademic but good enough. We want to avoid NaN or infinity creeping in.
+            _vector[0] *= 999999;
+            _vector[1] *= 999999;
+            _vector[2] *= 999999;
+            _vector[3]  = 0;
+        }
+        else
+        {
+            _vector[0] /= _wResult;
+            _vector[1] /= _wResult;
+            _vector[2] /= _wResult;
+            _vector[3]  = 1;
+        }
         
         return _vector;
     }
