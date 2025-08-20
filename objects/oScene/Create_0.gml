@@ -60,9 +60,15 @@ Draw = function()
     CbSpriteLayer("Assets_1", 0, 0, 0, 0);
     
     CbSpriteExt(sprTest, 0,   -320,   0, 0,    2, 2, 0, 90,    c_white, 1, false);
-    CbSpriteExt(sprTest, 0,    320,   0, 0,    2, 2, 0, current_time/15,    c_white, 1, true );
+    CbSpriteExt(sprTest, 0,    320, 320, 0,    2, 2, 0, current_time/15,    c_white, 1, true);
     CbSpriteExt(sprTest, 0,      0, 320, 0,    2, 2, 0,  0,    c_white, 1, false);
-    CbSpriteExt(sprGuy, 0,    200, 400, 0,    2, 2, 0,  0,    c_white, 1, false);
+    CbSpriteExt(sprGuy,  0,    200, 400, 0,    2, 2, 0,  0,    c_white, 1, false);
     
     CbBatchForceSubmit();
+    
+    var _cullmode = gpu_get_cullmode();
+    gpu_set_cullmode(cull_counterclockwise);
+    UggCapsule(400, 400, 0, 100, 20);
+    UggAABB(500, 400, 50,   90, 60, 100);
+    gpu_set_cullmode(_cullmode);
 }

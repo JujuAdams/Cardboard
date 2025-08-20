@@ -16,7 +16,7 @@
 //Ugg shader usage to be toggled by `UggSetUseShaders()`.
 /// 
 /// N.B. Disabling shaders will also disable Ugg's basic system.
-#macro UGG_FORCE_USE_SHADERS  undefined
+#macro UGG_FORCE_USE_SHADERS  false
 
 //Whether to set the fog colour to the shape colour when Ugg shaders are not in use. This allows
 //shapes to be drawn in colour even if Ugg shaders are disabled.
