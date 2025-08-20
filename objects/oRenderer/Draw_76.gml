@@ -18,7 +18,6 @@ if (variable_instance_exists(self, "light2"))
 if (variable_instance_exists(self, "light3"))
 {
     var _angle = point_direction(room_width/2, room_height/2, mouse_x, mouse_y) + oCamera.yaw + 90;
-    
     light3.xFrom = oCamera.camToX + lengthdir_x(10, _angle);
     light3.yFrom = oCamera.camToY + lengthdir_y(10, _angle);
     light3.zFrom = oCamera.camToZ + 30;
