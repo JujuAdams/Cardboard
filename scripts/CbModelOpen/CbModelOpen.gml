@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Starts the building process for a Cardboard model
 /// 
 /// This function returns <undefined>; CbModelClose() returns the model

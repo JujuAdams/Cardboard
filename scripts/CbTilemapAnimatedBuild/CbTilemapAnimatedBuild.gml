@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param tilemap
 /// @param xOffset
 /// @param yOffset

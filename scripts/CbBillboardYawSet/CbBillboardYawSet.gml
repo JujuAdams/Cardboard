@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Sets the yaw angle used for Cb's billboarded sprites
 /// This function allows use of CbSpriteBillboard*()
 /// 

@@ -1,1 +1,3 @@
+// Feather disable all
+
 #macro __CB_CONDITIONAL_SUBMIT  if (!_global.__batch.__auto && (_global.__model == undefined)) CbBatchForceSubmit();

@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param  function
 
 function CbLightDefaultDepthFunctionSet(_function)

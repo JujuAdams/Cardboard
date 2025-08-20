@@ -1,3 +1,5 @@
+// Feather disable all
+
 function CbCamera() constructor
 {
     __xFrom = 0;

@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Sets the color of ambient lighting
 /// 
 /// @param color   Color of the ambient lighting

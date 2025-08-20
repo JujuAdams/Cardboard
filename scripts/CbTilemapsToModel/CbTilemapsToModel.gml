@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param ruleset
 /// @param tilemapArray
 /// @param xOffset

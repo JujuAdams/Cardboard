@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbBuildError()
 {
     var _string = "";

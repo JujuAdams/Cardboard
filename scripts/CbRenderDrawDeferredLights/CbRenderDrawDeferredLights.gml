@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Renders lighting contributions from deferred lights 
 /// 
 /// @param viewMatrix

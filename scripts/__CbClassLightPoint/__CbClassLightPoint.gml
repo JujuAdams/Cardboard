@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbClassLightPoint(_x, _y, _z, _radius, _color) constructor
 {
     __CB_GLOBAL_RENDER

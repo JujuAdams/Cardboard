@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Turns auto-batching on or off
 /// 
 /// @param state  Whether to turn on auto-batching

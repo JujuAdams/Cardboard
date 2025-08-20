@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Forces the current batch to be submitted to the GPU
 /// 
 /// This should be called before a change in GPU state (such as world matrix / shader changes etc.)

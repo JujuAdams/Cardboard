@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Starts a new vertex buffer inside the model that's currently being built
 /// 
 /// This vertex buffer can be used to add your own vertex data to the model

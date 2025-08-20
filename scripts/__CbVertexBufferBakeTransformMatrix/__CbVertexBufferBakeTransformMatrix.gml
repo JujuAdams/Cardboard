@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbVertexBufferBakeTransformMatrix(_returnMode, _vertexBuffer, _vertexFormat, _matrix)
 {
     var _buffer = buffer_create_from_vertex_buffer(_vertexBuffer, buffer_fixed, 1);

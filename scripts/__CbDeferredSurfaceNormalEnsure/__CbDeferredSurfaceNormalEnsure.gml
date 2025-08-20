@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbDeferredSurfaceNormalEnsure(_refSurface)
 {
     __CB_GLOBAL_RENDER

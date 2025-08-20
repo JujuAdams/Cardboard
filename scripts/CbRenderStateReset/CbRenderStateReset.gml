@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Resets the GPU render state for the given pass
 /// This will set matrices, z-testing, and the current shader
 

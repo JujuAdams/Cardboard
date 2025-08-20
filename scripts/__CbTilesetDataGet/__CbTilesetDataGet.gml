@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param tileset
 
 function __CbTilesetDataGet(_tilesetIndex)

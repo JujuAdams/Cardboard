@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Draws a tile perpendicular to the floor ("standing up")
 /// 
 /// This function treats a z angle of 0 degrees as facing a camera pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)

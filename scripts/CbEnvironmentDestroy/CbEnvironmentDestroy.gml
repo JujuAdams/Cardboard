@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param environment
 
 function CbEnvironmentDestroy(_environment)

@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param animatedTilemapModel
 /// @param frame
 /// @param [setShader=true]

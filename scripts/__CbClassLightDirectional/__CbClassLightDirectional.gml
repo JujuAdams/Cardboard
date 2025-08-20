@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbClassLightDirectional(_dx, _dy, _dz, _color) constructor
 {
     __CB_GLOBAL_RENDER

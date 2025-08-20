@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Prepares lighting for use. This function should be called once per frame before rendering
 /// either the CB_PASS.LIT_OPAQUE or CB_PASS.LIT_ALPHA_BLEND passes.
 

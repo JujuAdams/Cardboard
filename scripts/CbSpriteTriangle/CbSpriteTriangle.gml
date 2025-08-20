@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Draws a sprite stretched over an arbitrary quadrilateral
 /// 
 /// If auto-batching is turned on or you are building a model then the sprite may not be immediately drawn

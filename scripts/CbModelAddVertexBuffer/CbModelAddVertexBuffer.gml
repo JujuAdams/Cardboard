@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param model
 /// @param vertexBuffer
 /// @param texturePointer

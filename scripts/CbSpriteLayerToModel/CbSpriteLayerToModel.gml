@@ -1,3 +1,5 @@
+// Feather disable all
+
 function CbSpriteLayerToModel()
 {
     return new __CbClassSpriteLayerToModel();

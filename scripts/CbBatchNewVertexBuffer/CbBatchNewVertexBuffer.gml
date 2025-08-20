@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Starts a new vertex buffer inside Cb's batching system
 /// 
 /// This vertex buffer can be used to add your own vertex data to the batch

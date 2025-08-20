@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Draws a sprite perpendicular to the floor ("standing up")
 /// 
 /// This function presumes that the camera is pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)

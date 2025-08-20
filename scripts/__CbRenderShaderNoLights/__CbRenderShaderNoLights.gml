@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbRenderShaderNoLights()
 {
     __CB_GLOBAL_RENDER

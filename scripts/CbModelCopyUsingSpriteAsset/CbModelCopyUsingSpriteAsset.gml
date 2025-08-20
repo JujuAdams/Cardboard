@@ -1,3 +1,5 @@
+// Feather disable all
+
 function CbModelCopyUsingSpriteAsset(_sourceModel, _destinationModel, _spriteElementID, _xOffset = 0, _yOffset = 0, _zOffset = 0, _zScaleMode = 0)
 {
     var _xScale = layer_sprite_get_xscale(_spriteElementID);

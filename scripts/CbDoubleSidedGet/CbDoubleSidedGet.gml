@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns whether double-sided drawing is enabled
 
 function CbDoubleSidedGet()

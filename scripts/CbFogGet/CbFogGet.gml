@@ -1,3 +1,5 @@
+// Feather disable all
+
 function CbFogGet()
 {
     __CB_GLOBAL_RENDER

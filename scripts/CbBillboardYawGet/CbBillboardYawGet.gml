@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns the yaw angle used for Cb's billboarded sprites
 
 function CbBillboardYawGet()

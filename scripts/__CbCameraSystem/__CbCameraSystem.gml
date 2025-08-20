@@ -1,3 +1,5 @@
+// Feather disable all
+
 #macro __CB_CAMERA_VERSION  "3.0.0"
 #macro __CB_CAMERA_DATE     "2024-06-16"
 

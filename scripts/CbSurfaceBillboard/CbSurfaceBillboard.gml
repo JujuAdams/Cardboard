@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Draws a sprite surface to the floor ("standing up") and facing the camera
 /// 
 /// This function requires that you call CbViewMatrixSet() before drawing the billboarded surface

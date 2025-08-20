@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Sets the current lighting mode for Cardboard
 /// 
 /// The light mode should be specified using the CB_LIGHT_MODE enum

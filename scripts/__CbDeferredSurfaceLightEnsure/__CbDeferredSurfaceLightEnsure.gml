@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbDeferredSurfaceLightEnsure(_refSurface)
 {
     __CB_GLOBAL_RENDER

@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbBuildTrace()
 {
     var _string = "CbBuild: ";

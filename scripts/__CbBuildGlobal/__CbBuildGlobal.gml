@@ -1,3 +1,5 @@
+// Feather disable all
+
 #macro __CB_GLOBAL_BUILD  static _global = __CbBuildGlobal();
 
 function __CbBuildGlobal()

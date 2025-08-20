@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns the ambient light colour
 
 function CbLightAmbientGet()

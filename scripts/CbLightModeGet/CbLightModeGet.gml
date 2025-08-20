@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns the current lighting mode
 
 function CbLightModeGet()

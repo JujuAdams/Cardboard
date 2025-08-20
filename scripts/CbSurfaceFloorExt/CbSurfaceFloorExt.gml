@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Draws a surface parallel to the floor ("lying down")
 /// 
 /// This function treats a z angle of 0 degrees as orienting the surface to a camera pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)

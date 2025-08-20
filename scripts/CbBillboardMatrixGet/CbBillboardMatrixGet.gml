@@ -1,3 +1,5 @@
+// Feather disable all
+
 function CbBillboardMatrixGet(_x, _y, _z)
 {
     __CB_GLOBAL_BUILD

@@ -1,3 +1,5 @@
+// Feather disable all
+
 function CbRenderStateDepthOnly()
 {
     __CB_GLOBAL_RENDER

@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns an array of all lights currently added to Cardboard
 /// 
 /// N.B. Elements in this array are weak references

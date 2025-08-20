@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Draws a native GameMaker particle system perpendicular to the floor ("standing up") and facing the camera
 /// 
 /// This function presumes that the camera is pointing in a "negative y" direction e.g. from (0, 200, 200) to (0, 0, 0)

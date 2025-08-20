@@ -1,3 +1,5 @@
+// Feather disable all
+
 #macro __CB_TILE_COMMON_TEXTURE ;\
 var _tilesetData = __CbTilesetDataGet(_tileset);\
 var _texture     = _tilesetData.__texture;\

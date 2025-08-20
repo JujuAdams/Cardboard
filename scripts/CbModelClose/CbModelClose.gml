@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Finishes building a model started by CbModelOpen()
 /// 
 /// This function returns the model that has been built

@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Sets the visibility all specified layers to <false>
 /// 
 /// @param array

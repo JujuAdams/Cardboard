@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns whether auto-batching is turned on
 
 function CbBatchAutoGet()

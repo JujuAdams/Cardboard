@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param enabled
 /// @param [color]
 /// @param [near]

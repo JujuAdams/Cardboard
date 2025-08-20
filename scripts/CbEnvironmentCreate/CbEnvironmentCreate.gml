@@ -1,3 +1,5 @@
+// Feather disable all
+
 function CbEnvironmentCreate()
 {
     return new __CbClassEnvironment();

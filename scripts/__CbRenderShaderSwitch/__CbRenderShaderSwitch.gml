@@ -1,3 +1,5 @@
+// Feather disable all
+
 function __CbRenderShaderSwitch(_lightMode, _viewMatrix, _projectionMatrix)
 {
     switch(_lightMode)
