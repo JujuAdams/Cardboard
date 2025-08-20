@@ -1,9 +1,9 @@
-if (show_info)
+if (showInfo)
 {
     var _string  = "Cardboard " + __CB_BUILD_VERSION + "\n";
         _string += "Juju Adams " + __CB_BUILD_DATE + "\n";
         _string += "\n";
-        _string += "FPS = " + string(fps) + " (" + string(fps_smoothed) + ")\n";
+        _string += "FPS = " + string(fps) + " (CPU " + string(1000 / fpsSmoothed) + "ms)\n";
         _string += "\n";
         _string += "WASD/shift/space to move camera\n";
         _string += "Q/E to rotate camera\n";
