@@ -6,7 +6,7 @@
   "name":"__UggConfig",
   "parent":{
     "name":"Ugg",
-    "path":"folders/Tests & Examples/Scripts/Ugg.yy",
+    "path":"folders/Ugg.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

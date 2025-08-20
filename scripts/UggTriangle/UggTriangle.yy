@@ -6,7 +6,7 @@
   "name":"UggTriangle",
   "parent":{
     "name":"Shapes",
-    "path":"folders/Tests & Examples/Scripts/Ugg/Shapes.yy",
+    "path":"folders/Ugg/Shapes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

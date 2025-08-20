@@ -6,7 +6,7 @@
   "name":"__UggPrebuildWireframePlane",
   "parent":{
     "name":"Wireframes",
-    "path":"folders/Tests & Examples/Scripts/Ugg/(System)/Wireframes.yy",
+    "path":"folders/Ugg/(System)/Wireframes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

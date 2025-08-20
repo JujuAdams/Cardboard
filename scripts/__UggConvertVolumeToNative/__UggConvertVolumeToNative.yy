@@ -6,7 +6,7 @@
   "name":"__UggConvertVolumeToNative",
   "parent":{
     "name":"(System)",
-    "path":"folders/Tests & Examples/Scripts/Ugg/(System).yy",
+    "path":"folders/Ugg/(System).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
