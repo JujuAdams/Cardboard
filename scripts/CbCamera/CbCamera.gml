@@ -241,4 +241,35 @@ function CbCamera() constructor
     {
         return CbCameraGetFrustrumCoords(GetViewMatrix(), GetProjectionMatrix());
     }
+    
+    static GetFrustrumLine = function(_xNorm = 0, _yNorm = 0)
+    {
+        static _result = {
+            x1: 0,
+            y1: 0,
+            z1: 0,
+            x2: 0,
+            y2: 0,
+            z2: 0,
+        };
+        
+        with(_result)
+        {
+            var _vpMatrixInverse = matrix_inverse(matrix_multiply(GetViewMatrix(), GetProjectionMatrix()));
+            
+            var _vector = matrix_transform_vertex(_vpMatrixInverse, _xNorm, -_yNorm, 0, 1);
+            var _w = _vector[3];
+            x1 = _vector[0] / _w;
+            y1 = _vector[1] / _w;
+            z1 = _vector[2] / _w;
+            
+            var _vector = matrix_transform_vertex(_vpMatrixInverse, _xNorm, -_yNorm, 1, 1);
+            var _w = _vector[3];
+            x2 = _vector[0] / _w;
+            y2 = _vector[1] / _w;
+            z2 = _vector[2] / _w;
+        }
+        
+        return _result;
+    }
 }
