@@ -47,8 +47,8 @@ function CbTileQuad()
     var _tilesetData   = __CbTilesetDataGet(_tileset);
     var _texture       = _tilesetData.__texture;
     var _uvs           = _tilesetData.__UVs;
-    var _borderWidth   = _tilesetData.__tileSeparatorH;
-    var _borderHeight  = _tilesetData.__tileSeparatorV;
+    var _borderWidth   = _tilesetData.__tileBorderX;
+    var _borderHeight  = _tilesetData.__tileBorderY;
     var _tilesetU0     = _uvs[0];
     var _tilesetV0     = _uvs[1];
     var _tilesetU1     = _uvs[2];
@@ -68,10 +68,15 @@ function CbTileQuad()
         _global.__batch.__textureIndex   = undefined;
     }
     
-    var _u0 = lerp(_tilesetU0, _tilesetU1, (_borderWidth  + _tileWidthExt *_tileX              ) / _textureWidth );
-    var _v0 = lerp(_tilesetV0, _tilesetV1, (_borderHeight + _tileHeightExt*_tileY              ) / _textureHeight);
-    var _u1 = lerp(_tilesetU0, _tilesetU1, (_borderWidth  + _tileWidthExt *_tileX + _tileWidth ) / _textureWidth );
-    var _v1 = lerp(_tilesetV0, _tilesetV1, (_borderHeight + _tileHeightExt*_tileY + _tileHeight) / _textureHeight);
+    var _tx0 = (_borderWidth  + _tileWidthExt *_tileX              ) / _textureWidth;
+    var _ty0 = (_borderHeight + _tileHeightExt*_tileY              ) / _textureHeight;
+    var _tx1 = (_borderWidth  + _tileWidthExt *_tileX + _tileWidth ) / _textureWidth;
+    var _ty1 = (_borderHeight + _tileHeightExt*_tileY + _tileHeight) / _textureHeight;
+    
+    var _u0 = lerp(_tilesetU0, _tilesetU1, _tx0);
+    var _v0 = lerp(_tilesetV0, _tilesetV1, _ty0);
+    var _u1 = lerp(_tilesetU0, _tilesetU1, _tx1);
+    var _v1 = lerp(_tilesetV0, _tilesetV1, _ty1);
     
     
     

@@ -10,14 +10,24 @@ function __CbClassTileset(_tileset) constructor
     __tileset     = _tileset;
     __tilesetInfo = tileset_get_info(_tileset);
     
-    __tileWidth      = __tilesetInfo.tile_width;
-    __tileHeight     = __tilesetInfo.tile_height;
-    __tileSeparatorH = __tilesetInfo.tile_horizontal_separator;
-    __tileSeparatorV = __tilesetInfo.tile_vertical_separator;
-    __textureWidth   = __tilesetInfo.width;
-    __textureHeight  = __tilesetInfo.height;
-    __tilesetWidth   = __tilesetInfo.tile_count  / __tilesetInfo.tile_columns;
-    __tilesetHeight  = __tilesetInfo.tile_columns;
+    __tileWidth     = __tilesetInfo.tile_width;
+    __tileHeight    = __tilesetInfo.tile_height;
+    
+    if (CB_LEGACY_TILESET_DATA)
+    {
+        __tileBorderX = __tilesetInfo.tile_horizontal_separator;
+        __tileBorderY = __tilesetInfo.tile_vertical_separator;
+    }
+    else
+    {
+        __tileBorderX = __tilesetInfo.tile_border_x;
+        __tileBorderY = __tilesetInfo.tile_border_y;
+    }
+    
+    __textureWidth  = __tilesetInfo.width;
+    __textureHeight = __tilesetInfo.height;
+    __tilesetWidth  = __tilesetInfo.tile_count  / __tilesetInfo.tile_columns;
+    __tilesetHeight = __tilesetInfo.tile_columns;
     
     __tileAnimMap = ds_map_create();
     

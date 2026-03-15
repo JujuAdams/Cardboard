@@ -80,8 +80,8 @@ function __CbTileQuadAnimated()
     
     var _tilesetData   = __CbTilesetDataGet(_tileset);
     var _uvs           = _tilesetData.__UVs;
-    var _borderWidth   = _tilesetData.__tileSeparatorH;
-    var _borderHeight  = _tilesetData.__tileSeparatorV;
+    var _borderWidth   = _tilesetData.__tileBorderX;
+    var _borderHeight  = _tilesetData.__tileBorderY;
     var _animMap       = _tilesetData.__tileAnimMap;
     var _tilesetU0     = _uvs[0];
     var _tilesetV0     = _uvs[1];
