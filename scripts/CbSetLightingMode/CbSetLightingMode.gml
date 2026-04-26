@@ -4,7 +4,7 @@
 /// 
 /// The light mode should be specified using the `CB_LIGHTING` constants:
 /// 
-/// `CB_LIGHTING_DISABLE_LIGHTING`
+/// `CB_LIGHTING_DISABLED`
 ///     No lighting is applied
 /// 
 /// `CB_LIGHTING_DISABLE_NO_SHADOWED_LIGHTS`

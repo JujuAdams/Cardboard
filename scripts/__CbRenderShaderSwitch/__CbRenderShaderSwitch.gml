@@ -6,7 +6,7 @@
 
 function __CbRenderShaderSwitch(_lightingMode, _viewMatrix, _projectionMatrix)
 {
-    if (_lightingMode == CB_LIGHTING_DISABLE_LIGHTING)
+    if (_lightingMode == CB_LIGHTING_DISABLED)
     {
         __CbRenderShaderNoLights();
     }

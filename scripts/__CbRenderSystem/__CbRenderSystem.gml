@@ -30,7 +30,7 @@ function __CbRenderSystem()
         };
         
         __lighting = {
-            __lightMode: CB_LIGHTING_DISABLE_LIGHTING,
+            __lightMode: CB_LIGHTING_DISABLED,
             __lightStructArray: [],
             
             __ambient:     c_white,
