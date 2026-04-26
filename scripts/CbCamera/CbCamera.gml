@@ -220,8 +220,8 @@ function CbCamera() constructor
     
     static GetViewMatrix = function()
     {
-        var _coeff = CB_CAMERA_OPENGL? -1 : 1;
-        if (CB_CAMERA_OPENGL && __orthographic) _coeff = 1;
+        var _coeff = CB_CAMERA_FLIP_V? -1 : 1;
+        if (CB_CAMERA_FLIP_V && __orthographic) _coeff = 1;
         
         if (__zTilt)
         {
@@ -235,7 +235,7 @@ function CbCamera() constructor
     
     static GetProjectionMatrix = function()
     {
-        var _coeff = CB_CAMERA_OPENGL? -1 : 1;
+        var _coeff = CB_CAMERA_FLIP_V? -1 : 1;
         
         if (__orthographic)
         {
