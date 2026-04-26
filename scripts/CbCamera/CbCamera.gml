@@ -37,6 +37,10 @@ function CbCamera() constructor
     __oldViewMatrix       = matrix_get(matrix_view);
     __oldProjectionMatrix = matrix_get(matrix_projection);
     
+    
+    
+    
+    
     static SetFrom = function(_x, _y, _z)
     {
         __xFrom = _x;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbLightGetAmbient",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightGetAmbient",
+  "parent":{
+    "name":"Lights",
+    "path":"folders/Cardboard/Render/Lights.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

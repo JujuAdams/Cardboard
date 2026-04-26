@@ -1,0 +1,10 @@
+// Feather disable all
+
+/// @param  function
+
+function CbLightSetDefaultDepthFunction(_function)
+{
+    __CB_GLOBAL_RENDER
+    
+    _global.__lighting.__defaultDepthFunction = _function;
+}

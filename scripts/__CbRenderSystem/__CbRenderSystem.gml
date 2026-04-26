@@ -1,29 +1,8 @@
 // Feather disable all
 
-#macro __CB_RENDER_VERSION  "3.0.0"
-#macro __CB_RENDER_DATE     "2024-06-16"
-
 #macro __CB_LIGHT_COUNT  6
 
 #macro __CB_SURFACE_SET_TARGET_EXT_WORKAROUND  true
-
-enum CB_PASS
-{
-    DEPTH_MAP,
-    LIT_OPAQUE,
-    LIT_ALPHA_BLEND,
-    UNLIT_OPAQUE,
-    UNLIT_ALPHA_BLEND,
-    __SIZE
-}
-
-enum CB_LIGHT_MODE
-{
-    DISABLE_LIGHTING,
-    NO_SHADOWED_LIGHTS,
-    ONE_SHADOWED_LIGHT,
-    DEFERRED,
-}
 
 #macro __CB_RENDER_OPENGL  (((os_type != os_windows) && (os_type != os_xboxone) && (os_type != os_xboxseriesxs)) || (os_browser != browser_not_a_browser))
 #macro __CB_GLOBAL_RENDER  static _global = __CbRenderSystem();
@@ -34,7 +13,7 @@ function __CbRenderSystem()
     static _system = undefined;
     if (_system != undefined) return _system;
     
-    __CbRenderTrace("Welcome to Cardboard Render by Juju Adams! This is version " + __CB_RENDER_VERSION + ", " + __CB_RENDER_DATE);
+    __CbRenderTrace("Welcome to Cardboard Render by Juju Adams! This is version " + CB_RENDER_VERSION + ", " + CB_RENDER_DATE);
     
     _system = {};
     with(_system)
@@ -51,7 +30,7 @@ function __CbRenderSystem()
         };
         
         __lighting = {
-            __lightMode: CB_LIGHT_MODE.DISABLE_LIGHTING,
+            __lightMode: CB_LIGHTING_DISABLE_LIGHTING,
             __lightStructArray: [],
             
             __ambient:     c_white,

@@ -1,7 +1,7 @@
 CbDoubleSidedSet(true);
 
-CbLightModeSet(CB_LIGHT_MODE.DEFERRED);
-CbLightAmbientSet(c_dkgray);
+CbLightingSetMode(CB_LIGHTING_DEFERRED);
+CbLightSetAmbient(c_dkgray);
 //dir    = CbLightDirectional(1, -2, -3, make_color_rgb(0.2*255, 0.3*255, 0.4*255));
 //light1 = CbLightPoint(-10, -10, 50, 200, c_white);
 
@@ -12,7 +12,7 @@ light4 = CbLightDirectionalWithShadows(-1, -1, -1, c_navy, -1024);
 frustrumViewMatrix = undefined;
 frustrumProjMatrix = undefined;
 
-CbLightDefaultDepthFunctionSet(function()
+CbLightSetDefaultDepthFunction(function()
 {
     //Draw the scene object
     oScene.Draw();

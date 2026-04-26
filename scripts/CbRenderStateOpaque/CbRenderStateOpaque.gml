@@ -20,5 +20,5 @@ function CbRenderStateOpaque(_unlit = false, _alphaTest = true, _viewMatrix = un
     }
     
     gpu_set_blendenable(false);
-    __CbRenderShaderSwitch(_unlit? CB_LIGHT_MODE.DISABLE_LIGHTING : _global.__lighting.__lightMode, _viewMatrix, _projectionMatrix);
+    __CbRenderShaderSwitch(_unlit? CB_LIGHTING_DISABLE_LIGHTING : _global.__lighting.__lightMode, _viewMatrix, _projectionMatrix);
 }

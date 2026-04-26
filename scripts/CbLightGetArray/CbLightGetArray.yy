@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbLightGetArray",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightGetArray",
+  "parent":{
+    "name":"Lights",
+    "path":"folders/Cardboard/Render/Lights.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

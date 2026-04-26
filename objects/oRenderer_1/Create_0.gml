@@ -1,7 +1,7 @@
 layer_set_visible("Assets_1", false);
 
-CbLightModeSet(CB_LIGHT_MODE.DEFERRED);
-CbLightAmbientSet(c_dkgray);
+CbLightingSetMode(CB_LIGHTING_DEFERRED);
+CbLightSetAmbient(c_dkgray);
 
 CbDoubleSidedSet(false);
 
@@ -35,7 +35,7 @@ _converter.Add(sprHi, 0, modelA);
 _converter.Convert("ConvertTest", modelB);
 CbLayerArrayHide("ConvertTest");
 
-CbLightDefaultDepthFunctionSet(function()
+CbLightSetDefaultDepthFunction(function()
 {
     CbModelSubmit(modelB);
     CbSpriteLayer("Assets_1", 0, 0, 0, 0);

@@ -1,13 +1,13 @@
 // Feather disable all
 
 /// Prepares lighting for use. This function should be called once per frame before rendering
-/// either the CB_PASS.LIT_OPAQUE or CB_PASS.LIT_ALPHA_BLEND passes.
+/// lit geometry.
 
 function CbRenderPreDrawLighting()
 {
     __CB_GLOBAL_RENDER
     
-    if (CbLightModeGet() != CB_LIGHT_MODE.DISABLE_LIGHTING)
+    if (CbLightingGetMode() != CB_LIGHTING_DISABLE_LIGHTING)
     {
         with(_global.__lighting)
         {
@@ -38,7 +38,7 @@ function CbRenderPreDrawLighting()
                 }
             }
             
-            if ((__lightMode == CB_LIGHT_MODE.ONE_SHADOWED_LIGHT) || (__lightMode == CB_LIGHT_MODE.DEFERRED))
+            if ((__lightMode == CB_LIGHTING_ONE_SHADOWED_LIGHT) || (__lightMode == CB_LIGHTING_DEFERRED))
             {
                 CbRenderStateDepthOnly();
                 
@@ -60,7 +60,7 @@ function CbRenderPreDrawLighting()
                 CbRenderStateReset();
             }
             
-            if (__lightMode == CB_LIGHT_MODE.DEFERRED)
+            if (__lightMode == CB_LIGHTING_DEFERRED)
             {
                 surface_set_target(__CbDeferredSurfaceNormalEnsure(surface_get_target()));
                 draw_clear(c_gray);

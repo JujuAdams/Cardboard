@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbSetAlphaTest",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSetAlphaTest",
+  "parent":{
+    "name":"Options",
+    "path":"folders/Cardboard/Render/Options.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

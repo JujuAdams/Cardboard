@@ -1,6 +1,6 @@
 // Feather disable all
 
-/// Renders lighting contributions from deferred lights 
+/// Renders lighting contributions from deferred lights.
 /// 
 /// @param viewMatrix
 /// @param projectionMatrix
@@ -10,7 +10,7 @@ function CbRenderDrawDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurf
 {
     __CB_GLOBAL_RENDER
     
-    if (CbLightModeGet() != CB_LIGHT_MODE.DEFERRED) return;
+    if (CbLightingGetMode() != CB_LIGHTING_DEFERRED) return;
     
     var _vpMatrix         = matrix_multiply(_viewMatrix, _projectionMatrix);
     var _vpMatrixInverse  = matrix_inverse(_vpMatrix);
