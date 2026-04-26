@@ -7,7 +7,7 @@ function CbRenderPreDrawLighting()
 {
     __CB_GLOBAL_RENDER
     
-    if (CbLightingGetMode() != CB_LIGHTING_DISABLE_LIGHTING)
+    if (CbGetLightingMode() != CB_LIGHTING_DISABLE_LIGHTING)
     {
         with(_global.__lighting)
         {

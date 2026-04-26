@@ -1,6 +1,6 @@
 // Feather disable all
 
-/// Convenience function that executes all Cardboard render passes, including lighting
+/// Convenience function that executes all Cardboard render passes, including lighting.
 /// 
 /// @param [litOpaqueFunc]
 /// @param [litAlphaBlendFunc]

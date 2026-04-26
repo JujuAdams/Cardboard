@@ -2,7 +2,7 @@
 
 /// Returns the current lighting mode
 
-function CbLightingGetMode()
+function CbGetLightingMode()
 {
     __CB_GLOBAL_RENDER
     

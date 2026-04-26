@@ -1,6 +1,6 @@
 CbSetDoubleSided(true);
 
-CbLightingSetMode(CB_LIGHTING_DEFERRED);
+CbSetLightingMode(CB_LIGHTING_DEFERRED);
 CbLightSetAmbient(c_dkgray);
 //dir    = CbLightDirectional(1, -2, -3, make_color_rgb(0.2*255, 0.3*255, 0.4*255));
 //light1 = CbLightPoint(-10, -10, 50, 200, c_white);

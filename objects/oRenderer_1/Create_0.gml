@@ -1,6 +1,6 @@
 layer_set_visible("Assets_1", false);
 
-CbLightingSetMode(CB_LIGHTING_DEFERRED);
+CbSetLightingMode(CB_LIGHTING_DEFERRED);
 CbLightSetAmbient(c_dkgray);
 
 CbSetDoubleSided(false);
