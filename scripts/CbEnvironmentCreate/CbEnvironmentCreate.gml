@@ -1,5 +1,19 @@
 // Feather disable all
 
+/// .BuildFromTilemap(tilemap)
+/// 
+/// .RoomCoordToWorldCoord(x, y)
+/// 
+/// .GetZ(x, y)
+/// 
+/// .GetRoomZOffsetGrid()
+/// 
+/// .GetZGrid()
+/// 
+/// .GetModel()
+/// 
+/// .Destroy()
+
 function CbEnvironmentCreate()
 {
     return new __CbClassEnvironment();

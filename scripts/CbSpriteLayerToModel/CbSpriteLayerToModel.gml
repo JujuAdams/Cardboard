@@ -1,5 +1,12 @@
 // Feather disable all
 
+/// Methods:
+/// .SetZGrid(zGrid, cellWidth, cellHeight, cellDepth)
+/// 
+/// .Add(sprite, image, model, [modelZScale=0])
+/// 
+/// .Convert(layer, destination, [zOffset=0])
+
 function CbSpriteLayerToModel()
 {
     return new __CbClassSpriteLayerToModel();

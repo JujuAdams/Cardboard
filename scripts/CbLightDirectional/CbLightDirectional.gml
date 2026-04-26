@@ -1,5 +1,16 @@
 // Feather disable all
 
+/// Variables:
+/// .dx .dy .dz
+/// 
+/// .color
+/// 
+/// .visible
+/// 
+/// 
+/// Methods:
+/// .Destroy()
+/// 
 /// @param dX
 /// @param dY
 /// @param dZ

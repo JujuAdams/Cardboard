@@ -1,5 +1,28 @@
 // Feather disable all
 
+/// Variables:
+/// .dx .dy .dz
+/// 
+/// .color
+/// 
+/// .visible
+/// 
+/// .nearOffset .farOffset
+/// 
+/// .shadowMapBiasMin .shadowMapBiasMax .shadowMapBiasCoeff
+/// 
+/// .depthFunction
+/// 
+/// 
+/// Methods:
+/// .TrackCamera()
+/// 
+/// .GetFrustrumCoords()
+/// 
+/// .DrawDebug()
+/// 
+/// .Destroy()
+/// 
 /// @param dX
 /// @param dY
 /// @param dZ

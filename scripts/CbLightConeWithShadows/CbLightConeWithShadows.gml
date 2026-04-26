@@ -1,5 +1,33 @@
 // Feather disable all
 
+/// Variables:
+/// .xFrom .yFrom .zFrom
+/// 
+/// .xTo .yTo .zTo
+/// 
+/// .xUp .yUp .zUp
+/// 
+/// .color
+/// 
+/// .visible
+/// 
+/// .fov
+/// 
+/// .radius
+/// 
+/// .near .far
+/// 
+/// .shadowMapBiasMin .shadowMapBiasMax .shadowMapBiasCoeff
+/// 
+/// .depthFunction
+/// 
+/// 
+/// Methods:
+/// .DrawDebug()
+/// 
+/// .Destroy()
+/// 
+/// 
 /// @param color
 /// @param xFrom
 /// @param yFrom
