@@ -1,5 +1,53 @@
 // Feather disable all
 
+/// .SetFrom(x, y, z)
+/// 
+/// .GetFrom()
+/// 
+/// .SetTo(x, y, z)
+/// 
+/// .GetTo()
+/// 
+/// .SetUp(x, y, z)
+/// 
+/// .GetUp()
+/// 
+/// .SetSize(width, height)
+/// 
+/// .GetSize()
+/// 
+/// .SetOrthographic(near, far)
+/// 
+/// .SetPerspective(fieldOfView, near, far)
+/// 
+/// .GetProjection()
+/// 
+/// .SetZTilt(state)
+/// 
+/// .GetZTilt()
+/// 
+/// .SetAxonometric(state)
+/// 
+/// .GetAxonometric()
+/// 
+/// .SetBillboardYawCallback(function)
+/// 
+/// .GetBillboardYawCallback()
+/// 
+/// .GetViewMatrix()
+/// 
+/// .GetProjectionMatrix()
+/// 
+/// .ApplyMatrices()
+/// 
+/// .Start([alphaTestRef=0.5], [backfaceCulling=cull_noculling])
+/// 
+/// .End()
+/// 
+/// .GetFrustrumCoords()
+/// 
+/// .GetFrustrumLine(xNormalized, yNormalized)
+
 function CbCamera() constructor
 {
     __xFrom = 0;

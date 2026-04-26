@@ -3,7 +3,7 @@
 /// @param [viewMatrix]
 /// @param [projectionMatrix]
 
-function __CbRenderShaderOneShadowedLight(_viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
+function __CbRenderShaderOneShadowedLight(_viewMatrix = undefined, _projMatrix = undefined)
 {
     __CB_GLOBAL_RENDER
     
@@ -56,8 +56,17 @@ function __CbRenderShaderOneShadowedLight(_viewMatrix = matrix_get(matrix_view),
         }
         else
         {
-            matrix_set(matrix_view,       _viewMatrix);
-            matrix_set(matrix_projection, _projectionMatrix);
+            //We only need to set matrices if we're rendering shadows
+            
+            if (_viewMatrix != undefined)
+            {
+                matrix_set(matrix_view, _viewMatrix);
+            }
+            
+            if (_projMatrix != undefined)
+            {
+                matrix_set(matrix_projection, _projMatrix);
+            }
         }
     }
 }

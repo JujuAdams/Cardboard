@@ -1,6 +1,10 @@
 // Feather disable all
 
-/// @param  function
+/// Sets a function to execute when rendering the depth buffer for shadow-mapped lights. This
+/// function can be overriden on a per-light basis by setting the `.depthFunction` variable on the
+/// light struct.
+/// 
+/// @param function
 
 function CbLightSetDefaultDepthFunction(_function)
 {

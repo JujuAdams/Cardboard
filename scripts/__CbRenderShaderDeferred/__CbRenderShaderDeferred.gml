@@ -3,7 +3,7 @@
 /// @param [viewMatrix]
 /// @param [projectionMatrix]
 
-function __CbRenderShaderDeferred(_viewMatrix = matrix_get(matrix_view), _projectionMatrix = matrix_get(matrix_projection))
+function __CbRenderShaderDeferred(_viewMatrix = undefined, _projMatrix = undefined)
 {
     __CB_GLOBAL_RENDER
     
@@ -16,6 +16,13 @@ function __CbRenderShaderDeferred(_viewMatrix = matrix_get(matrix_view), _projec
     surface_set_target_ext(0, _refSurface);
     surface_set_target_ext(1, __CbDeferredSurfaceNormalEnsure(_refSurface));
     
-    matrix_set(matrix_view,       _viewMatrix);
-    matrix_set(matrix_projection, _projectionMatrix);
+    if (_viewMatrix != undefined)
+    {
+        matrix_set(matrix_view, _viewMatrix);
+    }
+    
+    if (_projMatrix != undefined)
+    {
+        matrix_set(matrix_projection, _projMatrix);
+    }
 }
