@@ -12,8 +12,8 @@ function CbRenderDrawDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurf
     
     if (CbLightingGetMode() != CB_LIGHTING_DEFERRED) return;
     
-    var _vpMatrix         = matrix_multiply(_viewMatrix, _projectionMatrix);
-    var _vpMatrixInverse  = matrix_inverse(_vpMatrix);
+    var _vpMatrix        = matrix_multiply(_viewMatrix, _projectionMatrix);
+    var _vpMatrixInverse = matrix_inverse(_vpMatrix);
     
     var _refSurface = surface_get_target();
     
