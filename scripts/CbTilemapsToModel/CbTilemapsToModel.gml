@@ -55,8 +55,8 @@ function __CbTilemapToModelInternal(_ruleset, _tilemapBelow, _tilemap, _tilemapA
     if (is_string(_tilemap     )) _tilemap      = layer_tilemap_get_id(layer_get_id(_tilemap));
     if (is_string(_tilemapAbove)) _tilemapAbove = layer_tilemap_get_id(layer_get_id(_tilemapAbove));
     
-    var _oldDoubleSided = CbDoubleSidedGet();
-    CbDoubleSidedSet(false);
+    var _oldDoubleSided = CbGetDoubleSided();
+    CbSetDoubleSided(false);
     
     var _tilemapWidth  = tilemap_get_width(  _tilemap);
     var _tilemapHeight = tilemap_get_height( _tilemap);
@@ -243,5 +243,5 @@ function __CbTilemapToModelInternal(_ruleset, _tilemapBelow, _tilemap, _tilemapA
         ++_yMap;
     }
     
-    CbDoubleSidedSet(_oldDoubleSided);
+    CbSetDoubleSided(_oldDoubleSided);
 }

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbRenderConfig",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbRenderConfig",
+  "parent":{
+    "name":"Render",
+    "path":"folders/Cardboard/Render.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

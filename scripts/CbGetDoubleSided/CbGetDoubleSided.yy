@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbGetDoubleSided",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbGetDoubleSided",
+  "parent":{
+    "name":"Build",
+    "path":"folders/Cardboard/Build.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

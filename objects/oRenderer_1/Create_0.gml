@@ -3,7 +3,7 @@ layer_set_visible("Assets_1", false);
 CbLightingSetMode(CB_LIGHTING_DEFERRED);
 CbLightSetAmbient(c_dkgray);
 
-CbDoubleSidedSet(false);
+CbSetDoubleSided(false);
 
 //modelTilemap = CbModelCreate();
 //CbModelOpen(modelTilemap);
@@ -14,7 +14,7 @@ environment = CbEnvironmentCreate();
 environment.BuildFromTilemap(layer_tilemap_get_id("Tiles_1"));
 modelTilemap = environment.GetModel();
 zGrid = environment.GetRoomZOffsetGrid();
-CbLayerArrayHide("Tiles_1");
+CbHideLayerArray("Tiles_1");
 
 modelA = CbModelCreate();
 CbModelOpen(modelA);
@@ -33,7 +33,7 @@ var _converter = CbSpriteLayerToModel();
 _converter.SetZGrid(zGrid, 32, 32, 32);
 _converter.Add(sprHi, 0, modelA);
 _converter.Convert("ConvertTest", modelB);
-CbLayerArrayHide("ConvertTest");
+CbHideLayerArray("ConvertTest");
 
 CbLightSetDefaultDepthFunction(function()
 {

@@ -1,4 +1,4 @@
-CbDoubleSidedSet(true);
+CbSetDoubleSided(true);
 
 CbLightingSetMode(CB_LIGHTING_DEFERRED);
 CbLightSetAmbient(c_dkgray);

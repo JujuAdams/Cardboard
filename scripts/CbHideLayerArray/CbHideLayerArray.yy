@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbHideLayerArray",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbHideLayerArray",
+  "parent":{
+    "name":"Build",
+    "path":"folders/Cardboard/Build.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

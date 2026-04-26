@@ -10,8 +10,8 @@ var _array = ["Tiles_1", "Tiles_2", "Tiles_3"];
 
 CbSpriteFloorExt(sprHi, 0, 0, 0, 0, 100, 100, 0, c_white, 1);
 CbTilemapsToModel(_ruleset, _array, 0, 0, 0, 100, 100, 100);
-CbLayerArrayHide(_array);
-CbLayerArrayHide("Assets_1");
+CbHideLayerArray(_array);
+CbHideLayerArray("Assets_1");
 
 //CbSpriteFloorExt(sprHi, 0,  320,    0,   0, 5, 5, 0, c_red,    1);
 //CbSpriteFloorExt(sprHi, 0,    0, -320,   0, 5, 5, 0, c_aqua,   1);
