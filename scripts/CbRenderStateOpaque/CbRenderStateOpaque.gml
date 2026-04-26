@@ -1,5 +1,15 @@
 // Feather disable all
 
+/// Sets the game's render state to draw opaque graphics.
+/// 
+/// This function sets the following state:
+/// - Enables z-writing and z-testing
+/// - Sets backface culling (based on `CbSetBackfaceCulling()`)
+/// - Enables alpha testing (if `alphaTest` parameter is set to `true`)
+/// - Sets alpha test reference (based on `CbSetAlphaTestRef()`)
+/// - Disables alpha blending
+/// - Sets shader (based on `unlit` parameter and `CbSetLightingMode()`)
+/// 
 /// @param [unlit=false]
 /// @param [alphaTest=true]
 /// @param [viewMatrix]

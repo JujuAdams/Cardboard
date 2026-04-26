@@ -4,7 +4,7 @@
 /// 
 /// N.B. The alpha test reference value is from 0 to 1 (unlike GameMaker's native function)
 
-function CbGetAlphaTest()
+function CbGetAlphaTestRef()
 {
     __CB_GLOBAL_RENDER
     

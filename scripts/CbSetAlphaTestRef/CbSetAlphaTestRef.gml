@@ -6,7 +6,7 @@
 /// 
 /// @param alphaTestRef
 
-function CbSetAlphaTest(_alphaTestRef)
+function CbSetAlphaTestRef(_alphaTestRef)
 {
     __CB_GLOBAL_RENDER
     

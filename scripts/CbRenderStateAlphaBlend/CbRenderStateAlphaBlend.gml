@@ -1,5 +1,13 @@
 // Feather disable all
 
+/// Sets the game's render state to draw alpha-blended graphics.
+/// 
+/// This function sets the following state:
+/// - Enables z-testing
+/// - Disables z-writing
+/// - Sets backface culling (based on `CbSetBackfaceCulling()`)
+/// - Sets shader (based on `unlit` parameter and `CbSetLightingMode()`)
+/// 
 /// @param [unlit=false]
 /// @param [viewMatrix]
 /// @param [projectionMatrix]

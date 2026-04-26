@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbSetAlphaTest",
+  "%Name":"CbSetAlphaTestRef",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbSetAlphaTest",
+  "name":"CbSetAlphaTestRef",
   "parent":{
     "name":"Options",
     "path":"folders/Cardboard/Render/Options.yy",

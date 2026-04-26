@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"CbGetAlphaTest",
+  "%Name":"CbGetAlphaTestRef",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CbGetAlphaTest",
+  "name":"CbGetAlphaTestRef",
   "parent":{
     "name":"Options",
     "path":"folders/Cardboard/Render/Options.yy",

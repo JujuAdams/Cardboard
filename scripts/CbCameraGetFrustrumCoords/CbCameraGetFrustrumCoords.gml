@@ -23,7 +23,7 @@ function CbCameraGetFrustrumCoords(_viewMatrix, _projMatrix)
         var _wResult = _vector[3];
         if (_wResult == 0)
         {
-            //High unacademic but good enough. We want to avoid NaN or infinity creeping in.
+            //Highly unacademic but good enough. We want to avoid NaN or infinity creeping in.
             _vector[0] *= 999999;
             _vector[1] *= 999999;
             _vector[2] *= 999999;

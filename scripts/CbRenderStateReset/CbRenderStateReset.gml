@@ -1,7 +1,12 @@
 // Feather disable all
 
-/// Resets the GPU render state for the given pass
-/// This will set matrices, z-testing, and the current shader
+/// Resets the GPU render state:
+/// - Disables z-writing and z-testing
+/// - Disables culling
+/// - Disables alpha testing
+/// - Enables RGB and alpha writing
+/// - Enables alpha blending
+/// - Resets the active shader
 
 function CbRenderStateReset()
 {

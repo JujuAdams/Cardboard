@@ -1,5 +1,15 @@
 // Feather disable all
 
+/// Sets the game's render state to draw only into the depth buffer.
+/// 
+/// This function sets the following state:
+/// - Enables z-writing and z-testing
+/// - Sets backface culling (based on `CbSetBackfaceCulling()`)
+/// - Enables alpha testing
+/// - Sets alpha test reference (based on `CbSetAlphaTestRef()`)
+/// - Disables RGB and alpha writing
+/// - Disables alpha blending
+
 function CbRenderStateDepthOnly()
 {
     __CB_GLOBAL_RENDER
