@@ -1,6 +1,6 @@
 <h1 align="center">Cardboard 3.0.0-alpha</h1>
 
-<p align="center">Z-tilt/isometric 3D renderer for GameMaker 2022 LTS by <a href="https://www.jujuadams.com/" target="_blank">Juju Adams</a></p>
+<p align="center">Z-tilt/isometric 3D renderer for GameMaker by <a href="https://www.jujuadams.com/" target="_blank">Juju Adams</a></p>
 
 <p align="center"><a href="https://github.com/JujuAdams/Cardboard/releases/">Download the .yymps</a></p>
 
