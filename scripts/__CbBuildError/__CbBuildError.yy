@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbBuildError",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbBuildError",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Cardboard/Build/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,5 +1,5 @@
 // Q/E rotates the camera
-yawTarget += 45*(keyboard_check_pressed(ord("E")) - keyboard_check_pressed(ord("Q")));
+yawTarget += 22.5*(keyboard_check_pressed(ord("E")) - keyboard_check_pressed(ord("Q")));
 yaw = lerp(yaw, yawTarget, 0.3);
 
 //WASD and shift/space translate the camera linearly
@@ -20,3 +20,34 @@ camFromY = camToY + lengthdir_y(cameraDistance, yaw);
 camFromZ = camToZ + cameraHeight;
 
 cameraHeight += (keyboard_check_pressed(ord("O")) - keyboard_check_pressed(ord("L")));
+
+if (keyboard_check_released(ord("F")))
+{
+    oRenderer.frustrumViewMatrix = cbCamera.GetViewMatrix();
+    oRenderer.frustrumProjMatrix = cbCamera.GetProjectionMatrix();
+}
+
+if (keyboard_check_released(ord("Z")))
+{
+    cbCamera.SetZTilt(not cbCamera.GetZTilt());
+}
+
+if (keyboard_check_released(ord("X")))
+{
+    cbCamera.SetAxonometric(not cbCamera.GetAxonometric());
+}
+
+if (keyboard_check_released(ord("V")))
+{
+    if (cbCamera.GetProjection().orthographic)
+    {
+        cbCamera.SetPerspective(90, 1, 2048);
+    }
+    else
+    {
+        cbCamera.SetOrthographic(-2048, 2048);
+    }
+}
+
+cbCamera.SetFrom(camFromX, camFromY, camFromZ);
+cbCamera.SetTo(camToX, camToY, camToZ);

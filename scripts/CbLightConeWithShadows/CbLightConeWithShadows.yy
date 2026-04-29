@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbLightConeWithShadows",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightConeWithShadows",
+  "parent":{
+    "name":"Lights",
+    "path":"folders/Cardboard/Render/Lights.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

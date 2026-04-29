@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbLightSetDefaultDepthFunction",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbLightSetDefaultDepthFunction",
+  "parent":{
+    "name":"Lights",
+    "path":"folders/Cardboard/Render/Lights.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

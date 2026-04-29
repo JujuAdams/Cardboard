@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbSetLightingMode",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSetLightingMode",
+  "parent":{
+    "name":"Options",
+    "path":"folders/Cardboard/Render/Options.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

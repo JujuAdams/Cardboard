@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbClassTilemapRuleset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbClassTilemapRuleset",
+  "parent":{
+    "name":"Classes",
+    "path":"folders/Cardboard/Build/(System)/Classes.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

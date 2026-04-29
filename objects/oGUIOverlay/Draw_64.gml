@@ -1,13 +1,12 @@
-if (show_info)
+if (showInfo)
 {
-    var _string  = "Cardboard " + __CARDBOARD_VERSION + "\n";
-        _string += "@jujuadams " + __CARDBOARD_DATE + "\n";
+    var _string  = "Cardboard " + __CB_BUILD_VERSION + "\n";
+        _string += "Juju Adams " + __CB_BUILD_DATE + "\n";
         _string += "\n";
-        _string += "FPS = " + string(fps) + " (" + string(fps_smoothed) + ")\n";
+        _string += "FPS = " + string(fps) + " (CPU " + string(1000 / fpsSmoothed) + "ms)\n";
         _string += "\n";
         _string += "WASD/shift/space to move camera\n";
         _string += "Q/E to rotate camera\n";
-        _string += "X to toggle axonometric mode (" + (oRenderer.axonometric? "on" : "off") + ")\n";
         _string += "F1 to toggle this panel\n";
         _string += "F4 to toggle fullscreen";
     

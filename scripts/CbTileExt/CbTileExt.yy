@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbTileExt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbTileExt",
+  "parent":{
+    "name":"Tiles",
+    "path":"folders/Cardboard/Build/Tiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

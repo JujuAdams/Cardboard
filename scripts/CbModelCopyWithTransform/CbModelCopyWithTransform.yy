@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbModelCopyWithTransform",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbModelCopyWithTransform",
+  "parent":{
+    "name":"Models",
+    "path":"folders/Cardboard/Build/Models.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

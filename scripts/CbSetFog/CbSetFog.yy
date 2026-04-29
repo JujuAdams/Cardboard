@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbSetFog",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSetFog",
+  "parent":{
+    "name":"Options",
+    "path":"folders/Cardboard/Render/Options.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

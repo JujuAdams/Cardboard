@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbClassLightWithShadows",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbClassLightWithShadows",
+  "parent":{
+    "name":"Classes",
+    "path":"folders/Cardboard/Render/(System)/Classes.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

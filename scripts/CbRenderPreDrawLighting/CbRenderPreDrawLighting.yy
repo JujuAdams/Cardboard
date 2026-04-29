@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbRenderPreDrawLighting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbRenderPreDrawLighting",
+  "parent":{
+    "name":"Pipeline",
+    "path":"folders/Cardboard/Render/Pipeline.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

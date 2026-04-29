@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbModelNewVertexBuffer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbModelNewVertexBuffer",
+  "parent":{
+    "name":"Models",
+    "path":"folders/Cardboard/Build/Models.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

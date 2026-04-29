@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbCameraSystem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbCameraSystem",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Cardboard/Camera.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

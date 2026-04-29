@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbSetBackfaceCulling",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSetBackfaceCulling",
+  "parent":{
+    "name":"Options",
+    "path":"folders/Cardboard/Render/Options.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

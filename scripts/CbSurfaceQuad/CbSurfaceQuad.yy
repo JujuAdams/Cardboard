@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbSurfaceQuad",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbSurfaceQuad",
+  "parent":{
+    "name":"Surfaces",
+    "path":"folders/Cardboard/Build/Surfaces.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

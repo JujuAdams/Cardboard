@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbModelCopyUsingSpriteAsset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbModelCopyUsingSpriteAsset",
+  "parent":{
+    "name":"Models",
+    "path":"folders/Cardboard/Build/Models.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

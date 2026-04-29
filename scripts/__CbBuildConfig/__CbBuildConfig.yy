@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbBuildConfig",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbBuildConfig",
+  "parent":{
+    "name":"Build",
+    "path":"folders/Cardboard/Build.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

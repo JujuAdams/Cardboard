@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbRenderStateAlphaBlend",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbRenderStateAlphaBlend",
+  "parent":{
+    "name":"Pipeline",
+    "path":"folders/Cardboard/Render/Pipeline.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

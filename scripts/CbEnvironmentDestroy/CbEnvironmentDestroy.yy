@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbEnvironmentDestroy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbEnvironmentDestroy",
+  "parent":{
+    "name":"Environment",
+    "path":"folders/Cardboard/Build/Environment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

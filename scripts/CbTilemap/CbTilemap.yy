@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbTilemap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbTilemap",
+  "parent":{
+    "name":"Tilemaps",
+    "path":"folders/Cardboard/Build/Tilemaps.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

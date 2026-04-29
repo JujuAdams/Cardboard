@@ -1,0 +1,23 @@
+// Feather disable all
+
+/// Sets the game's render state to draw alpha-blended graphics.
+/// 
+/// This function sets the following state:
+/// - Enables z-testing
+/// - Disables z-writing
+/// - Sets backface culling (based on `CbSetBackfaceCulling()`)
+/// - Sets shader (based on `unlit` parameter and `CbSetLightingMode()`)
+/// 
+/// @param [unlit=false]
+/// @param [viewMatrix]
+/// @param [projectionMatrix]
+
+function CbRenderStateAlphaBlend(_unlit = false, _viewMatrix = undefined, _projMatrix = undefined)
+{
+    __CB_GLOBAL_RENDER
+    
+    gpu_set_ztestenable(true);
+    gpu_set_zwriteenable(false); //Don't write into the depth buffer!
+    gpu_set_cullmode(_global.__backfaceCulling? CB_CULLING_DIRECTION : cull_noculling);
+    __CbRenderShaderSwitch(_unlit? CB_LIGHTING_DISABLED : _global.__lighting.__lightMode, _viewMatrix, _projMatrix);
+}

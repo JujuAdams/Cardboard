@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbSpriteCommon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbSpriteCommon",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Cardboard/Build/Sprites.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

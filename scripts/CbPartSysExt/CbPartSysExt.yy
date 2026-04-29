@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CbPartSysExt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CbPartSysExt",
+  "parent":{
+    "name":"Particles",
+    "path":"folders/Cardboard/Build/Particles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
