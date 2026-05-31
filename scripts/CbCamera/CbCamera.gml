@@ -305,10 +305,11 @@ function CbCamera() constructor
             z2: 0,
         };
         
+        //TODO - Optimise
+        var _vpMatrixInverse = matrix_inverse(matrix_multiply(GetViewMatrix(), GetProjectionMatrix()));
+        
         with(_result)
         {
-            var _vpMatrixInverse = matrix_inverse(matrix_multiply(GetViewMatrix(), GetProjectionMatrix()));
-            
             var _vector = matrix_transform_vertex(_vpMatrixInverse, _xNorm, -_yNorm, 0, 1);
             var _w = _vector[3];
             x1 = _vector[0] / _w;
