@@ -78,7 +78,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.4.1030",
+    "IDEVersion":"2026.0.0.15",
   },
   "name":"Cardboard",
   "resources":[
@@ -89,9 +89,9 @@
     {"id":{"name":"oRenderer_1","path":"objects/oRenderer_1/oRenderer_1.yy",},},
     {"id":{"name":"oRenderer","path":"objects/oRenderer/oRenderer.yy",},},
     {"id":{"name":"oScene","path":"objects/oScene/oScene.yy",},},
+    {"id":{"name":"rBuilderTest","path":"rooms/rBuilderTest/rBuilderTest.yy",},},
     {"id":{"name":"rmAnimatedTileset","path":"rooms/rmAnimatedTileset/rmAnimatedTileset.yy",},},
     {"id":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
-    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
     {"id":{"name":"__Bonk","path":"scripts/__Bonk/__Bonk.yy",},},
     {"id":{"name":"__BonkClassHit","path":"scripts/__BonkClassHit/__BonkClassHit.yy",},},
     {"id":{"name":"__BonkClassReaction","path":"scripts/__BonkClassReaction/__BonkClassReaction.yy",},},
@@ -394,7 +394,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
-    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
+    {"roomId":{"name":"rBuilderTest","path":"rooms/rBuilderTest/rBuilderTest.yy",},},
     {"roomId":{"name":"rmAnimatedTileset","path":"rooms/rmAnimatedTileset/rmAnimatedTileset.yy",},},
   ],
   "templateType":null,
