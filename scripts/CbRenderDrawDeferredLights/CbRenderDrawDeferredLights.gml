@@ -26,7 +26,7 @@ function CbRenderDrawDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurf
         
         //Draw unshadowed lights first
         shader_set(__shdCbDeferredUnshadowed);
-        shader_set_uniform_matrix_array(shader_get_uniform(__shdCbDeferredUnshadowed, "u_mCameraInverse"), _vpMatrixInverse);
+        __CbSetProjectionMatrixUniform(shader_get_uniform(__shdCbDeferredUnshadowed, "u_mCameraInverse"), _vpMatrixInverse);
         texture_set_stage(shader_get_sampler_index(__shdCbDeferredUnshadowed, "u_sDepth" ), surface_get_texture_depth(_refSurface));
         texture_set_stage(shader_get_sampler_index(__shdCbDeferredUnshadowed, "u_sNormal"), surface_get_texture(__CbDeferredSurfaceNormalEnsure(_refSurface)));
         
@@ -42,7 +42,7 @@ function CbRenderDrawDeferredLights(_viewMatrix, _projectionMatrix, _diffuseSurf
         
         //Then draw shadowed lights
         shader_set(__shdCbDeferredShadowed);
-        shader_set_uniform_matrix_array(shader_get_uniform(__shdCbDeferredShadowed, "u_mCameraInverse"), _vpMatrixInverse);
+        __CbSetProjectionMatrixUniform(shader_get_uniform(__shdCbDeferredShadowed, "u_mCameraInverse"), _vpMatrixInverse);
         texture_set_stage(shader_get_sampler_index(__shdCbDeferredShadowed, "u_sDepth" ), surface_get_texture_depth(_refSurface));
         texture_set_stage(shader_get_sampler_index(__shdCbDeferredShadowed, "u_sNormal"), surface_get_texture(__CbDeferredSurfaceNormalEnsure(_refSurface)));
         

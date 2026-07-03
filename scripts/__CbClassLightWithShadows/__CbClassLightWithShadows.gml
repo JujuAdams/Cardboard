@@ -92,8 +92,8 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         var _function = depthFunction ?? _global.__lighting.__defaultDepthFunction;
         if (_function != undefined)
         {
-            matrix_set(matrix_view,       __matrixView);
-            matrix_set(matrix_projection, __matrixProj);
+            matrix_set(matrix_view, __matrixView);
+            __CbSetProjectionMatrix(__matrixProj);
             _function();
         }
         
@@ -139,7 +139,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         __Tick();
         __BuildMatrices();
         
-        shader_set_uniform_matrix_array(_u_mLightViewProj, __matrixViewProj);
+        __CbSetProjectionMatrixUniform(_u_mLightViewProj, __matrixViewProj);
         shader_set_uniform_f(_u_vLightPos, xFrom, yFrom, zFrom, radius);
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,
@@ -161,7 +161,7 @@ function __CbClassLightWithShadows(_color, _xFrom, _yFrom, _zFrom, _xTo, _yTo, _
         __Tick();
         __BuildMatrices();
         
-        shader_set_uniform_matrix_array(_u_mLightViewProj, __matrixViewProj);
+        __CbSetProjectionMatrixUniform(_u_mLightViewProj, __matrixViewProj);
         shader_set_uniform_f(_u_vLightPos, xFrom, yFrom, zFrom, radius);
         shader_set_uniform_f(_u_vLightColor, color_get_red(  color)/255,
                                              color_get_green(color)/255,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__CbSetProjectionMatrix",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CbSetProjectionMatrix",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Cardboard/Render/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

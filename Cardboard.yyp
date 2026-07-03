@@ -78,7 +78,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.15",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Cardboard",
   "resources":[
@@ -119,6 +119,8 @@
     {"id":{"name":"__CbDeferredSurfaceLightEnsure","path":"scripts/__CbDeferredSurfaceLightEnsure/__CbDeferredSurfaceLightEnsure.yy",},},
     {"id":{"name":"__CbDeferredSurfaceNormalEnsure","path":"scripts/__CbDeferredSurfaceNormalEnsure/__CbDeferredSurfaceNormalEnsure.yy",},},
     {"id":{"name":"__CbDrawCommon","path":"scripts/__CbDrawCommon/__CbDrawCommon.yy",},},
+    {"id":{"name":"__CbFixProjectionMatrix","path":"scripts/__CbFixProjectionMatrix/__CbFixProjectionMatrix.yy",},},
+    {"id":{"name":"__CbGetProjectionMatrix","path":"scripts/__CbGetProjectionMatrix/__CbGetProjectionMatrix.yy",},},
     {"id":{"name":"__CbMatrixBuildProjectionOrthoExt","path":"scripts/__CbMatrixBuildProjectionOrthoExt/__CbMatrixBuildProjectionOrthoExt.yy",},},
     {"id":{"name":"__CbParticleSysCommon","path":"scripts/__CbParticleSysCommon/__CbParticleSysCommon.yy",},},
     {"id":{"name":"__CbRenderConfig","path":"scripts/__CbRenderConfig/__CbRenderConfig.yy",},},
@@ -130,6 +132,8 @@
     {"id":{"name":"__CbRenderShaderSwitch","path":"scripts/__CbRenderShaderSwitch/__CbRenderShaderSwitch.yy",},},
     {"id":{"name":"__CbRenderSystem","path":"scripts/__CbRenderSystem/__CbRenderSystem.yy",},},
     {"id":{"name":"__CbRenderTrace","path":"scripts/__CbRenderTrace/__CbRenderTrace.yy",},},
+    {"id":{"name":"__CbSetProjectionMatrix","path":"scripts/__CbSetProjectionMatrix/__CbSetProjectionMatrix.yy",},},
+    {"id":{"name":"__CbSetProjectionMatrixUniform","path":"scripts/__CbSetProjectionMatrixUniform/__CbSetProjectionMatrixUniform.yy",},},
     {"id":{"name":"__CbSpriteCommon","path":"scripts/__CbSpriteCommon/__CbSpriteCommon.yy",},},
     {"id":{"name":"__CbSurfaceCommon","path":"scripts/__CbSurfaceCommon/__CbSurfaceCommon.yy",},},
     {"id":{"name":"__CbTileCommon","path":"scripts/__CbTileCommon/__CbTileCommon.yy",},},

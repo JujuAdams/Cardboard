@@ -4,7 +4,6 @@
 
 #macro __CB_SURFACE_SET_TARGET_EXT_WORKAROUND  true
 
-#macro __CB_RENDER_OPENGL  (((os_type != os_windows) && (os_type != os_xboxone) && (os_type != os_xboxseriesxs)) || (os_browser != browser_not_a_browser))
 #macro __CB_GLOBAL_RENDER  static _global = __CbRenderSystem();
 
 __CbRenderSystem();

@@ -9,7 +9,7 @@ function __CbRenderShaderDeferred(_viewMatrix = undefined, _projMatrix = undefin
     
     var _refSurface = surface_get_target();
     
-    shader_set(__CB_RENDER_OPENGL? __shdCbGBufferGLSL : __shdCbGBufferHLSL);
+    shader_set(CB_RENDER_NORMATIVE? __shdCbGBufferHLSL : __shdCbGBufferGLSL);
     if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND) surface_set_target(__CbDeferredSurfaceNormalEnsure(_refSurface));
     
     _global.__surfaceWorkaround = true;
@@ -23,6 +23,6 @@ function __CbRenderShaderDeferred(_viewMatrix = undefined, _projMatrix = undefin
     
     if (_projMatrix != undefined)
     {
-        matrix_set(matrix_projection, _projMatrix);
+        __CbSetProjectionMatrix(_projMatrix);
     }
 }

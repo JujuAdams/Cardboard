@@ -220,37 +220,47 @@ function CbCamera() constructor
     
     static GetViewMatrix = function()
     {
-        var _coeff = CB_CAMERA_FLIP_V? -1 : 1;
-        if (CB_CAMERA_FLIP_V && __orthographic) _coeff = 1;
-        
         if (__zTilt)
         {
-            return CbCameraBuildZTiltViewMatrix(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __orthographic && __axonometric, _coeff*__xUp, _coeff*__yUp, _coeff*__zUp);
+            return CbCameraBuildZTiltViewMatrix(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __orthographic && __axonometric, __xUp, __yUp, __zUp);
         }
         else
         {
-            return matrix_build_lookat(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, _coeff*__xUp, _coeff*__yUp, _coeff*__zUp);
+            return matrix_build_lookat(__xFrom, __yFrom, __zFrom, __xTo, __yTo, __zTo, __xUp, __yUp, __zUp);
         }
     }
     
     static GetProjectionMatrix = function()
     {
-        var _coeff = CB_CAMERA_FLIP_V? -1 : 1;
-        
         if (__orthographic)
         {
-            return matrix_build_projection_ortho(__width, _coeff*__height, __near, __far);
+            return matrix_build_projection_ortho(__width, __height, __near, __far);
         }
         else
         {
-            return matrix_build_projection_perspective_fov(__fieldOfView, _coeff*__width/__height, __near, __far);
+            return matrix_build_projection_perspective_fov(__fieldOfView, __width/__height, __near, __far);
         }
     }
     
     static ApplyMatrices = function()
     {
         matrix_set(matrix_view, GetViewMatrix());
-        matrix_set(matrix_projection, GetProjectionMatrix());
+        
+        if ((os_type == os_xboxone) || (os_type == os_xboxseriesxs) || (os_type == os_ps5) || (os_type == os_windows))
+        {
+            matrix_set(matrix_projection, GetProjectionMatrix());
+        }
+        else
+        {
+            var _projectionMatrix = GetProjectionMatrix();
+            
+            _projectionMatrix[@  1] = -_projectionMatrix[ 1];
+            _projectionMatrix[@  5] = -_projectionMatrix[ 5];
+            _projectionMatrix[@  9] = -_projectionMatrix[ 9];
+            _projectionMatrix[@ 13] = -_projectionMatrix[13];
+            
+            matrix_set(matrix_projection, _projectionMatrix);
+        }
     }
     
     static Start = function(_alphaTestRef = 0.5, _backfaceCulling = cull_noculling)

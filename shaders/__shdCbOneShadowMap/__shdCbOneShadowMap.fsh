@@ -55,11 +55,21 @@ vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
 
 vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
 {
-    vec4  lightSpacePos = lightMatrix*vec4(position, 1.0);
-    vec2  texCoord      = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
-    float calcDepth     = lightSpacePos.z / lightSpacePos.w;
+    vec4 lightSpacePos = lightMatrix*vec4(position, 1.0);
+    
+    #if defined(_YY_HLSL11_) || defined(_YY_PSSL_)
+        vec2 texCoord = 0.5 + 0.5*vec2(lightSpacePos.x, -lightSpacePos.y) / lightSpacePos.w;
+    #else
+        vec2 texCoord = 0.5 + 0.5*lightSpacePos.xy / lightSpacePos.w;
+    #endif
     
     float foundDepth = texture2D(lightDepthTexture, texCoord).r;
+    
+    #if !defined(_YY_HLSL11_) && !defined(_YY_PSSL_)
+        foundDepth = 2.0*foundDepth - 1.0;
+    #endif
+    
+    float calcDepth = lightSpacePos.z / lightSpacePos.w;
     
     //Choose the lighting vector
     vec3 dir;

@@ -74,7 +74,7 @@ function __CbRenderShaderOneShadowedLight(_viewMatrix = undefined, _projMatrix =
             
             if (_projMatrix != undefined)
             {
-                matrix_set(matrix_projection, _projMatrix);
+                __CbSetProjectionMatrix(_projMatrix);
             }
         }
     }
