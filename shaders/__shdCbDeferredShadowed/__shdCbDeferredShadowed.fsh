@@ -81,8 +81,7 @@ void main()
                             texture2D(u_sDepth, v_vTexcoord).r, 
                             1.0);
     #else
-        vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
-                            1.0 - 2.0*v_vTexcoord.y,
+        vec4 nsCoord = vec4(2.0*v_vTexcoord - 1.0,
                             2.0*texture2D(u_sDepth, v_vTexcoord).r - 1.0, 
                             1.0);
     #endif

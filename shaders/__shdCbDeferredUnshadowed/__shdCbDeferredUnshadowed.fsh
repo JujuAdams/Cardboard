@@ -43,10 +43,16 @@ void main()
     normal = 2.0*normal - 1.0;
     
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
-    vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
-                        1.0 - 2.0*v_vTexcoord.y,
-                        texture2D(u_sDepth, v_vTexcoord).r, 
-                        1.0);
+    #if defined(_YY_HLSL11_) || defined(_YY_PSSL_)
+        vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,
+                            1.0 - 2.0*v_vTexcoord.y,
+                            texture2D(u_sDepth, v_vTexcoord).r, 
+                            1.0);
+    #else
+        vec4 nsCoord = vec4(2.0*v_vTexcoord - 1.0,
+                            2.0*texture2D(u_sDepth, v_vTexcoord).r - 1.0, 
+                            1.0);
+    #endif
     
     //Work backwards from the NDSpace coordinate to world space
     vec4 position = u_mCameraInverse*nsCoord;
