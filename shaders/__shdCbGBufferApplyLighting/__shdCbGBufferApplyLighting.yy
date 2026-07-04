@@ -1,12 +1,12 @@
 {
   "$GMShader":"",
-  "%Name":"__shdCbGBufferHLSL",
-  "name":"__shdCbGBufferHLSL",
+  "%Name":"__shdCbGBufferApplyLighting",
+  "name":"__shdCbGBufferApplyLighting",
   "parent":{
     "name":"Shaders",
     "path":"folders/Cardboard/Render/(System)/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",
-  "type":3,
+  "type":1,
 }

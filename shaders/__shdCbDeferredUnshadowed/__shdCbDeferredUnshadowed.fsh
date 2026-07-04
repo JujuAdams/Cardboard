@@ -5,11 +5,17 @@ precision highp float;
 varying vec2 v_vTexcoord;
 
 uniform sampler2D u_sDepth;
-uniform sampler2D u_sNormal;
 uniform mat4      u_mCameraInverse;
 
 uniform vec4      u_vPosRadArray[LIGHT_COUNT];
 uniform vec3      u_vColorArray[LIGHT_COUNT];
+
+vec4 unpackFloat(float value)
+{
+    value *= (256.0*256.0*256.0 - 1.0) / (256.0*256.0*256.0);
+    vec4 encode = fract( value * vec4(1.0, 256.0, 256.0*256.0, 256.0*256.0*256.0) );
+    return vec4( encode.xyz - encode.yzw / 256.0, encode.w ) + 1.0/512.0;
+}
 
 float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, float radius)
 {
@@ -41,7 +47,7 @@ vec3 AccumulateUnshadowedLights(vec3 position, vec3 normal)
 void main()
 {
     //Unpack the normal
-    vec3 normal = 2.0*texture2D(u_sNormal, v_vTexcoord).rgb - 1.0;
+    vec3 normal = 2.0*(unpackFloat(texture2D(gm_BaseTexture, v_vTexcoord).g).xyz) - 1.0;
     
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
     vec4 nsCoord = vec4(2.0*v_vTexcoord.x - 1.0,

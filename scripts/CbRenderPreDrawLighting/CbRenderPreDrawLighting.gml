@@ -62,8 +62,8 @@ function CbRenderPreDrawLighting()
             
             if (__lightMode == CB_LIGHTING_DEFERRED)
             {
-                surface_set_target(__CbDeferredSurfaceNormalEnsure(surface_get_target()));
-                draw_clear(c_gray);
+                surface_set_target(__CbDeferredSurfaceGBufferEnsure(surface_get_target()));
+                draw_clear(c_black);
                 surface_reset_target();
                 
                 surface_set_target(__CbDeferredSurfaceLightEnsure(surface_get_target()));

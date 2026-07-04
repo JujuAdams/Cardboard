@@ -2,8 +2,6 @@
 
 #macro __CB_LIGHT_COUNT  6
 
-#macro __CB_SURFACE_SET_TARGET_EXT_WORKAROUND  true
-
 #macro __CB_GLOBAL_RENDER  static _global = __CbRenderSystem();
 
 __CbRenderSystem();
@@ -38,7 +36,7 @@ function __CbRenderSystem()
             
             __defaultDepthFunction: undefined,
             
-            __surfaceNormal: -1,
+            __surfaceGBuffer: -1,
             __surfaceLight:  -1,
         };
     };

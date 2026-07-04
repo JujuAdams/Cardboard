@@ -8,10 +8,18 @@ if (keyboard_check(ord("O")))
     shader_reset();
 }
 
+if (keyboard_check(ord("F")))
+{
+    shader_set(__shdCbGBufferDiffuse);
+    draw_surface(__CbDeferredSurfaceGBufferEnsure(application_surface), 0, 0);
+    shader_reset();
+}
+
 if (keyboard_check(ord("L")))
 {
-    var _surface = __CbDeferredSurfaceNormalEnsure(application_surface);
-    draw_surface(_surface, 0, 0);
+    shader_set(__shdCbGBufferNormal);
+    draw_surface(__CbDeferredSurfaceGBufferEnsure(application_surface), 0, 0);
+    shader_reset();
 }
 
 if (keyboard_check(ord("K")))

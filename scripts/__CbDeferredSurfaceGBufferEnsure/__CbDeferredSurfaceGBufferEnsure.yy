@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"__CbDeferredSurfaceNormalEnsure",
+  "%Name":"__CbDeferredSurfaceGBufferEnsure",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"__CbDeferredSurfaceNormalEnsure",
+  "name":"__CbDeferredSurfaceGBufferEnsure",
   "parent":{
     "name":"(System)",
     "path":"folders/Cardboard/Render/(System).yy",

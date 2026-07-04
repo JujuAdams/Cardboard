@@ -7,14 +7,9 @@ function __CbRenderShaderDeferred(_viewMatrix = undefined, _projMatrix = undefin
 {
     __CB_GLOBAL_RENDER
     
-    var _refSurface = surface_get_target();
-    
-    shader_set(CB_RENDER_NORMATIVE? __shdCbGBufferHLSL : __shdCbGBufferGLSL);
-    if (__CB_SURFACE_SET_TARGET_EXT_WORKAROUND) surface_set_target(__CbDeferredSurfaceNormalEnsure(_refSurface));
-    
+    shader_set(__shdCbGBuffer);
+    surface_set_target(__CbDeferredSurfaceGBufferEnsure(surface_get_target()));
     _global.__surfaceWorkaround = true;
-    surface_set_target_ext(0, _refSurface);
-    surface_set_target_ext(1, __CbDeferredSurfaceNormalEnsure(_refSurface));
     
     if (_viewMatrix != undefined)
     {
