@@ -1,11 +1,20 @@
+var _up        = keyboard_check(ord("W")) || (gamepad_axis_value(0, gp_axislv) < -0.5);
+var _down      = keyboard_check(ord("S")) || (gamepad_axis_value(0, gp_axislv) >  0.5);
+var _left      = keyboard_check(ord("A")) || (gamepad_axis_value(0, gp_axislh) < -0.5);
+var _right     = keyboard_check(ord("D")) || (gamepad_axis_value(0, gp_axislh) >  0.5);
+var _rotateCCW = keyboard_check_pressed(ord("E")) || gamepad_button_check_pressed(0, gp_padr);
+var _rotateCW  = keyboard_check_pressed(ord("Q")) || gamepad_button_check_pressed(0, gp_padl);
+var _ascend    = keyboard_check(vk_space) || gamepad_button_check(0, gp_padu);
+var _decend    = keyboard_check(vk_shift) || gamepad_button_check(0, gp_padd);
+
 // Q/E rotates the camera
-yawTarget += 22.5*(keyboard_check_pressed(ord("E")) - keyboard_check_pressed(ord("Q")));
+yawTarget += 22.5*(_rotateCCW - _rotateCW);
 yaw = lerp(yaw, yawTarget, 0.3);
 
 //WASD and shift/space translate the camera linearly
-var _para = 5*(keyboard_check(ord("S")) - keyboard_check(ord("W")));
-var _perp = 5*(keyboard_check(ord("D")) - keyboard_check(ord("A")));
-var _dz   = 5*(keyboard_check(vk_space) - keyboard_check(vk_shift));
+var _para = 5*(_down - _up);
+var _perp = 5*(_right - _left);
+var _dz   = 5*(_ascend - _decend);
 
 var _dx = lengthdir_x(_para, yawTarget) + lengthdir_x(_perp, yawTarget + 90);
 var _dy = lengthdir_y(_para, yawTarget) + lengthdir_y(_perp, yawTarget + 90);
