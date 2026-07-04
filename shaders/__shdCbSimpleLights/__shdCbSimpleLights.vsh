@@ -17,7 +17,7 @@ void main()
     
     v_vWorldPos = worldPos.xyz;
     v_fViewZ    = viewPos.z;
-    v_vNormal   = in_Normal;
+    v_vNormal   = normalize(in_Normal);
     v_vColour   = in_Colour;
     v_vTexcoord = in_TextureCoord;
 }

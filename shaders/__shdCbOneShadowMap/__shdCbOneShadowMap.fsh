@@ -32,12 +32,12 @@ float AccumulateUnshadowedLight(vec3 position, vec3 normal, vec3 lightVector, fl
     {
         //Point light
         vec3 lightDir = lightVector - position;
-        return max(dot(normalize(normal), normalize(lightDir)), 0.0) * max(0.0, 1.0 - (length(lightDir) / radius));
+        return max(dot(normal, normalize(lightDir)), 0.0) * max(0.0, 1.0 - (length(lightDir) / radius));
     }
     else
     {
         //Directional light
-        return max(dot(normalize(normal), normalize(lightVector)), 0.0);
+        return max(dot(normal, normalize(lightVector)), 0.0);
     }
 }
 
@@ -83,7 +83,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
     }
     
     //Adjust for normals
-    float dotProduct = max(dot(normalize(normal), normalize(dir)), 0.0);
+    float dotProduct = max(dot(normal, normalize(dir)), 0.0);
     
     //Perform the depth comparison
     float depthBias = clamp(u_vShadowMapBias.z*dotProduct, u_vShadowMapBias.x, u_vShadowMapBias.y);
