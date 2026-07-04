@@ -1,7 +1,7 @@
 {
   "$GMShader":"",
-  "%Name":"__shdCbDeferredShadowed",
-  "name":"__shdCbDeferredShadowed",
+  "%Name":"__shdCbDeferredTransferLighting",
+  "name":"__shdCbDeferredTransferLighting",
   "parent":{
     "name":"Deferred",
     "path":"folders/Cardboard/Render/(System)/Shaders/Deferred.yy",

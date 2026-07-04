@@ -3,8 +3,8 @@
   "%Name":"__shdCbDeferredUnshadowed",
   "name":"__shdCbDeferredUnshadowed",
   "parent":{
-    "name":"Shaders",
-    "path":"folders/Cardboard/Render/(System)/Shaders.yy",
+    "name":"Deferred",
+    "path":"folders/Cardboard/Render/(System)/Shaders/Deferred.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

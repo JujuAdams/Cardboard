@@ -7,8 +7,8 @@ function __CbRenderShaderDeferred(_viewMatrix = undefined, _projMatrix = undefin
 {
     __CB_GLOBAL_RENDER
     
-    shader_set(__shdCbGBuffer);
-    surface_set_target(__CbDeferredSurfaceGBufferEnsure(surface_get_target()));
+    shader_set(__shdCbDeferredToGBuffer);
+    surface_set_target(__CbDeferredSurfaceGBufferEnsure(surface_get_target()), surface_get_target());
     _global.__surfaceWorkaround = true;
     
     if (_viewMatrix != undefined)

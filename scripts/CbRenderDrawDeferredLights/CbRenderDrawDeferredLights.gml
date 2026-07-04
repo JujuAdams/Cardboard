@@ -71,8 +71,8 @@ function CbRenderDrawDeferredLights(_viewMatrix, _projectionMatrix)
     
     //Once we're done with compositing, transfer the resulting lighting onto the target surface
     gpu_set_blendmode_ext(bm_one, bm_zero);
-    shader_set(__shdCbGBufferApplyLighting);
-    texture_set_stage(shader_get_sampler_index(__shdCbGBufferApplyLighting, "u_sLighting"), surface_get_texture(_lightingSurface));
+    shader_set(__shdCbDeferredTransferLighting);
+    texture_set_stage(shader_get_sampler_index(__shdCbDeferredTransferLighting, "u_sLighting"), surface_get_texture(_lightingSurface));
     draw_surface(_gBufferSurface, 0, 0);
     shader_reset();
     gpu_set_blendmode(bm_normal);

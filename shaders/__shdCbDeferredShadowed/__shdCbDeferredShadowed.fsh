@@ -71,7 +71,8 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
 void main()
 {
     //Unpack the normal
-    vec3 normal = 2.0*(floor(texture2D(gm_BaseTexture, v_vTexcoord).rgb/2.0) / 255.0) - 1.0;
+    vec3 normal = floor(texture2D(gm_BaseTexture, v_vTexcoord).rgb/2.0) / 31.0;
+    normal = 2.0*normal - 1.0;
     
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
     #if defined(_YY_HLSL11_) || defined(_YY_PSSL_)

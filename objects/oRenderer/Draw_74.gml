@@ -10,14 +10,14 @@ if (keyboard_check(ord("O")))
 
 if (keyboard_check(ord("F")))
 {
-    shader_set(__shdCbGBufferDiffuse);
+    shader_set(__shdCbDeferredGetDiffuse);
     draw_surface(__CbDeferredSurfaceGBufferEnsure(application_surface), 0, 0);
     shader_reset();
 }
 
 if (keyboard_check(ord("L")))
 {
-    shader_set(__shdCbGBufferNormal);
+    shader_set(__shdCbDeferredGetNormal);
     draw_surface(__CbDeferredSurfaceGBufferEnsure(application_surface), 0, 0);
     shader_reset();
 }
