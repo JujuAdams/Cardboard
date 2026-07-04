@@ -11,13 +11,6 @@ uniform vec3      u_vLightColor;
 uniform mat4      u_mLightViewProj;
 uniform vec3      u_vShadowMapBias;
 
-vec4 unpackFloat(float value)
-{
-    value *= (256.0*256.0*256.0 - 1.0) / (256.0*256.0*256.0);
-    vec4 encode = fract( value * vec4(1.0, 256.0, 256.0*256.0, 256.0*256.0*256.0) );
-    return vec4( encode.xyz - encode.yzw / 256.0, encode.w ) + 1.0/512.0;
-}
-
 vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampler2D lightDepthTexture, vec3 lightPosition, float radius, vec3 lightColor)
 {
     vec4 lightSpacePos = lightMatrix*vec4(position, 1.0);
@@ -78,7 +71,7 @@ vec3 AccumulateShadowedLight(vec3 position, vec3 normal, mat4 lightMatrix, sampl
 void main()
 {
     //Unpack the normal
-    vec3 normal = 2.0*(unpackFloat(texture2D(gm_BaseTexture, v_vTexcoord).g).xyz) - 1.0;
+    vec3 normal = 2.0*(floor(texture2D(gm_BaseTexture, v_vTexcoord).rgb/2.0) / 255.0) - 1.0;
     
     //Unpack the texture coordinates and the sampled depth into a normalized device space coordinate
     #if defined(_YY_HLSL11_) || defined(_YY_PSSL_)

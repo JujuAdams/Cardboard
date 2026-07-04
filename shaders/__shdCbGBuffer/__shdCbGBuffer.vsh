@@ -11,10 +11,9 @@ varying vec2 v_vTexcoord;
 
 void main()
 {
-    vec4 worldPos = gm_Matrices[MATRIX_WORLD]*vec4(in_Position, 1.0);
-    gl_Position = gm_Matrices[MATRIX_PROJECTION]*gm_Matrices[MATRIX_VIEW]*worldPos;
+    gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION]*vec4(in_Position, 1.0);
     
-    v_vNormal   = (gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION]*vec4(in_Normal, 0.0)).xyz;
+    v_vNormal   = 0.5 + 0.5*normalize((gm_Matrices[MATRIX_WORLD]*vec4(in_Normal, 0.0)).xyz);
     v_vColour   = in_Colour;
     v_vTexcoord = in_TextureCoord;
 }
