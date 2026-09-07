@@ -265,6 +265,7 @@
     {"id":{"name":"CbBillboardGetYaw","path":"scripts/CbBillboardGetYaw/CbBillboardGetYaw.yy",},},
     {"id":{"name":"CbBillboardResetYaw","path":"scripts/CbBillboardResetYaw/CbBillboardResetYaw.yy",},},
     {"id":{"name":"CbBillboardSetYaw","path":"scripts/CbBillboardSetYaw/CbBillboardSetYaw.yy",},},
+    {"id":{"name":"CbBillboardSetYawExt","path":"scripts/CbBillboardSetYawExt/CbBillboardSetYawExt.yy",},},
     {"id":{"name":"CbCamera","path":"scripts/CbCamera/CbCamera.yy",},},
     {"id":{"name":"CbCameraBuildZTiltViewMatrix","path":"scripts/CbCameraBuildZTiltViewMatrix/CbCameraBuildZTiltViewMatrix.yy",},},
     {"id":{"name":"CbCameraGetFrustrumCoords","path":"scripts/CbCameraGetFrustrumCoords/CbCameraGetFrustrumCoords.yy",},},

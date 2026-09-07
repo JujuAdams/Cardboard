@@ -75,7 +75,7 @@ function CbCamera() constructor
     
     try
     {
-        __billboardYawSetFunc = CbBillboardSetYaw;
+        __billboardYawSetFunc = CbBillboardSetYawExt;
     }
     catch(_error)
     {
